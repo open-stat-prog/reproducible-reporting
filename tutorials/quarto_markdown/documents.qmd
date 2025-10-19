@@ -195,8 +195,8 @@ Below is an example of a simple Quarto presentation using the
 The YAML header defines document metadata and output type, while the
 Markdown body defines the slide content.
 
-- [Example .qmd file](main/assets/docs/presentation_example.qmd)
-- [Resuling .html output file](docs/assets/docs/presentation_example.html)
+- [Example .qmd file](https://github.com/open-stat-prog/reproducible-reporting/blob/main/assets/docs/presentation_example.qmd)
+- [Resuling .html output file](https://open-stat-prog.github.io/reproducible-reporting/assets/docs/presentation_example.html)
 
 Each slide begins with a heading (for example, `##`) or is separated
 using `---`. When rendered, Quarto executes any embedded R code chunks
