@@ -72,6 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -80,6 +93,19 @@ div.callout-reading.callout-style-default > .callout-header {
 }
 div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -98,39 +124,13 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 </style>
 
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -356,7 +356,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/index.html">Quarto and Markdown</a></li><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/purpose.html">The purpose of Markdown and Quarto</a></li></ol></nav>
 <div class="quarto-title">
@@ -381,7 +381,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <h2 class="anchored" data-anchor-id="introduction-to-quarto-and-markdown">Introduction to Quarto and Markdown</h2>
 <p>Before learning how to create documents and reports, it is important to understand the two core technologies behind this workflow: <strong>Quarto</strong> and <strong>Markdown</strong>. These tools form the foundation for reproducible, flexible, and professional document creation.</p>
 </section>
-<section id="what-is-quarto" class="level2">
+<section id="what-is-quarto" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-is-quarto">What Is Quarto?</h2>
 <p>Quarto is an open-source publishing system designed to create high-quality, reproducible documents and websites from plain text files. It allows you to combine written content, code, data, and visualizations in a single workflow.</p>
 <p>Quarto supports multiple programming languages—such as R, Python, Julia, and Observable—and can produce outputs in a variety of formats, including HTML, PDF, Microsoft Word, and PowerPoint.</p>
@@ -392,6 +392,8 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <li>Reproducible workflows and analysis pipelines</li>
 </ul>
 <p>In short, Quarto bridges the gap between writing and computation, helping you communicate results in a clear and automated way.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -405,13 +407,17 @@ Reading
 <p>For official documentation, installation instructions, and tutorials, see the <a href="https://quarto.org/">Quarto website</a>.</p>
 </div>
 </div>
-</section>
-<section id="what-is-markdown" class="level2">
+</div></div></section>
+<section id="what-is-markdown" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-is-markdown">What is Markdown?</h2>
 <p>Markdown is a lightweight text formatting language. It allows you to write plain text that can be easily converted into formatted documents such as web pages or PDFs.</p>
 <p>Instead of relying on graphical formatting tools (like bold or italic buttons), Markdown uses simple text-based markers that represent formatting instructions. The result is a writing experience that is both human-readable and machine-friendly.</p>
 <p>Markdown was originally created by John Gruber in 2004 with the goal of making writing for the web more accessible and less cluttered by code-like markup languages such as HTML.</p>
 <p>Markdown has since become a standard tool for technical communication, documentation, and note-taking, forming the foundation of many modern publishing systems — including Quarto.</p>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -425,9 +431,7 @@ Reading
 <p><a href="https://daringfireball.net/projects/markdown/">Here</a> you find the link to the original Markdown paper.</p>
 </div>
 </div>
-
-
-</section>
+</div></div></section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
