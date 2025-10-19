@@ -1,5 +1,5 @@
 ---
-title: "Module Template"
+title: "Reproducible reporting"
 page-navigation: false
 format:
   html: 
@@ -10,33 +10,51 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-Welcome to our template module. Every module comprises a series of topical *tutorials*, such as the three linked below.
+Welcome to the Reproducible reporting module. This module consists of a series of *tutorials* on the following topics:
 
-1. [First Topic](/tutorials/first_tutorial/index.qmd)
-1. [Second Topic](/tutorials/second_tutorial/index.qmd)
-
-Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout. Each tutorial
-section should be wrapped up with a knowledge quiz.
+1.  [Quarto and markdown](/tutorials/quarto_markdown/index.qmd)
+2.  [Chunks and options](/tutorials/chunk_options/index.qmd)
+3.  [Writing text](/tutorials/writing_text/index.qmd)
+4.  [Presenting output](/tutorials/presenting_output/index.qmd)
+5.  [Portability and reproducibility](/tutorials/reproducibility/index.qmd)
 
 ## Learning Goals
 
 After completing this module, you will be able to:
 
-### Tutorial 1
+### Quarto and markdown
 
-1. A thing you should learn from Tutorial 1.
-1. Another thing you should learn from Tutorial 1.
-1. One more thing you should learn From Tutorial 1.
+1.  Understand the purpose of Markdown and Quarto.
+2.  Understand the differences between Markdown and Quarto.
+3.  Recognize the different documents that can be created with Quarto.
 
-### Tutorial 2
+### Chunks and options
 
-1. A thing you should learn from Tutorial 2.
-1. Another thing you should learn from Tutorial 2.
+1.  Understand what code chuncks are.
+2.  Learn how to create and label R code chunks.
+3.  Explore common chunk options.
+
+### Writing text
+
+1.  Learn how to write plain text and basic Markdown formatting to style text.
+2.  Learn how to apply structure to a document.
+3.  Learn how to include inline code and results within text.
+
+### Presenting output
+
+1.  Learn how to display clean, readable tables.
+2.  Understand how to include plots and visualizations.
+
+### Portability and reproducibility
+
+1.  Understand what makes Quarto documents portable and reproducible.
+2.  Learn how to reuse content and structure across projects.
+3.  Appreciate the benefits of reproducible workflows.
 
 Click the button below to get started with the first tutorial.
 
 ```{r}
 #| echo: false
 #| results: asis
-begin_button("/tutorials/first_tutorial/index.html")
+begin_button("/tutorials/quarto_markdown/index.html")
 ```

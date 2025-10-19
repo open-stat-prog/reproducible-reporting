@@ -2,7 +2,7 @@ website:
 
   title: "OSP Module Template"
 
-  site-url: "https://www.openstatprog.com/module-template/"
+  site-url: "https://www.openstatprog.com/reproducible-reporting/"
 
   page-navigation: true
 
@@ -20,9 +20,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href: https://github.com/open-stat-prog/module-template
+            href: https://github.com/open-stat-prog/reproducible-reporting
           - text: Report a Bug
-            href: https://github.com/open-stat-prog/module-template/issues
+            href: https://github.com/open-stat-prog/reproducible-reporting/issues
 
   sidebar:
     style: "floating"
@@ -30,21 +30,35 @@ website:
     contents:
       - href: index.qmd
         text: "Overview"
-      - section: tutorials/first_tutorial/index.qmd
-        text: "First Tutorial"
+      - section: tutorials/quarto_markdown/index.qmd
+        text: "Quarto and Markdown"
         contents:
-        - href: tutorials/first_tutorial/topic1.qmd
-        - href: tutorials/first_tutorial/topic2.qmd
-        - href: tutorials/first_tutorial/topic3.qmd
-        - href: quizzes/first_tutorial/index.qmd
-          text: "Knowledge Quiz"
-      - section: tutorials/second_tutorial/index.qmd
-        text: "Second Tutorial"
+          - href: tutorials/quarto_markdown/purpose.qmd
+          - href: tutorials/quarto_markdown/differences.qmd
+          - href: tutorials/quarto_markdown/documents.qmd
+      - section: tutorials/chunk_options/index.qmd
+        text: "Chunks and options"
         contents:
-          - href: tutorials/second_tutorial/topic1.qmd
-          - href: tutorials/second_tutorial/topic2.qmd
-          - href: quizzes/second_tutorial/index.qmd
-            text: "Knowledge Quiz"
+          - href: tutorials/chunk_options/code_chunks.qmd
+          - href: tutorials/chunk_options/create_chunks.qmd
+          - href: tutorials/chunk_options/chunk_options.qmd
+      - section: tutorials/writing_text/index.qmd
+        text: "Writing text"
+        contents:
+          - href: tutorials/writing_text/text.qmd
+          - href: tutorials/writing_text/structure.qmd
+          - href: tutorials/writing_text/inline_code.qmd
+      - section: tutorials/presenting_output/index.qmd
+        text: "Presenting output"
+        contents:
+          - href: tutorials/presenting_output/tables.qmd
+          - href: tutorials/presenting_output/plots.qmd
+      - section: tutorials/reproducibility/index.qmd
+        text: "Reproducibility"
+        contents:
+          - href: tutorials/reproducibility/portable.qmd
+          - href: tutorials/reproducibility/reuse.qmd
+          - href: tutorials/reproducibility/workflows.qmd
       - href: conclusion.qmd
 
   page-footer:

@@ -1,0 +1,15 @@
+---
+title: "Differences between Quarto and Markdown"
+---
+
+While Markdown and Quarto are closely related, they operate at different conceptual levels. Markdown is a markup language, a way of writing text that includes lightweight formatting instructions. It allows authors to create structured documents using plain text syntax for elements such as headings, lists, and emphasis. However, Markdown by itself does not support code execution, metadata, or dynamic output. It is ideal for writing static content like documentation or notes but lacks the ability to combine text with live results or automated analysis.
+
+Quarto, by contrast, is a document generation and publishing framework that builds on Markdown. It extends Markdown’s simple syntax with tools for executing embedded R code, managing metadata, styling, and rendering outputs to multiple formats such as HTML, PDF, and slides. In practice, this means that Markdown provides the structure, while Quarto provides the workflow — handling the integration between narrative, computation, and presentation. For students working with R, Quarto enables reproducible reporting where statistical results and visualizations are generated automatically from the underlying code, ensuring accuracy and consistency across analyses.
+
+| **Layer** | **Example** | **Purpose** |
+|----------------------|-------------------------|-------------------------|
+| **Language layer** | Markdown | Provide the text structure, document content, and basic formatting syntax. |
+| **Processing layer** | Quarto | Interpret Markdown, integrate executable R code, and render the combined text and results into polished output formats such as HTML or PDF. |
+| **Computation layer** | R (and optionally Python, Julia) | Perform statistical analysis, generate tables and plots, and supply dynamic results that are embedded into the rendered document. |
+
+RStudio provides an integrated environment where **Markdown**, **Quarto**, and **R** work together to support reproducible and dynamic report writing. In this workflow, Markdown serves as the *language* for structuring text and formatting documents, while Quarto functions as the *publishing framework* that interprets Markdown, executes embedded R code, and converts the combined content into professional outputs such as reports, presentations, or dashboards. R supplies the *computational layer*, performing statistical analyses, generating visualizations, and producing results that are automatically incorporated into the final document. Together, these tools allow students to write, analyze, and present their work within a single, seamless system inside RStudio.

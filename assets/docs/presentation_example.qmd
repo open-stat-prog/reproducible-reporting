@@ -1,0 +1,70 @@
+---
+title: "Example presentation"
+author: "Open Statistical Programming"
+date: "2025-01-01"
+format: 
+  revealjs:
+    theme: simple
+    transition: slide
+    code-overflow: wrap
+    slide-number: true
+execute:
+  echo: true
+  warning: false
+---
+
+# Introduction
+
+Welcome to this short **Reveal.js presentation** created with Quarto.
+
+This presentation demonstrates how to combine **text**, **R code**, and **visualizations** into reproducible slides.
+
+---
+
+## About the Data
+
+We’ll use the built-in `mtcars` dataset to explore the relationship between horsepower (`hp`) and fuel efficiency (`mpg`).
+
+```{r}
+head(mtcars)
+```
+
+---
+
+## Visualizing the Relationship
+
+```{r}
+library(ggplot2)
+
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point(color = "steelblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "darkorange") +
+  labs(title = "Fuel Efficiency vs Horsepower",
+       x = "Horsepower (hp)",
+       y = "Miles per Gallon (mpg)")
+```
+
+---
+
+## Interpretation
+
+* Cars with higher horsepower generally have **lower fuel efficiency**.
+* The trend line shows a clear negative correlation between the two variables.
+* Such visualizations can support discussions in reports and presentations.
+
+---
+
+## Summary
+
+* **Markdown** provides the structure and narrative.
+* **R** executes the analysis and visualization.
+* **Quarto** integrates both to produce polished slides.
+
+Learn more:
+[Reveal.js Presentations in Quarto](https://quarto.org/docs/presentations/revealjs/)
+
+
+
+
+
+

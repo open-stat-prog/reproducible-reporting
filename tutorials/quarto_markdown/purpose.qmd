@@ -1,0 +1,51 @@
+---
+title: "The purpose of Markdown and Quarto"
+---
+
+## Introduction to Quarto and Markdown
+
+Before learning how to create documents and reports, it is important to understand the two core technologies behind this workflow: **Quarto** and **Markdown**. These tools form the foundation for reproducible, flexible, and professional document creation.
+
+## What Is Quarto?
+
+Quarto is an open-source publishing system designed to create high-quality, reproducible documents and websites from plain text files. It allows you to combine written content, code, data, and visualizations in a single workflow.
+
+Quarto supports multiple programming languages—such as R, Python, Julia, and Observable—and can produce outputs in a variety of formats, including HTML, PDF, Microsoft Word, and PowerPoint.
+
+Because Quarto integrates writing and computation, it is particularly well-suited for:
+
+-   Data science reports Research papers and technical documentation
+-   Educational materials and presentations
+-   Reproducible workflows and analysis pipelines
+
+In short, Quarto bridges the gap between writing and computation, helping you communicate results in a clear and automated way.
+
+::: {.column-margin}
+
+::: reading
+
+For official documentation, installation instructions, and tutorials, see the [Quarto website](https://quarto.org/).
+
+:::
+
+:::
+
+## What is Markdown? 
+
+Markdown is a lightweight text formatting language. It allows you to write plain text that can be easily converted into formatted documents such as web pages or PDFs.
+
+Instead of relying on graphical formatting tools (like bold or italic buttons), Markdown uses simple text-based markers that represent formatting instructions. The result is a writing experience that is both human-readable and machine-friendly.
+
+Markdown was originally created by John Gruber in 2004 with the goal of making writing for the web more accessible and less cluttered by code-like markup languages such as HTML.
+
+Markdown has since become a standard tool for technical communication, documentation, and note-taking, forming the foundation of many modern publishing systems — including Quarto.
+
+::: {.column-margin}
+
+::: reading
+
+[Here](https://daringfireball.net/projects/markdown/) you find the link to the original Markdown paper.
+
+:::
+
+:::

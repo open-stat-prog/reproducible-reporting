@@ -1,5 +1,5 @@
 ---
-title: "Knowledge Quiz: Tutorial 1"
+title: "Knowledge Quiz: Tutorial 2"
 ---
 
 ::: {.column-margin}
@@ -11,16 +11,14 @@ title: "Knowledge Quiz: Tutorial 1"
 
 :::
 
-```{r quiz1}
+```{r quiz2, eval=FALSE}
 #| echo: FALSE
 #| results: "asis"
 
 exams2forms::exams2forms(
   file = list(
-    "logical.Rmd",
-    "arithmetic2.Rmd",
-    "default_arguments2.Rmd"
+    "bad_question.Rmd"
   ),
-  edir = here::here("quizzes", "first_tutorial", "questions")
+  edir = here::here("quizzes", "second_tutorial", "questions")
 )
 ```
