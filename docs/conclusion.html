@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./tutorials/reproducibility/workflows.html" rel="prev">
+<link href="./tutorials/presenting_output/plots.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,6 +71,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -95,19 +108,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -234,19 +234,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/chunk_options/code_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+ <span class="menu-text">Introduction to code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/chunk_options/create_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Create code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/chunk_options/chunk_options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
       </ul>
@@ -263,19 +263,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/writing_text/text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Writing text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/writing_text/structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
+ <span class="menu-text">Adding structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/writing_text/inline_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
       </ul>
@@ -292,42 +292,13 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/presenting_output/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./tutorials/reproducibility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducibility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tutorials/reproducibility/portable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tutorials/reproducibility/reuse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tutorials/reproducibility/workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Figures</span></a>
   </div>
 </li>
       </ul>
@@ -366,21 +337,9 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 </header>
 
 
-<p>Use this page to provide some kind of brief wrap-up.</p>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>If your module feeds naturally into another, link that module through the button below as a suggestion for further study.</p>
-<ul>
-<li>Here, we’re linking to the <em>First Steps</em> module.</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<section id="buttons">
-<a id="nextButton" class="btn btn-primary float-start" href="https://www.openstatprog.com/first-steps/" role="button"> Next Module </a>
-</section>
-</div>
+<p>You successfully completed the module “Reproducible reporting”. You should now be able to generate written documents and presentations where you can seamlessly integrate your text and explanations with your coding in R chunks.</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -784,8 +743,8 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./tutorials/reproducibility/workflows.html" class="pagination-link" aria-label="Images &amp; Figures">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Images &amp; Figures</span>
+      <a href="./tutorials/presenting_output/plots.html" class="pagination-link" aria-label="Figures">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Figures</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

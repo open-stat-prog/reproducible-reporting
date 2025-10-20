@@ -1,62 +1,118 @@
 ---
-title: "Code Blocks"
+title: "Tables"
 ---
 
-This is the first topic file for Tutorial 1.
 
-- Such topic files should cover one substantively meaningful chunk of content.
+Tables are a common way to summarize data in reports. Quarto allows you to produce tables **directly in Markdown** or **dynamically from R**. Using clear, readable tables improves the presentation of results and makes your documents more professional and accessible.
 
-## Code Blocks
+## Text-Based Tables in Markdown
 
-Use **knitr** code blocks to include non-interactive R code.
+For simple tables, you can write them directly in Markdown using the pipe (`|`) syntax. This is ideal for small, static tables that do not require dynamic calculations.
+
+**Example:**
+
+```markdown
+| Group | Mean | SD  |
+|-------|------|-----|
+| A     | 5.2  | 1.1 |
+| B     | 6.8  | 0.9 |
+| C     | 4.9  | 1.3 |
+```
+
+Rendered output:
+
+| Group | Mean | SD  |
+| ----- | ---- | --- |
+| A     | 5.2  | 1.1 |
+| B     | 6.8  | 0.9 |
+| C     | 4.9  | 1.3 |
+
+* Use `---` under headers for proper alignment.
+* Columns can be aligned left (`:` on left), right (`:` on right), or center (`:` on both sides):
+
+```markdown
+| Group | Mean | SD  |
+|:------|----:|:---:|
+| A     | 5.2 | 1.1 |
+| B     | 6.8 | 0.9 |
+| C     | 4.9 | 1.3 |
+```
+Results in aligned columns like this: 
+
+| Group | Mean | SD  |
+|:------|----:|:---:|
+| A     | 5.2 | 1.1 |
+| B     | 6.8 | 0.9 |
+| C     | 4.9 | 1.3 |
+
+
+## Generating Tables from R with `knitr::kable`
+
+For tables that come from your R data (e.g., data frames, summaries), Quarto integrates seamlessly with `knitr::kable` to produce clean, nicely formatted tables.
+
+**Example:**
+
+When producing tables are raw output, they will look like this:
+```{r}
+#| echo: TRUE
+
+library(knitr)
+
+data <- data.frame(
+  Group = c("A", "B", "C"),
+  Mean  = c(5.2, 6.8, 4.9),
+  SD    = c(1.1, 0.9, 1.3)
+)
+
+data
+```
+
+When using kable, they can be formatted more neatly: 
+```{r}
+#| echo: TRUE
+
+kable(data, caption = "Summary statistics by group")
+```
+
+
+* `caption` adds a descriptive label for the table.
+* `kable` automatically aligns columns neatly.
+* For larger or more complex tables, you can also use **`kableExtra`** to add styling, colors, or column formatting.
 
 ```{r}
-## Add 2 and 2
-2 + 2
+#| echo: TRUE
 
-## Divide 225 by 15 and print the result
-(x <- 225 / 15)
+library(kableExtra)
+
+mean_score <- mean(data$Mean)
+
+kable(data, caption = paste("Summary statistics (overall mean:", round(mean_score, 2), ")")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#4CAF50")  # header row styling
 ```
 
-Use **quarto-webr** code blocks for interactive R exercises.
+* `kable_styling()`: Adds table styling options like **striped rows**, **hover effect**, and **condensed spacing**.
+* `row_spec(0, ...)`: Styles the header row (0 = header) with **bold text**, **white font**, and a **green background**.
+* The caption dynamically includes the **overall mean** calculated from the data.
 
-```{webr-r}
-fit <- lm(Petal.Length ~ Petal.Width, data = iris)
-summary(fit)
-```
+Rendered in HTML, this produces a **professional, readable table** that’s visually distinct and easier to interpret than a plain `kable()` table.
 
-### Code Block Environments
+You can also add row colors, column formatting, or footnotes with other `kableExtra` functions for even more control.
 
-A single execution environment is shared across code blocks of the same type.
 
-- All the **knitr** code blocks in a QMD file will share an evaluation environment.
-- Likewise for the **quarto-webr** code blocks
+## Tips for Readable Tables
 
-```{r}
-x^2
-```
+1. **Keep them concise**: Avoid overcrowding a table with too many columns or unnecessary decimals.
+2. **Label clearly**: Use meaningful headers and, if needed, a descriptive caption.
+3. **Round numbers**: Format numeric results for readability.
+4. **Consistent styling**: For longer reports, stick with a single table style (Markdown or `kable`) for consistency.
 
-```{webr-r}
-confint(fit)
-```
 
-**knitr** and **quarto-webr** code blocks to not share the same environment, though.
+::: {.column-margin}
 
-```{r, error = TRUE}
-resid(fit)
-```
+:::: resource
+For more detail, see [the Quarto documentation](https://quarto.org/docs/authoring/tables.html)
+::::
 
-```{webr-r}
-sqrt(x)
-```
+:::
 
-If you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a
-**knitr** chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.
-
-- Don't forget to set an appropriate seed, if you're trying to regenerate a stochastic object.
-
-### Inline Code
-
-Use **knitr** inline code chunks to embed R output in text blocks.
-
-- E.g., R says the squareroot of 2 is `r sqrt(2)`.

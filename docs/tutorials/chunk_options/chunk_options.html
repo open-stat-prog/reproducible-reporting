@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Second Topic – OSP Module Template</title>
+<title>Chunk options – OSP Module Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,32 +107,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -124,13 +133,39 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 </style>
 
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -176,7 +211,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/chunk_options.html">Second Topic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/chunk_options.html">Chunk options</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -235,19 +270,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/code_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+ <span class="menu-text">Introduction to code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/create_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Create code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/chunk_options.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
       </ul>
@@ -264,19 +299,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Writing text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
+ <span class="menu-text">Adding structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/inline_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
       </ul>
@@ -293,42 +328,13 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../tutorials/reproducibility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducibility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/portable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/reuse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Figures</span></a>
   </div>
 </li>
       </ul>
@@ -344,15 +350,27 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#display-control-options" id="toc-display-control-options" class="nav-link" data-scroll-target="#display-control-options">Display Control Options</a></li>
+  <li><a href="#execution-options" id="toc-execution-options" class="nav-link" data-scroll-target="#execution-options">Execution Options</a></li>
+  <li><a href="#figure-and-table-options" id="toc-figure-and-table-options" class="nav-link" data-scroll-target="#figure-and-table-options">Figure and Table Options</a></li>
+  <li><a href="#caching-and-performance-options" id="toc-caching-and-performance-options" class="nav-link" data-scroll-target="#caching-and-performance-options">Caching and Performance Options</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/chunk_options.html">Second Topic</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/chunk_options.html">Chunk options</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Second Topic</h1>
+<h1 class="title">Chunk options</h1>
 </div>
 
 
@@ -369,10 +387,93 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 </header>
 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-<p>Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.</p>
+<section id="introduction" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.</p>
+<p>Chunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-resource callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+External Resources
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://quarto.org/docs/computations/r.html#chunk-options">Quarto documentation on chunk options</a></p>
+</div>
+</div>
+</div></div><p>Quarto uses a <strong>YAML-style syntax</strong> for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to <code>{r}</code>, you write them <strong>as commented lines beginning with <code>#|</code></strong> inside the chunk, directly below the chunk header. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>#| label: data-summary</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>#| echo: TRUE</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>#| message: FALSE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here:</p>
+<ul>
+<li><code>label:</code> assigns a unique name to the chunk.</li>
+<li><code>echo:</code> determines whether the code appears in the rendered document.</li>
+<li><code>message:</code> controls whether R messages are shown.</li>
+</ul>
+<p>This “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).</p>
+<section id="display-control-options" class="level3">
+<h3 class="anchored" data-anchor-id="display-control-options">Display Control Options</h3>
+<p>Display-related options determine what content from a chunk appears in the final rendered document.</p>
+<ul>
+<li><strong><code>echo</code></strong> controls whether the source code itself is shown (<code>TRUE</code> shows it, <code>FALSE</code> hides it).</li>
+<li><strong><code>results</code></strong> specifies how the printed results appear (e.g., <code>"markup"</code> for normal output or <code>"hide"</code> to suppress).</li>
+<li><strong><code>warning</code></strong> and <strong><code>message</code></strong> control whether warnings or messages are displayed.</li>
+</ul>
+<p>For instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>#| echo: FALSE</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mean(c(5, 10, 15))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Which would only print the output when being rendered in a Quarto document:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+</section>
+<section id="execution-options" class="level3">
+<h3 class="anchored" data-anchor-id="execution-options">Execution Options</h3>
+<p>Execution options govern whether and how the code runs when Quarto renders the document.</p>
+<ul>
+<li><strong><code>eval</code></strong> determines if the chunk should be executed (<code>TRUE</code> or <code>FALSE</code>).</li>
+<li><strong><code>include</code></strong> controls whether both code and results appear in the final output; <code>include: FALSE</code> runs the code but hides all output.</li>
+<li><strong><code>error</code></strong> specifies whether rendering should continue if an error occurs (<code>TRUE</code>) or stop (<code>FALSE</code>).</li>
+</ul>
+<p>For example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>#| label: setup</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>#| include: FALSE</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>library(ggplot2)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>library(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="figure-and-table-options" class="level3">
+<h3 class="anchored" data-anchor-id="figure-and-table-options">Figure and Table Options</h3>
+<p>When your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.</p>
+<ul>
+<li><strong><code>fig-cap</code></strong> adds a caption to a plot.</li>
+<li><strong><code>fig-width</code></strong> and <strong><code>fig-height</code></strong> set the dimensions (in inches).</li>
+<li><strong><code>fig-align</code></strong> specifies the alignment (<code>"left"</code>, <code>"center"</code>, or <code>"right"</code>).</li>
+</ul>
+<p>For example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>#| label: visualization</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>#| echo: FALSE</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>#| fig-cap: "Distribution of scores by group."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="caching-and-performance-options" class="level3">
+<h3 class="anchored" data-anchor-id="caching-and-performance-options">Caching and Performance Options</h3>
+<p>For time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.</p>
+<ul>
+<li><strong><code>cache: TRUE</code></strong> saves the chunk’s results; subsequent renders reuse them unless the code changes.</li>
+</ul>
+<p>Caching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.</p>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -783,8 +884,8 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../tutorials/chunk_options/create_chunks.html" class="pagination-link" aria-label="Second Topic">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Second Topic</span>
+      <a href="../../tutorials/chunk_options/create_chunks.html" class="pagination-link" aria-label="Create code chunks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Create code chunks</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

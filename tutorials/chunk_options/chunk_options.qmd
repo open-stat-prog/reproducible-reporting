@@ -1,5 +1,101 @@
 ---
-title: "Second Topic"
+title: "Chunk options"
 ---
 
-{{< lipsum 2 >}}
+## Introduction
+
+Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.
+
+Chunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).
+
+::: {.column-margin}
+
+:::: resource
+[Quarto documentation on chunk options](https://quarto.org/docs/computations/r.html#chunk-options)
+::::
+
+:::
+
+
+Quarto uses a **YAML-style syntax** for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to `{r}`, you write them **as commented lines beginning with `#|`** inside the chunk, directly below the chunk header. For example:
+
+````markdown
+#| label: data-summary
+#| echo: TRUE
+#| message: FALSE
+````
+
+Here:
+
+* `label:` assigns a unique name to the chunk.
+* `echo:` determines whether the code appears in the rendered document.
+* `message:` controls whether R messages are shown.
+
+This “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).
+
+### Display Control Options
+
+Display-related options determine what content from a chunk appears in the final rendered document.
+
+* **`echo`** controls whether the source code itself is shown (`TRUE` shows it, `FALSE` hides it).
+* **`results`** specifies how the printed results appear (e.g., `"markup"` for normal output or `"hide"` to suppress).
+* **`warning`** and **`message`** control whether warnings or messages are displayed.
+
+For instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:
+
+````markdown
+#| echo: FALSE
+mean(c(5, 10, 15))
+````
+
+Which would only print the output when being rendered in a Quarto document:
+```{r}
+#| echo: FALSE
+mean(c(5, 10, 15))
+```
+
+### Execution Options
+
+Execution options govern whether and how the code runs when Quarto renders the document.
+
+* **`eval`** determines if the chunk should be executed (`TRUE` or `FALSE`).
+* **`include`** controls whether both code and results appear in the final output; `include: FALSE` runs the code but hides all output.
+* **`error`** specifies whether rendering should continue if an error occurs (`TRUE`) or stop (`FALSE`).
+
+For example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:
+
+````markdown
+#| label: setup
+#| include: FALSE
+
+library(ggplot2)
+library(dplyr)
+````
+
+### Figure and Table Options
+
+When your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.
+
+* **`fig-cap`** adds a caption to a plot.
+* **`fig-width`** and **`fig-height`** set the dimensions (in inches).
+* **`fig-align`** specifies the alignment (`"left"`, `"center"`, or `"right"`).
+
+For example:
+
+````markdown
+#| label: visualization
+#| echo: FALSE
+#| fig-cap: "Distribution of scores by group."
+````
+
+### Caching and Performance Options
+
+For time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.
+
+* **`cache: TRUE`** saves the chunk’s results; subsequent renders reuse them unless the code changes.
+
+Caching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.
+
+
+
+

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Second Topic – OSP Module Template</title>
+<title>Create code chunks – OSP Module Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,14 +72,14 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -98,6 +98,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
+div.callout-reading.callout {
+  border-left-color: purple;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: orange;
 }
@@ -109,19 +122,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -176,7 +176,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/create_chunks.html">Second Topic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/create_chunks.html">Create code chunks</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -235,19 +235,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/code_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+ <span class="menu-text">Introduction to code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/create_chunks.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Create code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/chunk_options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
       </ul>
@@ -264,19 +264,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Writing text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
+ <span class="menu-text">Adding structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/inline_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
       </ul>
@@ -293,42 +293,13 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../tutorials/reproducibility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducibility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/portable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/reuse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Figures</span></a>
   </div>
 </li>
       </ul>
@@ -344,15 +315,23 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quarto-visual-mode-in-r-studio" id="toc-quarto-visual-mode-in-r-studio" class="nav-link active" data-scroll-target="#quarto-visual-mode-in-r-studio">Quarto visual mode in R studio</a></li>
+  <li><a href="#quarto-source-mode-in-r-studio" id="toc-quarto-source-mode-in-r-studio" class="nav-link" data-scroll-target="#quarto-source-mode-in-r-studio">Quarto source mode in R studio</a></li>
+  <li><a href="#labelling-chunks" id="toc-labelling-chunks" class="nav-link" data-scroll-target="#labelling-chunks">Labelling chunks</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/create_chunks.html">Second Topic</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/create_chunks.html">Create code chunks</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Second Topic</h1>
+<h1 class="title">Create code chunks</h1>
 </div>
 
 
@@ -369,10 +348,38 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 </header>
 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-<p>Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.</p>
+<section id="quarto-visual-mode-in-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-visual-mode-in-r-studio">Quarto visual mode in R studio</h2>
+<p>When working with Quarto documents, you can switch between a “Source”and a “Visual” mode in R studio. In ths Visual mode, you can click on “Insert” –&gt; “Executable Cell” –&gt; “R”. Here you also see the various other programming languages listed that are supported by Quarto.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/GUI_chunks.png" class="img-fluid figure-img"></p>
+<figcaption>Creating chunks through the Visual mode</figcaption>
+</figure>
+</div>
+<p>When creating a chunk like this, a block appears in your .qmd file where you can directly type your R code.</p>
+<p>Although you can find everything you need to create your full .qmd file in the “Visual” mode with the guided user interface, we recommend to work in “Source” mode as much as possible.</p>
+</section>
+<section id="quarto-source-mode-in-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-source-mode-in-r-studio">Quarto source mode in R studio</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/Source_chunks.jpg" class="img-fluid figure-img"></p>
+<figcaption>Creating chunks through the Source mode</figcaption>
+</figure>
+</div>
+<p>In <strong>source mode</strong>, you can create a code chunk by typing three backticks followed by the language in curly braces—for example, <code>```{r}</code> for R, and then closing the chunk with another set of three backticks. Everything between these fences will be treated as executable code when the document is rendered.</p>
+<p>As you develop a Quarto document, it’s good practice to <strong>regularly check that it still executes correctly</strong>. The most direct way to do this is by <strong>rendering</strong> the document frequently. Rendering runs all code chunks in sequence, ensuring that each one can be executed successfully and that objects or results are correctly available when needed. You can render the document by clicking the <strong>Render</strong> button in RStudio, using the keyboard shortcut <strong>Ctrl + Shift + K</strong> (Windows/Linux) or <strong>Cmd + Shift + K</strong> (Mac), or by running <code>quarto render yourfile.qmd</code> in the terminal.</p>
+<p>If the document executes without errors, the rendered output (HTML, PDF, or Word) will be updated. If an error occurs, Quarto will stop rendering and display a message pointing to the problematic chunk. Reading these messages carefully helps identify where code might rely on outdated objects or missing packages. Running code chunks <strong>individually</strong> in RStudio (by clicking the green play icon at the top right of each chunk or pressing <strong>Ctrl + Shift + Enter</strong>) is another useful way to test smaller sections before rendering the entire document. By checking execution regularly, you can catch issues early and ensure your document remains fully reproducible from start to finish.</p>
+</section>
+<section id="labelling-chunks" class="level2">
+<h2 class="anchored" data-anchor-id="labelling-chunks">Labelling chunks</h2>
+<p>Each R code chunk in a Quarto document can be given a <strong>label</strong>, which is specified immediately after the opening <code>{r}</code> in the chunk header. For example: ```<code>#| label: data-summary</code>.</p>
+<p>The label <code>data-summary</code> uniquely identifies this chunk. Labels serve several important purposes. They make your document easier to navigate, help organize the flow of your analysis, and are used internally by Quarto for features such as <strong>caching</strong>, <strong>error reporting</strong>, and <strong>cross-referencing</strong>. For instance, if a rendering error occurs, Quarto reports it using the chunk label, making it straightforward to locate the source of the problem. Labels are also used to name figures or tables generated by that chunk, which ensures consistent and readable file names in your output directory.</p>
+<p>As a matter of good practice, chunk labels should be <strong>unique</strong>, <strong>short but descriptive</strong>, and <strong>use only lowercase letters, numbers, and hyphens or underscores</strong> (avoid spaces or special characters). A clear naming convention—such as <code>data-load</code>, <code>model-fit</code>, or <code>plot-results</code>—helps maintain readability and reproducibility, especially in longer documents. Consistent labeling not only improves your own workflow but also supports collaboration, as others can easily follow the structure and dependencies of your analysis.</p>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -783,13 +790,13 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../tutorials/chunk_options/code_chunks.html" class="pagination-link" aria-label="First Topic">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">First Topic</span>
+      <a href="../../tutorials/chunk_options/code_chunks.html" class="pagination-link" aria-label="Introduction to code chunks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction to code chunks</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/chunk_options/chunk_options.html" class="pagination-link" aria-label="Second Topic">
-        <span class="nav-page-text">Second Topic</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/chunk_options/chunk_options.html" class="pagination-link" aria-label="Chunk options">
+        <span class="nav-page-text">Chunk options</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,30 +1,97 @@
 ---
-title: "Images & Figures"
+title: "Inline code and results"
 ---
 
-This is the third topic file for Tutorial 1.
+In Quarto, **inline code** allows you to execute R expressions (or code in other supported languages) directly within your narrative text. This makes it possible to **embed calculated results dynamically** into your report, so your text always reflects the latest data or computations. Inline code is particularly useful for reporting **summary statistics**, **model results**, or **dates** without manually updating the text.
 
-## Assets Directory
 
-All pre-rendered assets (i.e., files that will not rendered/compiled into some other format) that you want to include in
-your website should live somewhere in the "/assets/" directory.
+## Syntax for Inline Code
 
-- `/assets/images/`: Image files
-- `/assets/figures/`: Scientific figures (e.g., graphs, plots, diagrams)
-- `/assets/docs/`: Pre-rendered documents (e.g., HTML)
+Inline R code in Quarto is enclosed with **single backticks** and starts with the language identifier, followed by the expression:
 
-## Images
-
-![A Nice Mountain View](/assets/images/ecrins_pano.jpg)
-
-## Figures
-
-![Serial Multiple Mediation](/assets/figures/mediation.png)
-
-## Documents
-
-Include a pre-rendered HTML files as part of this webpage.
-
-```{=html}
-{{< include /assets/docs/arrange.html >}}
+```{r}
+#| eval: false 
+`r 2 + 2`
 ```
+
+Including such a statement in text directly runs the code and prints the result: `r 2 + 2`.
+
+Similarly, you can embed variables defined in previous code chunks:
+
+
+```{r}
+mean_score <- mean(c(5, 10, 15))
+mean_score
+```
+
+If we now include in a sentence 
+```{r}
+#| eval: false 
+`r mean_score`
+```
+
+This immediately prints the value of `mean_score`: The average score is `r mean_score`.
+
+
+Key points:  
+- The expression inside the inline code is evaluated **at render time**.  
+- You can use any valid R expression, including functions, arithmetic, or objects created in previous chunks.  
+- Inline code only outputs the **result**, not the code itself.
+
+
+## Using Inline Code in Text
+
+Inline code can be used in:
+
+1. **Numerical results**:
+
+```{r}
+#| eval: false 
+The dataset contains `r nrow(mtcars)` rows and `r ncol(mtcars)` columns.
+```
+
+The dataset contains `r nrow(mtcars)` rows and `r ncol(mtcars)` columns.
+
+
+2. **Statistical summaries**:
+
+```{r}
+#| eval: false 
+The mean mpg is `r round(mean(mtcars$mpg), 1)`.
+```
+
+The mean mpg is `r round(mean(mtcars$mpg), 1)`.
+
+
+3. **Dynamic dates or times**:
+
+```{r}
+#| eval: false 
+Report generated on `r Sys.Date()`.
+```
+
+Report generated on `r Sys.Date()`.
+
+
+4. **Model results**:
+
+```{r}
+#| eval: false 
+The regression slope is `r coef(lm(mpg ~ wt, data = mtcars))[2]`.
+```
+
+The regression slope is `r coef(lm(mpg ~ wt, data = mtcars))[2]`.
+
+
+These ensure your narrative text always reflects the **current state of your analysis**.
+
+
+## Best Practices
+
+* **Keep expressions simple**: Inline code should be concise; longer computations belong in code chunks.
+* **Name variables clearly**: Use descriptive names in code chunks so inline references are readable.
+* **Round or format results**: Inline outputs may need rounding (`round()`) or formatting (`format()`) for clarity.
+
+
+Inline code is a key feature for **reproducible reporting**, as it reduces manual copying of results and ensures that text and code remain **synchronized**. By combining inline expressions with code chunks, you can create documents that automatically update whenever your data or analysis changes.
+

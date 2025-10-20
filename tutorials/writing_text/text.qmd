@@ -1,62 +1,118 @@
 ---
-title: "Code Blocks"
+title: "Writing text"
 ---
 
-This is the first topic file for Tutorial 1.
+## Text
 
-- Such topic files should cover one substantively meaningful chunk of content.
+Quarto builds on **Pandoc Markdown**, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:
 
-## Code Blocks
+* *Italics* can be written as `*italics*` or `_italics_`.
+* **Bold** is `**bold**` or `__bold__`.
+* ***Bold italics*** is `***bold italics***` (or alternatives combining `**` and `*`).
+* **Strikethrough**: `~~text~~` → ~~text~~.
+* **Inline (verbatim) code**: enclose text in backticks, e.g. `` `my_var <- 10` `` → `my_var <- 10`.
+* **Superscript / subscript**:
+    - `superscript^2^` → superscript²
+    - `subscript~2~` → subscript₂
+  You can also use braces to clarify: `superscript^{2}` or `subscript_{2}`.
+* Quarto also allows adding stylistic classes via span syntax, e.g.
+    `[This is smallcaps]{.smallcaps}` → (renders in small caps if supported).
 
-Use **knitr** code blocks to include non-interactive R code.
+This formatting gives you fine control over text appearance without leaving Markdown.
 
-```{r}
-## Add 2 and 2
-2 + 2
+## Lists
 
-## Divide 225 by 15 and print the result
-(x <- 225 / 15)
-```
+Lists are central to organizing information. Quarto supports both **unordered** and **ordered** lists, and nested lists. 
 
-Use **quarto-webr** code blocks for interactive R exercises.
+* **Unordered lists**: start lines with `*`, `+`, or `-`. For example:
 
-```{webr-r}
-fit <- lm(Petal.Length ~ Petal.Width, data = iris)
-summary(fit)
-```
+  ```markdown
+  * Item A  
+  * Item B  
+    + Sub-item B1  
+    + Sub-item B2  
+  * Item C  
+  ```
 
-### Code Block Environments
+Results in: 
 
-A single execution environment is shared across code blocks of the same type.
+  * Item A  
+  * Item B  
+    + Sub-item B1  
+    + Sub-item B2  
+  * Item C
 
-- All the **knitr** code blocks in a QMD file will share an evaluation environment.
-- Likewise for the **quarto-webr** code blocks
 
-```{r}
-x^2
-```
+* **Ordered lists**: use numbers followed by a dot:
 
-```{webr-r}
-confint(fit)
-```
+  ```markdown
+  1. First step  
+  2. Second step  
+     i) Subtask  
+     ii) Another subtask  
+  3. Third  
+  ```
 
-**knitr** and **quarto-webr** code blocks to not share the same environment, though.
+Results in: 
 
-```{r, error = TRUE}
-resid(fit)
-```
+  1. First step  
+  2. Second step  
+     i) Subtask  
+     ii) Another subtask  
+  3. Third  
 
-```{webr-r}
-sqrt(x)
-```
+* **Task lists**: Quarto supports “checklist” style items using `[ ]` or `[x]`:
 
-If you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a
-**knitr** chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.
+  ```markdown
+  - [ ] Task 1  
+  - [x] Task 2 (done)  
+  ```
 
-- Don't forget to set an appropriate seed, if you're trying to regenerate a stochastic object.
+Results in clickable boxes: 
 
-### Inline Code
+  - [ ] Task 1  
+  - [x] Task 2 (done)  
 
-Use **knitr** inline code chunks to embed R output in text blocks.
+* **Continuation lists**: Quarto allows list numbering to continue across interruptions using `(@)` to resume numbering.
 
-- E.g., R says the squareroot of 2 is `r sqrt(2)`.
+One **important note**: unlike some Markdown flavors (e.g. GitHub-Flavored Markdown), Quarto **requires a blank line before a list** for it to render properly. If you don’t insert a blank line, the line may just appear as ordinary text. You can always quickly check this by switching to the visual mode in R studio.
+
+
+## Links
+
+Quarto supports standard Markdown link syntax, plus extended capabilities.
+
+* **Inline link**: `[Quarto](https://quarto.org)` → [Quarto](https://quarto.org)
+* **Autolink URLs**: `<https://quarto.org>` → <https://quarto.org>
+
+These allow you to interweave narrative and media seamlessly.
+
+
+## Equations (Mathematical Notation)
+
+Quarto supports LaTeX-style math syntax using `$` and `$$` delimiters.
+
+* **Inline math**: wrap expressions in single dollar signs, e.g.
+    `This is inline: $E = mc^2$.` → This is inline: $(E = mc^2)$.
+
+* **Display (block) math**: wrap in double dollar signs:
+
+  ```markdown
+  $$
+  E = mc^2
+  $$
+  ```
+
+  → renders centered on its own line, looking as follows:
+  $$
+  E = mc^2
+  $$
+
+
+::: {.column-margin}
+
+:::: resource
+[Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+::::
+
+:::

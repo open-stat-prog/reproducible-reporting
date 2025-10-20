@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>First Topic – OSP Module Template</title>
+<title>Introduction to code chunks – OSP Module Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,19 +107,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -98,17 +120,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -122,6 +144,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -176,7 +211,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/code_chunks.html">First Topic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/code_chunks.html">Introduction to code chunks</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -235,19 +270,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/code_chunks.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">First Topic</span></a>
+ <span class="menu-text">Introduction to code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/create_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Create code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/chunk_options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
       </ul>
@@ -264,19 +299,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Writing text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
+ <span class="menu-text">Adding structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/inline_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
       </ul>
@@ -293,42 +328,13 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../tutorials/reproducibility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducibility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/portable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/reuse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Figures</span></a>
   </div>
 </li>
       </ul>
@@ -349,16 +355,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#blah" id="toc-blah" class="nav-link active" data-scroll-target="#blah">Blah</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/code_chunks.html">First Topic</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/index.html">Chunks and options</a></li><li class="breadcrumb-item"><a href="../../tutorials/chunk_options/code_chunks.html">Introduction to code chunks</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">First Topic</h1>
+<h1 class="title">Introduction to code chunks</h1>
 </div>
 
 
@@ -375,11 +382,78 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-<section id="blah" class="level2">
-<h2 class="anchored" data-anchor-id="blah">Blah</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-<p>Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. They serve as the fundamental bridge between the narrative and computational parts, and they enable a seamless integration of analysis and exposition. Each chunk is delimited by a specific syntax (for example, triple backticks followed by a language label such as {r}) that tells Quarto which language engine to use. When the document is rendered, Quarto evaluates these chunks in the specified language environment, captures their outputs—such as console text, tables, plots, or other visualizations—and inserts them directly into the document at the chunk’s position. This workflow supports the principles of literate programming and reproducible research, ensuring that results are dynamically linked to the underlying code rather than being static artifacts.</p>
+<p>Conceptually, Quarto treats code chunks as part of a larger computational document graph. During rendering, Quarto manages execution order, variable environments, and inter-chunk dependencies to maintain consistency. This means that chunks are not merely snippets of text to be formatted; they are active components in the document’s computational state. For instance, a variable created in one chunk can be referenced and used in another, allowing for modular, incremental development of analyses. Quarto also provides mechanisms for caching, error handling, and execution control, giving users flexibility in how computation is performed during document compilation.</p>
+<p>Importantly, code chunks are not limited to R. They can be written in Python, Julia, or other supported languages within the same document. This multilingual capability makes Quarto a versatile platform for mixed-language workflows, which are increasingly common in data science and applied research.</p>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p><strong>First chunk:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a small dataset</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">5</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">82</span>, <span class="at">sd =</span> <span class="dv">6</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Display a quick summary of the data</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data<span class="sc">$</span>score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  68.67   73.58   78.91   79.31   84.22   92.72 </code></pre>
+</div>
+</div>
+<p>In the first chunk, we see a dataset being generated and stored. Next, we see that the summary of this dataset is being requested. When rendering the document, the output of this request is automatically being printed in the document (as you can see printed directly below the code chunk).</p>
+<p><strong>Second chunk:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the dataset created in the previous chunk</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(score <span class="sc">~</span> group, <span class="at">data =</span> data)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display regression results</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = score ~ group, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.0514  -3.3335   0.1264   2.1877   9.4697 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   75.373      1.754  42.970  &lt; 2e-16 ***
+groupB         7.879      2.481   3.176  0.00523 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 5.547 on 18 degrees of freedom
+Multiple R-squared:  0.3591,    Adjusted R-squared:  0.3235 
+F-statistic: 10.09 on 1 and 18 DF,  p-value: 0.005231</code></pre>
+</div>
+</div>
+<p>The second chunk takes the dataset that was stored in the first chunk and performs some additional analysis on this, which is again printed directly below the chunk. This illustrates the dependencies between separate code chunks.</p>
+<p><strong>Third chunk:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="code_chunks_files/figure-html/visualization-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Distribution of scores by group.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The third chunk again illustrates this dependency, and in addition also shows that code can be executed that creates visualizations, which are then also directly executed and printed in the document.</p>
+<p>Together, these three chunks illustrate that:</p>
+<ul>
+<li><strong>Each chunk is executed in the same R session</strong>, meaning objects like <code>data</code> and <code>model</code> persist across chunks.</li>
+<li><strong>Output is automatically captured and displayed</strong>, first as numerical summaries, then as model output, and finally as a plot.</li>
+</ul>
 
 
 </section>
@@ -798,8 +872,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/chunk_options/create_chunks.html" class="pagination-link" aria-label="Second Topic">
-        <span class="nav-page-text">Second Topic</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/chunk_options/create_chunks.html" class="pagination-link" aria-label="Create code chunks">
+        <span class="nav-page-text">Create code chunks</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

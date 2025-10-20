@@ -1,14 +1,5 @@
 ---
-title: "First Tutorial"
+title: "Writing text"
 ---
 
-This is the landing page for the first tutorial. Each tutorial section should begin with a landing page named "index.qmd".
-
-- Use the landing page to provide a general overview of the tutorial topics.
-- Each tutorial can cover several specific topics.
-   - Separate these low-level substantive topics across subsection scripts.
-
-## Headings
-
-The title field of each QMD source file is typeset as a Level 1 heading, so use Level-2 headings as the highest heading
-level in your markdown.
+In this tutorial, we will learn you how to efficiently create an attractive written document using Quarto. First, you will learn how to write plain text and apply basic Markdown formatting to style the text. Next, we will pay more attention to structuring the document. Finally, we will also discuss how to include inline code and results within the text. 

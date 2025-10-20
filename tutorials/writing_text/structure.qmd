@@ -1,189 +1,144 @@
 ---
-title: "Divs & Callouts"
+title: Adding structure
+bibliography: ["references.bib"]
 ---
 
-This is the second topic file for Tutorial 1.
 
-## Callout Blocks
-
-Use callout blocks to highlight special information.
-
-::: {.callout-note}
-
-## Note Title
-
-Something noteworthy.
-
-:::
-
-::: {.callout-tip}
-
-## Tip Title
-
-Here's a tip for ya...
-
-:::
-
-::: {.callout-important}
-
-## Important Title
-
-This is very important!
-
-:::
-
-::: {.callout-warning}
-
-## Warning Title
-
-You've been warned.
-
-:::
-
-::: {.callout-caution}
-
-## Caution Title
-
-Proceed with caution.
-
-:::
-
-### Custom Callouts
-
-This project uses the [quarto-custom-callout](https://quarto.thecoatlessprofessor.com/custom-callout/) extension to
-provide some bespoke callout blocks. This template already defines four such blocks.
-
-A *reading* callout to highlight relevant, recommended literature.
-
-- I.e., These sources would be the required reading in a classroom context.
-
-::: reading
-
-[R4DS 2: Workflow Basics](https://r4ds.hadley.nz/workflow-basics.html)
-
-:::
-
-A *reading-advanced* callout to highlight relevant, but technically challanging, literature.
-
-- I.e., These sources would be supplementary reference materials but not required reading in a classroom context.
-
-::: reading-advanced
-
-[Advanced R 2.2: Binding Basics](https://adv-r.hadley.nz/names-values.html#binding-basics)
-
-:::
-
-A *resource* callout to highlight related external resources.
-
-::: resource
-
-For a different take on these ideas, check out Andrew Heiss' R Primers tutorial on the topic
-
-- [R Primers: Programming Basics](https://r-primers.andrewheiss.com/basics/02-programming-basics/)
-
-:::
-
-### Practice Callouts
-
-The custom *practice* callout is reserved for inline practice problems.
-
-- The `panel-tabset` div nested within the `practice` div creates a set of tabs to organize the exercise components.
-- Each Level 2 heading inside the `panel-tabset` div defines a new tab.
-   - In the examples below, the tab titles are specified through quarto shortcode variables.
-   - These variables are defined in the `_variables.yml` metadata file.
-
-::: practice
-
-## Example Code Exercise
-
-1. Regress `Petal.Width` onto `Species` using the `iris` dataset.
-1. Create a normal Q-Q plot of the residuals.
-
-:::: {.panel-tabset}
-
-## {{< var tab_title.editor >}}
-
-```{webr-r}
-```
-
-## {{< var tab_title.hint >}}
-
-Remember what happens when you call the Base R `plot()` function on a fitted lm object.
-
-## {{< var tab_title.solution >}}
-
-1. First, we'll use the `lm()` function to estimate the model.
-
-```{r}
-fit1 <- lm(Petal.Width ~ Species, data = iris)
-```
-
-1. Then, we'll use the default plotting method for lm objects to create the Q-Q plot.
-
-```{r}
-plot(fit1, 2)
-```
-
-::::
-
-:::
-
-::: practice
-
-## Example Theory Question
-
-:::: {.panel-tabset}
-
-## {{< var tab_title.question >}}
-
-What is the answer to life, the universe, and everything?
-
-## {{< var tab_title.solution >}}
-
-42
-
-::::
-
-:::
-
-## Using the Website Margin
-
-In the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are
-better placed in the website margin.
-
-- Placing supporting elements like links, callouts, and references in the margin streamlines the main body content while
-keeping the supporting information near the relevant main body content.
-
-To place content in the website margine, we use the `column-margin` div.
-
-### Example 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel.
-Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus
-volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales.
-Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est
-ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis.
-Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id,
-porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna
-elit id justo. Duis tincidunt id massa eget lacinia.
-
-::: {.column-margin}
-
-:::: {.callout-important}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-::::
-
-:::
-
-Nam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id
-auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere
-leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis
-eget luctus quam. Donec consectetur neque nec egestas ultricies.
+A well-structured Quarto document helps readers follow your analysis and allows Quarto to automatically generate tables of contents, numbered sections, and cross-references. You can add structure using **headings**, **numbered elements** (sections, figures, and equations), and **citations** or **cross-references**.
 
 ::: {.column-margin}
 
 :::: resource
-[Wikipedia: Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem)
+For more detail, see for example [HTML basics](https://quarto.org/docs/output-formats/html-basics.html)
 ::::
 
 :::
+
+## Headings and Subheadings
+
+Headings in Quarto follow the standard Markdown syntax using one or more hash (`#`) symbols. A single `#` creates a top-level heading, `##` creates a subheading, and so on.
+
+```markdown
+# Main Title
+
+## Section Title
+
+### Subsection Title
+```
+
+Which would result in: 
+
+# Main Title
+
+## Section Title
+
+### Subsection Title
+
+
+Quarto automatically interprets these heading levels to build a **document hierarchy**. This structure is reflected in the output and (if enabled) in a **table of contents** (`toc: true` in the YAML front matter).
+
+For example, adding the following to your YAML header will generate an automatic table of contents based on your headings:
+
+```yaml
+---
+title: "My Analysis Report"
+toc: true
+number-sections: true
+---
+```
+
+When `number-sections: true` is set, all headings are automatically numbered (`1`, `1.1`, `1.2`, etc.), and cross-references can be created for each section.
+
+
+### Numbering Figures and Equations
+
+Quarto automatically numbers **figures**, **tables**, and **equations** that have captions. This numbering enables you to refer to them consistently throughout your text.
+
+To number a **figure**, simply add a caption using the `fig-cap` option:
+
+````markdown
+#| label: fig-distribution
+#| fig-cap: "Distribution of scores by group."
+library(ggplot)
+
+ggplot(data, aes(x = group, y = score, fill = group)) +
+  geom_boxplot()
+````
+
+See below how this caption will appear in addition to the figure:
+
+```{r}
+#| label: fig-distribution
+#| fig-cap: "Distribution of scores by group."
+#| echo: FALSE
+
+library(ggplot2)
+
+set.seed(123)
+data <- data.frame(
+  group = rep(c("A", "B"), each = 10),
+  score = c(rnorm(10, mean = 75, sd = 5),
+            rnorm(10, mean = 82, sd = 6))
+)
+
+
+ggplot(data, aes(x = group, y = score, fill = group)) +
+  geom_boxplot()
+```
+
+To reference it in text, use the label you assigned:
+`See @fig-distribution for an overview of the score distributions.` would result in: See @fig-distribution for an overview of the score distributions.
+
+For **equations**, numbering occurs when you assign a label inside the LaTeX math block:
+
+```markdown
+$$
+E = mc^2 \quad
+$$ {#eq-myequation}
+```
+
+$$
+E = mc^2 \quad 
+$$ {#eq-myequation}
+
+You can then refer to this equation as `@eq-myequation` in your text, which will render as “(1)” or “Equation 1” depending on the format. Here it results in: @eq-myequation. 
+
+
+## Numbering Sections
+
+When you include `number-sections: true` in your YAML front matter, Quarto automatically numbers all top-level and nested headings. This is especially useful in reports, theses, or papers where hierarchical organization matters. The numbering adjusts dynamically as you add or rearrange content, ensuring consistent structure throughout the document.
+
+
+## Adding References and Citations
+
+Quarto uses **Pandoc’s citation system**, allowing you to cite sources from a bibliography file. In your YAML header, include the path to a `.bib` file (in BibTeX format):
+
+```yaml
+---
+title: "My Report"
+bibliography: references.bib
+---
+```
+
+You can then cite works in-text using the `@` symbol and the citation key from your `.bib` file:
+`As shown in @smith2021, the results confirm the hypothesis.`
+
+To include a **list of references** (a bibliography) at the end of your document, simply add a `# References` heading — Quarto will automatically populate it during rendering.
+
+Example of inline citations:
+
+* `@smith2021` →  @smith2021
+* `[@smith2021; @doe2022]` → [@smith2021; @doe2022]
+
+
+::: {.column-margin}
+
+:::: resource
+For more detail, see [Quarto citations](https://quarto.org/docs/authoring/citations.html)
+::::
+
+:::
+
+# References
+
+

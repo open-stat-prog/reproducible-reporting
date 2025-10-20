@@ -53,12 +53,6 @@ website:
         contents:
           - href: tutorials/presenting_output/tables.qmd
           - href: tutorials/presenting_output/plots.qmd
-      - section: tutorials/reproducibility/index.qmd
-        text: "Reproducibility"
-        contents:
-          - href: tutorials/reproducibility/portable.qmd
-          - href: tutorials/reproducibility/reuse.qmd
-          - href: tutorials/reproducibility/workflows.qmd
       - href: conclusion.qmd
 
   page-footer:

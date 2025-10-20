@@ -45,12 +45,6 @@ After completing this module, you will be able to:
 1.  Learn how to display clean, readable tables.
 2.  Understand how to include plots and visualizations.
 
-### Portability and reproducibility
-
-1.  Understand what makes Quarto documents portable and reproducible.
-2.  Learn how to reuse content and structure across projects.
-3.  Appreciate the benefits of reproducible workflows.
-
 Click the button below to get started with the first tutorial.
 
 ```{r}

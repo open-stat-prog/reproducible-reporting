@@ -51,181 +51,265 @@
   {
     "objectID": "tutorials/chunk_options/chunk_options.html",
     "href": "tutorials/chunk_options/chunk_options.html",
-    "title": "Second Topic",
+    "title": "Chunk options",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\nNunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.\n\n\n\n Back to top",
+    "text": "Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.\nChunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on chunk options\n\n\nQuarto uses a YAML-style syntax for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to {r}, you write them as commented lines beginning with #| inside the chunk, directly below the chunk header. For example:\n#| label: data-summary\n#| echo: TRUE\n#| message: FALSE\nHere:\n\nlabel: assigns a unique name to the chunk.\necho: determines whether the code appears in the rendered document.\nmessage: controls whether R messages are shown.\n\nThis “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).\n\n\nDisplay-related options determine what content from a chunk appears in the final rendered document.\n\necho controls whether the source code itself is shown (TRUE shows it, FALSE hides it).\nresults specifies how the printed results appear (e.g., \"markup\" for normal output or \"hide\" to suppress).\nwarning and message control whether warnings or messages are displayed.\n\nFor instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:\n#| echo: FALSE\nmean(c(5, 10, 15))\nWhich would only print the output when being rendered in a Quarto document:\n\n\n[1] 10\n\n\n\n\n\nExecution options govern whether and how the code runs when Quarto renders the document.\n\neval determines if the chunk should be executed (TRUE or FALSE).\ninclude controls whether both code and results appear in the final output; include: FALSE runs the code but hides all output.\nerror specifies whether rendering should continue if an error occurs (TRUE) or stop (FALSE).\n\nFor example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:\n#| label: setup\n#| include: FALSE\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nWhen your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.\n\nfig-cap adds a caption to a plot.\nfig-width and fig-height set the dimensions (in inches).\nfig-align specifies the alignment (\"left\", \"center\", or \"right\").\n\nFor example:\n#| label: visualization\n#| echo: FALSE\n#| fig-cap: \"Distribution of scores by group.\"\n\n\n\nFor time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.\n\ncache: TRUE saves the chunk’s results; subsequent renders reuse them unless the code changes.\n\nCaching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.",
     "crumbs": [
       "Open-Stat-Prog",
       "Chunks and options",
-      "Second Topic"
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html#introduction",
+    "href": "tutorials/chunk_options/chunk_options.html#introduction",
+    "title": "Chunk options",
+    "section": "",
+    "text": "Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.\nChunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on chunk options\n\n\nQuarto uses a YAML-style syntax for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to {r}, you write them as commented lines beginning with #| inside the chunk, directly below the chunk header. For example:\n#| label: data-summary\n#| echo: TRUE\n#| message: FALSE\nHere:\n\nlabel: assigns a unique name to the chunk.\necho: determines whether the code appears in the rendered document.\nmessage: controls whether R messages are shown.\n\nThis “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).\n\n\nDisplay-related options determine what content from a chunk appears in the final rendered document.\n\necho controls whether the source code itself is shown (TRUE shows it, FALSE hides it).\nresults specifies how the printed results appear (e.g., \"markup\" for normal output or \"hide\" to suppress).\nwarning and message control whether warnings or messages are displayed.\n\nFor instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:\n#| echo: FALSE\nmean(c(5, 10, 15))\nWhich would only print the output when being rendered in a Quarto document:\n\n\n[1] 10\n\n\n\n\n\nExecution options govern whether and how the code runs when Quarto renders the document.\n\neval determines if the chunk should be executed (TRUE or FALSE).\ninclude controls whether both code and results appear in the final output; include: FALSE runs the code but hides all output.\nerror specifies whether rendering should continue if an error occurs (TRUE) or stop (FALSE).\n\nFor example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:\n#| label: setup\n#| include: FALSE\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nWhen your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.\n\nfig-cap adds a caption to a plot.\nfig-width and fig-height set the dimensions (in inches).\nfig-align specifies the alignment (\"left\", \"center\", or \"right\").\n\nFor example:\n#| label: visualization\n#| echo: FALSE\n#| fig-cap: \"Distribution of scores by group.\"\n\n\n\nFor time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.\n\ncache: TRUE saves the chunk’s results; subsequent renders reuse them unless the code changes.\n\nCaching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
     ]
   },
   {
     "objectID": "tutorials/chunk_options/code_chunks.html",
     "href": "tutorials/chunk_options/code_chunks.html",
-    "title": "First Topic",
+    "title": "Introduction to code chunks",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "text": "In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. They serve as the fundamental bridge between the narrative and computational parts, and they enable a seamless integration of analysis and exposition. Each chunk is delimited by a specific syntax (for example, triple backticks followed by a language label such as {r}) that tells Quarto which language engine to use. When the document is rendered, Quarto evaluates these chunks in the specified language environment, captures their outputs—such as console text, tables, plots, or other visualizations—and inserts them directly into the document at the chunk’s position. This workflow supports the principles of literate programming and reproducible research, ensuring that results are dynamically linked to the underlying code rather than being static artifacts.\nConceptually, Quarto treats code chunks as part of a larger computational document graph. During rendering, Quarto manages execution order, variable environments, and inter-chunk dependencies to maintain consistency. This means that chunks are not merely snippets of text to be formatted; they are active components in the document’s computational state. For instance, a variable created in one chunk can be referenced and used in another, allowing for modular, incremental development of analyses. Quarto also provides mechanisms for caching, error handling, and execution control, giving users flexibility in how computation is performed during document compilation.\nImportantly, code chunks are not limited to R. They can be written in Python, Julia, or other supported languages within the same document. This multilingual capability makes Quarto a versatile platform for mixed-language workflows, which are increasingly common in data science and applied research.",
     "crumbs": [
       "Open-Stat-Prog",
       "Chunks and options",
-      "First Topic"
+      "Introduction to code chunks"
     ]
   },
   {
-    "objectID": "tutorials/chunk_options/code_chunks.html#blah",
-    "href": "tutorials/chunk_options/code_chunks.html#blah",
-    "title": "First Topic",
-    "section": "Blah",
-    "text": "Blah\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\nNunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.",
+    "objectID": "tutorials/chunk_options/code_chunks.html#introduction",
+    "href": "tutorials/chunk_options/code_chunks.html#introduction",
+    "title": "Introduction to code chunks",
+    "section": "",
+    "text": "In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. They serve as the fundamental bridge between the narrative and computational parts, and they enable a seamless integration of analysis and exposition. Each chunk is delimited by a specific syntax (for example, triple backticks followed by a language label such as {r}) that tells Quarto which language engine to use. When the document is rendered, Quarto evaluates these chunks in the specified language environment, captures their outputs—such as console text, tables, plots, or other visualizations—and inserts them directly into the document at the chunk’s position. This workflow supports the principles of literate programming and reproducible research, ensuring that results are dynamically linked to the underlying code rather than being static artifacts.\nConceptually, Quarto treats code chunks as part of a larger computational document graph. During rendering, Quarto manages execution order, variable environments, and inter-chunk dependencies to maintain consistency. This means that chunks are not merely snippets of text to be formatted; they are active components in the document’s computational state. For instance, a variable created in one chunk can be referenced and used in another, allowing for modular, incremental development of analyses. Quarto also provides mechanisms for caching, error handling, and execution control, giving users flexibility in how computation is performed during document compilation.\nImportantly, code chunks are not limited to R. They can be written in Python, Julia, or other supported languages within the same document. This multilingual capability makes Quarto a versatile platform for mixed-language workflows, which are increasingly common in data science and applied research.",
     "crumbs": [
       "Open-Stat-Prog",
       "Chunks and options",
-      "First Topic"
+      "Introduction to code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/code_chunks.html#example",
+    "href": "tutorials/chunk_options/code_chunks.html#example",
+    "title": "Introduction to code chunks",
+    "section": "Example",
+    "text": "Example\nFirst chunk:\n\n# Create a small dataset\nset.seed(123)\ndata &lt;- data.frame(\n  group = rep(c(\"A\", \"B\"), each = 10),\n  score = c(rnorm(10, mean = 75, sd = 5),\n            rnorm(10, mean = 82, sd = 6))\n)\n\n# Display a quick summary of the data\nsummary(data$score)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  68.67   73.58   78.91   79.31   84.22   92.72 \n\n\nIn the first chunk, we see a dataset being generated and stored. Next, we see that the summary of this dataset is being requested. When rendering the document, the output of this request is automatically being printed in the document (as you can see printed directly below the code chunk).\nSecond chunk:\n\n# Use the dataset created in the previous chunk\nmodel &lt;- lm(score ~ group, data = data)\n\n# Display regression results\nsummary(model)\n\n\nCall:\nlm(formula = score ~ group, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-13.0514  -3.3335   0.1264   2.1877   9.4697 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   75.373      1.754  42.970  &lt; 2e-16 ***\ngroupB         7.879      2.481   3.176  0.00523 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 5.547 on 18 degrees of freedom\nMultiple R-squared:  0.3591,    Adjusted R-squared:  0.3235 \nF-statistic: 10.09 on 1 and 18 DF,  p-value: 0.005231\n\n\nThe second chunk takes the dataset that was stored in the first chunk and performs some additional analysis on this, which is again printed directly below the chunk. This illustrates the dependencies between separate code chunks.\nThird chunk:\n\n\n\n\n\nDistribution of scores by group.\n\n\n\n\nThe third chunk again illustrates this dependency, and in addition also shows that code can be executed that creates visualizations, which are then also directly executed and printed in the document.\nTogether, these three chunks illustrate that:\n\nEach chunk is executed in the same R session, meaning objects like data and model persist across chunks.\nOutput is automatically captured and displayed, first as numerical summaries, then as model output, and finally as a plot.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Introduction to code chunks"
     ]
   },
   {
     "objectID": "tutorials/presenting_output/tables.html",
     "href": "tutorials/presenting_output/tables.html",
-    "title": "Code Blocks",
+    "title": "Tables",
     "section": "",
-    "text": "This is the first topic file for Tutorial 1.",
+    "text": "Tables are a common way to summarize data in reports. Quarto allows you to produce tables directly in Markdown or dynamically from R. Using clear, readable tables improves the presentation of results and makes your documents more professional and accessible.",
     "crumbs": [
       "Open-Stat-Prog",
       "Presenting output",
-      "Code Blocks"
+      "Tables"
     ]
   },
   {
-    "objectID": "tutorials/presenting_output/tables.html#code-blocks",
-    "href": "tutorials/presenting_output/tables.html#code-blocks",
-    "title": "Code Blocks",
-    "section": "Code Blocks",
-    "text": "Code Blocks\nUse knitr code blocks to include non-interactive R code.\n\n## Add 2 and 2\n2 + 2\n\n[1] 4\n\n## Divide 225 by 15 and print the result\n(x &lt;- 225 / 15)\n\n[1] 15\n\n\nUse quarto-webr code blocks for interactive R exercises.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCode Block Environments\nA single execution environment is shared across code blocks of the same type.\n\nAll the knitr code blocks in a QMD file will share an evaluation environment.\nLikewise for the quarto-webr code blocks\n\n\nx^2\n\n[1] 225\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nknitr and quarto-webr code blocks to not share the same environment, though.\n\nresid(fit)\n\nError: object 'fit' not found\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a knitr chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.\n\nDon’t forget to set an appropriate seed, if you’re trying to regenerate a stochastic object.\n\n\n\nInline Code\nUse knitr inline code chunks to embed R output in text blocks.\n\nE.g., R says the squareroot of 2 is 1.4142136.",
+    "objectID": "tutorials/presenting_output/tables.html#text-based-tables-in-markdown",
+    "href": "tutorials/presenting_output/tables.html#text-based-tables-in-markdown",
+    "title": "Tables",
+    "section": "Text-Based Tables in Markdown",
+    "text": "Text-Based Tables in Markdown\nFor simple tables, you can write them directly in Markdown using the pipe (|) syntax. This is ideal for small, static tables that do not require dynamic calculations.\nExample:\n| Group | Mean | SD  |\n|-------|------|-----|\n| A     | 5.2  | 1.1 |\n| B     | 6.8  | 0.9 |\n| C     | 4.9  | 1.3 |\nRendered output:\n\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\nUse --- under headers for proper alignment.\nColumns can be aligned left (: on left), right (: on right), or center (: on both sides):\n\n| Group | Mean | SD  |\n|:------|----:|:---:|\n| A     | 5.2 | 1.1 |\n| B     | 6.8 | 0.9 |\n| C     | 4.9 | 1.3 |\nResults in aligned columns like this:\n\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3",
     "crumbs": [
       "Open-Stat-Prog",
       "Presenting output",
-      "Code Blocks"
+      "Tables"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/tables.html#generating-tables-from-r-with-knitrkable",
+    "href": "tutorials/presenting_output/tables.html#generating-tables-from-r-with-knitrkable",
+    "title": "Tables",
+    "section": "Generating Tables from R with knitr::kable",
+    "text": "Generating Tables from R with knitr::kable\nFor tables that come from your R data (e.g., data frames, summaries), Quarto integrates seamlessly with knitr::kable to produce clean, nicely formatted tables.\nExample:\nWhen producing tables are raw output, they will look like this:\n\nlibrary(knitr)\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Mean  = c(5.2, 6.8, 4.9),\n  SD    = c(1.1, 0.9, 1.3)\n)\n\ndata\n\n  Group Mean  SD\n1     A  5.2 1.1\n2     B  6.8 0.9\n3     C  4.9 1.3\n\n\nWhen using kable, they can be formatted more neatly:\n\nkable(data, caption = \"Summary statistics by group\")\n\n\nSummary statistics by group\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\n\n\ncaption adds a descriptive label for the table.\nkable automatically aligns columns neatly.\nFor larger or more complex tables, you can also use kableExtra to add styling, colors, or column formatting.\n\n\nlibrary(kableExtra)\n\nmean_score &lt;- mean(data$Mean)\n\nkable(data, caption = paste(\"Summary statistics (overall mean:\", round(mean_score, 2), \")\")) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\", \"condensed\"), full_width = FALSE) %&gt;%\n  row_spec(0, bold = TRUE, color = \"white\", background = \"#4CAF50\")  # header row styling\n\n\nSummary statistics (overall mean: 5.63 )\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\n\n\nkable_styling(): Adds table styling options like striped rows, hover effect, and condensed spacing.\nrow_spec(0, ...): Styles the header row (0 = header) with bold text, white font, and a green background.\nThe caption dynamically includes the overall mean calculated from the data.\n\nRendered in HTML, this produces a professional, readable table that’s visually distinct and easier to interpret than a plain kable() table.\nYou can also add row colors, column formatting, or footnotes with other kableExtra functions for even more control.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Tables"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/tables.html#tips-for-readable-tables",
+    "href": "tutorials/presenting_output/tables.html#tips-for-readable-tables",
+    "title": "Tables",
+    "section": "Tips for Readable Tables",
+    "text": "Tips for Readable Tables\n\nKeep them concise: Avoid overcrowding a table with too many columns or unnecessary decimals.\nLabel clearly: Use meaningful headers and, if needed, a descriptive caption.\nRound numbers: Format numeric results for readability.\nConsistent styling: For longer reports, stick with a single table style (Markdown or kable) for consistency.\n\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see the Quarto documentation",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Tables"
     ]
   },
   {
     "objectID": "tutorials/presenting_output/plots.html",
     "href": "tutorials/presenting_output/plots.html",
-    "title": "Divs & Callouts",
+    "title": "Figures",
     "section": "",
-    "text": "This is the second topic file for Tutorial 1.",
+    "text": "Figures are essential for visualizing data, illustrating concepts, or enhancing your reports. Quarto supports figures generated from R code as well as external images, allowing you to control captions, size, and placement for a polished presentation.",
     "crumbs": [
       "Open-Stat-Prog",
       "Presenting output",
-      "Divs & Callouts"
+      "Figures"
     ]
   },
   {
-    "objectID": "tutorials/presenting_output/plots.html#callout-blocks",
-    "href": "tutorials/presenting_output/plots.html#callout-blocks",
-    "title": "Divs & Callouts",
-    "section": "Callout Blocks",
-    "text": "Callout Blocks\nUse callout blocks to highlight special information.\n\n\n\n\n\n\nNote Title\n\n\n\nSomething noteworthy.\n\n\n\n\n\n\n\n\nTip Title\n\n\n\nHere’s a tip for ya…\n\n\n\n\n\n\n\n\nImportant Title\n\n\n\nThis is very important!\n\n\n\n\n\n\n\n\nWarning Title\n\n\n\nYou’ve been warned.\n\n\n\n\n\n\n\n\nCaution Title\n\n\n\nProceed with caution.\n\n\n\nCustom Callouts\nThis project uses the quarto-custom-callout extension to provide some bespoke callout blocks. This template already defines four such blocks.\nA reading callout to highlight relevant, recommended literature.\n\nI.e., These sources would be the required reading in a classroom context.\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2: Workflow Basics\n\n\nA reading-advanced callout to highlight relevant, but technically challanging, literature.\n\nI.e., These sources would be supplementary reference materials but not required reading in a classroom context.\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\nA resource callout to highlight related external resources.\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor a different take on these ideas, check out Andrew Heiss’ R Primers tutorial on the topic\n\nR Primers: Programming Basics\n\n\n\n\n\nPractice Callouts\nThe custom practice callout is reserved for inline practice problems.\n\nThe panel-tabset div nested within the practice div creates a set of tabs to organize the exercise components.\nEach Level 2 heading inside the panel-tabset div defines a new tab.\n\nIn the examples below, the tab titles are specified through quarto shortcode variables.\nThese variables are defined in the _variables.yml metadata file.\n\n\n\n\n\n\n\n\nExample Code Exercise\n\n\n\n\nRegress Petal.Width onto Species using the iris dataset.\nCreate a normal Q-Q plot of the residuals.\n\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nRemember what happens when you call the Base R plot() function on a fitted lm object.\n\n\n\nFirst, we’ll use the lm() function to estimate the model.\n\n\nfit1 &lt;- lm(Petal.Width ~ Species, data = iris)\n\n\nThen, we’ll use the default plotting method for lm objects to create the Q-Q plot.\n\n\nplot(fit1, 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample Theory Question\n\n\n\n\n Question Solution\n\n\nWhat is the answer to life, the universe, and everything?\n\n\n42",
+    "objectID": "tutorials/presenting_output/plots.html#figures-generated-from-r",
+    "href": "tutorials/presenting_output/plots.html#figures-generated-from-r",
+    "title": "Figures",
+    "section": "Figures Generated from R",
+    "text": "Figures Generated from R\nWhen creating plots in R, you can add captions and adjust figure size using chunk options in Quarto.\nThe options within your R chunk would be set like this:\n#| label: fig-scores\n#| fig-cap: \"Boxplot of scores by group\"\n#| fig-width: 6\n#| fig-height: 4\nAnd with the following R code:\n\nlibrary(ggplot2)\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Score = c(5.2, 6.8, 4.9)\n)\n\nggplot(data, aes(x = Group, y = Score, fill = Group)) +\n  geom_bar(stat = \"identity\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Boxplot of scores by group\n\n\n\n\n\nThis would then result in the figure as directly outputted after the code. Here, you see:\n\nfig-cap: Adds a caption to the figure.\nfig-width and fig-height: Control the size of the rendered figure (in inches for HTML/PDF).\nlabel: Allows you to cross-reference the figure in text with @fig-scores: Ref to Figure 1.\n\nYou can also combine fig-align: \"center\" in the chunk to center the figure in the output.",
     "crumbs": [
       "Open-Stat-Prog",
       "Presenting output",
-      "Divs & Callouts"
+      "Figures"
     ]
   },
   {
-    "objectID": "tutorials/presenting_output/plots.html#using-the-website-margin",
-    "href": "tutorials/presenting_output/plots.html#using-the-website-margin",
-    "title": "Divs & Callouts",
-    "section": "Using the Website Margin",
-    "text": "Using the Website Margin\nIn the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are better placed in the website margin.\n\nPlacing supporting elements like links, callouts, and references in the margin streamlines the main body content while keeping the supporting information near the relevant main body content.\n\nTo place content in the website margine, we use the column-margin div.\n\nExample\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel. Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales. Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis. Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id, porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna elit id justo. Duis tincidunt id massa eget lacinia.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n\nNam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis eget luctus quam. Donec consectetur neque nec egestas ultricies.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nWikipedia: Central Limit Theorem",
+    "objectID": "tutorials/presenting_output/plots.html#external-images",
+    "href": "tutorials/presenting_output/plots.html#external-images",
+    "title": "Figures",
+    "section": "2. External Images",
+    "text": "2. External Images\nQuarto can include images stored locally or from the web using Markdown syntax:\n\nLocal images:\nLocal images can be presented as follows:\n![This is a local image caption](/assets/images/ecrins_pano.jpg){#fig-local width=50%}\n\n\n\n\n\n\nFigure 2: This is a local image caption\n\n\n\n\n{#fig-local}: Assigns a label for cross-referencing using @fig-local: Figure 2.\nwidth=50%: Adjusts the display size relative to the output width.\n\n\n\nWeb images:\nWeb images can be presented by linking to them directly:\n![Quarto logo](https://quarto.org/quarto.png){width=200px}\n\n\n\nQuarto logo\n\n\n\nDirectly embeds an image from a URL.\nCan adjust size using width or height.\nCaptions can be added, but for HTML output, you may need to style with CSS for advanced formatting.\n\n\n\nBest Practices for Figures\n\nAlways add captions: Makes figures self-contained and referenceable.\nLabel your figures: Use #| label: for R plots or {#fig-label} for Markdown images to enable cross-referencing.\nAdjust sizes thoughtfully: Use fig-width/fig-height or CSS/Markdown size attributes to make sure figures are readable.\nUse consistent styling: Keep themes, fonts, and color schemes consistent across all figures for a professional look.\nPrefer vector graphics for clarity: When possible, export PDF/SVG plots for crisp rendering in reports.",
     "crumbs": [
       "Open-Stat-Prog",
       "Presenting output",
-      "Divs & Callouts"
+      "Figures"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/plots.html#combining-inline-references-with-figures",
+    "href": "tutorials/presenting_output/plots.html#combining-inline-references-with-figures",
+    "title": "Figures",
+    "section": "Combining Inline References with Figures",
+    "text": "Combining Inline References with Figures\nOnce a figure is labeled, you can refer to it in the text dynamically:\nAs shown in @fig-scores, group B has the highest score.\nWhich will look as follows in text: As shown in Figure 1, group B has the highest score.\nQuarto will automatically number the figure in the rendered document.\nThis approach allows you to seamlessly integrate data-driven plots, static images, and online resources while keeping your figures clean, readable, and fully reproducible.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see the Quarto documentation",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Figures"
     ]
   },
   {
     "objectID": "tutorials/writing_text/text.html",
     "href": "tutorials/writing_text/text.html",
-    "title": "Code Blocks",
+    "title": "Writing text",
     "section": "",
-    "text": "This is the first topic file for Tutorial 1.",
+    "text": "Quarto builds on Pandoc Markdown, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:\n\nItalics can be written as *italics* or _italics_.\nBold is **bold** or __bold__.\nBold italics is ***bold italics*** (or alternatives combining ** and *).\nStrikethrough: ~~text~~ → text.\nInline (verbatim) code: enclose text in backticks, e.g. `my_var &lt;- 10` → my_var &lt;- 10.\nSuperscript / subscript:   - superscript^2^ → superscript²   - subscript~2~ → subscript₂ You can also use braces to clarify: superscript^{2} or subscript_{2}.\nQuarto also allows adding stylistic classes via span syntax, e.g.   [This is smallcaps]{.smallcaps} → (renders in small caps if supported).\n\nThis formatting gives you fine control over text appearance without leaving Markdown.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Code Blocks"
+      "Writing text"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/text.html#code-blocks",
-    "href": "tutorials/writing_text/text.html#code-blocks",
-    "title": "Code Blocks",
-    "section": "Code Blocks",
-    "text": "Code Blocks\nUse knitr code blocks to include non-interactive R code.\n\n## Add 2 and 2\n2 + 2\n\n[1] 4\n\n## Divide 225 by 15 and print the result\n(x &lt;- 225 / 15)\n\n[1] 15\n\n\nUse quarto-webr code blocks for interactive R exercises.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCode Block Environments\nA single execution environment is shared across code blocks of the same type.\n\nAll the knitr code blocks in a QMD file will share an evaluation environment.\nLikewise for the quarto-webr code blocks\n\n\nx^2\n\n[1] 225\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nknitr and quarto-webr code blocks to not share the same environment, though.\n\nresid(fit)\n\nError: object 'fit' not found\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a knitr chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.\n\nDon’t forget to set an appropriate seed, if you’re trying to regenerate a stochastic object.\n\n\n\nInline Code\nUse knitr inline code chunks to embed R output in text blocks.\n\nE.g., R says the squareroot of 2 is 1.4142136.",
+    "objectID": "tutorials/writing_text/text.html#text",
+    "href": "tutorials/writing_text/text.html#text",
+    "title": "Writing text",
+    "section": "",
+    "text": "Quarto builds on Pandoc Markdown, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:\n\nItalics can be written as *italics* or _italics_.\nBold is **bold** or __bold__.\nBold italics is ***bold italics*** (or alternatives combining ** and *).\nStrikethrough: ~~text~~ → text.\nInline (verbatim) code: enclose text in backticks, e.g. `my_var &lt;- 10` → my_var &lt;- 10.\nSuperscript / subscript:   - superscript^2^ → superscript²   - subscript~2~ → subscript₂ You can also use braces to clarify: superscript^{2} or subscript_{2}.\nQuarto also allows adding stylistic classes via span syntax, e.g.   [This is smallcaps]{.smallcaps} → (renders in small caps if supported).\n\nThis formatting gives you fine control over text appearance without leaving Markdown.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Code Blocks"
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html#lists",
+    "href": "tutorials/writing_text/text.html#lists",
+    "title": "Writing text",
+    "section": "Lists",
+    "text": "Lists\nLists are central to organizing information. Quarto supports both unordered and ordered lists, and nested lists.\n\nUnordered lists: start lines with *, +, or -. For example:\n* Item A  \n* Item B  \n  + Sub-item B1  \n  + Sub-item B2  \n* Item C  \n\nResults in:\n\nItem A\n\nItem B\n\nSub-item B1\n\nSub-item B2\n\n\nItem C\nOrdered lists: use numbers followed by a dot:\n1. First step  \n2. Second step  \n   i) Subtask  \n   ii) Another subtask  \n3. Third  \n\nResults in:\n\nFirst step\n\nSecond step\n\nSubtask\n\nAnother subtask\n\n\nThird\n\n\nTask lists: Quarto supports “checklist” style items using [ ] or [x]:\n- [ ] Task 1  \n- [x] Task 2 (done)  \n\nResults in clickable boxes:\n\nTask 1\n\nTask 2 (done)\nContinuation lists: Quarto allows list numbering to continue across interruptions using (@) to resume numbering.\n\nOne important note: unlike some Markdown flavors (e.g. GitHub-Flavored Markdown), Quarto requires a blank line before a list for it to render properly. If you don’t insert a blank line, the line may just appear as ordinary text. You can always quickly check this by switching to the visual mode in R studio.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html#links",
+    "href": "tutorials/writing_text/text.html#links",
+    "title": "Writing text",
+    "section": "Links",
+    "text": "Links\nQuarto supports standard Markdown link syntax, plus extended capabilities.\n\nInline link: [Quarto](https://quarto.org) → Quarto\nAutolink URLs: &lt;https://quarto.org&gt; → https://quarto.org\n\nThese allow you to interweave narrative and media seamlessly.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html#equations-mathematical-notation",
+    "href": "tutorials/writing_text/text.html#equations-mathematical-notation",
+    "title": "Writing text",
+    "section": "Equations (Mathematical Notation)",
+    "text": "Equations (Mathematical Notation)\nQuarto supports LaTeX-style math syntax using $ and $$ delimiters.\n\nInline math: wrap expressions in single dollar signs, e.g.   This is inline: $E = mc^2$. → This is inline: \\((E = mc^2)\\).\nDisplay (block) math: wrap in double dollar signs:\n$$\nE = mc^2\n$$\n→ renders centered on its own line, looking as follows: \\[\nE = mc^2\n\\]\n\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nMarkdown basics",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
     ]
   },
   {
     "objectID": "tutorials/writing_text/inline_code.html",
     "href": "tutorials/writing_text/inline_code.html",
-    "title": "Images & Figures",
+    "title": "Inline code and results",
     "section": "",
-    "text": "This is the third topic file for Tutorial 1.\narrange() orders the rows of a data frame by the values of selected columns.\nUnlike other dplyr verbs, arrange() largely ignores grouping; you need to explicitly mention grouping\n    variables (or use  .by_group = TRUE) in order to group by them, and functions of variables are\n    evaluated once per data frame, not once per group.\nUnlike base sorting with sort(), NA are:\nAn object of the same type as .data. The output has the following properties:\nThis function is a generic, which means that packages can provide implementations (methods) for\n    other classes. See the documentation of individual methods for extra arguments and differences in behaviour.\nThe following methods are currently available in loaded packages: no methods found.\nOther single table verbs: \n    filter(),\n    mutate(),\n    reframe(),\n    rename(),\n    select(),\n    slice(),\n    summarise()",
+    "text": "In Quarto, inline code allows you to execute R expressions (or code in other supported languages) directly within your narrative text. This makes it possible to embed calculated results dynamically into your report, so your text always reflects the latest data or computations. Inline code is particularly useful for reporting summary statistics, model results, or dates without manually updating the text.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Images & Figures"
+      "Inline code and results"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/inline_code.html#assets-directory",
-    "href": "tutorials/writing_text/inline_code.html#assets-directory",
-    "title": "Images & Figures",
-    "section": "Assets Directory",
-    "text": "Assets Directory\nAll pre-rendered assets (i.e., files that will not rendered/compiled into some other format) that you want to include in your website should live somewhere in the “/assets/” directory.\n\n/assets/images/: Image files\n/assets/figures/: Scientific figures (e.g., graphs, plots, diagrams)\n/assets/docs/: Pre-rendered documents (e.g., HTML)",
+    "objectID": "tutorials/writing_text/inline_code.html#syntax-for-inline-code",
+    "href": "tutorials/writing_text/inline_code.html#syntax-for-inline-code",
+    "title": "Inline code and results",
+    "section": "Syntax for Inline Code",
+    "text": "Syntax for Inline Code\nInline R code in Quarto is enclosed with single backticks and starts with the language identifier, followed by the expression:\n\n`r 2 + 2`\n\nIncluding such a statement in text directly runs the code and prints the result: 4.\nSimilarly, you can embed variables defined in previous code chunks:\n\nmean_score &lt;- mean(c(5, 10, 15))\nmean_score\n\n[1] 10\n\n\nIf we now include in a sentence\n\n`r mean_score`\n\nThis immediately prints the value of mean_score: The average score is 10.\nKey points:\n- The expression inside the inline code is evaluated at render time.\n- You can use any valid R expression, including functions, arithmetic, or objects created in previous chunks.\n- Inline code only outputs the result, not the code itself.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Images & Figures"
+      "Inline code and results"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/inline_code.html#images",
-    "href": "tutorials/writing_text/inline_code.html#images",
-    "title": "Images & Figures",
-    "section": "Images",
-    "text": "Images\n\n\n\nA Nice Mountain View",
+    "objectID": "tutorials/writing_text/inline_code.html#using-inline-code-in-text",
+    "href": "tutorials/writing_text/inline_code.html#using-inline-code-in-text",
+    "title": "Inline code and results",
+    "section": "Using Inline Code in Text",
+    "text": "Using Inline Code in Text\nInline code can be used in:\n\nNumerical results:\n\n\nThe dataset contains `r nrow(mtcars)` rows and `r ncol(mtcars)` columns.\n\nThe dataset contains 32 rows and 11 columns.\n\nStatistical summaries:\n\n\nThe mean mpg is `r round(mean(mtcars$mpg), 1)`.\n\nThe mean mpg is 20.1.\n\nDynamic dates or times:\n\n\nReport generated on `r Sys.Date()`.\n\nReport generated on 2025-10-20.\n\nModel results:\n\n\nThe regression slope is `r coef(lm(mpg ~ wt, data = mtcars))[2]`.\n\nThe regression slope is -5.3444716.\nThese ensure your narrative text always reflects the current state of your analysis.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Images & Figures"
+      "Inline code and results"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/inline_code.html#figures",
-    "href": "tutorials/writing_text/inline_code.html#figures",
-    "title": "Images & Figures",
-    "section": "Figures",
-    "text": "Figures\n\n\n\nSerial Multiple Mediation",
+    "objectID": "tutorials/writing_text/inline_code.html#best-practices",
+    "href": "tutorials/writing_text/inline_code.html#best-practices",
+    "title": "Inline code and results",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nKeep expressions simple: Inline code should be concise; longer computations belong in code chunks.\nName variables clearly: Use descriptive names in code chunks so inline references are readable.\nRound or format results: Inline outputs may need rounding (round()) or formatting (format()) for clarity.\n\nInline code is a key feature for reproducible reporting, as it reduces manual copying of results and ensures that text and code remain synchronized. By combining inline expressions with code chunks, you can create documents that automatically update whenever your data or analysis changes.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Images & Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/inline_code.html#documents",
-    "href": "tutorials/writing_text/inline_code.html#documents",
-    "title": "Images & Figures",
-    "section": "Documents",
-    "text": "Documents\nInclude a pre-rendered HTML files as part of this webpage.\nR: Order rows using column values\n  \n  \n  \n  \n  \n  \n\n\n\n  \n\n\n\narrange {dplyr}\nR Documentation\n\n\n\n\n\n  Order rows using column values\n\n  Description\n\n  \n  \n\n  Usage\n\n  arrange(.data, ..., .by_group = FALSE)\n\n## S3 method for class 'data.frame'\narrange(.data, ..., .by_group = FALSE, .locale = NULL)\n\n  Arguments\n\n  \n\n\n\n\n\n\n\n.data\nA data frame, data frame extension (e.g. a tibble), or a lazy data frame (e.g. from dbplyr or dtplyr). See Methods, below, for more details.\n\n\n...\n&lt;data-masking&gt; Variables, or functions of variables. Use desc() to sort a variable in descending order.\n\n\n.by_group\nIf TRUE, will sort first by grouping variable. Applies togrouped data frames only.\n\n\n.locale\nThe locale to sort character vectors in.\n\nIf NULL, the default, uses the \"C\" locale unless the dplyr.legacy_locale global option escape hatch is active. See the dplyr-locale help page for more details.\nIf a single string from stringi::stri_locale_list() is supplied, then this will be used as the locale to sort with. For example, \"en\" will sort with the American English locale. This requires the stringi package.\nIf \"C\" is supplied, then character vectors will always be sorted in the C locale. This does not require stringi and is often much faster than supplying a locale identifier.\n\nThe C locale is not the same as English locales, such as \"en\", particularly when it comes to data containing a mix of upper and lower case letters. This is explained in more detail on the locale help page under the ⁠Default locale⁠ section.\n\n\n\n\n\n  Details\n\n  Missing values\n\n  \n\n  \n    \n       always sorted to the end for local data, even when wrapped with desc().\n    \n    \n       treated differently for remote data, depending on the backend.\n    \n  \n\n  Value\n\n  \n\n  \n    \n       All rows appear in the output, but (usually) in a different place.\n    \n    \n       Columns are not modified.\n    \n    \n       Groups are not modified.\n    \n    \n       Data frame attributes are preserved.\n    \n  \n\n  Methods\n\n  \n  \n\n  See Also\n\n  \n\n  Examples\n\n  arrange(mtcars, cyl, disp)\narrange(mtcars, desc(disp))\n\n# grouped arrange ignores groups\nby_cyl &lt;- mtcars %&gt;% group_by(cyl)\nby_cyl %&gt;% arrange(desc(wt))\n# Unless you specifically ask:\nby_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)\n\n# use embracing when wrapping in a function;\n# see ?rlang::args_data_masking for more details\ntidy_eval_arrange &lt;- function(.data, var) {\n  .data %&gt;%\n    arrange({{ var }})\n}\ntidy_eval_arrange(mtcars, mpg)\n\n# Use `across()` or `pick()` to select columns with tidy-select\niris %&gt;% arrange(pick(starts_with(\"Sepal\")))\niris %&gt;% arrange(across(starts_with(\"Sepal\"), desc))",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Images & Figures"
+      "Inline code and results"
     ]
   },
   {
@@ -273,66 +357,6 @@
     "text": "Using the Website Margin\nIn the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are better placed in the website margin.\n\nPlacing supporting elements like links, callouts, and references in the margin streamlines the main body content while keeping the supporting information near the relevant main body content.\n\nTo place content in the website margine, we use the column-margin div.\n\nExample\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel. Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales. Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis. Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id, porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna elit id justo. Duis tincidunt id massa eget lacinia.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n\nNam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis eget luctus quam. Donec consectetur neque nec egestas ultricies.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nWikipedia: Central Limit Theorem"
   },
   {
-    "objectID": "tutorials/reproducibility/reuse.html",
-    "href": "tutorials/reproducibility/reuse.html",
-    "title": "Divs & Callouts",
-    "section": "",
-    "text": "This is the second topic file for Tutorial 1.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Divs & Callouts"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/reuse.html#callout-blocks",
-    "href": "tutorials/reproducibility/reuse.html#callout-blocks",
-    "title": "Divs & Callouts",
-    "section": "Callout Blocks",
-    "text": "Callout Blocks\nUse callout blocks to highlight special information.\n\n\n\n\n\n\nNote Title\n\n\n\nSomething noteworthy.\n\n\n\n\n\n\n\n\nTip Title\n\n\n\nHere’s a tip for ya…\n\n\n\n\n\n\n\n\nImportant Title\n\n\n\nThis is very important!\n\n\n\n\n\n\n\n\nWarning Title\n\n\n\nYou’ve been warned.\n\n\n\n\n\n\n\n\nCaution Title\n\n\n\nProceed with caution.\n\n\n\nCustom Callouts\nThis project uses the quarto-custom-callout extension to provide some bespoke callout blocks. This template already defines four such blocks.\nA reading callout to highlight relevant, recommended literature.\n\nI.e., These sources would be the required reading in a classroom context.\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2: Workflow Basics\n\n\nA reading-advanced callout to highlight relevant, but technically challanging, literature.\n\nI.e., These sources would be supplementary reference materials but not required reading in a classroom context.\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\nA resource callout to highlight related external resources.\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor a different take on these ideas, check out Andrew Heiss’ R Primers tutorial on the topic\n\nR Primers: Programming Basics\n\n\n\n\n\nPractice Callouts\nThe custom practice callout is reserved for inline practice problems.\n\nThe panel-tabset div nested within the practice div creates a set of tabs to organize the exercise components.\nEach Level 2 heading inside the panel-tabset div defines a new tab.\n\nIn the examples below, the tab titles are specified through quarto shortcode variables.\nThese variables are defined in the _variables.yml metadata file.\n\n\n\n\n\n\n\n\nExample Code Exercise\n\n\n\n\nRegress Petal.Width onto Species using the iris dataset.\nCreate a normal Q-Q plot of the residuals.\n\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nRemember what happens when you call the Base R plot() function on a fitted lm object.\n\n\n\nFirst, we’ll use the lm() function to estimate the model.\n\n\nfit1 &lt;- lm(Petal.Width ~ Species, data = iris)\n\n\nThen, we’ll use the default plotting method for lm objects to create the Q-Q plot.\n\n\nplot(fit1, 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample Theory Question\n\n\n\n\n Question Solution\n\n\nWhat is the answer to life, the universe, and everything?\n\n\n42",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Divs & Callouts"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/reuse.html#using-the-website-margin",
-    "href": "tutorials/reproducibility/reuse.html#using-the-website-margin",
-    "title": "Divs & Callouts",
-    "section": "Using the Website Margin",
-    "text": "Using the Website Margin\nIn the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are better placed in the website margin.\n\nPlacing supporting elements like links, callouts, and references in the margin streamlines the main body content while keeping the supporting information near the relevant main body content.\n\nTo place content in the website margine, we use the column-margin div.\n\nExample\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel. Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales. Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis. Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id, porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna elit id justo. Duis tincidunt id massa eget lacinia.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n\nNam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis eget luctus quam. Donec consectetur neque nec egestas ultricies.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nWikipedia: Central Limit Theorem",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Divs & Callouts"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/portable.html",
-    "href": "tutorials/reproducibility/portable.html",
-    "title": "Code Blocks",
-    "section": "",
-    "text": "This is the first topic file for Tutorial 1.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Code Blocks"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/portable.html#code-blocks",
-    "href": "tutorials/reproducibility/portable.html#code-blocks",
-    "title": "Code Blocks",
-    "section": "Code Blocks",
-    "text": "Code Blocks\nUse knitr code blocks to include non-interactive R code.\n\n## Add 2 and 2\n2 + 2\n\n[1] 4\n\n## Divide 225 by 15 and print the result\n(x &lt;- 225 / 15)\n\n[1] 15\n\n\nUse quarto-webr code blocks for interactive R exercises.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCode Block Environments\nA single execution environment is shared across code blocks of the same type.\n\nAll the knitr code blocks in a QMD file will share an evaluation environment.\nLikewise for the quarto-webr code blocks\n\n\nx^2\n\n[1] 225\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nknitr and quarto-webr code blocks to not share the same environment, though.\n\nresid(fit)\n\nError: object 'fit' not found\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a knitr chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.\n\nDon’t forget to set an appropriate seed, if you’re trying to regenerate a stochastic object.\n\n\n\nInline Code\nUse knitr inline code chunks to embed R output in text blocks.\n\nE.g., R says the squareroot of 2 is 1.4142136.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Code Blocks"
-    ]
-  },
-  {
     "objectID": "in_progress.html",
     "href": "in_progress.html",
     "title": "In Progress",
@@ -355,7 +379,7 @@
     "href": "index.html#learning-goals",
     "title": "Reproducible reporting",
     "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nQuarto and markdown\n\nUnderstand the purpose of Markdown and Quarto.\nUnderstand the differences between Markdown and Quarto.\nRecognize the different documents that can be created with Quarto.\n\n\n\nChunks and options\n\nUnderstand what code chuncks are.\nLearn how to create and label R code chunks.\nExplore common chunk options.\n\n\n\nWriting text\n\nLearn how to write plain text and basic Markdown formatting to style text.\nLearn how to apply structure to a document.\nLearn how to include inline code and results within text.\n\n\n\nPresenting output\n\nLearn how to display clean, readable tables.\nUnderstand how to include plots and visualizations.\n\n\n\nPortability and reproducibility\n\nUnderstand what makes Quarto documents portable and reproducible.\nLearn how to reuse content and structure across projects.\nAppreciate the benefits of reproducible workflows.\n\nClick the button below to get started with the first tutorial.\n\n\n Begin Tutorial",
+    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nQuarto and markdown\n\nUnderstand the purpose of Markdown and Quarto.\nUnderstand the differences between Markdown and Quarto.\nRecognize the different documents that can be created with Quarto.\n\n\n\nChunks and options\n\nUnderstand what code chuncks are.\nLearn how to create and label R code chunks.\nExplore common chunk options.\n\n\n\nWriting text\n\nLearn how to write plain text and basic Markdown formatting to style text.\nLearn how to apply structure to a document.\nLearn how to include inline code and results within text.\n\n\n\nPresenting output\n\nLearn how to display clean, readable tables.\nUnderstand how to include plots and visualizations.\n\nClick the button below to get started with the first tutorial.\n\n\n Begin Tutorial",
     "crumbs": [
       "Open-Stat-Prog",
       "Overview"
@@ -366,103 +390,10 @@
     "href": "conclusion.html",
     "title": "Conclusion",
     "section": "",
-    "text": "Use this page to provide some kind of brief wrap-up.",
+    "text": "You successfully completed the module “Reproducible reporting”. You should now be able to generate written documents and presentations where you can seamlessly integrate your text and explanations with your coding in R chunks.\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Conclusion"
-    ]
-  },
-  {
-    "objectID": "conclusion.html#next-steps",
-    "href": "conclusion.html#next-steps",
-    "title": "Conclusion",
-    "section": "Next Steps",
-    "text": "Next Steps\nIf your module feeds naturally into another, link that module through the button below as a suggestion for further study.\n\nHere, we’re linking to the First Steps module.\n\n\n\n Next Module",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Conclusion"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/workflows.html",
-    "href": "tutorials/reproducibility/workflows.html",
-    "title": "Images & Figures",
-    "section": "",
-    "text": "This is the third topic file for Tutorial 1.\narrange() orders the rows of a data frame by the values of selected columns.\nUnlike other dplyr verbs, arrange() largely ignores grouping; you need to explicitly mention grouping\n    variables (or use  .by_group = TRUE) in order to group by them, and functions of variables are\n    evaluated once per data frame, not once per group.\nUnlike base sorting with sort(), NA are:\nAn object of the same type as .data. The output has the following properties:\nThis function is a generic, which means that packages can provide implementations (methods) for\n    other classes. See the documentation of individual methods for extra arguments and differences in behaviour.\nThe following methods are currently available in loaded packages: no methods found.\nOther single table verbs: \n    filter(),\n    mutate(),\n    reframe(),\n    rename(),\n    select(),\n    slice(),\n    summarise()",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Images & Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/workflows.html#assets-directory",
-    "href": "tutorials/reproducibility/workflows.html#assets-directory",
-    "title": "Images & Figures",
-    "section": "Assets Directory",
-    "text": "Assets Directory\nAll pre-rendered assets (i.e., files that will not rendered/compiled into some other format) that you want to include in your website should live somewhere in the “/assets/” directory.\n\n/assets/images/: Image files\n/assets/figures/: Scientific figures (e.g., graphs, plots, diagrams)\n/assets/docs/: Pre-rendered documents (e.g., HTML)",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Images & Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/workflows.html#images",
-    "href": "tutorials/reproducibility/workflows.html#images",
-    "title": "Images & Figures",
-    "section": "Images",
-    "text": "Images\n\n\n\nA Nice Mountain View",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Images & Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/workflows.html#figures",
-    "href": "tutorials/reproducibility/workflows.html#figures",
-    "title": "Images & Figures",
-    "section": "Figures",
-    "text": "Figures\n\n\n\nSerial Multiple Mediation",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Images & Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/workflows.html#documents",
-    "href": "tutorials/reproducibility/workflows.html#documents",
-    "title": "Images & Figures",
-    "section": "Documents",
-    "text": "Documents\nInclude a pre-rendered HTML files as part of this webpage.\nR: Order rows using column values\n  \n  \n  \n  \n  \n  \n\n\n\n  \n\n\n\narrange {dplyr}\nR Documentation\n\n\n\n\n\n  Order rows using column values\n\n  Description\n\n  \n  \n\n  Usage\n\n  arrange(.data, ..., .by_group = FALSE)\n\n## S3 method for class 'data.frame'\narrange(.data, ..., .by_group = FALSE, .locale = NULL)\n\n  Arguments\n\n  \n\n\n\n\n\n\n\n.data\nA data frame, data frame extension (e.g. a tibble), or a lazy data frame (e.g. from dbplyr or dtplyr). See Methods, below, for more details.\n\n\n...\n&lt;data-masking&gt; Variables, or functions of variables. Use desc() to sort a variable in descending order.\n\n\n.by_group\nIf TRUE, will sort first by grouping variable. Applies togrouped data frames only.\n\n\n.locale\nThe locale to sort character vectors in.\n\nIf NULL, the default, uses the \"C\" locale unless the dplyr.legacy_locale global option escape hatch is active. See the dplyr-locale help page for more details.\nIf a single string from stringi::stri_locale_list() is supplied, then this will be used as the locale to sort with. For example, \"en\" will sort with the American English locale. This requires the stringi package.\nIf \"C\" is supplied, then character vectors will always be sorted in the C locale. This does not require stringi and is often much faster than supplying a locale identifier.\n\nThe C locale is not the same as English locales, such as \"en\", particularly when it comes to data containing a mix of upper and lower case letters. This is explained in more detail on the locale help page under the ⁠Default locale⁠ section.\n\n\n\n\n\n  Details\n\n  Missing values\n\n  \n\n  \n    \n       always sorted to the end for local data, even when wrapped with desc().\n    \n    \n       treated differently for remote data, depending on the backend.\n    \n  \n\n  Value\n\n  \n\n  \n    \n       All rows appear in the output, but (usually) in a different place.\n    \n    \n       Columns are not modified.\n    \n    \n       Groups are not modified.\n    \n    \n       Data frame attributes are preserved.\n    \n  \n\n  Methods\n\n  \n  \n\n  See Also\n\n  \n\n  Examples\n\n  arrange(mtcars, cyl, disp)\narrange(mtcars, desc(disp))\n\n# grouped arrange ignores groups\nby_cyl &lt;- mtcars %&gt;% group_by(cyl)\nby_cyl %&gt;% arrange(desc(wt))\n# Unless you specifically ask:\nby_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)\n\n# use embracing when wrapping in a function;\n# see ?rlang::args_data_masking for more details\ntidy_eval_arrange &lt;- function(.data, var) {\n  .data %&gt;%\n    arrange({{ var }})\n}\ntidy_eval_arrange(mtcars, mpg)\n\n# Use `across()` or `pick()` to select columns with tidy-select\niris %&gt;% arrange(pick(starts_with(\"Sepal\")))\niris %&gt;% arrange(across(starts_with(\"Sepal\"), desc))",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility",
-      "Images & Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/index.html",
-    "href": "tutorials/reproducibility/index.html",
-    "title": "First Tutorial",
-    "section": "",
-    "text": "This is the landing page for the first tutorial. Each tutorial section should begin with a landing page named “index.qmd”.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility"
-    ]
-  },
-  {
-    "objectID": "tutorials/reproducibility/index.html#headings",
-    "href": "tutorials/reproducibility/index.html#headings",
-    "title": "First Tutorial",
-    "section": "Headings",
-    "text": "Headings\nThe title field of each QMD source file is typeset as a Level 1 heading, so use Level-2 headings as the highest heading level in your markdown.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Reproducibility"
     ]
   },
   {
@@ -577,20 +508,9 @@
   {
     "objectID": "tutorials/writing_text/index.html",
     "href": "tutorials/writing_text/index.html",
-    "title": "First Tutorial",
+    "title": "Writing text",
     "section": "",
-    "text": "This is the landing page for the first tutorial. Each tutorial section should begin with a landing page named “index.qmd”.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/index.html#headings",
-    "href": "tutorials/writing_text/index.html#headings",
-    "title": "First Tutorial",
-    "section": "Headings",
-    "text": "Headings\nThe title field of each QMD source file is typeset as a Level 1 heading, so use Level-2 headings as the highest heading level in your markdown.",
+    "text": "In this tutorial, we will learn you how to efficiently create an attractive written document using Quarto. First, you will learn how to write plain text and apply basic Markdown formatting to style the text. Next, we will pay more attention to structuring the document. Finally, we will also discuss how to include inline code and results within the text.\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text"
@@ -599,56 +519,69 @@
   {
     "objectID": "tutorials/writing_text/structure.html",
     "href": "tutorials/writing_text/structure.html",
-    "title": "Divs & Callouts",
+    "title": "Adding structure",
     "section": "",
-    "text": "This is the second topic file for Tutorial 1.",
+    "text": "A well-structured Quarto document helps readers follow your analysis and allows Quarto to automatically generate tables of contents, numbered sections, and cross-references. You can add structure using headings, numbered elements (sections, figures, and equations), and citations or cross-references.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Divs & Callouts"
+      "Adding structure"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/structure.html#callout-blocks",
-    "href": "tutorials/writing_text/structure.html#callout-blocks",
-    "title": "Divs & Callouts",
-    "section": "Callout Blocks",
-    "text": "Callout Blocks\nUse callout blocks to highlight special information.\n\n\n\n\n\n\nNote Title\n\n\n\nSomething noteworthy.\n\n\n\n\n\n\n\n\nTip Title\n\n\n\nHere’s a tip for ya…\n\n\n\n\n\n\n\n\nImportant Title\n\n\n\nThis is very important!\n\n\n\n\n\n\n\n\nWarning Title\n\n\n\nYou’ve been warned.\n\n\n\n\n\n\n\n\nCaution Title\n\n\n\nProceed with caution.\n\n\n\nCustom Callouts\nThis project uses the quarto-custom-callout extension to provide some bespoke callout blocks. This template already defines four such blocks.\nA reading callout to highlight relevant, recommended literature.\n\nI.e., These sources would be the required reading in a classroom context.\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2: Workflow Basics\n\n\nA reading-advanced callout to highlight relevant, but technically challanging, literature.\n\nI.e., These sources would be supplementary reference materials but not required reading in a classroom context.\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\nA resource callout to highlight related external resources.\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor a different take on these ideas, check out Andrew Heiss’ R Primers tutorial on the topic\n\nR Primers: Programming Basics\n\n\n\n\n\nPractice Callouts\nThe custom practice callout is reserved for inline practice problems.\n\nThe panel-tabset div nested within the practice div creates a set of tabs to organize the exercise components.\nEach Level 2 heading inside the panel-tabset div defines a new tab.\n\nIn the examples below, the tab titles are specified through quarto shortcode variables.\nThese variables are defined in the _variables.yml metadata file.\n\n\n\n\n\n\n\n\nExample Code Exercise\n\n\n\n\nRegress Petal.Width onto Species using the iris dataset.\nCreate a normal Q-Q plot of the residuals.\n\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nRemember what happens when you call the Base R plot() function on a fitted lm object.\n\n\n\nFirst, we’ll use the lm() function to estimate the model.\n\n\nfit1 &lt;- lm(Petal.Width ~ Species, data = iris)\n\n\nThen, we’ll use the default plotting method for lm objects to create the Q-Q plot.\n\n\nplot(fit1, 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample Theory Question\n\n\n\n\n Question Solution\n\n\nWhat is the answer to life, the universe, and everything?\n\n\n42",
+    "objectID": "tutorials/writing_text/structure.html#headings-and-subheadings",
+    "href": "tutorials/writing_text/structure.html#headings-and-subheadings",
+    "title": "Adding structure",
+    "section": "Headings and Subheadings",
+    "text": "Headings and Subheadings\nHeadings in Quarto follow the standard Markdown syntax using one or more hash (#) symbols. A single # creates a top-level heading, ## creates a subheading, and so on.\n# Main Title\n\n## Section Title\n\n### Subsection Title\nWhich would result in:",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Divs & Callouts"
+      "Adding structure"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/structure.html#using-the-website-margin",
-    "href": "tutorials/writing_text/structure.html#using-the-website-margin",
-    "title": "Divs & Callouts",
-    "section": "Using the Website Margin",
-    "text": "Using the Website Margin\nIn the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are better placed in the website margin.\n\nPlacing supporting elements like links, callouts, and references in the margin streamlines the main body content while keeping the supporting information near the relevant main body content.\n\nTo place content in the website margine, we use the column-margin div.\n\nExample\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel. Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales. Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis. Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id, porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna elit id justo. Duis tincidunt id massa eget lacinia.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n\nNam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis eget luctus quam. Donec consectetur neque nec egestas ultricies.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nWikipedia: Central Limit Theorem",
+    "objectID": "tutorials/writing_text/structure.html#section-title",
+    "href": "tutorials/writing_text/structure.html#section-title",
+    "title": "Adding structure",
+    "section": "Section Title",
+    "text": "Section Title\n\nSubsection Title\nQuarto automatically interprets these heading levels to build a document hierarchy. This structure is reflected in the output and (if enabled) in a table of contents (toc: true in the YAML front matter).\nFor example, adding the following to your YAML header will generate an automatic table of contents based on your headings:\n---\ntitle: \"My Analysis Report\"\ntoc: true\nnumber-sections: true\n---\nWhen number-sections: true is set, all headings are automatically numbered (1, 1.1, 1.2, etc.), and cross-references can be created for each section.\n\n\nNumbering Figures and Equations\nQuarto automatically numbers figures, tables, and equations that have captions. This numbering enables you to refer to them consistently throughout your text.\nTo number a figure, simply add a caption using the fig-cap option:\n#| label: fig-distribution\n#| fig-cap: \"Distribution of scores by group.\"\nlibrary(ggplot)\n\nggplot(data, aes(x = group, y = score, fill = group)) +\n  geom_boxplot()\nSee below how this caption will appear in addition to the figure:\n\n\n\n\n\n\n\n\nFigure 1: Distribution of scores by group.\n\n\n\n\n\nTo reference it in text, use the label you assigned: See @fig-distribution for an overview of the score distributions. would result in: See Figure 1 for an overview of the score distributions.\nFor equations, numbering occurs when you assign a label inside the LaTeX math block:\n$$\nE = mc^2 \\quad\n$$ {#eq-myequation}\n\\[\nE = mc^2 \\quad\n\\tag{1}\\]\nYou can then refer to this equation as @eq-myequation in your text, which will render as “(1)” or “Equation 1” depending on the format. Here it results in: Equation 1.",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Divs & Callouts"
+      "Adding structure"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/structure.html#numbering-sections",
+    "href": "tutorials/writing_text/structure.html#numbering-sections",
+    "title": "Adding structure",
+    "section": "Numbering Sections",
+    "text": "Numbering Sections\nWhen you include number-sections: true in your YAML front matter, Quarto automatically numbers all top-level and nested headings. This is especially useful in reports, theses, or papers where hierarchical organization matters. The numbering adjusts dynamically as you add or rearrange content, ensuring consistent structure throughout the document.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Adding structure"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/structure.html#adding-references-and-citations",
+    "href": "tutorials/writing_text/structure.html#adding-references-and-citations",
+    "title": "Adding structure",
+    "section": "Adding References and Citations",
+    "text": "Adding References and Citations\nQuarto uses Pandoc’s citation system, allowing you to cite sources from a bibliography file. In your YAML header, include the path to a .bib file (in BibTeX format):\n---\ntitle: \"My Report\"\nbibliography: references.bib\n---\nYou can then cite works in-text using the @ symbol and the citation key from your .bib file: As shown in @smith2021, the results confirm the hypothesis.\nTo include a list of references (a bibliography) at the end of your document, simply add a # References heading — Quarto will automatically populate it during rendering.\nExample of inline citations:\n\n@smith2021 → Smith (2021)\n[@smith2021; @doe2022] → (Smith 2021; Doe 2022)\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see Quarto citations",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Adding structure"
     ]
   },
   {
     "objectID": "tutorials/presenting_output/index.html",
     "href": "tutorials/presenting_output/index.html",
-    "title": "First Tutorial",
+    "title": "Tables and Figures",
     "section": "",
-    "text": "This is the landing page for the first tutorial. Each tutorial section should begin with a landing page named “index.qmd”.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/index.html#headings",
-    "href": "tutorials/presenting_output/index.html#headings",
-    "title": "First Tutorial",
-    "section": "Headings",
-    "text": "Headings\nThe title field of each QMD source file is typeset as a Level 1 heading, so use Level-2 headings as the highest heading level in your markdown.",
+    "text": "In this tutorial, you will learn about the various options for creating neat tables and figures in Quarto documents.\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Presenting output"
@@ -657,32 +590,57 @@
   {
     "objectID": "tutorials/chunk_options/create_chunks.html",
     "href": "tutorials/chunk_options/create_chunks.html",
-    "title": "Second Topic",
+    "title": "Create code chunks",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\nNunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.\n\n\n\n Back to top",
+    "text": "When working with Quarto documents, you can switch between a “Source”and a “Visual” mode in R studio. In ths Visual mode, you can click on “Insert” –&gt; “Executable Cell” –&gt; “R”. Here you also see the various other programming languages listed that are supported by Quarto.\n\n\n\nCreating chunks through the Visual mode\n\n\nWhen creating a chunk like this, a block appears in your .qmd file where you can directly type your R code.\nAlthough you can find everything you need to create your full .qmd file in the “Visual” mode with the guided user interface, we recommend to work in “Source” mode as much as possible.",
     "crumbs": [
       "Open-Stat-Prog",
       "Chunks and options",
-      "Second Topic"
+      "Create code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/create_chunks.html#quarto-visual-mode-in-r-studio",
+    "href": "tutorials/chunk_options/create_chunks.html#quarto-visual-mode-in-r-studio",
+    "title": "Create code chunks",
+    "section": "",
+    "text": "When working with Quarto documents, you can switch between a “Source”and a “Visual” mode in R studio. In ths Visual mode, you can click on “Insert” –&gt; “Executable Cell” –&gt; “R”. Here you also see the various other programming languages listed that are supported by Quarto.\n\n\n\nCreating chunks through the Visual mode\n\n\nWhen creating a chunk like this, a block appears in your .qmd file where you can directly type your R code.\nAlthough you can find everything you need to create your full .qmd file in the “Visual” mode with the guided user interface, we recommend to work in “Source” mode as much as possible.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/create_chunks.html#quarto-source-mode-in-r-studio",
+    "href": "tutorials/chunk_options/create_chunks.html#quarto-source-mode-in-r-studio",
+    "title": "Create code chunks",
+    "section": "Quarto source mode in R studio",
+    "text": "Quarto source mode in R studio\n\n\n\nCreating chunks through the Source mode\n\n\nIn source mode, you can create a code chunk by typing three backticks followed by the language in curly braces—for example, ```{r} for R, and then closing the chunk with another set of three backticks. Everything between these fences will be treated as executable code when the document is rendered.\nAs you develop a Quarto document, it’s good practice to regularly check that it still executes correctly. The most direct way to do this is by rendering the document frequently. Rendering runs all code chunks in sequence, ensuring that each one can be executed successfully and that objects or results are correctly available when needed. You can render the document by clicking the Render button in RStudio, using the keyboard shortcut Ctrl + Shift + K (Windows/Linux) or Cmd + Shift + K (Mac), or by running quarto render yourfile.qmd in the terminal.\nIf the document executes without errors, the rendered output (HTML, PDF, or Word) will be updated. If an error occurs, Quarto will stop rendering and display a message pointing to the problematic chunk. Reading these messages carefully helps identify where code might rely on outdated objects or missing packages. Running code chunks individually in RStudio (by clicking the green play icon at the top right of each chunk or pressing Ctrl + Shift + Enter) is another useful way to test smaller sections before rendering the entire document. By checking execution regularly, you can catch issues early and ensure your document remains fully reproducible from start to finish.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/create_chunks.html#labelling-chunks",
+    "href": "tutorials/chunk_options/create_chunks.html#labelling-chunks",
+    "title": "Create code chunks",
+    "section": "Labelling chunks",
+    "text": "Labelling chunks\nEach R code chunk in a Quarto document can be given a label, which is specified immediately after the opening {r} in the chunk header. For example: ```#| label: data-summary.\nThe label data-summary uniquely identifies this chunk. Labels serve several important purposes. They make your document easier to navigate, help organize the flow of your analysis, and are used internally by Quarto for features such as caching, error reporting, and cross-referencing. For instance, if a rendering error occurs, Quarto reports it using the chunk label, making it straightforward to locate the source of the problem. Labels are also used to name figures or tables generated by that chunk, which ensures consistent and readable file names in your output directory.\nAs a matter of good practice, chunk labels should be unique, short but descriptive, and use only lowercase letters, numbers, and hyphens or underscores (avoid spaces or special characters). A clear naming convention—such as data-load, model-fit, or plot-results—helps maintain readability and reproducibility, especially in longer documents. Consistent labeling not only improves your own workflow but also supports collaboration, as others can easily follow the structure and dependencies of your analysis.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
     ]
   },
   {
     "objectID": "tutorials/chunk_options/index.html",
     "href": "tutorials/chunk_options/index.html",
-    "title": "Second Tutorial",
+    "title": "Chunks and options",
     "section": "",
-    "text": "This is the landing page for the second tutorial.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options"
-    ]
-  },
-  {
-    "objectID": "tutorials/chunk_options/index.html#blah",
-    "href": "tutorials/chunk_options/index.html#blah",
-    "title": "Second Tutorial",
-    "section": "Blah",
-    "text": "Blah\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nBlah, Blah\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\nNunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.",
+    "text": "With this tutorial, you will learn the following things about code chunks.\n\nFirst, we will explain to you what code chunks are.\nSecond, you will learn how to create and label code chunks yourself.\nFinally, you will get familiar with common code chunk options.\n\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Chunks and options"
@@ -742,7 +700,7 @@
     "href": "quizzes/second_tutorial/questions/arithmetic2.html",
     "title": "Question",
     "section": "",
-    "text": "Question\nWhat is the value of \\(x\\) in the following equation?\n\\[\nx = \\frac{4 + 4}{5}\n\\]\nRound your answer to two decimal places.\n\n\nSolution\nAfter rounding, we get 1.60.\n\n\nMeta-information\nexname: Arithmetic extype: num exsolution: 1.60 extol: 0.01\n\n\n\n\n Back to top"
+    "text": "Question\nWhat is the value of \\(x\\) in the following equation?\n\\[\nx = \\frac{4 + 2}{4}\n\\]\nRound your answer to two decimal places.\n\n\nSolution\nAfter rounding, we get 1.50.\n\n\nMeta-information\nexname: Arithmetic extype: num exsolution: 1.50 extol: 0.01\n\n\n\n\n Back to top"
   },
   {
     "objectID": "quizzes/first_tutorial/questions/bad_question.html",

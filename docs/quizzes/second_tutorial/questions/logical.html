@@ -70,19 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -104,6 +91,19 @@ div.callout-reading.callout-style-default > .callout-header {
 }
 div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -233,19 +233,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/chunk_options/code_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+ <span class="menu-text">Introduction to code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/chunk_options/create_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Create code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/chunk_options/chunk_options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
       </ul>
@@ -262,19 +262,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/writing_text/text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Writing text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/writing_text/structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
+ <span class="menu-text">Adding structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/writing_text/inline_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
       </ul>
@@ -291,42 +291,13 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/presenting_output/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../tutorials/reproducibility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducibility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/reproducibility/portable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/reproducibility/reuse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/reproducibility/workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Figures</span></a>
   </div>
 </li>
       </ul>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Images &amp; Figures – OSP Module Template</title>
+<title>Inline code and results – OSP Module Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,17 +107,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -111,17 +146,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -176,7 +211,7 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/writing_text/index.html">Writing text</a></li><li class="breadcrumb-item"><a href="../../tutorials/writing_text/inline_code.html">Images &amp; Figures</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/writing_text/index.html">Writing text</a></li><li class="breadcrumb-item"><a href="../../tutorials/writing_text/inline_code.html">Inline code and results</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -235,19 +270,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/code_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+ <span class="menu-text">Introduction to code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/create_chunks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Create code chunks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/chunk_options/chunk_options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+ <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
       </ul>
@@ -264,19 +299,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Writing text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
+ <span class="menu-text">Adding structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/writing_text/inline_code.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
       </ul>
@@ -293,42 +328,13 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../tutorials/reproducibility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducibility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/portable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code Blocks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/reuse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Divs &amp; Callouts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/reproducibility/workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Images &amp; Figures</span></a>
+ <span class="menu-text">Figures</span></a>
   </div>
 </li>
       </ul>
@@ -349,19 +355,18 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assets-directory" id="toc-assets-directory" class="nav-link active" data-scroll-target="#assets-directory">Assets Directory</a></li>
-  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images">Images</a></li>
-  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
-  <li><a href="#documents" id="toc-documents" class="nav-link" data-scroll-target="#documents">Documents</a></li>
+  <li><a href="#syntax-for-inline-code" id="toc-syntax-for-inline-code" class="nav-link active" data-scroll-target="#syntax-for-inline-code">Syntax for Inline Code</a></li>
+  <li><a href="#using-inline-code-in-text" id="toc-using-inline-code-in-text" class="nav-link" data-scroll-target="#using-inline-code-in-text">Using Inline Code in Text</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/writing_text/index.html">Writing text</a></li><li class="breadcrumb-item"><a href="../../tutorials/writing_text/inline_code.html">Images &amp; Figures</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/writing_text/index.html">Writing text</a></li><li class="breadcrumb-item"><a href="../../tutorials/writing_text/inline_code.html">Inline code and results</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Images &amp; Figures</h1>
+<h1 class="title">Inline code and results</h1>
 </div>
 
 
@@ -378,198 +383,73 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
 </header>
 
 
-<p>This is the third topic file for Tutorial 1.</p>
-<section id="assets-directory" class="level2">
-<h2 class="anchored" data-anchor-id="assets-directory">Assets Directory</h2>
-<p>All pre-rendered assets (i.e., files that will not rendered/compiled into some other format) that you want to include in your website should live somewhere in the “/assets/” directory.</p>
-<ul>
-<li><code>/assets/images/</code>: Image files</li>
-<li><code>/assets/figures/</code>: Scientific figures (e.g., graphs, plots, diagrams)</li>
-<li><code>/assets/docs/</code>: Pre-rendered documents (e.g., HTML)</li>
-</ul>
-</section>
-<section id="images" class="level2">
-<h2 class="anchored" data-anchor-id="images">Images</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/images/ecrins_pano.jpg" class="img-fluid figure-img"></p>
-<figcaption>A Nice Mountain View</figcaption>
-</figure>
+<p>In Quarto, <strong>inline code</strong> allows you to execute R expressions (or code in other supported languages) directly within your narrative text. This makes it possible to <strong>embed calculated results dynamically</strong> into your report, so your text always reflects the latest data or computations. Inline code is particularly useful for reporting <strong>summary statistics</strong>, <strong>model results</strong>, or <strong>dates</strong> without manually updating the text.</p>
+<section id="syntax-for-inline-code" class="level2">
+<h2 class="anchored" data-anchor-id="syntax-for-inline-code">Syntax for Inline Code</h2>
+<p>Inline R code in Quarto is enclosed with <strong>single backticks</strong> and starts with the language identifier, followed by the expression:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r 2 + 2</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="figures" class="level2">
-<h2 class="anchored" data-anchor-id="figures">Figures</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../assets/figures/mediation.png" class="img-fluid figure-img"></p>
-<figcaption>Serial Multiple Mediation</figcaption>
-</figure>
+<p>Including such a statement in text directly runs the code and prints the result: 4.</p>
+<p>Similarly, you can embed variables defined in previous code chunks:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mean_score <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mean_score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
 </div>
+</div>
+<p>If we now include in a sentence</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r mean_score</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This immediately prints the value of <code>mean_score</code>: The average score is 10.</p>
+<p>Key points:<br>
+- The expression inside the inline code is evaluated <strong>at render time</strong>.<br>
+- You can use any valid R expression, including functions, arithmetic, or objects created in previous chunks.<br>
+- Inline code only outputs the <strong>result</strong>, not the code itself.</p>
 </section>
-<section id="documents" class="level2">
-<h2 class="anchored" data-anchor-id="documents">Documents</h2>
-<p>Include a pre-rendered HTML files as part of this webpage.</p>
-<title>R: Order rows using column values</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
-  <script type="text/javascript">
-    const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
-    function processMathHTML() {
-      var l = document.getElementsByClassName('reqn');
-      for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
-      return;
-    }
-  </script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" onload="processMathHTML();"></script>
-  <!-- <link rel="stylesheet" type="text/css" href="/html/R.css" /> -->
-
-<div class="container"><main>
-
-  
-<table class="caption-top table" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td>arrange {dplyr}</td>
-<td style="text-align: right;">R Documentation</td>
-</tr>
-</tbody>
-</table>
-
-
-  <h2 class="anchored">Order rows using column values</h2>
-
-  <h3 class="anchored">Description</h3>
-
-  <p><code>arrange()</code> orders the rows of a data frame by the values of selected columns.</p>
-  <p>
-    Unlike other dplyr verbs, <code>arrange()</code> largely ignores grouping; you need to explicitly mention grouping
-    variables (or use  <code>.by_group = TRUE</code>) in order to group by them, and functions of variables are
-    evaluated once per data frame, not once per group.
-  </p>
-
-  <h3 class="anchored">Usage</h3>
-
-  <pre><code class="language-R">arrange(.data, ..., .by_group = FALSE)
-
-## S3 method for class 'data.frame'
-arrange(.data, ..., .by_group = FALSE, .locale = NULL)</code></pre>
-
-  <h3 class="anchored">Arguments</h3>
-
-  
-<table class="caption-top table" data-quarto-postprocess="true" role="presentation">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><code id=".data">.data</code></td>
-<td><p>A data frame, data frame extension (e.g. a tibble), or a lazy data frame (e.g. from dbplyr or dtplyr). See <em>Methods</em>, below, for more details.</p></td>
-</tr>
-<tr class="even">
-<td><code id="...">...</code></td>
-<td><p>&lt;<code>data-masking</code>&gt; Variables, or functions of variables. Use <code>desc()</code> to sort a variable in descending order.</p></td>
-</tr>
-<tr class="odd">
-<td><code id=".by_group">.by_group</code></td>
-<td><p>If <code>TRUE</code>, will sort first by grouping variable. Applies togrouped data frames only.</p></td>
-</tr>
-<tr class="even">
-<td><code id=".locale">.locale</code></td>
-<td><p>The locale to sort character vectors in.</p>
+<section id="using-inline-code-in-text" class="level2">
+<h2 class="anchored" data-anchor-id="using-inline-code-in-text">Using Inline Code in Text</h2>
+<p>Inline code can be used in:</p>
+<ol type="1">
+<li><strong>Numerical results</strong>:</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>The dataset contains <span class="st">`</span><span class="at">r nrow(mtcars)</span><span class="st">`</span> rows and <span class="st">`</span><span class="at">r ncol(mtcars)</span><span class="st">`</span> columns.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The dataset contains 32 rows and 11 columns.</p>
+<ol start="2" type="1">
+<li><strong>Statistical summaries</strong>:</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>The mean mpg is <span class="st">`</span><span class="at">r round(mean(mtcars$mpg), 1)</span><span class="st">`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The mean mpg is 20.1.</p>
+<ol start="3" type="1">
+<li><strong>Dynamic dates or times</strong>:</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Report generated on <span class="st">`</span><span class="at">r Sys.Date()</span><span class="st">`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Report generated on 2025-10-20.</p>
+<ol start="4" type="1">
+<li><strong>Model results</strong>:</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>The regression slope is <span class="st">`</span><span class="at">r coef(lm(mpg ~ wt, data = mtcars))[2]</span><span class="st">`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The regression slope is -5.3444716.</p>
+<p>These ensure your narrative text always reflects the <strong>current state of your analysis</strong>.</p>
+</section>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
 <ul>
-<li><p>If <code>NULL</code>, the default, uses the <code>"C"</code> locale unless the <code>dplyr.legacy_locale</code> global option escape hatch is active. See the dplyr-locale help page for more details.</p></li>
-<li><p>If a single string from <code>stringi::stri_locale_list()</code> is supplied, then this will be used as the locale to sort with. For example, <code>"en"</code> will sort with the American English locale. This requires the stringi package.</p></li>
-<li><p>If <code>"C"</code> is supplied, then character vectors will always be sorted in the C locale. This does not require stringi and is often much faster than supplying a locale identifier.</p></li>
+<li><strong>Keep expressions simple</strong>: Inline code should be concise; longer computations belong in code chunks.</li>
+<li><strong>Name variables clearly</strong>: Use descriptive names in code chunks so inline references are readable.</li>
+<li><strong>Round or format results</strong>: Inline outputs may need rounding (<code>round()</code>) or formatting (<code>format()</code>) for clarity.</li>
 </ul>
-<p>The C locale is not the same as English locales, such as <code>"en"</code>, particularly when it comes to data containing a mix of upper and lower case letters. This is explained in more detail on the locale help page under the <code style="white-space: pre;">⁠Default locale⁠</code> section.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-  <h3 class="anchored">Details</h3>
-
-  <h4 class="anchored">Missing values</h4>
-
-  <p>Unlike base sorting with <code>sort()</code>, <code>NA</code> are:</p>
-
-  <ul>
-    <li>
-      <p> always sorted to the end for local data, even when wrapped with <code>desc()</code>.</p>
-    </li>
-    <li>
-      <p> treated differently for remote data, depending on the backend.</p>
-    </li>
-  </ul>
-
-  <h3 class="anchored">Value</h3>
-
-  <p>An object of the same type as <code>.data</code>. The output has the following properties:</p>
-
-  <ul>
-    <li>
-      <p> All rows appear in the output, but (usually) in a different place.</p>
-    </li>
-    <li>
-      <p> Columns are not modified.</p>
-    </li>
-    <li>
-      <p> Groups are not modified.</p>
-    </li>
-    <li>
-      <p> Data frame attributes are preserved.</p>
-    </li>
-  </ul>
-
-  <h3 class="anchored">Methods</h3>
-
-  <p>
-    This function is a <strong>generic</strong>, which means that packages can provide implementations (methods) for
-    other classes. See the documentation of individual methods for extra arguments and differences in behaviour.
-  </p>
-  <p>The following methods are currently available in loaded packages: no methods found.</p>
-
-  <h3 class="anchored">See Also</h3>
-
-  <p>
-    Other single table verbs: 
-    <code>filter()</code>,
-    <code>mutate()</code>,
-    <code>reframe()</code>,
-    <code>rename()</code>,
-    <code>select()</code>,
-    <code>slice()</code>,
-    <code>summarise()</code>
-  </p>
-
-  <h3 class="anchored">Examples</h3>
-
-  <pre><code class="language-R">arrange(mtcars, cyl, disp)
-arrange(mtcars, desc(disp))
-
-# grouped arrange ignores groups
-by_cyl &lt;- mtcars %&gt;% group_by(cyl)
-by_cyl %&gt;% arrange(desc(wt))
-# Unless you specifically ask:
-by_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)
-
-# use embracing when wrapping in a function;
-# see ?rlang::args_data_masking for more details
-tidy_eval_arrange &lt;- function(.data, var) {
-  .data %&gt;%
-    arrange({{ var }})
-}
-tidy_eval_arrange(mtcars, mpg)
-
-# Use `across()` or `pick()` to select columns with tidy-select
-iris %&gt;% arrange(pick(starts_with("Sepal")))
-iris %&gt;% arrange(across(starts_with("Sepal"), desc))</code></pre>
-
-</main></div>
-
+<p>Inline code is a key feature for <strong>reproducible reporting</strong>, as it reduces manual copying of results and ensures that text and code remain <strong>synchronized</strong>. By combining inline expressions with code chunks, you can create documents that automatically update whenever your data or analysis changes.</p>
 
 
 </section>
@@ -983,8 +863,8 @@ iris %&gt;% arrange(across(starts_with("Sepal"), desc))</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../tutorials/writing_text/structure.html" class="pagination-link" aria-label="Divs &amp; Callouts">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Divs &amp; Callouts</span>
+      <a href="../../tutorials/writing_text/structure.html" class="pagination-link" aria-label="Adding structure">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Adding structure</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

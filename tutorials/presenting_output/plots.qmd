@@ -1,189 +1,110 @@
 ---
-title: "Divs & Callouts"
+title: "Figures"
 ---
 
-This is the second topic file for Tutorial 1.
 
-## Callout Blocks
+Figures are essential for visualizing data, illustrating concepts, or enhancing your reports. Quarto supports **figures generated from R code** as well as **external images**, allowing you to control captions, size, and placement for a polished presentation.
 
-Use callout blocks to highlight special information.
 
-::: {.callout-note}
+## Figures Generated from R
 
-## Note Title
+When creating plots in R, you can add **captions** and **adjust figure size** using chunk options in Quarto.
 
-Something noteworthy.
+The options within your R chunk would be set like this:
 
-:::
-
-::: {.callout-tip}
-
-## Tip Title
-
-Here's a tip for ya...
-
-:::
-
-::: {.callout-important}
-
-## Important Title
-
-This is very important!
-
-:::
-
-::: {.callout-warning}
-
-## Warning Title
-
-You've been warned.
-
-:::
-
-::: {.callout-caution}
-
-## Caution Title
-
-Proceed with caution.
-
-:::
-
-### Custom Callouts
-
-This project uses the [quarto-custom-callout](https://quarto.thecoatlessprofessor.com/custom-callout/) extension to
-provide some bespoke callout blocks. This template already defines four such blocks.
-
-A *reading* callout to highlight relevant, recommended literature.
-
-- I.e., These sources would be the required reading in a classroom context.
-
-::: reading
-
-[R4DS 2: Workflow Basics](https://r4ds.hadley.nz/workflow-basics.html)
-
-:::
-
-A *reading-advanced* callout to highlight relevant, but technically challanging, literature.
-
-- I.e., These sources would be supplementary reference materials but not required reading in a classroom context.
-
-::: reading-advanced
-
-[Advanced R 2.2: Binding Basics](https://adv-r.hadley.nz/names-values.html#binding-basics)
-
-:::
-
-A *resource* callout to highlight related external resources.
-
-::: resource
-
-For a different take on these ideas, check out Andrew Heiss' R Primers tutorial on the topic
-
-- [R Primers: Programming Basics](https://r-primers.andrewheiss.com/basics/02-programming-basics/)
-
-:::
-
-### Practice Callouts
-
-The custom *practice* callout is reserved for inline practice problems.
-
-- The `panel-tabset` div nested within the `practice` div creates a set of tabs to organize the exercise components.
-- Each Level 2 heading inside the `panel-tabset` div defines a new tab.
-   - In the examples below, the tab titles are specified through quarto shortcode variables.
-   - These variables are defined in the `_variables.yml` metadata file.
-
-::: practice
-
-## Example Code Exercise
-
-1. Regress `Petal.Width` onto `Species` using the `iris` dataset.
-1. Create a normal Q-Q plot of the residuals.
-
-:::: {.panel-tabset}
-
-## {{< var tab_title.editor >}}
-
-```{webr-r}
-```
-
-## {{< var tab_title.hint >}}
-
-Remember what happens when you call the Base R `plot()` function on a fitted lm object.
-
-## {{< var tab_title.solution >}}
-
-1. First, we'll use the `lm()` function to estimate the model.
-
+````markdown
+#| label: fig-scores
+#| fig-cap: "Boxplot of scores by group"
+#| fig-width: 6
+#| fig-height: 4
+````
+And with the following R code: 
 ```{r}
-fit1 <- lm(Petal.Width ~ Species, data = iris)
+#| label: fig-scores
+#| fig-cap: "Boxplot of scores by group"
+#| fig-width: 6
+#| fig-height: 4
+
+library(ggplot2)
+
+data <- data.frame(
+  Group = c("A", "B", "C"),
+  Score = c(5.2, 6.8, 4.9)
+)
+
+ggplot(data, aes(x = Group, y = Score, fill = Group)) +
+  geom_bar(stat = "identity") +
+  theme_minimal()
 ```
 
-1. Then, we'll use the default plotting method for lm objects to create the Q-Q plot.
+This would then result in the figure as directly outputted after the code. Here, you see:
 
-```{r}
-plot(fit1, 2)
+* `fig-cap`: Adds a **caption** to the figure.
+* `fig-width` and `fig-height`: Control the **size of the rendered figure** (in inches for HTML/PDF).
+* `label`: Allows you to **cross-reference** the figure in text with `@fig-scores`: Ref to @fig-scores.
+
+You can also combine `fig-align: "center"` in the chunk to **center the figure** in the output.
+
+
+## 2. External Images
+
+Quarto can include images stored locally or from the web using **Markdown syntax**:
+
+### Local images:
+
+Local images can be presented as follows:
+
+```markdown
+![This is a local image caption](/assets/images/ecrins_pano.jpg){#fig-local width=50%}
 ```
 
-::::
+![This is a local image caption](/assets/images/ecrins_pano.jpg){#fig-local width=50%}
 
-:::
+* `{#fig-local}`: Assigns a **label** for cross-referencing using `@fig-local`: @fig-local. 
+* `width=50%`: Adjusts the display size relative to the output width.
 
-::: practice
+### Web images:
 
-## Example Theory Question
+Web images can be presented by linking to them directly:
 
-:::: {.panel-tabset}
+```markdown
+![Quarto logo](https://quarto.org/quarto.png){width=200px}
+```
 
-## {{< var tab_title.question >}}
+![Quarto logo](https://quarto.org/quarto.png){width=200px}
 
-What is the answer to life, the universe, and everything?
+* Directly embeds an image from a URL.
+* Can adjust size using `width` or `height`.
+* Captions can be added, but for HTML output, you may need to style with CSS for advanced formatting.
 
-## {{< var tab_title.solution >}}
+### Best Practices for Figures
 
-42
+1. **Always add captions**: Makes figures self-contained and referenceable.
+2. **Label your figures**: Use `#| label:` for R plots or `{#fig-label}` for Markdown images to enable cross-referencing.
+3. **Adjust sizes thoughtfully**: Use `fig-width`/`fig-height` or CSS/Markdown size attributes to make sure figures are readable.
+4. **Use consistent styling**: Keep themes, fonts, and color schemes consistent across all figures for a professional look.
+5. **Prefer vector graphics for clarity**: When possible, export PDF/SVG plots for crisp rendering in reports.
 
-::::
 
-:::
+## Combining Inline References with Figures
 
-## Using the Website Margin
+Once a figure is labeled, you can refer to it in the text dynamically:
 
-In the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are
-better placed in the website margin.
+```markdown
+As shown in @fig-scores, group B has the highest score.
+```
+Which will look as follows in text: As shown in @fig-scores, group B has the highest score.
 
-- Placing supporting elements like links, callouts, and references in the margin streamlines the main body content while
-keeping the supporting information near the relevant main body content.
+Quarto will automatically number the figure in the rendered document.
 
-To place content in the website margine, we use the `column-margin` div.
 
-### Example 
+This approach allows you to seamlessly integrate **data-driven plots**, **static images**, and **online resources** while keeping your figures clean, readable, and fully reproducible.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel.
-Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus
-volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales.
-Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est
-ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis.
-Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id,
-porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna
-elit id justo. Duis tincidunt id massa eget lacinia.
-
-::: {.column-margin}
-
-:::: {.callout-important}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-::::
-
-:::
-
-Nam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id
-auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere
-leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis
-eget luctus quam. Donec consectetur neque nec egestas ultricies.
 
 ::: {.column-margin}
 
 :::: resource
-[Wikipedia: Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem)
+For more detail, see [the Quarto documentation](https://quarto.org/docs/authoring/figures.html)
 ::::
 
 :::
