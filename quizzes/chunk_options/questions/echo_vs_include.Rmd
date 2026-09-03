@@ -1,0 +1,28 @@
+Question
+========
+You want a chunk's code to run, but neither the code nor its output should appear anywhere in the rendered document
+(for example, a setup chunk loading packages). Which option should you use?
+
+Answerlist
+----------
+* `echo: FALSE`
+* `eval: FALSE`
+* `include: FALSE`
+* `error: FALSE`
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: `echo: FALSE` hides only the code; the result would still appear.
+* Wrong: `eval: FALSE` prevents the chunk from running at all, so packages would not actually be loaded.
+* Correct: `include: FALSE` runs the chunk but hides both the code and any output.
+* Wrong: `error: FALSE` controls whether rendering stops on an error; it does not hide code or output.
+
+Meta-information
+================
+exname: Hiding Code and Output
+extype: schoice
+exsolution: 0010
+exshuffle: 4

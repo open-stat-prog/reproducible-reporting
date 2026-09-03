@@ -107,17 +107,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -133,17 +133,17 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -282,7 +282,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/quarto_markdown/documents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Creating different documents with Quarto</span></a>
+ <span class="menu-text">Creating documents with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/quarto_markdown/presentations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating presentations with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/quarto_markdown/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -314,6 +326,12 @@ window.Quarto = {
  <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/chunk_options/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -343,6 +361,12 @@ window.Quarto = {
  <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/writing_text/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -366,6 +390,12 @@ window.Quarto = {
  <span class="menu-text">Figures</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/presenting_output/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -386,8 +416,7 @@ window.Quarto = {
   <ul>
   <li><a href="#text" id="toc-text" class="nav-link active" data-scroll-target="#text">Text</a></li>
   <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
-  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
-  <li><a href="#equations-mathematical-notation" id="toc-equations-mathematical-notation" class="nav-link" data-scroll-target="#equations-mathematical-notation">Equations (Mathematical Notation)</a></li>
+  <li><a href="#links-and-equations" id="toc-links-and-equations" class="nav-link" data-scroll-target="#links-and-equations">Links and Equations</a></li>
   </ul>
 </nav>
     </div>
@@ -415,99 +444,89 @@ window.Quarto = {
 
 <section id="text" class="level2">
 <h2 class="anchored" data-anchor-id="text">Text</h2>
-<p>Quarto builds on <strong>Pandoc Markdown</strong>, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:</p>
+<p>Quarto builds on <strong>Pandoc Markdown</strong>, which supports inline formatting for emphasis, code, strikethrough, and superscript/subscript.</p>
+<p><strong>Do:</strong> Run this in your own Quarto document and see how it looks.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>*italics*</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>**bold**</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>See:</strong> In visual mode, or when rendering the document, you should see this:</p>
+<p><em>italics</em> <strong>bold</strong></p>
+<p><strong>Predict:</strong> now suppose you wrap a word in <em>three</em> asterisks instead of one or two, like <code>***word***</code>. Do you expect this to render as italics, bold, or both combined?</p>
+<p><strong>Explain:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><em>bold italics</em></strong></p>
+<p>As predicted, combining the two markers combines both effects.</p>
+<p>A few other inline formatting options are useful to know:</p>
 <ul>
-<li><em>Italics</em> can be written as <code>*italics*</code> or <code>_italics_</code>.</li>
-<li><strong>Bold</strong> is <code>**bold**</code> or <code>__bold__</code>.</li>
-<li><strong><em>Bold italics</em></strong> is <code>***bold italics***</code> (or alternatives combining <code>**</code> and <code>*</code>).</li>
 <li><strong>Strikethrough</strong>: <code>~~text~~</code> → <del>text</del>.</li>
 <li><strong>Inline (verbatim) code</strong>: enclose text in backticks, e.g.&nbsp;<code>`my_var &lt;- 10`</code> → <code>my_var &lt;- 10</code>.</li>
-<li><strong>Superscript / subscript</strong>:   - <code>superscript^2^</code> → superscript²   - <code>subscript~2~</code> → subscript₂ You can also use braces to clarify: <code>superscript^{2}</code> or <code>subscript_{2}</code>.</li>
-<li>Quarto also allows adding stylistic classes via span syntax, e.g.   <code>[This is smallcaps]{.smallcaps}</code> → (renders in small caps if supported).</li>
+<li><strong>Superscript / subscript</strong>: <code>superscript^2^</code> → superscript², <code>subscript~2~</code> → subscript₂.</li>
 </ul>
-<p>This formatting gives you fine control over text appearance without leaving Markdown.</p>
 </section>
 <section id="lists" class="level2">
 <h2 class="anchored" data-anchor-id="lists">Lists</h2>
-<p>Lists are central to organizing information. Quarto supports both <strong>unordered</strong> and <strong>ordered</strong> lists, and nested lists.</p>
+<p>Quarto supports <strong>unordered</strong> and <strong>ordered</strong> lists, including nested lists.</p>
 <ul>
-<li><p><strong>Unordered lists</strong>: start lines with <code>*</code>, <code>+</code>, or <code>-</code>. For example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Item A  </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Item B  </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>Sub-item B1  </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>Sub-item B2  </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Item C  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-<p>Results in:</p>
+<li><p><strong>Unordered lists</strong> start lines with <code>*</code>, <code>+</code>, or <code>-</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Item A</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Item B</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>Sub-item B1</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Item C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><p>Item A<br>
-</p></li>
-<li><p>Item B</p>
+<li>Item A</li>
+<li>Item B
 <ul>
-<li>Sub-item B1<br>
-</li>
-<li>Sub-item B2<br>
-</li>
+<li>Sub-item B1</li>
 </ul></li>
-<li><p>Item C</p></li>
-<li><p><strong>Ordered lists</strong>: use numbers followed by a dot:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>First step  </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Second step  </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   i) Subtask  </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   ii) Another subtask  </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Third  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-<p>Results in:</p>
+<li>Item C</li>
+</ul></li>
+<li><p><strong>Ordered lists</strong> use numbers followed by a dot:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>First step</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Second step</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Third step</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
-<li>First step<br>
-</li>
-<li>Second step
-<ol type="i">
-<li>Subtask<br>
-</li>
-<li>Another subtask<br>
-</li>
+<li>First step</li>
+<li>Second step</li>
+<li>Third step</li>
 </ol></li>
-<li>Third</li>
-</ol>
-<ul>
-<li><p><strong>Task lists</strong>: Quarto supports “checklist” style items using <code>[ ]</code> or <code>[x]</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Task 1  </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Task 2 (done)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Task lists</strong> use <code>[ ]</code> or <code>[x]</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Task 1</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Task 2 (done)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul class="task-list">
+<li><label><input type="checkbox">Task 1</label></li>
+<li><label><input type="checkbox" checked="">Task 2 (done)</label></li>
+</ul></li>
 </ul>
-<p>Results in clickable boxes:</p>
-<ul>
-<li><p><label><input type="checkbox">Task 1<br>
-</label></p></li>
-<li><p><label><input type="checkbox" checked="">Task 2 (done)</label></p></li>
-<li><p><strong>Continuation lists</strong>: Quarto allows list numbering to continue across interruptions using <code>(@)</code> to resume numbering.</p></li>
-</ul>
-<p>One <strong>important note</strong>: unlike some Markdown flavors (e.g.&nbsp;GitHub-Flavored Markdown), Quarto <strong>requires a blank line before a list</strong> for it to render properly. If you don’t insert a blank line, the line may just appear as ordinary text. You can always quickly check this by switching to the visual mode in R studio.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Common Mistake
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quarto requires a <strong>blank line before a list</strong> for it to render correctly. Without it, the list items may appear as ordinary text rather than a formatted list. If a list isn’t rendering the way you expect, check for a missing blank line above it first.</p>
+</div>
+</div>
 </section>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<p>Quarto supports standard Markdown link syntax, plus extended capabilities.</p>
+<section id="links-and-equations" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="links-and-equations">Links and Equations</h2>
 <ul>
 <li><strong>Inline link</strong>: <code>[Quarto](https://quarto.org)</code> → <a href="https://quarto.org">Quarto</a></li>
-<li><strong>Autolink URLs</strong>: <code>&lt;https://quarto.org&gt;</code> → <a href="https://quarto.org" class="uri">https://quarto.org</a></li>
+<li><strong>Autolink URL</strong>: <code>&lt;https://quarto.org&gt;</code> → <a href="https://quarto.org" class="uri">https://quarto.org</a></li>
 </ul>
-<p>These allow you to interweave narrative and media seamlessly.</p>
-</section>
-<section id="equations-mathematical-notation" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="equations-mathematical-notation">Equations (Mathematical Notation)</h2>
-<p>Quarto supports LaTeX-style math syntax using <code>$</code> and <code>$$</code> delimiters.</p>
+<p>Quarto supports LaTeX-style math using <code>$</code> and <code>$$</code> delimiters:</p>
 <ul>
-<li><p><strong>Inline math</strong>: wrap expressions in single dollar signs, e.g.   <code>This is inline: $E = mc^2$.</code> → This is inline: <span class="math inline">\((E = mc^2)\)</span>.</p></li>
-<li><p><strong>Display (block) math</strong>: wrap in double dollar signs:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>E = mc^2</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>→ renders centered on its own line, looking as follows: <span class="math display">\[
+<li><p><strong>Inline math</strong>: <code>This is inline: $E = mc^2$.</code> → This is inline: <span class="math inline">\(E = mc^2\)</span>.</p></li>
+<li><p><strong>Display math</strong>, on its own centered line:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>E = mc^2</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math display">\[
 E = mc^2
 \]</span></p></li>
 </ul>
-
-
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-resource callout-titled">
@@ -523,7 +542,33 @@ External Resources
 <p><a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown basics</a></p>
 </div>
 </div>
-</div></div></section>
+</div></div><div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Write the Markdown syntax for a sentence that is both bold and italicized, ending with a variable name written as verbatim code, <code>x</code>, followed by a superscript 2.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>***This sentence is bold and italicized***, using <span class="in">`x`</span>^2^.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><em>This sentence is bold and italicized</em></strong>, using <code>x</code><sup>2</sup>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -956,7 +1001,7 @@ External Resources
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- © 2025
+ © 2026
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">

@@ -1,0 +1,28 @@
+Question
+========
+You reference a figure in your text with `@fig-scores`, but the figure's actual chunk label is `#| label: fig-score`
+(missing the final "s"). What happens when you render the document?
+
+Answerlist
+----------
+* Quarto automatically matches the closest label and resolves the reference correctly.
+* The reference fails to resolve, and the rendered document shows the broken reference text or a placeholder instead of a number.
+* Rendering stops with a fatal error and no document is produced.
+* The figure is renumbered to match the reference automatically.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: Quarto requires an exact label match; it does not guess or auto-correct mismatched labels.
+* Correct: a cross-reference only resolves if it exactly matches an existing label; otherwise it shows the raw reference text or a placeholder instead of a number.
+* Wrong: a mismatched cross-reference does not stop rendering entirely; the rest of the document still renders.
+* Wrong: labels are not automatically adjusted to match an incorrect reference.
+
+Meta-information
+================
+exname: Broken Cross-References
+extype: schoice
+exsolution: 0100
+exshuffle: 4

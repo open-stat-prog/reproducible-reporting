@@ -1,0 +1,65 @@
+---
+title: "Creating presentations with Quarto"
+---
+
+Quarto can also turn a `.qmd` file into a slide deck. Presentations use the same YAML header and Markdown body as the
+reports covered in the previous tutorial; they simply render slide-by-slide instead of page-by-page.
+
+**Do:** Take the Quarto report that you started working on at the `documents` tutorial. Do you think you could turn it into a slideshow just by changing the `format` field in the YAML header, or would you need to rewrite the file from scratch?
+
+**See:** Switching formats is again very simple at the YAML level. In practice you probably want to reorganize the content itself, since a slide holds much less text than a page, and each heading needs to mark where a new slide begins.
+
+## Presentation Formats
+
+| **Format** | **Output Type** | **Strengths** | **Challenges** |
+|----|----|----|----|
+| `revealjs` | HTML slides | Flexible; supports transitions, incremental reveals, embedded code. | Web-based only; needs attention to screen layout. |
+| `pptx` | PowerPoint | Easy to share; editable after rendering. | Limited styling and dynamic features. |
+| `beamer` | PDF slides (LaTeX) | High-quality, printable; ideal for academic talks. | Complex LaTeX configuration; limited interactivity. |
+
+## Example: A Reveal.js Presentation
+
+- [Example .qmd file](https://github.com/open-stat-prog/reproducible-reporting/blob/main/assets/docs/presentation_example.qmd)
+- [Resulting .html output](https://open-stat-prog.github.io/reproducible-reporting/assets/docs/presentation_example.html)
+
+Each slide begins with a heading (e.g., `##`) or is separated by `---`. When rendered, Quarto executes any embedded code
+chunks and displays their output, such as tables or plots, directly on the slide.
+
+Keep slides concise: aim for clarity, minimal text, and meaningful visuals rather than dense explanations.
+
+**Common challenges:**
+
+- **Balancing detail and readability:** avoid overloading slides with text or long code blocks.
+- **Consistent design:** use concise titles and uniform font sizes.
+- **Cross-platform compatibility:** check that revealjs slides display correctly across browsers; `pptx` output can
+  render differently depending on the software used to open it.
+
+As with reports, revealjs slides are HTML output, so if you're submitting or sharing slides as a single file, apply the
+same `embed-resources: true` setting covered in the previous tutorial.
+
+::: {.column-margin}
+::: reading
+Learn more: [Quarto Presentations Overview](https://quarto.org/docs/presentations/) — [Reveal.js Presentations](https://quarto.org/docs/presentations/revealjs/) — [PowerPoint Presentations](https://quarto.org/docs/presentations/powerpoint.html)
+:::
+:::
+
+::: practice
+
+## Practice Exercise
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+You have a Quarto HTML report analyzing exam scores and want to present the same analysis as a revealjs slideshow that
+you can safely email as a single file. What would you change in the YAML header, and what else would you likely still
+need to adjust in the body of the document?
+
+## {{< var tab_title.solution >}}
+
+In the YAML header, change `format: html` to `format: revealjs` and keep `embed-resources: true` so the slideshow stays
+a single, portable file. In the body, you would still need to reorganize the content into slide-sized chunks, adding
+headings or `---` separators to mark where each new slide begins, and trimming dense text down to the key points.
+
+::::
+
+:::

@@ -12,11 +12,15 @@ source(here::here("R", "buttons.R"))
 
 Welcome to the Reproducible reporting module. This module consists of a series of *tutorials* on the following topics:
 
+::: {.callout-tip}
+## ⏱ Estimated Time to Complete
+About 100–130 minutes, including practice exercises and knowledge quizzes.
+:::
+
 1.  [Quarto and markdown](/tutorials/quarto_markdown/index.qmd)
 2.  [Chunks and options](/tutorials/chunk_options/index.qmd)
 3.  [Writing text](/tutorials/writing_text/index.qmd)
 4.  [Presenting output](/tutorials/presenting_output/index.qmd)
-5.  [Portability and reproducibility](/tutorials/reproducibility/index.qmd)
 
 ## Learning Goals
 
@@ -26,11 +30,11 @@ After completing this module, you will be able to:
 
 1.  Understand the purpose of Markdown and Quarto.
 2.  Understand the differences between Markdown and Quarto.
-3.  Recognize the different documents that can be created with Quarto.
+3.  Create documents and presentations with Quarto, and keep rendered files self-contained.
 
 ### Chunks and options
 
-1.  Understand what code chuncks are.
+1.  Understand what code chunks are.
 2.  Learn how to create and label R code chunks.
 3.  Explore common chunk options.
 

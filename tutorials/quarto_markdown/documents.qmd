@@ -1,65 +1,33 @@
 ---
-title: "Creating different documents with Quarto"
-editor: 
-  markdown: 
-    wrap: 72
+title: "Creating documents with Quarto"
 ---
 
-Quarto enables you to create a wide range of professional documents and
-presentations directly from RStudio. It builds on Markdown to combine
-code, text, and visualizations into a single reproducible workflow. This
-section introduces the **basics** of creating Quarto files, then
-explores the unique features and challenges of producing **reports** and
-**presentations**.
+Quarto lets you create professional reports and papers directly from RStudio, combining code, text, and visualizations in a single reproducible workflow. This tutorial covers the basics of working with Quarto files in RStudio, then walks through creating report-style documents specifically. The next tutorial covers presentations.
 
-### Basics: Working with Quarto in RStudio
+## Working with Quarto in RStudio
 
-RStudio provides an integrated environment for writing and rendering
-Quarto documents. To start a new project:
+To start a new Quarto document in RStudio:
 
-1.  Go to **File → New File → Quarto Document...**
-2.  In the dialog box, enter a **title**, **author**, and choose the
-    **default output format** (e.g., HTML, PDF, or Word).
-3.  RStudio will create a `.qmd` file containing a template YAML header
-    and example code chunk.
-4.  Click **Render** (or use *Render on Save*) to produce the formatted
-    output.
+1. Go to **File → New File → Quarto Document...**
+2. Enter a **title**, **author**, and choose a **default output format** (e.g., HTML, PDF, or Word).
+3. RStudio creates a `.qmd` file containing a template YAML header and an example code chunk.
+4. Click **Render** (or use *Render on Save*) to produce the formatted output.
 
-![RStudio Quarto new document dialog (source:
-https://quarto.org)](https://quarto.org/docs/get-started/authoring/images/rstudio-new-document.png)
+![RStudio Quarto new document dialog (source: https://quarto.org)](https://quarto.org/docs/get-started/authoring/images/rstudio-new-document.png)
 
 ::: reading
-The screenshot above shows where to create new Quarto documents in
-RStudio. For more information, see the official Quarto documentation: 🔗
-[Authoring with RStudio – Quarto
-Documentation](https://quarto.org/docs/get-started/authoring/rstudio.html)
+For more information, see the official Quarto documentation: [Authoring with RStudio](https://quarto.org/docs/get-started/authoring/rstudio.html)
 :::
 
-A quarto file consists of:
+Every `.qmd` file has the same basic structure: a **YAML header** (between `---` lines) defining metadata like title
+and output format, a **body** written in Markdown, and optional embedded R code chunks.
 
--   A **YAML header** (between `---` lines) defining metadata like
-    title, author, date, and output type.
--   The **body**, written in Markdown syntax, possibly including
-    embedded R code chunks using `{r}` blocks.
--   Optional **format-specific settings** for output style and behavior.
+## YAML: Document Metadata and Configuration
 
-Of course — here’s a **concise, textbook-style paragraph** explaining
-**YAML** in the context of Quarto and RStudio:
+The YAML header is where you tell Quarto *how* to render your document: what format to produce and which options to
+apply. It uses a simple key-value structure, enclosed between `---` at the start and end of the block.
 
-------------------------------------------------------------------------
-
-### YAML: Document Metadata and Configuration
-
-At the top of every Quarto (`.qmd`) document is a section written in
-**YAML** (short for *“YAML Ain’t Markup Language”*). YAML provides a
-structured way to define **metadata**, such as information *about* the
-document like the title, author, date, and output format. It also
-controls global document options like table of contents, numbering,
-themes, or code execution settings. YAML uses a simple key–value
-structure, enclosed between three dashes (`---`) at the beginning and
-end of the block. For example:
-
-``` yaml
+```yaml
 ---
 title: "Statistical Analysis of Air Quality Data"
 author: "Alex Rivera"
@@ -71,157 +39,78 @@ format:
 ---
 ```
 
-In this example, YAML instructs Quarto to render the document as an HTML
-report with a table of contents and collapsible code sections. While the
-Markdown and R layers handle *what* is written and *how* it’s computed,
-YAML defines *how* the entire document is presented and configured.
+**Do:** Create a Quarto document on your own computer. In the YAML header of the `.qmd` file, change `format: html` to `format: pdf` in the header. Do you expect this to be a one-line switch, or would you need to change other parts of the document too?
 
-### Language Layer
+**See:** For a simple document, changing the target format really can be that simple: the same Markdown body and
+code chunks are reused. In practice, though, some format-specific options (like `code-fold`, which is an HTML-only
+feature) won't carry over, and PDF output has its own setup requirements, covered below.
 
-The **language layer** defines the written structure and formatting of a
-document using **Markdown** syntax. Markdown provides a simple and
-readable way to organize content through headings, lists, emphasis,
-links, and tables. It focuses entirely on text and structure, not on
-data or computation. In a Quarto document, this layer represents the
-narrative: the words, explanations, and organization that frame the
-analysis.
+## Creating Reports and Papers
 
-**Example (Markdown text):**
-
-``` markdown
-# Results and Discussion
-
-In this section, we summarize the findings from our dataset.  
-The following figure illustrates the relationship between fuel efficiency and engine power.
-
-- Data collected from the *mtcars* dataset  
-- Variables analyzed: **mpg** (miles per gallon) and **hp** (horsepower)
-```
-
-This text defines structure and emphasis but does not perform any
-computation.
-
-### Computation Layer
-
-The **computation layer** carries out the actual **data analysis and
-visualization**. It involves embedding executable R code chunks inside
-the Markdown document, allowing results, tables, and figures to be
-generated automatically when the document is rendered. This integration
-ensures that all output is reproducible — every number and plot reflects
-the latest version of the data and analysis.
-
-**Example (R code chunk):**
-
-```{r}
-# Create a scatterplot of mpg vs horsepower
-library(ggplot2)
-
-ggplot(mtcars, aes(x = hp, y = mpg)) +
-  geom_point(color = "steelblue") +
-  labs(title = "Fuel Efficiency vs Engine Power",
-       x = "Horsepower (hp)",
-       y = "Miles per Gallon (mpg)")
-```
-
-When rendered through Quarto, this code runs in R, producing a plot that
-appears directly in the final document or presentation.
-
-### Creating Quarto Documents (Reports, Articles, and Papers)
-
-Quarto supports a variety of **document-based outputs**, such as
-research reports, academic papers, and technical documentation. Common
-formats include:
+Common document output formats include:
 
 | **Format** | **Output Type**        | **Typical Use**                        |
-|------------|------------------------|----------------------------------------|
+|------------|------------------------|-----------------------------------------|
 | `html`     | Interactive web report | Exploratory data reports, dashboards   |
 | `pdf`      | Print-quality report   | Academic papers, formatted submissions |
 | `docx`     | Microsoft Word         | Editable reports for collaboration     |
 | `epub`     | e-book                 | Long-form reading materials            |
 
-To create a document, specify the format in the YAML header:
+Quarto automatically executes embedded code chunks and inserts the resulting tables and plots, so every time you
+re-render, the analysis and visuals update from your current data.
 
-``` yaml
+A few things to keep in mind across formats:
+
+- **Layout:** reports may need page breaks or fixed figure sizing, especially for PDF and Word.
+- **PDF rendering** requires a working LaTeX installation (e.g., TinyTeX).
+- **Settings don't always transfer:** an option that works for HTML may not apply to PDF or Word.
+- **Citations** are supported via BibTeX, covered later in this module.
+
+::: {.callout-note}
+## Common Mistake
+
+By default, a rendered HTML report can reference supporting files, such as separately saved images, rather than
+embedding everything into the single `.html` file. If you then hand in or share only that `.html` file, without its supporting files, it can open broken or missing content for whoever receives it. To avoid this, set your document to be **self-contained** by adding `embed-resources: true` under your HTML format options:
+
+```yaml
+format:
+  html:
+    embed-resources: true
+```
+
+This produces a single, fully portable `.html` file with everything, including plots and images, embedded inside it. This is important whenever you're submitting a report as one file, for example for a homework assignment.
+:::
+
+::: {.column-margin}
+::: reading
+Learn more: [Quarto Document Formats](https://quarto.org/docs/output-formats/all-formats.html)
+:::
+:::
+
+::: practice
+
+## Practice Exercise
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+Write a YAML header for an HTML report titled "Analysis Report," with a table of contents, that is safe to hand in as a single file.
+
+## {{< var tab_title.solution >}}
+
+```yaml
 ---
 title: "Analysis Report"
-author: "Student Name"
 format:
   html:
     toc: true
-    number-sections: true
+    embed-resources: true
 ---
 ```
 
-Quarto automatically executes embedded R code chunks and inserts the
-resulting tables and plots. This enables **reproducible research** —
-every time you re-render, the analysis and visuals update from your
-current data.
+The `toc: true` option adds a table of contents, and `embed-resources: true` ensures the rendered `.html` file is
+self-contained, so it can be shared or submitted on its own.
 
-**Unique challenges and considerations for documents:**
-
--   **Layout and length:** Reports may require page breaks, consistent
-    figure sizing, and control over floating tables.
--   **PDF rendering:** Requires a working LaTeX installation (e.g.,
-    TinyTeX).
--   **Cross-format consistency:** Settings that work for HTML might not
-    suit PDF or Word outputs.
--   **Citations and cross-references:** Quarto supports citation
-    management via BibTeX, but setup requires care.
-
-:::: column-margin
-::: reading
-Learn more: [Quarto Document
-Formats](https://quarto.org/docs/output-formats/all-formats.html)
-:::
 ::::
 
-### Creating Quarto Presentations (Slides and Talks)
-
-Quarto also allows you to create **presentations** directly from `.qmd`
-files. Presentations use the same structure as documents but render
-slide-by-slide instead of page-by-page. You can choose from several
-output types:
-
-| **Presentation Format** | **Output Type** | **Strengths** | **Challenges** |
-|----|----|----|----|
-| `revealjs` | HTML slides | Highly flexible; supports transitions, incremental reveals, and embedded code or interactivity. | Requires attention to screen layout and readability; web-based only. |
-| `pptx` | PowerPoint | Easy to share; editable after rendering. | Limited styling and dynamic features compared to HTML slides. |
-| `beamer` | PDF slides (LaTeX) | High-quality printable slides; ideal for academic talks. | Complex LaTeX configuration; limited interactivity. |
-
-### Example: Creating a Reveal.js Presentation
-
-Below is an example of a simple Quarto presentation using the
-**Reveal.js** format.\
-The YAML header defines document metadata and output type, while the
-Markdown body defines the slide content.
-
-- [Example .qmd file](https://github.com/open-stat-prog/reproducible-reporting/blob/main/assets/docs/presentation_example.qmd)
-- [Resuling .html output file](https://open-stat-prog.github.io/reproducible-reporting/assets/docs/presentation_example.html)
-
-Each slide begins with a heading (for example, `##`) or is separated
-using `---`. When rendered, Quarto executes any embedded R code chunks
-and displays their outputs, such as tables or plots, directly on the
-slides.
-
-Students should keep slides concise: aim for **clarity, minimal text**,
-and **meaningful visuals** rather than dense explanations.
-
-**Common challenges for presentations:**
-
--   **Balancing detail and readability:** Avoid overloading slides with
-    text or long code blocks.
--   **Consistent design:** Use concise titles and uniform font sizes.
--   **File size:** Embedded plots can increase file size; consider image
-    compression.
--   **Cross-platform compatibility:** Check that Reveal.js slides
-    display correctly across browsers; PowerPoint (`pptx`) outputs may
-    render differently.
-
-::: column-margin
-::: reading
-Learn more: [Quarto Presentations Overview](https://quarto.org/docs/presentations/) 
-[Reveal.js Presentations in Quarto](https://quarto.org/docs/presentations/revealjs/) 
-[PowerPoint Presentations in Quarto](https://quarto.org/docs/presentations/powerpoint.html)
-
-:::
 :::

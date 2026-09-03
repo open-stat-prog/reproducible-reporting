@@ -1,0 +1,27 @@
+Question
+========
+How does Quarto expect chunk options to be written inside an R chunk?
+
+Answerlist
+----------
+* As arguments inside the curly braces, e.g. `` {r, echo=FALSE} ``.
+* As commented lines starting with `#|`, placed directly below the chunk header.
+* As a separate YAML file referenced by the chunk's label.
+* As plain R function calls at the top of the chunk, e.g. `set_echo(FALSE)`.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: this is the older R Markdown syntax; Quarto uses a different convention.
+* Correct: Quarto chunk options are written as `#|` commented lines directly below the chunk header.
+* Wrong: chunk options are written inline in the chunk itself, not in a separate file.
+* Wrong: chunk options are not set through R function calls.
+
+Meta-information
+================
+exname: Chunk Option Syntax
+extype: schoice
+exsolution: 0100
+exshuffle: 4

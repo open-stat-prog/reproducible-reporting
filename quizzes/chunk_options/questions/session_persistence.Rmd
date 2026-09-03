@@ -1,0 +1,28 @@
+Question
+========
+A Quarto document has two R chunks. The first chunk creates an object called `x`. Can the second chunk use `x`,
+without recreating it?
+
+Answerlist
+----------
+* No, each chunk runs in its own isolated environment.
+* Yes, because all R chunks in a document share a single, continuous session.
+* Only if both chunks have the same label.
+* Only if the `cache: TRUE` option is set on the first chunk.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: R chunks are not isolated from one another.
+* Correct: chunks in the same language run in one shared session, so objects persist across chunks in the order they appear.
+* Wrong: chunk labels identify chunks for referencing and error messages; they don't control whether objects are shared.
+* Wrong: caching affects whether a chunk's computation is rerun on subsequent renders; it isn't required for objects to be shared within a single render.
+
+Meta-information
+================
+exname: Session Persistence Across Chunks
+extype: schoice
+exsolution: 0100
+exshuffle: 4

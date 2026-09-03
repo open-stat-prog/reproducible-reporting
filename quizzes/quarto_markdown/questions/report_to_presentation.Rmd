@@ -1,0 +1,28 @@
+Question
+========
+You already have a Quarto report rendered as HTML and want to turn the same analysis into a revealjs slideshow. What is
+the most direct way to do this?
+
+Answerlist
+----------
+* Rewrite the entire file from scratch using slide-specific syntax.
+* Change the `format` field in the YAML header from `html` to `revealjs`.
+* Convert the file to PDF first, then to slides.
+* Manually copy each paragraph into a separate PowerPoint file.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: presentations reuse the same YAML and Markdown structure as documents; a full rewrite isn't necessary.
+* Correct: changing `format` to `revealjs` is the key step, though the content typically still needs to be reorganized into slide-sized chunks.
+* Wrong: there is no need to convert to PDF as an intermediate step.
+* Wrong: this bypasses Quarto entirely and isn't how Quarto presentations are created.
+
+Meta-information
+================
+exname: Converting a Report to a Presentation
+extype: schoice
+exsolution: 0100
+exshuffle: 4

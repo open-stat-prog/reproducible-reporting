@@ -1,0 +1,29 @@
+Question
+========
+You render an HTML report and want to email just the single `.html` file to your instructor as a homework submission.
+Which YAML option should you add to make sure all images and plots are embedded directly in that file, rather than
+referenced externally?
+
+Answerlist
+----------
+* `toc: true`
+* `code-fold: true`
+* `embed-resources: true`
+* `number-sections: true`
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: `toc` adds a table of contents; it has no effect on whether resources are embedded.
+* Wrong: `code-fold` controls whether code is collapsible; it has no effect on whether resources are embedded.
+* Correct: `embed-resources: true` embeds all supporting files, such as images and plots, directly into a single, portable `.html` file.
+* Wrong: `number-sections` adds section numbering; it has no effect on whether resources are embedded.
+
+Meta-information
+================
+exname: Self-Contained HTML Output
+extype: schoice
+exsolution: 0010
+exshuffle: 4

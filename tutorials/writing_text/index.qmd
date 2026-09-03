@@ -2,4 +2,8 @@
 title: "Writing text"
 ---
 
-In this tutorial, we will learn you how to efficiently create an attractive written document using Quarto. First, you will learn how to write plain text and apply basic Markdown formatting to style the text. Next, we will pay more attention to structuring the document. Finally, we will also discuss how to include inline code and results within the text. 
+In this tutorial, you will learn how to write and structure text in Quarto documents:
+
+-   How to apply basic Markdown formatting to style text, and create lists, links, and equations.
+-   How to structure a document with headings, numbered figures and equations, and citations.
+-   How to embed live, computed results directly within your narrative text.

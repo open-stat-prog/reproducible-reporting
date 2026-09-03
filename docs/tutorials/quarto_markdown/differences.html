@@ -72,6 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -96,19 +109,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -218,7 +218,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/quarto_markdown/documents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Creating different documents with Quarto</span></a>
+ <span class="menu-text">Creating documents with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/quarto_markdown/presentations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating presentations with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/quarto_markdown/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -250,6 +262,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/chunk_options/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -279,6 +297,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/writing_text/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -300,6 +324,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Figures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/presenting_output/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -340,8 +370,9 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<p>While Markdown and Quarto are closely related, they operate at different conceptual levels. Markdown is a markup language, a way of writing text that includes lightweight formatting instructions. It allows authors to create structured documents using plain text syntax for elements such as headings, lists, and emphasis. However, Markdown by itself does not support code execution, metadata, or dynamic output. It is ideal for writing static content like documentation or notes but lacks the ability to combine text with live results or automated analysis.</p>
-<p>Quarto, by contrast, is a document generation and publishing framework that builds on Markdown. It extends Markdown’s simple syntax with tools for executing embedded R code, managing metadata, styling, and rendering outputs to multiple formats such as HTML, PDF, and slides. In practice, this means that Markdown provides the structure, while Quarto provides the workflow — handling the integration between narrative, computation, and presentation. For students working with R, Quarto enables reproducible reporting where statistical results and visualizations are generated automatically from the underlying code, ensuring accuracy and consistency across analyses.</p>
+<p>Markdown and Quarto operate at different levels. Markdown is a markup language: plain text with lightweight formatting instructions for elements like headings, lists, and emphasis. It has no support for code execution, metadata, or dynamic output, which makes it ideal for static content like documentation or notes, but not for combining text with live results.</p>
+<p>Quarto builds on Markdown to add a document generation and publishing workflow. It extends Markdown’s syntax with tools for executing embedded code, managing metadata, and rendering to multiple output formats such as HTML, PDF, and slides.</p>
+<p>In short, Markdown provides the structure, while Quarto provides the workflow that ties narrative, computation, and presentation together.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -364,16 +395,39 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <tr class="even">
 <td><strong>Processing layer</strong></td>
 <td>Quarto</td>
-<td>Interpret Markdown, integrate executable R code, and render the combined text and results into polished output formats such as HTML or PDF.</td>
+<td>Interpret Markdown, integrate executable code, and render everything into polished output formats such as HTML or PDF.</td>
 </tr>
 <tr class="odd">
 <td><strong>Computation layer</strong></td>
 <td>R (and optionally Python, Julia)</td>
-<td>Perform statistical analysis, generate tables and plots, and supply dynamic results that are embedded into the rendered document.</td>
+<td>Perform analysis, generate tables and plots, and supply dynamic results embedded into the rendered document.</td>
 </tr>
 </tbody>
 </table>
-<p>RStudio provides an integrated environment where <strong>Markdown</strong>, <strong>Quarto</strong>, and <strong>R</strong> work together to support reproducible and dynamic report writing. In this workflow, Markdown serves as the <em>language</em> for structuring text and formatting documents, while Quarto functions as the <em>publishing framework</em> that interprets Markdown, executes embedded R code, and converts the combined content into professional outputs such as reports, presentations, or dashboards. R supplies the <em>computational layer</em>, performing statistical analyses, generating visualizations, and producing results that are automatically incorporated into the final document. Together, these tools allow students to write, analyze, and present their work within a single, seamless system inside RStudio.</p>
+<p>RStudio ties these three layers together in one environment: Markdown structures the text, Quarto renders it and executes the embedded code, and R supplies the actual computation. This lets you write, analyze, and present your work within a single, seamless workflow.</p>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>A colleague asks you to convert your Quarto report into a plain Markdown file, so they can drop it into a different publishing system. Would you lose anything in the process, and if so, what?</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Yes. You would lose the computation layer: any embedded code chunks, and the tables, figures, or inline results they generate, since Markdown alone cannot execute code. Only the plain narrative text and static formatting would survive the conversion.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -791,8 +845,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/quarto_markdown/documents.html" class="pagination-link" aria-label="Creating different documents with Quarto">
-        <span class="nav-page-text">Creating different documents with Quarto</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/quarto_markdown/documents.html" class="pagination-link" aria-label="Creating documents with Quarto">
+        <span class="nav-page-text">Creating documents with Quarto</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -808,7 +862,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- © 2025
+ © 2026
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">

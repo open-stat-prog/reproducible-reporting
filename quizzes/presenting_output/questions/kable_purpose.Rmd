@@ -1,0 +1,27 @@
+Question
+========
+What does wrapping a data frame in `knitr::kable()` accomplish, compared to letting R print the data frame directly?
+
+Answerlist
+----------
+* It changes the underlying values stored in the data frame.
+* It renders the data as a properly formatted table matching the document's style, rather than R's plain console-style printout.
+* It automatically rounds every numeric column to two decimal places.
+* It converts the data frame into a figure.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: `kable()` only changes how the data is displayed, not the underlying values.
+* Correct: `kable()` produces a clean, document-formatted table instead of R's raw console output.
+* Wrong: `kable()` does not automatically round values; rounding must be done separately if desired.
+* Wrong: `kable()` produces a table, not a figure.
+
+Meta-information
+================
+exname: Purpose of kable()
+extype: schoice
+exsolution: 0100
+exshuffle: 4

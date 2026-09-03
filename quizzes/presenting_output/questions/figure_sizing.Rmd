@@ -1,0 +1,27 @@
+Question
+========
+What do the `fig-width` and `fig-height` chunk options control?
+
+Answerlist
+----------
+* The caption text shown below the figure.
+* The dimensions of the rendered figure, in inches.
+* Whether the figure's code is shown alongside the plot.
+* The color palette used in the plot.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: the caption is set with `fig-cap`, not `fig-width`/`fig-height`.
+* Correct: `fig-width` and `fig-height` set the rendered figure's dimensions, in inches.
+* Wrong: showing or hiding code is controlled by `echo`, not the figure sizing options.
+* Wrong: the color palette is determined by the plotting code itself, not by these chunk options.
+
+Meta-information
+================
+exname: Figure Sizing Options
+extype: schoice
+exsolution: 0100
+exshuffle: 4

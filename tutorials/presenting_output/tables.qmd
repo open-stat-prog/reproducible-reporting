@@ -2,62 +2,34 @@
 title: "Tables"
 ---
 
-
-Tables are a common way to summarize data in reports. Quarto allows you to produce tables **directly in Markdown** or **dynamically from R**. Using clear, readable tables improves the presentation of results and makes your documents more professional and accessible.
+Tables are a common way to summarize data in reports. Quarto can produce tables **directly in Markdown** or
+**dynamically from R**. Clear, readable tables make your documents more professional and easier to follow.
 
 ## Text-Based Tables in Markdown
 
-For simple tables, you can write them directly in Markdown using the pipe (`|`) syntax. This is ideal for small, static tables that do not require dynamic calculations.
-
-**Example:**
+For small, static tables, you can write them directly in Markdown using pipe (`|`) syntax:
 
 ```markdown
 | Group | Mean | SD  |
-|-------|------|-----|
+|:------|-----:|:---:|
 | A     | 5.2  | 1.1 |
 | B     | 6.8  | 0.9 |
-| C     | 4.9  | 1.3 |
 ```
 
-Rendered output:
-
 | Group | Mean | SD  |
-| ----- | ---- | --- |
+|:------|-----:|:---:|
 | A     | 5.2  | 1.1 |
 | B     | 6.8  | 0.9 |
-| C     | 4.9  | 1.3 |
 
-* Use `---` under headers for proper alignment.
-* Columns can be aligned left (`:` on left), right (`:` on right), or center (`:` on both sides):
+A `---` row under the headers is required; colons control column alignment (left, right, or center).
 
-```markdown
-| Group | Mean | SD  |
-|:------|----:|:---:|
-| A     | 5.2 | 1.1 |
-| B     | 6.8 | 0.9 |
-| C     | 4.9 | 1.3 |
-```
-Results in aligned columns like this: 
+## Generating Tables from R with `kable()`
 
-| Group | Mean | SD  |
-|:------|----:|:---:|
-| A     | 5.2 | 1.1 |
-| B     | 6.8 | 0.9 |
-| C     | 4.9 | 1.3 |
+For tables built from your own data, `knitr::kable()` produces a clean, nicely formatted table.
 
+**Do:** Run the code below in your own Quarto document.
 
-## Generating Tables from R with `knitr::kable`
-
-For tables that come from your R data (e.g., data frames, summaries), Quarto integrates seamlessly with `knitr::kable` to produce clean, nicely formatted tables.
-
-**Example:**
-
-When producing tables are raw output, they will look like this:
 ```{r}
-#| echo: TRUE
-
-library(knitr)
-
 data <- data.frame(
   Group = c("A", "B", "C"),
   Mean  = c(5.2, 6.8, 4.9),
@@ -67,52 +39,62 @@ data <- data.frame(
 data
 ```
 
-When using kable, they can be formatted more neatly: 
-```{r}
-#| echo: TRUE
+**See:** The table gets printed as a raw R object, the data frame's default output isn't well suited for a report.
 
+**Predict:** before looking below, predict how wrapping this same data frame in `knitr::kable()` will change its
+appearance in the rendered document.
+
+```{r}
+library(knitr)
 kable(data, caption = "Summary statistics by group")
 ```
 
+**Explain:** as predicted, `kable()` renders the data as a properly formatted table matching the surrounding document
+style, with a caption added via the `caption` argument, rather than R's plain console-style printout.
 
-* `caption` adds a descriptive label for the table.
-* `kable` automatically aligns columns neatly.
-* For larger or more complex tables, you can also use **`kableExtra`** to add styling, colors, or column formatting.
+For more control, such as striped rows, colored headers, and similar styling, the **`kableExtra`** package extends `kable()`
+output:
 
 ```{r}
-#| echo: TRUE
-
 library(kableExtra)
 
-mean_score <- mean(data$Mean)
-
-kable(data, caption = paste("Summary statistics (overall mean:", round(mean_score, 2), ")")) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
-  row_spec(0, bold = TRUE, color = "white", background = "#4CAF50")  # header row styling
+kable(data, caption = "Summary statistics by group") |>
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) |>
+  row_spec(0, bold = TRUE, color = "white", background = "#4CAF50")
 ```
 
-* `kable_styling()`: Adds table styling options like **striped rows**, **hover effect**, and **condensed spacing**.
-* `row_spec(0, ...)`: Styles the header row (0 = header) with **bold text**, **white font**, and a **green background**.
-* The caption dynamically includes the **overall mean** calculated from the data.
-
-Rendered in HTML, this produces a **professional, readable table** that’s visually distinct and easier to interpret than a plain `kable()` table.
-
-You can also add row colors, column formatting, or footnotes with other `kableExtra` functions for even more control.
-
-
-## Tips for Readable Tables
-
-1. **Keep them concise**: Avoid overcrowding a table with too many columns or unnecessary decimals.
-2. **Label clearly**: Use meaningful headers and, if needed, a descriptive caption.
-3. **Round numbers**: Format numeric results for readability.
-4. **Consistent styling**: For longer reports, stick with a single table style (Markdown or `kable`) for consistency.
-
-
 ::: {.column-margin}
+::: resource
+[Quarto documentation on tables](https://quarto.org/docs/authoring/tables.html)
+:::
+:::
 
-:::: resource
-For more detail, see [the Quarto documentation](https://quarto.org/docs/authoring/tables.html)
+::: practice
+
+## Practice Exercise
+
+Create a data frame with two columns of your choice (at least 3 rows), then use `kable()` to display it with a caption.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+library(knitr)
+
+scores <- data.frame(
+  Student = c("Alex", "Jordan", "Sam"),
+  Score   = c(88, 92, 79)
+)
+
+kable(scores, caption = "Exam scores")
+```
+
 ::::
 
 :::
-

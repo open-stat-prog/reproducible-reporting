@@ -2,23 +2,17 @@
 title: "Figures"
 ---
 
-
-Figures are essential for visualizing data, illustrating concepts, or enhancing your reports. Quarto supports **figures generated from R code** as well as **external images**, allowing you to control captions, size, and placement for a polished presentation.
-
+Figures are essential for visualizing data. Quarto supports **figures generated from R code** as well as **external
+images**, with chunk options and Markdown attributes controlling captions, size, and placement.
 
 ## Figures Generated from R
 
-When creating plots in R, you can add **captions** and **adjust figure size** using chunk options in Quarto.
+**Do:** Run the code below in your own Quarto document. It sets four chunk options:
 
-The options within your R chunk would be set like this:
+- `label: fig-scores` — a label enabling this figure to be cross-referenced elsewhere as `@fig-scores`
+- `fig-cap` — the figure's caption
+- `fig-width` / `fig-height` — the figure's dimensions, in inches
 
-````markdown
-#| label: fig-scores
-#| fig-cap: "Boxplot of scores by group"
-#| fig-width: 6
-#| fig-height: 4
-````
-And with the following R code: 
 ```{r}
 #| label: fig-scores
 #| fig-cap: "Boxplot of scores by group"
@@ -37,35 +31,31 @@ ggplot(data, aes(x = Group, y = Score, fill = Group)) +
   theme_minimal()
 ```
 
-This would then result in the figure as directly outputted after the code. Here, you see:
+**See:** the resulting figure, with the caption and dimensions from the chunk options applied.
 
-* `fig-cap`: Adds a **caption** to the figure.
-* `fig-width` and `fig-height`: Control the **size of the rendered figure** (in inches for HTML/PDF).
-* `label`: Allows you to **cross-reference** the figure in text with `@fig-scores`: Ref to @fig-scores.
+**Predict:** if you add `fig-align: "center"` to this same chunk, what do you expect to change: the figure's content
+and size, or something else?
 
-You can also combine `fig-align: "center"` in the chunk to **center the figure** in the output.
+**Explain:** `fig-align` only changes the figure's horizontal placement on the page (left/center/right); the plot
+itself, its caption, and its dimensions stay exactly the same. Chunk options that control appearance are independent of
+one another, much like the `hist()`/`plot()` styling options covered in the visualization module.
 
+When possible, export figures as vector graphics (PDF or SVG) rather than raster formats (PNG, JPEG): vector graphics
+stay crisp at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.
 
-## 2. External Images
+## External Images
 
-Quarto can include images stored locally or from the web using **Markdown syntax**:
+Local and web images can also be included, using Markdown's image syntax.
 
-### Local images:
-
-Local images can be presented as follows:
+**Local images**, referenced with a project-relative path (leading `/`):
 
 ```markdown
-![This is a local image caption](/assets/images/ecrins_pano.jpg){#fig-local width=50%}
+![Caption text](/assets/images/ecrins_pano.jpg){#fig-local width=50%}
 ```
 
-![This is a local image caption](/assets/images/ecrins_pano.jpg){#fig-local width=50%}
+![Caption text](/assets/images/ecrins_pano.jpg){#fig-local width=50%}
 
-* `{#fig-local}`: Assigns a **label** for cross-referencing using `@fig-local`: @fig-local. 
-* `width=50%`: Adjusts the display size relative to the output width.
-
-### Web images:
-
-Web images can be presented by linking to them directly:
+**Web images**, linked directly by URL:
 
 ```markdown
 ![Quarto logo](https://quarto.org/quarto.png){width=200px}
@@ -73,38 +63,78 @@ Web images can be presented by linking to them directly:
 
 ![Quarto logo](https://quarto.org/quarto.png){width=200px}
 
-* Directly embeds an image from a URL.
-* Can adjust size using `width` or `height`.
-* Captions can be added, but for HTML output, you may need to style with CSS for advanced formatting.
+Both accept the same `{#fig-label width=...}` attributes as R-generated figures, so they can be sized and
+cross-referenced the same way.
 
-### Best Practices for Figures
+::: {.callout-note}
+## Common Mistake
 
-1. **Always add captions**: Makes figures self-contained and referenceable.
-2. **Label your figures**: Use `#| label:` for R plots or `{#fig-label}` for Markdown images to enable cross-referencing.
-3. **Adjust sizes thoughtfully**: Use `fig-width`/`fig-height` or CSS/Markdown size attributes to make sure figures are readable.
-4. **Use consistent styling**: Keep themes, fonts, and color schemes consistent across all figures for a professional look.
-5. **Prefer vector graphics for clarity**: When possible, export PDF/SVG plots for crisp rendering in reports.
+A local image path that works on one page can break on another if it's a plain relative path (e.g., `images/photo.jpg`),
+since Quarto resolves it relative to that page's own folder — the same class of path problem covered for bibliography
+files earlier in this module. For images, a **leading `/`** reliably resolves the path from the project root
+regardless of which page includes it, so prefer `/assets/images/photo.jpg` over a bare relative path.
+:::
 
+## Referencing Figures in Text
 
-## Combining Inline References with Figures
-
-Once a figure is labeled, you can refer to it in the text dynamically:
+Once a figure has a label, reference it anywhere in the text with `@`:
 
 ```markdown
 As shown in @fig-scores, group B has the highest score.
 ```
-Which will look as follows in text: As shown in @fig-scores, group B has the highest score.
 
-Quarto will automatically number the figure in the rendered document.
-
-
-This approach allows you to seamlessly integrate **data-driven plots**, **static images**, and **online resources** while keeping your figures clean, readable, and fully reproducible.
-
+As shown in @fig-scores, group B has the highest score.
 
 ::: {.column-margin}
+::: resource
+[Quarto documentation on figures](https://quarto.org/docs/authoring/figures.html)
+:::
+:::
 
-:::: resource
-For more detail, see [the Quarto documentation](https://quarto.org/docs/authoring/figures.html)
+::: practice
+
+## Practice Exercise
+
+Create a labeled, captioned bar plot with `ggplot2` showing the `Score` for each `Group` in the data frame from the
+example above, sized 5 by 3 inches.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.hint >}}
+
+The plot itself can be built and tested here with `ggplot2`. In an actual `.qmd` file, you would also add these chunk
+options above the code to control the label, caption, and size:
+
+```yaml
+#| label: fig-mine
+#| fig-cap: "Your caption here"
+#| fig-width: 5
+#| fig-height: 3
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+library(ggplot2)
+
+data <- data.frame(
+  Group = c("A", "B", "C"),
+  Score = c(5.2, 6.8, 4.9)
+)
+
+ggplot(data, aes(x = Group, y = Score, fill = Group)) +
+  geom_bar(stat = "identity") +
+  theme_minimal()
+```
+
+In a real `.qmd` file, this chunk would also carry `#| label: fig-mine`, `#| fig-cap: "Your caption here"`,
+`#| fig-width: 5`, and `#| fig-height: 3` as chunk options above the code.
+
 ::::
 
 :::

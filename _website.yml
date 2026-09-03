@@ -36,23 +36,32 @@ website:
           - href: tutorials/quarto_markdown/purpose.qmd
           - href: tutorials/quarto_markdown/differences.qmd
           - href: tutorials/quarto_markdown/documents.qmd
+          - href: tutorials/quarto_markdown/presentations.qmd
+          - href: quizzes/quarto_markdown/index.qmd
+            text: "Knowledge Quiz"
       - section: tutorials/chunk_options/index.qmd
         text: "Chunks and options"
         contents:
           - href: tutorials/chunk_options/code_chunks.qmd
           - href: tutorials/chunk_options/create_chunks.qmd
           - href: tutorials/chunk_options/chunk_options.qmd
+          - href: quizzes/chunk_options/index.qmd
+            text: "Knowledge Quiz"
       - section: tutorials/writing_text/index.qmd
         text: "Writing text"
         contents:
           - href: tutorials/writing_text/text.qmd
           - href: tutorials/writing_text/structure.qmd
           - href: tutorials/writing_text/inline_code.qmd
+          - href: quizzes/writing_text/index.qmd
+            text: "Knowledge Quiz"
       - section: tutorials/presenting_output/index.qmd
         text: "Presenting output"
         contents:
           - href: tutorials/presenting_output/tables.qmd
           - href: tutorials/presenting_output/plots.qmd
+          - href: quizzes/presenting_output/index.qmd
+            text: "Knowledge Quiz"
       - href: conclusion.qmd
 
   page-footer:
@@ -61,6 +70,6 @@ website:
     left: |
       [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
     right: 
-      - text: "&copy; 2025"
+      - text: "&copy; 2026"
       - href: "https://github.com/open-stat-prog"
         text: Open-Stat-Prog

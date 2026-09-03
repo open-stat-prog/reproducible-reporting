@@ -2,8 +2,8 @@
 title: "Chunks and options"
 ---
 
-With this tutorial, you will learn the following things about code chunks.
+In this tutorial, you will learn the following about code chunks in Quarto:
 
--   First, we will explain to you what code chunks are.
--   Second, you will learn how to create and label code chunks yourself.
--   Finally, you will get familiar with common code chunk options.
+- What code chunks are, and how they share a single execution session.
+- How to create and label chunks, and why rendering regularly matters.
+- The most common chunk options, and how they control what appears in your rendered document.

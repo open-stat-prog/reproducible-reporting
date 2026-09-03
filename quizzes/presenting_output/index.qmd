@@ -1,0 +1,27 @@
+---
+title: "Knowledge Quiz: Presenting Output"
+---
+
+::: {.column-margin}
+
+:::: {.callout-note}
+- Click the check-mark button to check your answer.
+- Click the question-mark button to see an explanation of the solution.
+::::
+
+:::
+
+```{r quiz1}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "kable_purpose.Rmd",
+    "figure_sizing.Rmd",
+    "image_path_resolution.Rmd",
+    "vector_graphics.Rmd"
+  ),
+  edir = here::here("quizzes", "presenting_output", "questions")
+)
+```

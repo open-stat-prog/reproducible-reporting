@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Creating different documents with Quarto – OSP Module Template</title>
+<title>Creating documents with Quarto – OSP Module Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/chunk_options/index.html" rel="next">
+<link href="../../tutorials/quarto_markdown/presentations.html" rel="next">
 <link href="../../tutorials/quarto_markdown/differences.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -107,14 +107,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
-div.callout-reading.callout {
-  border-left-color: purple;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -133,30 +146,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-reading.callout {
+  border-left-color: purple;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -211,7 +211,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/index.html">Quarto and Markdown</a></li><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/documents.html">Creating different documents with Quarto</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/index.html">Quarto and Markdown</a></li><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/documents.html">Creating documents with Quarto</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -253,7 +253,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/quarto_markdown/documents.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Creating different documents with Quarto</span></a>
+ <span class="menu-text">Creating documents with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/quarto_markdown/presentations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating presentations with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/quarto_markdown/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -285,6 +297,12 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
  <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/chunk_options/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -314,6 +332,12 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
  <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/writing_text/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -337,6 +361,12 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
  <span class="menu-text">Figures</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/presenting_output/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -355,22 +385,18 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basics-working-with-quarto-in-rstudio" id="toc-basics-working-with-quarto-in-rstudio" class="nav-link active" data-scroll-target="#basics-working-with-quarto-in-rstudio">Basics: Working with Quarto in RStudio</a></li>
+  <li><a href="#working-with-quarto-in-rstudio" id="toc-working-with-quarto-in-rstudio" class="nav-link active" data-scroll-target="#working-with-quarto-in-rstudio">Working with Quarto in RStudio</a></li>
   <li><a href="#yaml-document-metadata-and-configuration" id="toc-yaml-document-metadata-and-configuration" class="nav-link" data-scroll-target="#yaml-document-metadata-and-configuration">YAML: Document Metadata and Configuration</a></li>
-  <li><a href="#language-layer" id="toc-language-layer" class="nav-link" data-scroll-target="#language-layer">Language Layer</a></li>
-  <li><a href="#computation-layer" id="toc-computation-layer" class="nav-link" data-scroll-target="#computation-layer">Computation Layer</a></li>
-  <li><a href="#creating-quarto-documents-reports-articles-and-papers" id="toc-creating-quarto-documents-reports-articles-and-papers" class="nav-link" data-scroll-target="#creating-quarto-documents-reports-articles-and-papers">Creating Quarto Documents (Reports, Articles, and Papers)</a></li>
-  <li><a href="#creating-quarto-presentations-slides-and-talks" id="toc-creating-quarto-presentations-slides-and-talks" class="nav-link" data-scroll-target="#creating-quarto-presentations-slides-and-talks">Creating Quarto Presentations (Slides and Talks)</a></li>
-  <li><a href="#example-creating-a-reveal.js-presentation" id="toc-example-creating-a-reveal.js-presentation" class="nav-link" data-scroll-target="#example-creating-a-reveal.js-presentation">Example: Creating a Reveal.js Presentation</a></li>
+  <li><a href="#creating-reports-and-papers" id="toc-creating-reports-and-papers" class="nav-link" data-scroll-target="#creating-reports-and-papers">Creating Reports and Papers</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/index.html">Quarto and Markdown</a></li><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/documents.html">Creating different documents with Quarto</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/index.html">Quarto and Markdown</a></li><li class="breadcrumb-item"><a href="../../tutorials/quarto_markdown/documents.html">Creating documents with Quarto</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Creating different documents with Quarto</h1>
+<h1 class="title">Creating documents with Quarto</h1>
 </div>
 
 
@@ -387,14 +413,14 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </header>
 
 
-<p>Quarto enables you to create a wide range of professional documents and presentations directly from RStudio. It builds on Markdown to combine code, text, and visualizations into a single reproducible workflow. This section introduces the <strong>basics</strong> of creating Quarto files, then explores the unique features and challenges of producing <strong>reports</strong> and <strong>presentations</strong>.</p>
-<section id="basics-working-with-quarto-in-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="basics-working-with-quarto-in-rstudio">Basics: Working with Quarto in RStudio</h3>
-<p>RStudio provides an integrated environment for writing and rendering Quarto documents. To start a new project:</p>
+<p>Quarto lets you create professional reports and papers directly from RStudio, combining code, text, and visualizations in a single reproducible workflow. This tutorial covers the basics of working with Quarto files in RStudio, then walks through creating report-style documents specifically. The next tutorial covers presentations.</p>
+<section id="working-with-quarto-in-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-quarto-in-rstudio">Working with Quarto in RStudio</h2>
+<p>To start a new Quarto document in RStudio:</p>
 <ol type="1">
 <li>Go to <strong>File → New File → Quarto Document…</strong></li>
-<li>In the dialog box, enter a <strong>title</strong>, <strong>author</strong>, and choose the <strong>default output format</strong> (e.g., HTML, PDF, or Word).</li>
-<li>RStudio will create a <code>.qmd</code> file containing a template YAML header and example code chunk.</li>
+<li>Enter a <strong>title</strong>, <strong>author</strong>, and choose a <strong>default output format</strong> (e.g., HTML, PDF, or Word).</li>
+<li>RStudio creates a <code>.qmd</code> file containing a template YAML header and an example code chunk.</li>
 <li>Click <strong>Render</strong> (or use <em>Render on Save</em>) to produce the formatted output.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -413,21 +439,14 @@ Reading
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The screenshot above shows where to create new Quarto documents in RStudio. For more information, see the official Quarto documentation: 🔗 <a href="https://quarto.org/docs/get-started/authoring/rstudio.html">Authoring with RStudio – Quarto Documentation</a></p>
+<p>For more information, see the official Quarto documentation: <a href="https://quarto.org/docs/get-started/authoring/rstudio.html">Authoring with RStudio</a></p>
 </div>
 </div>
-<p>A quarto file consists of:</p>
-<ul>
-<li>A <strong>YAML header</strong> (between <code>---</code> lines) defining metadata like title, author, date, and output type.</li>
-<li>The <strong>body</strong>, written in Markdown syntax, possibly including embedded R code chunks using <code>{r}</code> blocks.</li>
-<li>Optional <strong>format-specific settings</strong> for output style and behavior.</li>
-</ul>
-<p>Of course — here’s a <strong>concise, textbook-style paragraph</strong> explaining <strong>YAML</strong> in the context of Quarto and RStudio:</p>
-<hr>
+<p>Every <code>.qmd</code> file has the same basic structure: a <strong>YAML header</strong> (between <code>---</code> lines) defining metadata like title and output format, a <strong>body</strong> written in Markdown, and optional embedded R code chunks.</p>
 </section>
-<section id="yaml-document-metadata-and-configuration" class="level3">
-<h3 class="anchored" data-anchor-id="yaml-document-metadata-and-configuration">YAML: Document Metadata and Configuration</h3>
-<p>At the top of every Quarto (<code>.qmd</code>) document is a section written in <strong>YAML</strong> (short for <em>“YAML Ain’t Markup Language”</em>). YAML provides a structured way to define <strong>metadata</strong>, such as information <em>about</em> the document like the title, author, date, and output format. It also controls global document options like table of contents, numbering, themes, or code execution settings. YAML uses a simple key–value structure, enclosed between three dashes (<code>---</code>) at the beginning and end of the block. For example:</p>
+<section id="yaml-document-metadata-and-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="yaml-document-metadata-and-configuration">YAML: Document Metadata and Configuration</h2>
+<p>The YAML header is where you tell Quarto <em>how</em> to render your document: what format to produce and which options to apply. It uses a simple key-value structure, enclosed between <code>---</code> at the start and end of the block.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Statistical Analysis of Air Quality Data"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Alex Rivera"</span></span>
@@ -437,52 +456,17 @@ Reading
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In this example, YAML instructs Quarto to render the document as an HTML report with a table of contents and collapsible code sections. While the Markdown and R layers handle <em>what</em> is written and <em>how</em> it’s computed, YAML defines <em>how</em> the entire document is presented and configured.</p>
+<p><strong>Do:</strong> Create a Quarto document on your own computer. In the YAML header of the <code>.qmd</code> file, change <code>format: html</code> to <code>format: pdf</code> in the header. Do you expect this to be a one-line switch, or would you need to change other parts of the document too?</p>
+<p><strong>See:</strong> For a simple document, changing the target format really can be that simple: the same Markdown body and code chunks are reused. In practice, though, some format-specific options (like <code>code-fold</code>, which is an HTML-only feature) won’t carry over, and PDF output has its own setup requirements, covered below.</p>
 </section>
-<section id="language-layer" class="level3">
-<h3 class="anchored" data-anchor-id="language-layer">Language Layer</h3>
-<p>The <strong>language layer</strong> defines the written structure and formatting of a document using <strong>Markdown</strong> syntax. Markdown provides a simple and readable way to organize content through headings, lists, emphasis, links, and tables. It focuses entirely on text and structure, not on data or computation. In a Quarto document, this layer represents the narrative: the words, explanations, and organization that frame the analysis.</p>
-<p><strong>Example (Markdown text):</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Results and Discussion</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>In this section, we summarize the findings from our dataset.  </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>The following figure illustrates the relationship between fuel efficiency and engine power.</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data collected from the *mtcars* dataset  </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variables analyzed: **mpg** (miles per gallon) and **hp** (horsepower)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This text defines structure and emphasis but does not perform any computation.</p>
-</section>
-<section id="computation-layer" class="level3">
-<h3 class="anchored" data-anchor-id="computation-layer">Computation Layer</h3>
-<p>The <strong>computation layer</strong> carries out the actual <strong>data analysis and visualization</strong>. It involves embedding executable R code chunks inside the Markdown document, allowing results, tables, and figures to be generated automatically when the document is rendered. This integration ensures that all output is reproducible — every number and plot reflects the latest version of the data and analysis.</p>
-<p><strong>Example (R code chunk):</strong></p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatterplot of mpg vs horsepower</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Fuel Efficiency vs Engine Power"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Horsepower (hp)"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Miles per Gallon (mpg)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="documents_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>When rendered through Quarto, this code runs in R, producing a plot that appears directly in the final document or presentation.</p>
-</section>
-<section id="creating-quarto-documents-reports-articles-and-papers" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="creating-quarto-documents-reports-articles-and-papers">Creating Quarto Documents (Reports, Articles, and Papers)</h3>
-<p>Quarto supports a variety of <strong>document-based outputs</strong>, such as research reports, academic papers, and technical documentation. Common formats include:</p>
+<section id="creating-reports-and-papers" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="creating-reports-and-papers">Creating Reports and Papers</h2>
+<p>Common document output formats include:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 31%">
-<col style="width: 52%">
+<col style="width: 53%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -514,23 +498,31 @@ Reading
 </tr>
 </tbody>
 </table>
-<p>To create a document, specify the format in the YAML header:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Analysis Report"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Student Name"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Quarto automatically executes embedded R code chunks and inserts the resulting tables and plots. This enables <strong>reproducible research</strong> — every time you re-render, the analysis and visuals update from your current data.</p>
-<p><strong>Unique challenges and considerations for documents:</strong></p>
+<p>Quarto automatically executes embedded code chunks and inserts the resulting tables and plots, so every time you re-render, the analysis and visuals update from your current data.</p>
+<p>A few things to keep in mind across formats:</p>
 <ul>
-<li><strong>Layout and length:</strong> Reports may require page breaks, consistent figure sizing, and control over floating tables.</li>
-<li><strong>PDF rendering:</strong> Requires a working LaTeX installation (e.g., TinyTeX).</li>
-<li><strong>Cross-format consistency:</strong> Settings that work for HTML might not suit PDF or Word outputs.</li>
-<li><strong>Citations and cross-references:</strong> Quarto supports citation management via BibTeX, but setup requires care.</li>
+<li><strong>Layout:</strong> reports may need page breaks or fixed figure sizing, especially for PDF and Word.</li>
+<li><strong>PDF rendering</strong> requires a working LaTeX installation (e.g., TinyTeX).</li>
+<li><strong>Settings don’t always transfer:</strong> an option that works for HTML may not apply to PDF or Word.</li>
+<li><strong>Citations</strong> are supported via BibTeX, covered later in this module.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Common Mistake
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By default, a rendered HTML report can reference supporting files, such as separately saved images, rather than embedding everything into the single <code>.html</code> file. If you then hand in or share only that <code>.html</code> file, without its supporting files, it can open broken or missing content for whoever receives it. To avoid this, set your document to be <strong>self-contained</strong> by adding <code>embed-resources: true</code> under your HTML format options:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This produces a single, fully portable <code>.html</code> file with everything, including plots and images, embedded inside it. This is important whenever you’re submitting a report as one file, for example for a homework assignment.</p>
+</div>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading callout-titled">
@@ -546,82 +538,39 @@ Reading
 <p>Learn more: <a href="https://quarto.org/docs/output-formats/all-formats.html">Quarto Document Formats</a></p>
 </div>
 </div>
-</div></div></section>
-<section id="creating-quarto-presentations-slides-and-talks" class="level3">
-<h3 class="anchored" data-anchor-id="creating-quarto-presentations-slides-and-talks">Creating Quarto Presentations (Slides and Talks)</h3>
-<p>Quarto also allows you to create <strong>presentations</strong> directly from <code>.qmd</code> files. Presentations use the same structure as documents but render slide-by-slide instead of page-by-page. You can choose from several output types:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Presentation Format</strong></th>
-<th><strong>Output Type</strong></th>
-<th><strong>Strengths</strong></th>
-<th><strong>Challenges</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>revealjs</code></td>
-<td>HTML slides</td>
-<td>Highly flexible; supports transitions, incremental reveals, and embedded code or interactivity.</td>
-<td>Requires attention to screen layout and readability; web-based only.</td>
-</tr>
-<tr class="even">
-<td><code>pptx</code></td>
-<td>PowerPoint</td>
-<td>Easy to share; editable after rendering.</td>
-<td>Limited styling and dynamic features compared to HTML slides.</td>
-</tr>
-<tr class="odd">
-<td><code>beamer</code></td>
-<td>PDF slides (LaTeX)</td>
-<td>High-quality printable slides; ideal for academic talks.</td>
-<td>Complex LaTeX configuration; limited interactivity.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="example-creating-a-reveal.js-presentation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="example-creating-a-reveal.js-presentation">Example: Creating a Reveal.js Presentation</h3>
-<p>Below is an example of a simple Quarto presentation using the <strong>Reveal.js</strong> format.<br>
-The YAML header defines document metadata and output type, while the Markdown body defines the slide content.</p>
-<ul>
-<li><a href="https://github.com/open-stat-prog/reproducible-reporting/blob/main/assets/docs/presentation_example.qmd">Example .qmd file</a></li>
-<li><a href="https://open-stat-prog.github.io/reproducible-reporting/assets/docs/presentation_example.html">Resuling .html output file</a></li>
-</ul>
-<p>Each slide begins with a heading (for example, <code>##</code>) or is separated using <code>---</code>. When rendered, Quarto executes any embedded R code chunks and displays their outputs, such as tables or plots, directly on the slides.</p>
-<p>Students should keep slides concise: aim for <strong>clarity, minimal text</strong>, and <strong>meaningful visuals</strong> rather than dense explanations.</p>
-<p><strong>Common challenges for presentations:</strong></p>
-<ul>
-<li><strong>Balancing detail and readability:</strong> Avoid overloading slides with text or long code blocks.</li>
-<li><strong>Consistent design:</strong> Use concise titles and uniform font sizes.</li>
-<li><strong>File size:</strong> Embedded plots can increase file size; consider image compression.</li>
-<li><strong>Cross-platform compatibility:</strong> Check that Reveal.js slides display correctly across browsers; PowerPoint (<code>pptx</code>) outputs may render differently.</li>
-</ul>
-
-
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="callout callout-style-default callout-reading callout-titled">
+</div></div><div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Reading
+Practice Exercise
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/">Quarto Presentations Overview</a> <a href="https://quarto.org/docs/presentations/revealjs/">Reveal.js Presentations in Quarto</a> <a href="https://quarto.org/docs/presentations/powerpoint.html">PowerPoint Presentations in Quarto</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Write a YAML header for an HTML report titled “Analysis Report,” with a table of contents, that is safe to hand in as a single file.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Analysis Report"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>toc: true</code> option adds a table of contents, and <code>embed-resources: true</code> ensures the rendered <code>.html</code> file is self-contained, so it can be shared or submitted on its own.</p>
 </div>
 </div>
-</div></div></section>
+</div>
+</div>
+</div>
+
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1037,8 +986,8 @@ Reading
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/chunk_options/index.html" class="pagination-link" aria-label="Chunks and options">
-        <span class="nav-page-text">Chunks and options</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/quarto_markdown/presentations.html" class="pagination-link" aria-label="Creating presentations with Quarto">
+        <span class="nav-page-text">Creating presentations with Quarto</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1054,7 +1003,7 @@ Reading
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- © 2025
+ © 2026
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">

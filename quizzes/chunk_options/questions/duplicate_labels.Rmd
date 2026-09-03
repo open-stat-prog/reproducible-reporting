@@ -1,0 +1,28 @@
+Question
+========
+You copy-paste an existing chunk to use as a starting point for a new one, but forget to change its label. What
+happens when you render the document?
+
+Answerlist
+----------
+* Nothing; chunk labels are purely cosmetic and don't affect rendering.
+* Quarto silently renames the second chunk's label automatically.
+* Rendering fails with a duplicate-label error.
+* Only the first chunk with that label is executed; the second is skipped.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: chunk labels must be unique, and duplicates cause a rendering error.
+* Wrong: Quarto does not silently rename duplicate labels.
+* Correct: chunk labels must be unique within a document; a duplicate causes rendering to fail with an error.
+* Wrong: this is not how Quarto handles duplicate labels; rendering fails outright.
+
+Meta-information
+================
+exname: Duplicate Chunk Labels
+extype: schoice
+exsolution: 0010
+exshuffle: 4

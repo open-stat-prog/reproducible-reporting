@@ -20,6 +20,8 @@ format:
 
 engine: knitr
 
+bibliography: references.bib
+
 knitr:
   opts_chunk:
     message: false

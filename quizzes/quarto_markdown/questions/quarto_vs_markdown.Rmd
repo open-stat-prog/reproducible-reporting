@@ -1,0 +1,27 @@
+Question
+========
+Which capability does Quarto have that plain Markdown lacks?
+
+Answerlist
+----------
+* Formatting text with headings and lists.
+* Executing code and embedding the resulting output in a document.
+* Adding hyperlinks to a document.
+* Applying bold or italic emphasis to text.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: heading and list formatting is a core Markdown feature, available without Quarto.
+* Correct: Markdown has no computation layer; Quarto adds the ability to execute code and embed dynamic results.
+* Wrong: hyperlinks are supported by Markdown alone.
+* Wrong: emphasis (bold/italic) is a core Markdown feature.
+
+Meta-information
+================
+exname: Quarto versus Markdown Capabilities
+extype: schoice
+exsolution: 0100
+exshuffle: 4

@@ -4,98 +4,97 @@ title: "Writing text"
 
 ## Text
 
-Quarto builds on **Pandoc Markdown**, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:
+Quarto builds on **Pandoc Markdown**, which supports inline formatting for emphasis, code, strikethrough, and
+superscript/subscript.
 
-* *Italics* can be written as `*italics*` or `_italics_`.
-* **Bold** is `**bold**` or `__bold__`.
-* ***Bold italics*** is `***bold italics***` (or alternatives combining `**` and `*`).
+**Do:** Run this in your own Quarto document and see how it looks. 
+
+```markdown
+*italics*
+**bold**
+```
+
+**See:** In visual mode, or when rendering the document, you should see this:
+
+*italics*
+**bold**
+
+**Predict:** now suppose you wrap a word in *three* asterisks instead of one or two, like `***word***`. Do you expect
+this to render as italics, bold, or both combined?
+
+**Explain:** 
+
+```markdown
+***bold italics***
+```
+
+***bold italics***
+
+As predicted, combining the two markers combines both effects. 
+
+A few other inline formatting options are useful to know:
+
 * **Strikethrough**: `~~text~~` → ~~text~~.
 * **Inline (verbatim) code**: enclose text in backticks, e.g. `` `my_var <- 10` `` → `my_var <- 10`.
-* **Superscript / subscript**:
-    - `superscript^2^` → superscript²
-    - `subscript~2~` → subscript₂
-  You can also use braces to clarify: `superscript^{2}` or `subscript_{2}`.
-* Quarto also allows adding stylistic classes via span syntax, e.g.
-    `[This is smallcaps]{.smallcaps}` → (renders in small caps if supported).
-
-This formatting gives you fine control over text appearance without leaving Markdown.
+* **Superscript / subscript**: `superscript^2^` → superscript², `subscript~2~` → subscript₂.
 
 ## Lists
 
-Lists are central to organizing information. Quarto supports both **unordered** and **ordered** lists, and nested lists. 
+Quarto supports **unordered** and **ordered** lists, including nested lists.
 
-* **Unordered lists**: start lines with `*`, `+`, or `-`. For example:
+* **Unordered lists** start lines with `*`, `+`, or `-`:
 
   ```markdown
-  * Item A  
-  * Item B  
-    + Sub-item B1  
-    + Sub-item B2  
-  * Item C  
+  * Item A
+  * Item B
+    + Sub-item B1
+  * Item C
   ```
 
-Results in: 
-
-  * Item A  
-  * Item B  
-    + Sub-item B1  
-    + Sub-item B2  
+  * Item A
+  * Item B
+    + Sub-item B1
   * Item C
 
-
-* **Ordered lists**: use numbers followed by a dot:
-
-  ```markdown
-  1. First step  
-  2. Second step  
-     i) Subtask  
-     ii) Another subtask  
-  3. Third  
-  ```
-
-Results in: 
-
-  1. First step  
-  2. Second step  
-     i) Subtask  
-     ii) Another subtask  
-  3. Third  
-
-* **Task lists**: Quarto supports “checklist” style items using `[ ]` or `[x]`:
+* **Ordered lists** use numbers followed by a dot:
 
   ```markdown
-  - [ ] Task 1  
-  - [x] Task 2 (done)  
+  1. First step
+  2. Second step
+  3. Third step
   ```
 
-Results in clickable boxes: 
+  1. First step
+  2. Second step
+  3. Third step
 
-  - [ ] Task 1  
-  - [x] Task 2 (done)  
+* **Task lists** use `[ ]` or `[x]`:
 
-* **Continuation lists**: Quarto allows list numbering to continue across interruptions using `(@)` to resume numbering.
+  ```markdown
+  - [ ] Task 1
+  - [x] Task 2 (done)
+  ```
 
-One **important note**: unlike some Markdown flavors (e.g. GitHub-Flavored Markdown), Quarto **requires a blank line before a list** for it to render properly. If you don’t insert a blank line, the line may just appear as ordinary text. You can always quickly check this by switching to the visual mode in R studio.
+  - [ ] Task 1
+  - [x] Task 2 (done)
 
+::: {.callout-note}
+## Common Mistake
 
-## Links
+Quarto requires a **blank line before a list** for it to render correctly. Without it, the list items may appear as
+ordinary text rather than a formatted list. If a list isn't rendering the way you expect, check for a missing blank
+line above it first.
+:::
 
-Quarto supports standard Markdown link syntax, plus extended capabilities.
+## Links and Equations
 
 * **Inline link**: `[Quarto](https://quarto.org)` → [Quarto](https://quarto.org)
-* **Autolink URLs**: `<https://quarto.org>` → <https://quarto.org>
+* **Autolink URL**: `<https://quarto.org>` → <https://quarto.org>
 
-These allow you to interweave narrative and media seamlessly.
+Quarto supports LaTeX-style math using `$` and `$$` delimiters:
 
-
-## Equations (Mathematical Notation)
-
-Quarto supports LaTeX-style math syntax using `$` and `$$` delimiters.
-
-* **Inline math**: wrap expressions in single dollar signs, e.g.
-    `This is inline: $E = mc^2$.` → This is inline: $(E = mc^2)$.
-
-* **Display (block) math**: wrap in double dollar signs:
+* **Inline math**: `This is inline: $E = mc^2$.` → This is inline: $E = mc^2$.
+* **Display math**, on its own centered line:
 
   ```markdown
   $$
@@ -103,16 +102,36 @@ Quarto supports LaTeX-style math syntax using `$` and `$$` delimiters.
   $$
   ```
 
-  → renders centered on its own line, looking as follows:
   $$
   E = mc^2
   $$
-
 
 ::: {.column-margin}
 
 :::: resource
 [Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+::::
+
+:::
+
+::: practice
+
+## Practice Exercise
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+Write the Markdown syntax for a sentence that is both bold and italicized, ending with a variable name written as
+verbatim code, `x`, followed by a superscript 2.
+
+## {{< var tab_title.solution >}}
+
+```markdown
+***This sentence is bold and italicized***, using `x`^2^.
+```
+
+***This sentence is bold and italicized***, using `x`^2^.
+
 ::::
 
 :::

@@ -72,6 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -96,19 +109,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -218,7 +218,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/quarto_markdown/documents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Creating different documents with Quarto</span></a>
+ <span class="menu-text">Creating documents with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/quarto_markdown/presentations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating presentations with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/quarto_markdown/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -250,6 +262,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/chunk_options/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -279,6 +297,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/writing_text/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -300,6 +324,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/presenting_output/plots.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Figures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/presenting_output/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -350,19 +380,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 <section id="introduction-to-quarto-and-markdown" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-quarto-and-markdown">Introduction to Quarto and Markdown</h2>
-<p>Before learning how to create documents and reports, it is important to understand the two core technologies behind this workflow: <strong>Quarto</strong> and <strong>Markdown</strong>. These tools form the foundation for reproducible, flexible, and professional document creation.</p>
+<p>Before learning how to create documents and reports, it helps to understand the two core technologies behind this workflow: <strong>Quarto</strong> and <strong>Markdown</strong>. Together, they form the foundation for reproducible, flexible document creation.</p>
 </section>
 <section id="what-is-quarto" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-is-quarto">What Is Quarto?</h2>
-<p>Quarto is an open-source publishing system designed to create high-quality, reproducible documents and websites from plain text files. It allows you to combine written content, code, data, and visualizations in a single workflow.</p>
-<p>Quarto supports multiple programming languages—such as R, Python, Julia, and Observable—and can produce outputs in a variety of formats, including HTML, PDF, Microsoft Word, and PowerPoint.</p>
-<p>Because Quarto integrates writing and computation, it is particularly well-suited for:</p>
-<ul>
-<li>Data science reports Research papers and technical documentation</li>
-<li>Educational materials and presentations</li>
-<li>Reproducible workflows and analysis pipelines</li>
-</ul>
-<p>In short, Quarto bridges the gap between writing and computation, helping you communicate results in a clear and automated way.</p>
+<p>Quarto is an open-source publishing system for creating reproducible documents and websites from plain text files. It combines written content, code, data, and visualizations in a single workflow, supports multiple programming languages (R, Python or Julia), and can render to formats including HTML, PDF, Microsoft Word, and PowerPoint.</p>
+<p>Because it integrates writing and computation, Quarto is well-suited for data science reports, research papers, educational materials and presentations, and reproducible analysis pipelines more generally.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading callout-titled">
@@ -381,12 +404,8 @@ Reading
 </div></div></section>
 <section id="what-is-markdown" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-is-markdown">What is Markdown?</h2>
-<p>Markdown is a lightweight text formatting language. It allows you to write plain text that can be easily converted into formatted documents such as web pages or PDFs.</p>
-<p>Instead of relying on graphical formatting tools (like bold or italic buttons), Markdown uses simple text-based markers that represent formatting instructions. The result is a writing experience that is both human-readable and machine-friendly.</p>
-<p>Markdown was originally created by John Gruber in 2004 with the goal of making writing for the web more accessible and less cluttered by code-like markup languages such as HTML.</p>
-<p>Markdown has since become a standard tool for technical communication, documentation, and note-taking, forming the foundation of many modern publishing systems — including Quarto.</p>
-
-
+<p>Markdown is a lightweight text formatting language: you write plain text with simple text-based markers (rather than graphical formatting buttons) that get converted into formatted output such as web pages or PDFs. The result is a writing experience that is both human-readable and machine-friendly.</p>
+<p>Markdown was created in 2004 to make writing for the web simpler than working directly in HTML, and it has since become a standard tool for technical writing and documentation, forming the foundation of many modern publishing systems — including Quarto.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading callout-titled">
@@ -402,7 +421,32 @@ Reading
 <p><a href="https://daringfireball.net/projects/markdown/">Here</a> you find the link to the original Markdown paper.</p>
 </div>
 </div>
-</div></div></section>
+</div></div><div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>You’re writing a lab report where a table of results needs to update automatically every time you rerun your analysis. Would plain Markdown or Quarto be the right tool for this, and why?</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Quarto. Markdown only provides text formatting; it has no way to execute code or generate results. Quarto builds on Markdown by adding a computation layer, so tables and figures can be generated from your analysis and stay in sync with your data.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -835,7 +879,7 @@ Reading
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- © 2025
+ © 2026
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">

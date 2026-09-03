@@ -1,0 +1,28 @@
+Question
+========
+You embed a regression coefficient directly in your text using the inline expression `coef(model)[2]`, and it renders
+as "-5.344471517291". What should you do to make this more suitable for a report?
+
+Answerlist
+----------
+* Nothing; inline results should always show full computational precision.
+* Wrap the expression in `round()` or `format()` before embedding it, e.g. `round(coef(model)[2], 2)`.
+* Replace the inline code with a hard-coded number typed directly into the text.
+* Move the entire sentence into a separate code chunk instead of using inline code.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: unrounded results are usually far more precise than a report needs, and look out of place in a sentence.
+* Correct: rounding or formatting the expression keeps the inline result readable, while still updating automatically if the underlying data changes.
+* Wrong: hard-coding a number defeats the purpose of inline code, since the text would no longer update automatically.
+* Wrong: moving it to a separate chunk doesn't address the rounding issue, and inline code is specifically meant for embedding results directly in text.
+
+Meta-information
+================
+exname: Rounding Inline Results
+extype: schoice
+exsolution: 0100
+exshuffle: 4

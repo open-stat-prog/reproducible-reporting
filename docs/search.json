@@ -1,650 +1,195 @@
 [
   {
-    "objectID": "quizzes/first_tutorial/questions/default_arguments1.html",
-    "href": "quizzes/first_tutorial/questions/default_arguments1.html",
+    "objectID": "quizzes/chunk_options/questions/duplicate_labels.html",
+    "href": "quizzes/chunk_options/questions/duplicate_labels.html",
     "title": "Question",
     "section": "",
-    "text": "Which section of an R package help file would you reference to learn the default values for a function’s arguments.\n\n\n\nDescription\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
+    "text": "You copy-paste an existing chunk to use as a starting point for a new one, but forget to change its label. What happens when you render the document?\n\n\n\nNothing; chunk labels are purely cosmetic and don’t affect rendering.\nQuarto silently renames the second chunk’s label automatically.\nRendering fails with a duplicate-label error.\nOnly the first chunk with that label is executed; the second is skipped."
   },
   {
-    "objectID": "quizzes/first_tutorial/questions/default_arguments1.html#answerlist",
-    "href": "quizzes/first_tutorial/questions/default_arguments1.html#answerlist",
+    "objectID": "quizzes/chunk_options/questions/duplicate_labels.html#answerlist",
+    "href": "quizzes/chunk_options/questions/duplicate_labels.html#answerlist",
     "title": "Question",
     "section": "",
-    "text": "Description\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
+    "text": "Nothing; chunk labels are purely cosmetic and don’t affect rendering.\nQuarto silently renames the second chunk’s label automatically.\nRendering fails with a duplicate-label error.\nOnly the first chunk with that label is executed; the second is skipped."
   },
   {
-    "objectID": "quizzes/first_tutorial/index.html",
-    "href": "quizzes/first_tutorial/index.html",
-    "title": "Knowledge Quiz: Tutorial 2",
-    "section": "",
-    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "quizzes/second_tutorial/questions/logical.html",
-    "href": "quizzes/second_tutorial/questions/logical.html",
-    "title": "Question",
-    "section": "",
-    "text": "Which of the following expressions will return TRUE?\n\n\n\n\"foo\" != \"bar\"\n(8 + 6) &lt; (8 * 6)\n(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\"alice\" == \"bob\" | \"alice\" == \"alice\"\n!(6 &gt; 7)\nTRUE\nFALSE\n\"foo\" == \"bar\"\n(8 - 1) == 7 & 7 &gt; (14 / 2)\n\"alice\" == \"bob\" | \"alice\" != \"alice\"\n\"alice\" == \"bob\" & \"alice\" == \"alice\"\n!TRUE\nTRUE & FALSE"
-  },
-  {
-    "objectID": "quizzes/second_tutorial/questions/logical.html#answerlist",
-    "href": "quizzes/second_tutorial/questions/logical.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "\"foo\" != \"bar\"\n(8 + 6) &lt; (8 * 6)\n(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\"alice\" == \"bob\" | \"alice\" == \"alice\"\n!(6 &gt; 7)\nTRUE\nFALSE\n\"foo\" == \"bar\"\n(8 - 1) == 7 & 7 &gt; (14 / 2)\n\"alice\" == \"bob\" | \"alice\" != \"alice\"\n\"alice\" == \"bob\" & \"alice\" == \"alice\"\n!TRUE\nTRUE & FALSE"
-  },
-  {
-    "objectID": "quizzes/second_tutorial/questions/logical.html#answerlist-1",
-    "href": "quizzes/second_tutorial/questions/logical.html#answerlist-1",
+    "objectID": "quizzes/chunk_options/questions/duplicate_labels.html#answerlist-1",
+    "href": "quizzes/chunk_options/questions/duplicate_labels.html#answerlist-1",
     "title": "Question",
     "section": "Answerlist",
-    "text": "Answerlist\n\nTRUE: “foo” is not equal to “bar”\nTRUE: 14 is strictly less than 48\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7\nTRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”\nTRUE: 6 is not strictly greater than 7, and that result is negated\nTRUE: Trivially\nFALSE: Trivially\nFALSE: “foo” is not equal to “bar”\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7\nFALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”\nFALSE: “alice” is not equal to “bob”\nFALSE: Trivial negation\nFALSE: Trivially"
+    "text": "Answerlist\n\nWrong: chunk labels must be unique, and duplicates cause a rendering error.\nWrong: Quarto does not silently rename duplicate labels.\nCorrect: chunk labels must be unique within a document; a duplicate causes rendering to fail with an error.\nWrong: this is not how Quarto handles duplicate labels; rendering fails outright."
   },
   {
-    "objectID": "quizzes/second_tutorial/index.html",
-    "href": "quizzes/second_tutorial/index.html",
-    "title": "Knowledge Quiz: Tutorial 1",
+    "objectID": "quizzes/chunk_options/questions/session_persistence.html",
+    "href": "quizzes/chunk_options/questions/session_persistence.html",
+    "title": "Question",
     "section": "",
-    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n Back to top"
+    "text": "A Quarto document has two R chunks. The first chunk creates an object called x. Can the second chunk use x, without recreating it?\n\n\n\nNo, each chunk runs in its own isolated environment.\nYes, because all R chunks in a document share a single, continuous session.\nOnly if both chunks have the same label.\nOnly if the cache: TRUE option is set on the first chunk."
   },
   {
-    "objectID": "tutorials/chunk_options/chunk_options.html",
-    "href": "tutorials/chunk_options/chunk_options.html",
-    "title": "Chunk options",
+    "objectID": "quizzes/chunk_options/questions/session_persistence.html#answerlist",
+    "href": "quizzes/chunk_options/questions/session_persistence.html#answerlist",
+    "title": "Question",
     "section": "",
-    "text": "Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.\nChunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on chunk options\n\n\nQuarto uses a YAML-style syntax for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to {r}, you write them as commented lines beginning with #| inside the chunk, directly below the chunk header. For example:\n#| label: data-summary\n#| echo: TRUE\n#| message: FALSE\nHere:\n\nlabel: assigns a unique name to the chunk.\necho: determines whether the code appears in the rendered document.\nmessage: controls whether R messages are shown.\n\nThis “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).\n\n\nDisplay-related options determine what content from a chunk appears in the final rendered document.\n\necho controls whether the source code itself is shown (TRUE shows it, FALSE hides it).\nresults specifies how the printed results appear (e.g., \"markup\" for normal output or \"hide\" to suppress).\nwarning and message control whether warnings or messages are displayed.\n\nFor instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:\n#| echo: FALSE\nmean(c(5, 10, 15))\nWhich would only print the output when being rendered in a Quarto document:\n\n\n[1] 10\n\n\n\n\n\nExecution options govern whether and how the code runs when Quarto renders the document.\n\neval determines if the chunk should be executed (TRUE or FALSE).\ninclude controls whether both code and results appear in the final output; include: FALSE runs the code but hides all output.\nerror specifies whether rendering should continue if an error occurs (TRUE) or stop (FALSE).\n\nFor example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:\n#| label: setup\n#| include: FALSE\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nWhen your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.\n\nfig-cap adds a caption to a plot.\nfig-width and fig-height set the dimensions (in inches).\nfig-align specifies the alignment (\"left\", \"center\", or \"right\").\n\nFor example:\n#| label: visualization\n#| echo: FALSE\n#| fig-cap: \"Distribution of scores by group.\"\n\n\n\nFor time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.\n\ncache: TRUE saves the chunk’s results; subsequent renders reuse them unless the code changes.\n\nCaching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.",
+    "text": "No, each chunk runs in its own isolated environment.\nYes, because all R chunks in a document share a single, continuous session.\nOnly if both chunks have the same label.\nOnly if the cache: TRUE option is set on the first chunk."
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/session_persistence.html#answerlist-1",
+    "href": "quizzes/chunk_options/questions/session_persistence.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: R chunks are not isolated from one another.\nCorrect: chunks in the same language run in one shared session, so objects persist across chunks in the order they appear.\nWrong: chunk labels identify chunks for referencing and error messages; they don’t control whether objects are shared.\nWrong: caching affects whether a chunk’s computation is rerun on subsequent renders; it isn’t required for objects to be shared within a single render."
+  },
+  {
+    "objectID": "quizzes/chunk_options/index.html",
+    "href": "quizzes/chunk_options/index.html",
+    "title": "Knowledge Quiz: Chunks and Options",
+    "section": "",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nA Quarto document has two R chunks. The first chunk creates an object called x. Can the second chunk use x, without recreating it?\n\nYes, because all R chunks in a document share a single, continuous session.No, each chunk runs in its own isolated environment.Only if both chunks have the same label.Only if the cache: TRUE option is set on the first chunk.\n\n\n\n\nCorrect: chunks in the same language run in one shared session, so objects persist across chunks in the order they appear.\nWrong: R chunks are not isolated from one another.\nWrong: chunk labels identify chunks for referencing and error messages; they don’t control whether objects are shared.\nWrong: caching affects whether a chunk’s computation is rerun on subsequent renders; it isn’t required for objects to be shared within a single render.\n\n\n\n\n\nYou copy-paste an existing chunk to use as a starting point for a new one, but forget to change its label. What happens when you render the document?\n\nRendering fails with a duplicate-label error.Quarto silently renames the second chunk’s label automatically.Only the first chunk with that label is executed; the second is skipped.Nothing; chunk labels are purely cosmetic and don’t affect rendering.\n\n\n\n\nCorrect: chunk labels must be unique within a document; a duplicate causes rendering to fail with an error.\nWrong: Quarto does not silently rename duplicate labels.\nWrong: this is not how Quarto handles duplicate labels; rendering fails outright.\nWrong: chunk labels must be unique, and duplicates cause a rendering error.\n\n\n\n\n\nYou want a chunk’s code to run, but neither the code nor its output should appear anywhere in the rendered document (for example, a setup chunk loading packages). Which option should you use?\n\neval: FALSEinclude: FALSEecho: FALSEerror: FALSE\n\n\n\n\nWrong: eval: FALSE prevents the chunk from running at all, so packages would not actually be loaded.\nCorrect: include: FALSE runs the chunk but hides both the code and any output.\nWrong: echo: FALSE hides only the code; the result would still appear.\nWrong: error: FALSE controls whether rendering stops on an error; it does not hide code or output.\n\n\n\n\n\nHow does Quarto expect chunk options to be written inside an R chunk?\n\nAs plain R function calls at the top of the chunk, e.g. set_echo(FALSE).As commented lines starting with #|, placed directly below the chunk header.As arguments inside the curly braces, e.g. {r, echo=FALSE}.As a separate YAML file referenced by the chunk’s label.\n\n\n\n\nWrong: chunk options are not set through R function calls.\nCorrect: Quarto chunk options are written as #| commented lines directly below the chunk header.\nWrong: this is the older R Markdown syntax; Quarto uses a different convention.\nWrong: chunk options are written inline in the chunk itself, not in a separate file.\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Chunks and options",
-      "Chunk options"
+      "Knowledge Quiz"
     ]
   },
   {
-    "objectID": "tutorials/chunk_options/chunk_options.html#introduction",
-    "href": "tutorials/chunk_options/chunk_options.html#introduction",
-    "title": "Chunk options",
+    "objectID": "quizzes/presenting_output/questions/figure_sizing.html",
+    "href": "quizzes/presenting_output/questions/figure_sizing.html",
+    "title": "Question",
     "section": "",
-    "text": "Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.\nChunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on chunk options\n\n\nQuarto uses a YAML-style syntax for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to {r}, you write them as commented lines beginning with #| inside the chunk, directly below the chunk header. For example:\n#| label: data-summary\n#| echo: TRUE\n#| message: FALSE\nHere:\n\nlabel: assigns a unique name to the chunk.\necho: determines whether the code appears in the rendered document.\nmessage: controls whether R messages are shown.\n\nThis “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).\n\n\nDisplay-related options determine what content from a chunk appears in the final rendered document.\n\necho controls whether the source code itself is shown (TRUE shows it, FALSE hides it).\nresults specifies how the printed results appear (e.g., \"markup\" for normal output or \"hide\" to suppress).\nwarning and message control whether warnings or messages are displayed.\n\nFor instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:\n#| echo: FALSE\nmean(c(5, 10, 15))\nWhich would only print the output when being rendered in a Quarto document:\n\n\n[1] 10\n\n\n\n\n\nExecution options govern whether and how the code runs when Quarto renders the document.\n\neval determines if the chunk should be executed (TRUE or FALSE).\ninclude controls whether both code and results appear in the final output; include: FALSE runs the code but hides all output.\nerror specifies whether rendering should continue if an error occurs (TRUE) or stop (FALSE).\n\nFor example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:\n#| label: setup\n#| include: FALSE\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nWhen your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.\n\nfig-cap adds a caption to a plot.\nfig-width and fig-height set the dimensions (in inches).\nfig-align specifies the alignment (\"left\", \"center\", or \"right\").\n\nFor example:\n#| label: visualization\n#| echo: FALSE\n#| fig-cap: \"Distribution of scores by group.\"\n\n\n\nFor time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.\n\ncache: TRUE saves the chunk’s results; subsequent renders reuse them unless the code changes.\n\nCaching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Chunk options"
-    ]
+    "text": "What do the fig-width and fig-height chunk options control?\n\n\n\nThe caption text shown below the figure.\nThe dimensions of the rendered figure, in inches.\nWhether the figure’s code is shown alongside the plot.\nThe color palette used in the plot."
   },
   {
-    "objectID": "tutorials/chunk_options/code_chunks.html",
-    "href": "tutorials/chunk_options/code_chunks.html",
-    "title": "Introduction to code chunks",
+    "objectID": "quizzes/presenting_output/questions/figure_sizing.html#answerlist",
+    "href": "quizzes/presenting_output/questions/figure_sizing.html#answerlist",
+    "title": "Question",
     "section": "",
-    "text": "In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. They serve as the fundamental bridge between the narrative and computational parts, and they enable a seamless integration of analysis and exposition. Each chunk is delimited by a specific syntax (for example, triple backticks followed by a language label such as {r}) that tells Quarto which language engine to use. When the document is rendered, Quarto evaluates these chunks in the specified language environment, captures their outputs—such as console text, tables, plots, or other visualizations—and inserts them directly into the document at the chunk’s position. This workflow supports the principles of literate programming and reproducible research, ensuring that results are dynamically linked to the underlying code rather than being static artifacts.\nConceptually, Quarto treats code chunks as part of a larger computational document graph. During rendering, Quarto manages execution order, variable environments, and inter-chunk dependencies to maintain consistency. This means that chunks are not merely snippets of text to be formatted; they are active components in the document’s computational state. For instance, a variable created in one chunk can be referenced and used in another, allowing for modular, incremental development of analyses. Quarto also provides mechanisms for caching, error handling, and execution control, giving users flexibility in how computation is performed during document compilation.\nImportantly, code chunks are not limited to R. They can be written in Python, Julia, or other supported languages within the same document. This multilingual capability makes Quarto a versatile platform for mixed-language workflows, which are increasingly common in data science and applied research.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Introduction to code chunks"
-    ]
+    "text": "The caption text shown below the figure.\nThe dimensions of the rendered figure, in inches.\nWhether the figure’s code is shown alongside the plot.\nThe color palette used in the plot."
   },
   {
-    "objectID": "tutorials/chunk_options/code_chunks.html#introduction",
-    "href": "tutorials/chunk_options/code_chunks.html#introduction",
-    "title": "Introduction to code chunks",
+    "objectID": "quizzes/presenting_output/questions/figure_sizing.html#answerlist-1",
+    "href": "quizzes/presenting_output/questions/figure_sizing.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: the caption is set with fig-cap, not fig-width/fig-height.\nCorrect: fig-width and fig-height set the rendered figure’s dimensions, in inches.\nWrong: showing or hiding code is controlled by echo, not the figure sizing options.\nWrong: the color palette is determined by the plotting code itself, not by these chunk options."
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/kable_purpose.html",
+    "href": "quizzes/presenting_output/questions/kable_purpose.html",
+    "title": "Question",
     "section": "",
-    "text": "In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. They serve as the fundamental bridge between the narrative and computational parts, and they enable a seamless integration of analysis and exposition. Each chunk is delimited by a specific syntax (for example, triple backticks followed by a language label such as {r}) that tells Quarto which language engine to use. When the document is rendered, Quarto evaluates these chunks in the specified language environment, captures their outputs—such as console text, tables, plots, or other visualizations—and inserts them directly into the document at the chunk’s position. This workflow supports the principles of literate programming and reproducible research, ensuring that results are dynamically linked to the underlying code rather than being static artifacts.\nConceptually, Quarto treats code chunks as part of a larger computational document graph. During rendering, Quarto manages execution order, variable environments, and inter-chunk dependencies to maintain consistency. This means that chunks are not merely snippets of text to be formatted; they are active components in the document’s computational state. For instance, a variable created in one chunk can be referenced and used in another, allowing for modular, incremental development of analyses. Quarto also provides mechanisms for caching, error handling, and execution control, giving users flexibility in how computation is performed during document compilation.\nImportantly, code chunks are not limited to R. They can be written in Python, Julia, or other supported languages within the same document. This multilingual capability makes Quarto a versatile platform for mixed-language workflows, which are increasingly common in data science and applied research.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Introduction to code chunks"
-    ]
+    "text": "What does wrapping a data frame in knitr::kable() accomplish, compared to letting R print the data frame directly?\n\n\n\nIt changes the underlying values stored in the data frame.\nIt renders the data as a properly formatted table matching the document’s style, rather than R’s plain console-style printout.\nIt automatically rounds every numeric column to two decimal places.\nIt converts the data frame into a figure."
   },
   {
-    "objectID": "tutorials/chunk_options/code_chunks.html#example",
-    "href": "tutorials/chunk_options/code_chunks.html#example",
-    "title": "Introduction to code chunks",
-    "section": "Example",
-    "text": "Example\nFirst chunk:\n\n# Create a small dataset\nset.seed(123)\ndata &lt;- data.frame(\n  group = rep(c(\"A\", \"B\"), each = 10),\n  score = c(rnorm(10, mean = 75, sd = 5),\n            rnorm(10, mean = 82, sd = 6))\n)\n\n# Display a quick summary of the data\nsummary(data$score)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  68.67   73.58   78.91   79.31   84.22   92.72 \n\n\nIn the first chunk, we see a dataset being generated and stored. Next, we see that the summary of this dataset is being requested. When rendering the document, the output of this request is automatically being printed in the document (as you can see printed directly below the code chunk).\nSecond chunk:\n\n# Use the dataset created in the previous chunk\nmodel &lt;- lm(score ~ group, data = data)\n\n# Display regression results\nsummary(model)\n\n\nCall:\nlm(formula = score ~ group, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-13.0514  -3.3335   0.1264   2.1877   9.4697 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   75.373      1.754  42.970  &lt; 2e-16 ***\ngroupB         7.879      2.481   3.176  0.00523 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 5.547 on 18 degrees of freedom\nMultiple R-squared:  0.3591,    Adjusted R-squared:  0.3235 \nF-statistic: 10.09 on 1 and 18 DF,  p-value: 0.005231\n\n\nThe second chunk takes the dataset that was stored in the first chunk and performs some additional analysis on this, which is again printed directly below the chunk. This illustrates the dependencies between separate code chunks.\nThird chunk:\n\n\n\n\n\nDistribution of scores by group.\n\n\n\n\nThe third chunk again illustrates this dependency, and in addition also shows that code can be executed that creates visualizations, which are then also directly executed and printed in the document.\nTogether, these three chunks illustrate that:\n\nEach chunk is executed in the same R session, meaning objects like data and model persist across chunks.\nOutput is automatically captured and displayed, first as numerical summaries, then as model output, and finally as a plot.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Introduction to code chunks"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/tables.html",
-    "href": "tutorials/presenting_output/tables.html",
-    "title": "Tables",
+    "objectID": "quizzes/presenting_output/questions/kable_purpose.html#answerlist",
+    "href": "quizzes/presenting_output/questions/kable_purpose.html#answerlist",
+    "title": "Question",
     "section": "",
-    "text": "Tables are a common way to summarize data in reports. Quarto allows you to produce tables directly in Markdown or dynamically from R. Using clear, readable tables improves the presentation of results and makes your documents more professional and accessible.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Tables"
-    ]
+    "text": "It changes the underlying values stored in the data frame.\nIt renders the data as a properly formatted table matching the document’s style, rather than R’s plain console-style printout.\nIt automatically rounds every numeric column to two decimal places.\nIt converts the data frame into a figure."
   },
   {
-    "objectID": "tutorials/presenting_output/tables.html#text-based-tables-in-markdown",
-    "href": "tutorials/presenting_output/tables.html#text-based-tables-in-markdown",
-    "title": "Tables",
-    "section": "Text-Based Tables in Markdown",
-    "text": "Text-Based Tables in Markdown\nFor simple tables, you can write them directly in Markdown using the pipe (|) syntax. This is ideal for small, static tables that do not require dynamic calculations.\nExample:\n| Group | Mean | SD  |\n|-------|------|-----|\n| A     | 5.2  | 1.1 |\n| B     | 6.8  | 0.9 |\n| C     | 4.9  | 1.3 |\nRendered output:\n\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\nUse --- under headers for proper alignment.\nColumns can be aligned left (: on left), right (: on right), or center (: on both sides):\n\n| Group | Mean | SD  |\n|:------|----:|:---:|\n| A     | 5.2 | 1.1 |\n| B     | 6.8 | 0.9 |\n| C     | 4.9 | 1.3 |\nResults in aligned columns like this:\n\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Tables"
-    ]
+    "objectID": "quizzes/presenting_output/questions/kable_purpose.html#answerlist-1",
+    "href": "quizzes/presenting_output/questions/kable_purpose.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: kable() only changes how the data is displayed, not the underlying values.\nCorrect: kable() produces a clean, document-formatted table instead of R’s raw console output.\nWrong: kable() does not automatically round values; rounding must be done separately if desired.\nWrong: kable() produces a table, not a figure."
   },
   {
-    "objectID": "tutorials/presenting_output/tables.html#generating-tables-from-r-with-knitrkable",
-    "href": "tutorials/presenting_output/tables.html#generating-tables-from-r-with-knitrkable",
-    "title": "Tables",
-    "section": "Generating Tables from R with knitr::kable",
-    "text": "Generating Tables from R with knitr::kable\nFor tables that come from your R data (e.g., data frames, summaries), Quarto integrates seamlessly with knitr::kable to produce clean, nicely formatted tables.\nExample:\nWhen producing tables are raw output, they will look like this:\n\nlibrary(knitr)\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Mean  = c(5.2, 6.8, 4.9),\n  SD    = c(1.1, 0.9, 1.3)\n)\n\ndata\n\n  Group Mean  SD\n1     A  5.2 1.1\n2     B  6.8 0.9\n3     C  4.9 1.3\n\n\nWhen using kable, they can be formatted more neatly:\n\nkable(data, caption = \"Summary statistics by group\")\n\n\nSummary statistics by group\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\n\n\ncaption adds a descriptive label for the table.\nkable automatically aligns columns neatly.\nFor larger or more complex tables, you can also use kableExtra to add styling, colors, or column formatting.\n\n\nlibrary(kableExtra)\n\nmean_score &lt;- mean(data$Mean)\n\nkable(data, caption = paste(\"Summary statistics (overall mean:\", round(mean_score, 2), \")\")) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\", \"condensed\"), full_width = FALSE) %&gt;%\n  row_spec(0, bold = TRUE, color = \"white\", background = \"#4CAF50\")  # header row styling\n\n\nSummary statistics (overall mean: 5.63 )\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\n\n\nkable_styling(): Adds table styling options like striped rows, hover effect, and condensed spacing.\nrow_spec(0, ...): Styles the header row (0 = header) with bold text, white font, and a green background.\nThe caption dynamically includes the overall mean calculated from the data.\n\nRendered in HTML, this produces a professional, readable table that’s visually distinct and easier to interpret than a plain kable() table.\nYou can also add row colors, column formatting, or footnotes with other kableExtra functions for even more control.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Tables"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/tables.html#tips-for-readable-tables",
-    "href": "tutorials/presenting_output/tables.html#tips-for-readable-tables",
-    "title": "Tables",
-    "section": "Tips for Readable Tables",
-    "text": "Tips for Readable Tables\n\nKeep them concise: Avoid overcrowding a table with too many columns or unnecessary decimals.\nLabel clearly: Use meaningful headers and, if needed, a descriptive caption.\nRound numbers: Format numeric results for readability.\nConsistent styling: For longer reports, stick with a single table style (Markdown or kable) for consistency.\n\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see the Quarto documentation",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Tables"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/plots.html",
-    "href": "tutorials/presenting_output/plots.html",
-    "title": "Figures",
+    "objectID": "quizzes/writing_text/questions/section_numbering.html",
+    "href": "quizzes/writing_text/questions/section_numbering.html",
+    "title": "Question",
     "section": "",
-    "text": "Figures are essential for visualizing data, illustrating concepts, or enhancing your reports. Quarto supports figures generated from R code as well as external images, allowing you to control captions, size, and placement for a polished presentation.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Figures"
-    ]
+    "text": "A document has a top-level heading (#), containing a section (##), which itself contains a subsection (###). With number-sections: true set in the YAML header, how would the subsection be numbered?\n\n\n\n1\n1.1\n1.1.1\nSubsections are not numbered, only top-level headings are."
   },
   {
-    "objectID": "tutorials/presenting_output/plots.html#figures-generated-from-r",
-    "href": "tutorials/presenting_output/plots.html#figures-generated-from-r",
-    "title": "Figures",
-    "section": "Figures Generated from R",
-    "text": "Figures Generated from R\nWhen creating plots in R, you can add captions and adjust figure size using chunk options in Quarto.\nThe options within your R chunk would be set like this:\n#| label: fig-scores\n#| fig-cap: \"Boxplot of scores by group\"\n#| fig-width: 6\n#| fig-height: 4\nAnd with the following R code:\n\nlibrary(ggplot2)\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Score = c(5.2, 6.8, 4.9)\n)\n\nggplot(data, aes(x = Group, y = Score, fill = Group)) +\n  geom_bar(stat = \"identity\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Boxplot of scores by group\n\n\n\n\n\nThis would then result in the figure as directly outputted after the code. Here, you see:\n\nfig-cap: Adds a caption to the figure.\nfig-width and fig-height: Control the size of the rendered figure (in inches for HTML/PDF).\nlabel: Allows you to cross-reference the figure in text with @fig-scores: Ref to Figure 1.\n\nYou can also combine fig-align: \"center\" in the chunk to center the figure in the output.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/plots.html#external-images",
-    "href": "tutorials/presenting_output/plots.html#external-images",
-    "title": "Figures",
-    "section": "2. External Images",
-    "text": "2. External Images\nQuarto can include images stored locally or from the web using Markdown syntax:\n\nLocal images:\nLocal images can be presented as follows:\n![This is a local image caption](/assets/images/ecrins_pano.jpg){#fig-local width=50%}\n\n\n\n\n\n\nFigure 2: This is a local image caption\n\n\n\n\n{#fig-local}: Assigns a label for cross-referencing using @fig-local: Figure 2.\nwidth=50%: Adjusts the display size relative to the output width.\n\n\n\nWeb images:\nWeb images can be presented by linking to them directly:\n![Quarto logo](https://quarto.org/quarto.png){width=200px}\n\n\n\nQuarto logo\n\n\n\nDirectly embeds an image from a URL.\nCan adjust size using width or height.\nCaptions can be added, but for HTML output, you may need to style with CSS for advanced formatting.\n\n\n\nBest Practices for Figures\n\nAlways add captions: Makes figures self-contained and referenceable.\nLabel your figures: Use #| label: for R plots or {#fig-label} for Markdown images to enable cross-referencing.\nAdjust sizes thoughtfully: Use fig-width/fig-height or CSS/Markdown size attributes to make sure figures are readable.\nUse consistent styling: Keep themes, fonts, and color schemes consistent across all figures for a professional look.\nPrefer vector graphics for clarity: When possible, export PDF/SVG plots for crisp rendering in reports.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/plots.html#combining-inline-references-with-figures",
-    "href": "tutorials/presenting_output/plots.html#combining-inline-references-with-figures",
-    "title": "Figures",
-    "section": "Combining Inline References with Figures",
-    "text": "Combining Inline References with Figures\nOnce a figure is labeled, you can refer to it in the text dynamically:\nAs shown in @fig-scores, group B has the highest score.\nWhich will look as follows in text: As shown in Figure 1, group B has the highest score.\nQuarto will automatically number the figure in the rendered document.\nThis approach allows you to seamlessly integrate data-driven plots, static images, and online resources while keeping your figures clean, readable, and fully reproducible.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see the Quarto documentation",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output",
-      "Figures"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/text.html",
-    "href": "tutorials/writing_text/text.html",
-    "title": "Writing text",
+    "objectID": "quizzes/writing_text/questions/section_numbering.html#answerlist",
+    "href": "quizzes/writing_text/questions/section_numbering.html#answerlist",
+    "title": "Question",
     "section": "",
-    "text": "Quarto builds on Pandoc Markdown, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:\n\nItalics can be written as *italics* or _italics_.\nBold is **bold** or __bold__.\nBold italics is ***bold italics*** (or alternatives combining ** and *).\nStrikethrough: ~~text~~ → text.\nInline (verbatim) code: enclose text in backticks, e.g. `my_var &lt;- 10` → my_var &lt;- 10.\nSuperscript / subscript:   - superscript^2^ → superscript²   - subscript~2~ → subscript₂ You can also use braces to clarify: superscript^{2} or subscript_{2}.\nQuarto also allows adding stylistic classes via span syntax, e.g.   [This is smallcaps]{.smallcaps} → (renders in small caps if supported).\n\nThis formatting gives you fine control over text appearance without leaving Markdown.",
+    "text": "1\n1.1\n1.1.1\nSubsections are not numbered, only top-level headings are."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/section_numbering.html#answerlist-1",
+    "href": "quizzes/writing_text/questions/section_numbering.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: 1 would be the number given to the top-level heading, not the subsection.\nWrong: 1.1 would be the number given to the section, one level up from the subsection.\nCorrect: numbering reflects the full heading hierarchy, so the subsection nested two levels deep is numbered 1.1.1.\nWrong: number-sections: true numbers all heading levels, not just the top level."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/bold_italic_syntax.html",
+    "href": "quizzes/writing_text/questions/bold_italic_syntax.html",
+    "title": "Question",
+    "section": "",
+    "text": "Which Markdown syntax renders a word as both bold and italicized?\n\n\n\n*word*\n**word**\n***word***\n~~word~~"
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/bold_italic_syntax.html#answerlist",
+    "href": "quizzes/writing_text/questions/bold_italic_syntax.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "*word*\n**word**\n***word***\n~~word~~"
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/bold_italic_syntax.html#answerlist-1",
+    "href": "quizzes/writing_text/questions/bold_italic_syntax.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: a single pair of asterisks renders italics only.\nWrong: two pairs of asterisks render bold only.\nCorrect: three asterisks combine both bold and italic emphasis.\nWrong: double tildes render strikethrough, not bold or italic emphasis."
+  },
+  {
+    "objectID": "quizzes/writing_text/index.html",
+    "href": "quizzes/writing_text/index.html",
+    "title": "Knowledge Quiz: Writing Text",
+    "section": "",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich Markdown syntax renders a word as both bold and italicized?\n\n***word****word***word**~~word~~\n\n\n\n\nCorrect: three asterisks combine both bold and italic emphasis.\nWrong: a single pair of asterisks renders italics only.\nWrong: two pairs of asterisks render bold only.\nWrong: double tildes render strikethrough, not bold or italic emphasis.\n\n\n\n\n\nA document has a top-level heading (#), containing a section (##), which itself contains a subsection (###). With number-sections: true set in the YAML header, how would the subsection be numbered?\n\nSubsections are not numbered, only top-level headings are.1.1.11.11\n\n\n\n\nWrong: number-sections: true numbers all heading levels, not just the top level.\nCorrect: numbering reflects the full heading hierarchy, so the subsection nested two levels deep is numbered 1.1.1.\nWrong: 1.1 would be the number given to the section, one level up from the subsection.\nWrong: 1 would be the number given to the top-level heading, not the subsection.\n\n\n\n\n\nYou reference a figure in your text with @fig-scores, but the figure’s actual chunk label is #| label: fig-score (missing the final “s”). What happens when you render the document?\n\nThe figure is renumbered to match the reference automatically.Rendering stops with a fatal error and no document is produced.The reference fails to resolve, and the rendered document shows the broken reference text or a placeholder instead of a number.Quarto automatically matches the closest label and resolves the reference correctly.\n\n\n\n\nWrong: labels are not automatically adjusted to match an incorrect reference.\nWrong: a mismatched cross-reference does not stop rendering entirely; the rest of the document still renders.\nCorrect: a cross-reference only resolves if it exactly matches an existing label; otherwise it shows the raw reference text or a placeholder instead of a number.\nWrong: Quarto requires an exact label match; it does not guess or auto-correct mismatched labels.\n\n\n\n\n\nYou embed a regression coefficient directly in your text using the inline expression coef(model)[2], and it renders as “-5.344471517291”. What should you do to make this more suitable for a report?\n\nWrap the expression in round() or format() before embedding it, e.g. round(coef(model)[2], 2).Move the entire sentence into a separate code chunk instead of using inline code.Nothing; inline results should always show full computational precision.Replace the inline code with a hard-coded number typed directly into the text.\n\n\n\n\nCorrect: rounding or formatting the expression keeps the inline result readable, while still updating automatically if the underlying data changes.\nWrong: moving it to a separate chunk doesn’t address the rounding issue, and inline code is specifically meant for embedding results directly in text.\nWrong: unrounded results are usually far more precise than a report needs, and look out of place in a sentence.\nWrong: hard-coding a number defeats the purpose of inline code, since the text would no longer update automatically.\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Writing text",
-      "Writing text"
+      "Knowledge Quiz"
     ]
   },
   {
-    "objectID": "tutorials/writing_text/text.html#text",
-    "href": "tutorials/writing_text/text.html#text",
-    "title": "Writing text",
+    "objectID": "quizzes/quarto_markdown/questions/self_contained_html.html",
+    "href": "quizzes/quarto_markdown/questions/self_contained_html.html",
+    "title": "Question",
     "section": "",
-    "text": "Quarto builds on Pandoc Markdown, which supports a range of inline formatting for emphasis, code, strikethrough, and superscript/subscript. Some key features:\n\nItalics can be written as *italics* or _italics_.\nBold is **bold** or __bold__.\nBold italics is ***bold italics*** (or alternatives combining ** and *).\nStrikethrough: ~~text~~ → text.\nInline (verbatim) code: enclose text in backticks, e.g. `my_var &lt;- 10` → my_var &lt;- 10.\nSuperscript / subscript:   - superscript^2^ → superscript²   - subscript~2~ → subscript₂ You can also use braces to clarify: superscript^{2} or subscript_{2}.\nQuarto also allows adding stylistic classes via span syntax, e.g.   [This is smallcaps]{.smallcaps} → (renders in small caps if supported).\n\nThis formatting gives you fine control over text appearance without leaving Markdown.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Writing text"
-    ]
+    "text": "You render an HTML report and want to email just the single .html file to your instructor as a homework submission. Which YAML option should you add to make sure all images and plots are embedded directly in that file, rather than referenced externally?\n\n\n\ntoc: true\ncode-fold: true\nembed-resources: true\nnumber-sections: true"
   },
   {
-    "objectID": "tutorials/writing_text/text.html#lists",
-    "href": "tutorials/writing_text/text.html#lists",
-    "title": "Writing text",
-    "section": "Lists",
-    "text": "Lists\nLists are central to organizing information. Quarto supports both unordered and ordered lists, and nested lists.\n\nUnordered lists: start lines with *, +, or -. For example:\n* Item A  \n* Item B  \n  + Sub-item B1  \n  + Sub-item B2  \n* Item C  \n\nResults in:\n\nItem A\n\nItem B\n\nSub-item B1\n\nSub-item B2\n\n\nItem C\nOrdered lists: use numbers followed by a dot:\n1. First step  \n2. Second step  \n   i) Subtask  \n   ii) Another subtask  \n3. Third  \n\nResults in:\n\nFirst step\n\nSecond step\n\nSubtask\n\nAnother subtask\n\n\nThird\n\n\nTask lists: Quarto supports “checklist” style items using [ ] or [x]:\n- [ ] Task 1  \n- [x] Task 2 (done)  \n\nResults in clickable boxes:\n\nTask 1\n\nTask 2 (done)\nContinuation lists: Quarto allows list numbering to continue across interruptions using (@) to resume numbering.\n\nOne important note: unlike some Markdown flavors (e.g. GitHub-Flavored Markdown), Quarto requires a blank line before a list for it to render properly. If you don’t insert a blank line, the line may just appear as ordinary text. You can always quickly check this by switching to the visual mode in R studio.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Writing text"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/text.html#links",
-    "href": "tutorials/writing_text/text.html#links",
-    "title": "Writing text",
-    "section": "Links",
-    "text": "Links\nQuarto supports standard Markdown link syntax, plus extended capabilities.\n\nInline link: [Quarto](https://quarto.org) → Quarto\nAutolink URLs: &lt;https://quarto.org&gt; → https://quarto.org\n\nThese allow you to interweave narrative and media seamlessly.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Writing text"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/text.html#equations-mathematical-notation",
-    "href": "tutorials/writing_text/text.html#equations-mathematical-notation",
-    "title": "Writing text",
-    "section": "Equations (Mathematical Notation)",
-    "text": "Equations (Mathematical Notation)\nQuarto supports LaTeX-style math syntax using $ and $$ delimiters.\n\nInline math: wrap expressions in single dollar signs, e.g.   This is inline: $E = mc^2$. → This is inline: \\((E = mc^2)\\).\nDisplay (block) math: wrap in double dollar signs:\n$$\nE = mc^2\n$$\n→ renders centered on its own line, looking as follows: \\[\nE = mc^2\n\\]\n\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nMarkdown basics",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Writing text"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/inline_code.html",
-    "href": "tutorials/writing_text/inline_code.html",
-    "title": "Inline code and results",
+    "objectID": "quizzes/quarto_markdown/questions/self_contained_html.html#answerlist",
+    "href": "quizzes/quarto_markdown/questions/self_contained_html.html#answerlist",
+    "title": "Question",
     "section": "",
-    "text": "In Quarto, inline code allows you to execute R expressions (or code in other supported languages) directly within your narrative text. This makes it possible to embed calculated results dynamically into your report, so your text always reflects the latest data or computations. Inline code is particularly useful for reporting summary statistics, model results, or dates without manually updating the text.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Inline code and results"
-    ]
+    "text": "toc: true\ncode-fold: true\nembed-resources: true\nnumber-sections: true"
   },
   {
-    "objectID": "tutorials/writing_text/inline_code.html#syntax-for-inline-code",
-    "href": "tutorials/writing_text/inline_code.html#syntax-for-inline-code",
-    "title": "Inline code and results",
-    "section": "Syntax for Inline Code",
-    "text": "Syntax for Inline Code\nInline R code in Quarto is enclosed with single backticks and starts with the language identifier, followed by the expression:\n\n`r 2 + 2`\n\nIncluding such a statement in text directly runs the code and prints the result: 4.\nSimilarly, you can embed variables defined in previous code chunks:\n\nmean_score &lt;- mean(c(5, 10, 15))\nmean_score\n\n[1] 10\n\n\nIf we now include in a sentence\n\n`r mean_score`\n\nThis immediately prints the value of mean_score: The average score is 10.\nKey points:\n- The expression inside the inline code is evaluated at render time.\n- You can use any valid R expression, including functions, arithmetic, or objects created in previous chunks.\n- Inline code only outputs the result, not the code itself.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Inline code and results"
-    ]
+    "objectID": "quizzes/quarto_markdown/questions/self_contained_html.html#answerlist-1",
+    "href": "quizzes/quarto_markdown/questions/self_contained_html.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: toc adds a table of contents; it has no effect on whether resources are embedded.\nWrong: code-fold controls whether code is collapsible; it has no effect on whether resources are embedded.\nCorrect: embed-resources: true embeds all supporting files, such as images and plots, directly into a single, portable .html file.\nWrong: number-sections adds section numbering; it has no effect on whether resources are embedded."
   },
   {
-    "objectID": "tutorials/writing_text/inline_code.html#using-inline-code-in-text",
-    "href": "tutorials/writing_text/inline_code.html#using-inline-code-in-text",
-    "title": "Inline code and results",
-    "section": "Using Inline Code in Text",
-    "text": "Using Inline Code in Text\nInline code can be used in:\n\nNumerical results:\n\n\nThe dataset contains `r nrow(mtcars)` rows and `r ncol(mtcars)` columns.\n\nThe dataset contains 32 rows and 11 columns.\n\nStatistical summaries:\n\n\nThe mean mpg is `r round(mean(mtcars$mpg), 1)`.\n\nThe mean mpg is 20.1.\n\nDynamic dates or times:\n\n\nReport generated on `r Sys.Date()`.\n\nReport generated on 2025-10-20.\n\nModel results:\n\n\nThe regression slope is `r coef(lm(mpg ~ wt, data = mtcars))[2]`.\n\nThe regression slope is -5.3444716.\nThese ensure your narrative text always reflects the current state of your analysis.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Inline code and results"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/inline_code.html#best-practices",
-    "href": "tutorials/writing_text/inline_code.html#best-practices",
-    "title": "Inline code and results",
-    "section": "Best Practices",
-    "text": "Best Practices\n\nKeep expressions simple: Inline code should be concise; longer computations belong in code chunks.\nName variables clearly: Use descriptive names in code chunks so inline references are readable.\nRound or format results: Inline outputs may need rounding (round()) or formatting (format()) for clarity.\n\nInline code is a key feature for reproducible reporting, as it reduces manual copying of results and ensures that text and code remain synchronized. By combining inline expressions with code chunks, you can create documents that automatically update whenever your data or analysis changes.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Inline code and results"
-    ]
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/differences.html",
-    "href": "tutorials/quarto_markdown/differences.html",
-    "title": "Differences between Quarto and Markdown",
+    "objectID": "quizzes/quarto_markdown/questions/yaml_purpose.html",
+    "href": "quizzes/quarto_markdown/questions/yaml_purpose.html",
+    "title": "Question",
     "section": "",
-    "text": "While Markdown and Quarto are closely related, they operate at different conceptual levels. Markdown is a markup language, a way of writing text that includes lightweight formatting instructions. It allows authors to create structured documents using plain text syntax for elements such as headings, lists, and emphasis. However, Markdown by itself does not support code execution, metadata, or dynamic output. It is ideal for writing static content like documentation or notes but lacks the ability to combine text with live results or automated analysis.\nQuarto, by contrast, is a document generation and publishing framework that builds on Markdown. It extends Markdown’s simple syntax with tools for executing embedded R code, managing metadata, styling, and rendering outputs to multiple formats such as HTML, PDF, and slides. In practice, this means that Markdown provides the structure, while Quarto provides the workflow — handling the integration between narrative, computation, and presentation. For students working with R, Quarto enables reproducible reporting where statistical results and visualizations are generated automatically from the underlying code, ensuring accuracy and consistency across analyses.\n\n\n\n\n\n\n\n\nLayer\nExample\nPurpose\n\n\n\n\nLanguage layer\nMarkdown\nProvide the text structure, document content, and basic formatting syntax.\n\n\nProcessing layer\nQuarto\nInterpret Markdown, integrate executable R code, and render the combined text and results into polished output formats such as HTML or PDF.\n\n\nComputation layer\nR (and optionally Python, Julia)\nPerform statistical analysis, generate tables and plots, and supply dynamic results that are embedded into the rendered document.\n\n\n\nRStudio provides an integrated environment where Markdown, Quarto, and R work together to support reproducible and dynamic report writing. In this workflow, Markdown serves as the language for structuring text and formatting documents, while Quarto functions as the publishing framework that interprets Markdown, executes embedded R code, and converts the combined content into professional outputs such as reports, presentations, or dashboards. R supplies the computational layer, performing statistical analyses, generating visualizations, and producing results that are automatically incorporated into the final document. Together, these tools allow students to write, analyze, and present their work within a single, seamless system inside RStudio.\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown",
-      "Differences between Quarto and Markdown"
-    ]
+    "text": "What is the primary purpose of the YAML header at the top of a Quarto document?\n\n\n\nTo write the narrative text that appears in the rendered document.\nTo define metadata and rendering options, such as the title and output format.\nTo execute the document’s R code.\nTo list the keyboard shortcuts available in RStudio."
   },
   {
-    "objectID": "tutorials/quarto_markdown/index.html",
-    "href": "tutorials/quarto_markdown/index.html",
-    "title": "Quarto and Markdown",
+    "objectID": "quizzes/quarto_markdown/questions/yaml_purpose.html#answerlist",
+    "href": "quizzes/quarto_markdown/questions/yaml_purpose.html#answerlist",
+    "title": "Question",
     "section": "",
-    "text": "This tutorial introduces Quarto and Markdown.\n\nIt starts with explaining for what purposes Quarto and Markdown can be used.\nNext, it focuses more explicitly on the differences between Quarto and Markdown.\nFinally, different documents that can be created with Quarto are introduced. Here, concrete examples of written documents and presentations are given.\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown"
-    ]
+    "text": "To write the narrative text that appears in the rendered document.\nTo define metadata and rendering options, such as the title and output format.\nTo execute the document’s R code.\nTo list the keyboard shortcuts available in RStudio."
   },
   {
-    "objectID": "tutorials/quarto_markdown/topic2.html",
-    "href": "tutorials/quarto_markdown/topic2.html",
-    "title": "Divs & Callouts",
-    "section": "",
-    "text": "This is the second topic file for Tutorial 1."
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic2.html#callout-blocks",
-    "href": "tutorials/quarto_markdown/topic2.html#callout-blocks",
-    "title": "Divs & Callouts",
-    "section": "Callout Blocks",
-    "text": "Callout Blocks\nUse callout blocks to highlight special information.\n\n\n\n\n\n\nNote Title\n\n\n\nSomething noteworthy.\n\n\n\n\n\n\n\n\nTip Title\n\n\n\nHere’s a tip for ya…\n\n\n\n\n\n\n\n\nImportant Title\n\n\n\nThis is very important!\n\n\n\n\n\n\n\n\nWarning Title\n\n\n\nYou’ve been warned.\n\n\n\n\n\n\n\n\nCaution Title\n\n\n\nProceed with caution.\n\n\n\nCustom Callouts\nThis project uses the quarto-custom-callout extension to provide some bespoke callout blocks. This template already defines four such blocks.\nA reading callout to highlight relevant, recommended literature.\n\nI.e., These sources would be the required reading in a classroom context.\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2: Workflow Basics\n\n\nA reading-advanced callout to highlight relevant, but technically challanging, literature.\n\nI.e., These sources would be supplementary reference materials but not required reading in a classroom context.\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\nA resource callout to highlight related external resources.\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor a different take on these ideas, check out Andrew Heiss’ R Primers tutorial on the topic\n\nR Primers: Programming Basics\n\n\n\n\n\nPractice Callouts\nThe custom practice callout is reserved for inline practice problems.\n\nThe panel-tabset div nested within the practice div creates a set of tabs to organize the exercise components.\nEach Level 2 heading inside the panel-tabset div defines a new tab.\n\nIn the examples below, the tab titles are specified through quarto shortcode variables.\nThese variables are defined in the _variables.yml metadata file.\n\n\n\n\n\n\n\n\nExample Code Exercise\n\n\n\n\nRegress Petal.Width onto Species using the iris dataset.\nCreate a normal Q-Q plot of the residuals.\n\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nRemember what happens when you call the Base R plot() function on a fitted lm object.\n\n\n\nFirst, we’ll use the lm() function to estimate the model.\n\n\nfit1 &lt;- lm(Petal.Width ~ Species, data = iris)\n\n\nThen, we’ll use the default plotting method for lm objects to create the Q-Q plot.\n\n\nplot(fit1, 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExample Theory Question\n\n\n\n\n Question Solution\n\n\nWhat is the answer to life, the universe, and everything?\n\n\n42"
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic2.html#using-the-website-margin",
-    "href": "tutorials/quarto_markdown/topic2.html#using-the-website-margin",
-    "title": "Divs & Callouts",
-    "section": "Using the Website Margin",
-    "text": "Using the Website Margin\nIn the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are better placed in the website margin.\n\nPlacing supporting elements like links, callouts, and references in the margin streamlines the main body content while keeping the supporting information near the relevant main body content.\n\nTo place content in the website margine, we use the column-margin div.\n\nExample\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel. Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales. Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis. Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id, porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna elit id justo. Duis tincidunt id massa eget lacinia.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n\nNam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis eget luctus quam. Donec consectetur neque nec egestas ultricies.\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nWikipedia: Central Limit Theorem"
-  },
-  {
-    "objectID": "in_progress.html",
-    "href": "in_progress.html",
-    "title": "In Progress",
-    "section": "",
-    "text": "Sorry, we’re still building the page you’ve requested.\nIt’s almost done…really.\nWe’re just working through a few minor issues…\n\n\n\nImage Source"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Reproducible reporting",
-    "section": "",
-    "text": "Welcome to the Reproducible reporting module. This module consists of a series of tutorials on the following topics:",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#learning-goals",
-    "href": "index.html#learning-goals",
-    "title": "Reproducible reporting",
-    "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nQuarto and markdown\n\nUnderstand the purpose of Markdown and Quarto.\nUnderstand the differences between Markdown and Quarto.\nRecognize the different documents that can be created with Quarto.\n\n\n\nChunks and options\n\nUnderstand what code chuncks are.\nLearn how to create and label R code chunks.\nExplore common chunk options.\n\n\n\nWriting text\n\nLearn how to write plain text and basic Markdown formatting to style text.\nLearn how to apply structure to a document.\nLearn how to include inline code and results within text.\n\n\n\nPresenting output\n\nLearn how to display clean, readable tables.\nUnderstand how to include plots and visualizations.\n\nClick the button below to get started with the first tutorial.\n\n\n Begin Tutorial",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "conclusion.html",
-    "href": "conclusion.html",
-    "title": "Conclusion",
-    "section": "",
-    "text": "You successfully completed the module “Reproducible reporting”. You should now be able to generate written documents and presentations where you can seamlessly integrate your text and explanations with your coding in R chunks.\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Conclusion"
-    ]
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic3.html",
-    "href": "tutorials/quarto_markdown/topic3.html",
-    "title": "Images & Figures",
-    "section": "",
-    "text": "This is the third topic file for Tutorial 1.\narrange() orders the rows of a data frame by the values of selected columns.\nUnlike other dplyr verbs, arrange() largely ignores grouping; you need to explicitly mention grouping\n    variables (or use  .by_group = TRUE) in order to group by them, and functions of variables are\n    evaluated once per data frame, not once per group.\nUnlike base sorting with sort(), NA are:\nAn object of the same type as .data. The output has the following properties:\nThis function is a generic, which means that packages can provide implementations (methods) for\n    other classes. See the documentation of individual methods for extra arguments and differences in behaviour.\nThe following methods are currently available in loaded packages: no methods found.\nOther single table verbs: \n    filter(),\n    mutate(),\n    reframe(),\n    rename(),\n    select(),\n    slice(),\n    summarise()"
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic3.html#assets-directory",
-    "href": "tutorials/quarto_markdown/topic3.html#assets-directory",
-    "title": "Images & Figures",
-    "section": "Assets Directory",
-    "text": "Assets Directory\nAll pre-rendered assets (i.e., files that will not rendered/compiled into some other format) that you want to include in your website should live somewhere in the “/assets/” directory.\n\n/assets/images/: Image files\n/assets/figures/: Scientific figures (e.g., graphs, plots, diagrams)\n/assets/docs/: Pre-rendered documents (e.g., HTML)"
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic3.html#images",
-    "href": "tutorials/quarto_markdown/topic3.html#images",
-    "title": "Images & Figures",
-    "section": "Images",
-    "text": "Images\n\n\n\nA Nice Mountain View"
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic3.html#figures",
-    "href": "tutorials/quarto_markdown/topic3.html#figures",
-    "title": "Images & Figures",
-    "section": "Figures",
-    "text": "Figures\n\n\n\nSerial Multiple Mediation"
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic3.html#documents",
-    "href": "tutorials/quarto_markdown/topic3.html#documents",
-    "title": "Images & Figures",
-    "section": "Documents",
-    "text": "Documents\nInclude a pre-rendered HTML files as part of this webpage.\nR: Order rows using column values\n  \n  \n  \n  \n  \n  \n\n\n\n  \n\n\n\narrange {dplyr}\nR Documentation\n\n\n\n\n\n  Order rows using column values\n\n  Description\n\n  \n  \n\n  Usage\n\n  arrange(.data, ..., .by_group = FALSE)\n\n## S3 method for class 'data.frame'\narrange(.data, ..., .by_group = FALSE, .locale = NULL)\n\n  Arguments\n\n  \n\n\n\n\n\n\n\n.data\nA data frame, data frame extension (e.g. a tibble), or a lazy data frame (e.g. from dbplyr or dtplyr). See Methods, below, for more details.\n\n\n...\n&lt;data-masking&gt; Variables, or functions of variables. Use desc() to sort a variable in descending order.\n\n\n.by_group\nIf TRUE, will sort first by grouping variable. Applies togrouped data frames only.\n\n\n.locale\nThe locale to sort character vectors in.\n\nIf NULL, the default, uses the \"C\" locale unless the dplyr.legacy_locale global option escape hatch is active. See the dplyr-locale help page for more details.\nIf a single string from stringi::stri_locale_list() is supplied, then this will be used as the locale to sort with. For example, \"en\" will sort with the American English locale. This requires the stringi package.\nIf \"C\" is supplied, then character vectors will always be sorted in the C locale. This does not require stringi and is often much faster than supplying a locale identifier.\n\nThe C locale is not the same as English locales, such as \"en\", particularly when it comes to data containing a mix of upper and lower case letters. This is explained in more detail on the locale help page under the ⁠Default locale⁠ section.\n\n\n\n\n\n  Details\n\n  Missing values\n\n  \n\n  \n    \n       always sorted to the end for local data, even when wrapped with desc().\n    \n    \n       treated differently for remote data, depending on the backend.\n    \n  \n\n  Value\n\n  \n\n  \n    \n       All rows appear in the output, but (usually) in a different place.\n    \n    \n       Columns are not modified.\n    \n    \n       Groups are not modified.\n    \n    \n       Data frame attributes are preserved.\n    \n  \n\n  Methods\n\n  \n  \n\n  See Also\n\n  \n\n  Examples\n\n  arrange(mtcars, cyl, disp)\narrange(mtcars, desc(disp))\n\n# grouped arrange ignores groups\nby_cyl &lt;- mtcars %&gt;% group_by(cyl)\nby_cyl %&gt;% arrange(desc(wt))\n# Unless you specifically ask:\nby_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)\n\n# use embracing when wrapping in a function;\n# see ?rlang::args_data_masking for more details\ntidy_eval_arrange &lt;- function(.data, var) {\n  .data %&gt;%\n    arrange({{ var }})\n}\ntidy_eval_arrange(mtcars, mpg)\n\n# Use `across()` or `pick()` to select columns with tidy-select\niris %&gt;% arrange(pick(starts_with(\"Sepal\")))\niris %&gt;% arrange(across(starts_with(\"Sepal\"), desc))"
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic1.html",
-    "href": "tutorials/quarto_markdown/topic1.html",
-    "title": "Code Blocks",
-    "section": "",
-    "text": "This is the first topic file for Tutorial 1."
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/topic1.html#code-blocks",
-    "href": "tutorials/quarto_markdown/topic1.html#code-blocks",
-    "title": "Code Blocks",
-    "section": "Code Blocks",
-    "text": "Code Blocks\nUse knitr code blocks to include non-interactive R code.\n\n## Add 2 and 2\n2 + 2\n\n[1] 4\n\n## Divide 225 by 15 and print the result\n(x &lt;- 225 / 15)\n\n[1] 15\n\n\nUse quarto-webr code blocks for interactive R exercises.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCode Block Environments\nA single execution environment is shared across code blocks of the same type.\n\nAll the knitr code blocks in a QMD file will share an evaluation environment.\nLikewise for the quarto-webr code blocks\n\n\nx^2\n\n[1] 225\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nknitr and quarto-webr code blocks to not share the same environment, though.\n\nresid(fit)\n\nError: object 'fit' not found\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a knitr chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.\n\nDon’t forget to set an appropriate seed, if you’re trying to regenerate a stochastic object.\n\n\n\nInline Code\nUse knitr inline code chunks to embed R output in text blocks.\n\nE.g., R says the squareroot of 2 is 1.4142136."
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/documents.html",
-    "href": "tutorials/quarto_markdown/documents.html",
-    "title": "Creating different documents with Quarto",
-    "section": "",
-    "text": "Quarto enables you to create a wide range of professional documents and presentations directly from RStudio. It builds on Markdown to combine code, text, and visualizations into a single reproducible workflow. This section introduces the basics of creating Quarto files, then explores the unique features and challenges of producing reports and presentations.\n\nBasics: Working with Quarto in RStudio\nRStudio provides an integrated environment for writing and rendering Quarto documents. To start a new project:\n\nGo to File → New File → Quarto Document…\nIn the dialog box, enter a title, author, and choose the default output format (e.g., HTML, PDF, or Word).\nRStudio will create a .qmd file containing a template YAML header and example code chunk.\nClick Render (or use Render on Save) to produce the formatted output.\n\n\n\n\nRStudio Quarto new document dialog (source: https://quarto.org)\n\n\n\n\n\n\n\n\nReading\n\n\n\nThe screenshot above shows where to create new Quarto documents in RStudio. For more information, see the official Quarto documentation: 🔗 Authoring with RStudio – Quarto Documentation\n\n\nA quarto file consists of:\n\nA YAML header (between --- lines) defining metadata like title, author, date, and output type.\nThe body, written in Markdown syntax, possibly including embedded R code chunks using {r} blocks.\nOptional format-specific settings for output style and behavior.\n\nOf course — here’s a concise, textbook-style paragraph explaining YAML in the context of Quarto and RStudio:\n\n\n\nYAML: Document Metadata and Configuration\nAt the top of every Quarto (.qmd) document is a section written in YAML (short for “YAML Ain’t Markup Language”). YAML provides a structured way to define metadata, such as information about the document like the title, author, date, and output format. It also controls global document options like table of contents, numbering, themes, or code execution settings. YAML uses a simple key–value structure, enclosed between three dashes (---) at the beginning and end of the block. For example:\n---\ntitle: \"Statistical Analysis of Air Quality Data\"\nauthor: \"Alex Rivera\"\ndate: \"2025-01-01\"\nformat:\n  html:\n    toc: true\n    code-fold: true\n---\nIn this example, YAML instructs Quarto to render the document as an HTML report with a table of contents and collapsible code sections. While the Markdown and R layers handle what is written and how it’s computed, YAML defines how the entire document is presented and configured.\n\n\nLanguage Layer\nThe language layer defines the written structure and formatting of a document using Markdown syntax. Markdown provides a simple and readable way to organize content through headings, lists, emphasis, links, and tables. It focuses entirely on text and structure, not on data or computation. In a Quarto document, this layer represents the narrative: the words, explanations, and organization that frame the analysis.\nExample (Markdown text):\n# Results and Discussion\n\nIn this section, we summarize the findings from our dataset.  \nThe following figure illustrates the relationship between fuel efficiency and engine power.\n\n- Data collected from the *mtcars* dataset  \n- Variables analyzed: **mpg** (miles per gallon) and **hp** (horsepower)\nThis text defines structure and emphasis but does not perform any computation.\n\n\nComputation Layer\nThe computation layer carries out the actual data analysis and visualization. It involves embedding executable R code chunks inside the Markdown document, allowing results, tables, and figures to be generated automatically when the document is rendered. This integration ensures that all output is reproducible — every number and plot reflects the latest version of the data and analysis.\nExample (R code chunk):\n\n# Create a scatterplot of mpg vs horsepower\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = hp, y = mpg)) +\n  geom_point(color = \"steelblue\") +\n  labs(title = \"Fuel Efficiency vs Engine Power\",\n       x = \"Horsepower (hp)\",\n       y = \"Miles per Gallon (mpg)\")\n\n\n\n\n\n\n\n\nWhen rendered through Quarto, this code runs in R, producing a plot that appears directly in the final document or presentation.\n\n\nCreating Quarto Documents (Reports, Articles, and Papers)\nQuarto supports a variety of document-based outputs, such as research reports, academic papers, and technical documentation. Common formats include:\n\n\n\n\n\n\n\n\nFormat\nOutput Type\nTypical Use\n\n\n\n\nhtml\nInteractive web report\nExploratory data reports, dashboards\n\n\npdf\nPrint-quality report\nAcademic papers, formatted submissions\n\n\ndocx\nMicrosoft Word\nEditable reports for collaboration\n\n\nepub\ne-book\nLong-form reading materials\n\n\n\nTo create a document, specify the format in the YAML header:\n---\ntitle: \"Analysis Report\"\nauthor: \"Student Name\"\nformat:\n  html:\n    toc: true\n    number-sections: true\n---\nQuarto automatically executes embedded R code chunks and inserts the resulting tables and plots. This enables reproducible research — every time you re-render, the analysis and visuals update from your current data.\nUnique challenges and considerations for documents:\n\nLayout and length: Reports may require page breaks, consistent figure sizing, and control over floating tables.\nPDF rendering: Requires a working LaTeX installation (e.g., TinyTeX).\nCross-format consistency: Settings that work for HTML might not suit PDF or Word outputs.\nCitations and cross-references: Quarto supports citation management via BibTeX, but setup requires care.\n\n\n\n\n\n\n\n\n\nReading\n\n\n\nLearn more: Quarto Document Formats\n\n\n\n\nCreating Quarto Presentations (Slides and Talks)\nQuarto also allows you to create presentations directly from .qmd files. Presentations use the same structure as documents but render slide-by-slide instead of page-by-page. You can choose from several output types:\n\n\n\n\n\n\n\n\n\nPresentation Format\nOutput Type\nStrengths\nChallenges\n\n\n\n\nrevealjs\nHTML slides\nHighly flexible; supports transitions, incremental reveals, and embedded code or interactivity.\nRequires attention to screen layout and readability; web-based only.\n\n\npptx\nPowerPoint\nEasy to share; editable after rendering.\nLimited styling and dynamic features compared to HTML slides.\n\n\nbeamer\nPDF slides (LaTeX)\nHigh-quality printable slides; ideal for academic talks.\nComplex LaTeX configuration; limited interactivity.\n\n\n\n\n\nExample: Creating a Reveal.js Presentation\nBelow is an example of a simple Quarto presentation using the Reveal.js format.\nThe YAML header defines document metadata and output type, while the Markdown body defines the slide content.\n\nExample .qmd file\nResuling .html output file\n\nEach slide begins with a heading (for example, ##) or is separated using ---. When rendered, Quarto executes any embedded R code chunks and displays their outputs, such as tables or plots, directly on the slides.\nStudents should keep slides concise: aim for clarity, minimal text, and meaningful visuals rather than dense explanations.\nCommon challenges for presentations:\n\nBalancing detail and readability: Avoid overloading slides with text or long code blocks.\nConsistent design: Use concise titles and uniform font sizes.\nFile size: Embedded plots can increase file size; consider image compression.\nCross-platform compatibility: Check that Reveal.js slides display correctly across browsers; PowerPoint (pptx) outputs may render differently.\n\n\n\n\n\n\n\n\n\n\n\nReading\n\n\n\nLearn more: Quarto Presentations Overview Reveal.js Presentations in Quarto PowerPoint Presentations in Quarto\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown",
-      "Creating different documents with Quarto"
-    ]
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/purpose.html",
-    "href": "tutorials/quarto_markdown/purpose.html",
-    "title": "The purpose of Markdown and Quarto",
-    "section": "",
-    "text": "Before learning how to create documents and reports, it is important to understand the two core technologies behind this workflow: Quarto and Markdown. These tools form the foundation for reproducible, flexible, and professional document creation.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown",
-      "The purpose of Markdown and Quarto"
-    ]
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/purpose.html#introduction-to-quarto-and-markdown",
-    "href": "tutorials/quarto_markdown/purpose.html#introduction-to-quarto-and-markdown",
-    "title": "The purpose of Markdown and Quarto",
-    "section": "",
-    "text": "Before learning how to create documents and reports, it is important to understand the two core technologies behind this workflow: Quarto and Markdown. These tools form the foundation for reproducible, flexible, and professional document creation.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown",
-      "The purpose of Markdown and Quarto"
-    ]
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/purpose.html#what-is-quarto",
-    "href": "tutorials/quarto_markdown/purpose.html#what-is-quarto",
-    "title": "The purpose of Markdown and Quarto",
-    "section": "What Is Quarto?",
-    "text": "What Is Quarto?\nQuarto is an open-source publishing system designed to create high-quality, reproducible documents and websites from plain text files. It allows you to combine written content, code, data, and visualizations in a single workflow.\nQuarto supports multiple programming languages—such as R, Python, Julia, and Observable—and can produce outputs in a variety of formats, including HTML, PDF, Microsoft Word, and PowerPoint.\nBecause Quarto integrates writing and computation, it is particularly well-suited for:\n\nData science reports Research papers and technical documentation\nEducational materials and presentations\nReproducible workflows and analysis pipelines\n\nIn short, Quarto bridges the gap between writing and computation, helping you communicate results in a clear and automated way.\n\n\n\n\n\n\n\n\nReading\n\n\n\nFor official documentation, installation instructions, and tutorials, see the Quarto website.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown",
-      "The purpose of Markdown and Quarto"
-    ]
-  },
-  {
-    "objectID": "tutorials/quarto_markdown/purpose.html#what-is-markdown",
-    "href": "tutorials/quarto_markdown/purpose.html#what-is-markdown",
-    "title": "The purpose of Markdown and Quarto",
-    "section": "What is Markdown?",
-    "text": "What is Markdown?\nMarkdown is a lightweight text formatting language. It allows you to write plain text that can be easily converted into formatted documents such as web pages or PDFs.\nInstead of relying on graphical formatting tools (like bold or italic buttons), Markdown uses simple text-based markers that represent formatting instructions. The result is a writing experience that is both human-readable and machine-friendly.\nMarkdown was originally created by John Gruber in 2004 with the goal of making writing for the web more accessible and less cluttered by code-like markup languages such as HTML.\nMarkdown has since become a standard tool for technical communication, documentation, and note-taking, forming the foundation of many modern publishing systems — including Quarto.\n\n\n\n\n\n\n\n\n\n\nReading\n\n\n\nHere you find the link to the original Markdown paper.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Quarto and Markdown",
-      "The purpose of Markdown and Quarto"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/index.html",
-    "href": "tutorials/writing_text/index.html",
-    "title": "Writing text",
-    "section": "",
-    "text": "In this tutorial, we will learn you how to efficiently create an attractive written document using Quarto. First, you will learn how to write plain text and apply basic Markdown formatting to style the text. Next, we will pay more attention to structuring the document. Finally, we will also discuss how to include inline code and results within the text.\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/structure.html",
-    "href": "tutorials/writing_text/structure.html",
-    "title": "Adding structure",
-    "section": "",
-    "text": "A well-structured Quarto document helps readers follow your analysis and allows Quarto to automatically generate tables of contents, numbered sections, and cross-references. You can add structure using headings, numbered elements (sections, figures, and equations), and citations or cross-references.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Adding structure"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/structure.html#headings-and-subheadings",
-    "href": "tutorials/writing_text/structure.html#headings-and-subheadings",
-    "title": "Adding structure",
-    "section": "Headings and Subheadings",
-    "text": "Headings and Subheadings\nHeadings in Quarto follow the standard Markdown syntax using one or more hash (#) symbols. A single # creates a top-level heading, ## creates a subheading, and so on.\n# Main Title\n\n## Section Title\n\n### Subsection Title\nWhich would result in:",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Adding structure"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/structure.html#section-title",
-    "href": "tutorials/writing_text/structure.html#section-title",
-    "title": "Adding structure",
-    "section": "Section Title",
-    "text": "Section Title\n\nSubsection Title\nQuarto automatically interprets these heading levels to build a document hierarchy. This structure is reflected in the output and (if enabled) in a table of contents (toc: true in the YAML front matter).\nFor example, adding the following to your YAML header will generate an automatic table of contents based on your headings:\n---\ntitle: \"My Analysis Report\"\ntoc: true\nnumber-sections: true\n---\nWhen number-sections: true is set, all headings are automatically numbered (1, 1.1, 1.2, etc.), and cross-references can be created for each section.\n\n\nNumbering Figures and Equations\nQuarto automatically numbers figures, tables, and equations that have captions. This numbering enables you to refer to them consistently throughout your text.\nTo number a figure, simply add a caption using the fig-cap option:\n#| label: fig-distribution\n#| fig-cap: \"Distribution of scores by group.\"\nlibrary(ggplot)\n\nggplot(data, aes(x = group, y = score, fill = group)) +\n  geom_boxplot()\nSee below how this caption will appear in addition to the figure:\n\n\n\n\n\n\n\n\nFigure 1: Distribution of scores by group.\n\n\n\n\n\nTo reference it in text, use the label you assigned: See @fig-distribution for an overview of the score distributions. would result in: See Figure 1 for an overview of the score distributions.\nFor equations, numbering occurs when you assign a label inside the LaTeX math block:\n$$\nE = mc^2 \\quad\n$$ {#eq-myequation}\n\\[\nE = mc^2 \\quad\n\\tag{1}\\]\nYou can then refer to this equation as @eq-myequation in your text, which will render as “(1)” or “Equation 1” depending on the format. Here it results in: Equation 1.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Adding structure"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/structure.html#numbering-sections",
-    "href": "tutorials/writing_text/structure.html#numbering-sections",
-    "title": "Adding structure",
-    "section": "Numbering Sections",
-    "text": "Numbering Sections\nWhen you include number-sections: true in your YAML front matter, Quarto automatically numbers all top-level and nested headings. This is especially useful in reports, theses, or papers where hierarchical organization matters. The numbering adjusts dynamically as you add or rearrange content, ensuring consistent structure throughout the document.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Adding structure"
-    ]
-  },
-  {
-    "objectID": "tutorials/writing_text/structure.html#adding-references-and-citations",
-    "href": "tutorials/writing_text/structure.html#adding-references-and-citations",
-    "title": "Adding structure",
-    "section": "Adding References and Citations",
-    "text": "Adding References and Citations\nQuarto uses Pandoc’s citation system, allowing you to cite sources from a bibliography file. In your YAML header, include the path to a .bib file (in BibTeX format):\n---\ntitle: \"My Report\"\nbibliography: references.bib\n---\nYou can then cite works in-text using the @ symbol and the citation key from your .bib file: As shown in @smith2021, the results confirm the hypothesis.\nTo include a list of references (a bibliography) at the end of your document, simply add a # References heading — Quarto will automatically populate it during rendering.\nExample of inline citations:\n\n@smith2021 → Smith (2021)\n[@smith2021; @doe2022] → (Smith 2021; Doe 2022)\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see Quarto citations",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Writing text",
-      "Adding structure"
-    ]
-  },
-  {
-    "objectID": "tutorials/presenting_output/index.html",
-    "href": "tutorials/presenting_output/index.html",
-    "title": "Tables and Figures",
-    "section": "",
-    "text": "In this tutorial, you will learn about the various options for creating neat tables and figures in Quarto documents.\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Presenting output"
-    ]
-  },
-  {
-    "objectID": "tutorials/chunk_options/create_chunks.html",
-    "href": "tutorials/chunk_options/create_chunks.html",
-    "title": "Create code chunks",
-    "section": "",
-    "text": "When working with Quarto documents, you can switch between a “Source”and a “Visual” mode in R studio. In ths Visual mode, you can click on “Insert” –&gt; “Executable Cell” –&gt; “R”. Here you also see the various other programming languages listed that are supported by Quarto.\n\n\n\nCreating chunks through the Visual mode\n\n\nWhen creating a chunk like this, a block appears in your .qmd file where you can directly type your R code.\nAlthough you can find everything you need to create your full .qmd file in the “Visual” mode with the guided user interface, we recommend to work in “Source” mode as much as possible.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Create code chunks"
-    ]
-  },
-  {
-    "objectID": "tutorials/chunk_options/create_chunks.html#quarto-visual-mode-in-r-studio",
-    "href": "tutorials/chunk_options/create_chunks.html#quarto-visual-mode-in-r-studio",
-    "title": "Create code chunks",
-    "section": "",
-    "text": "When working with Quarto documents, you can switch between a “Source”and a “Visual” mode in R studio. In ths Visual mode, you can click on “Insert” –&gt; “Executable Cell” –&gt; “R”. Here you also see the various other programming languages listed that are supported by Quarto.\n\n\n\nCreating chunks through the Visual mode\n\n\nWhen creating a chunk like this, a block appears in your .qmd file where you can directly type your R code.\nAlthough you can find everything you need to create your full .qmd file in the “Visual” mode with the guided user interface, we recommend to work in “Source” mode as much as possible.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Create code chunks"
-    ]
-  },
-  {
-    "objectID": "tutorials/chunk_options/create_chunks.html#quarto-source-mode-in-r-studio",
-    "href": "tutorials/chunk_options/create_chunks.html#quarto-source-mode-in-r-studio",
-    "title": "Create code chunks",
-    "section": "Quarto source mode in R studio",
-    "text": "Quarto source mode in R studio\n\n\n\nCreating chunks through the Source mode\n\n\nIn source mode, you can create a code chunk by typing three backticks followed by the language in curly braces—for example, ```{r} for R, and then closing the chunk with another set of three backticks. Everything between these fences will be treated as executable code when the document is rendered.\nAs you develop a Quarto document, it’s good practice to regularly check that it still executes correctly. The most direct way to do this is by rendering the document frequently. Rendering runs all code chunks in sequence, ensuring that each one can be executed successfully and that objects or results are correctly available when needed. You can render the document by clicking the Render button in RStudio, using the keyboard shortcut Ctrl + Shift + K (Windows/Linux) or Cmd + Shift + K (Mac), or by running quarto render yourfile.qmd in the terminal.\nIf the document executes without errors, the rendered output (HTML, PDF, or Word) will be updated. If an error occurs, Quarto will stop rendering and display a message pointing to the problematic chunk. Reading these messages carefully helps identify where code might rely on outdated objects or missing packages. Running code chunks individually in RStudio (by clicking the green play icon at the top right of each chunk or pressing Ctrl + Shift + Enter) is another useful way to test smaller sections before rendering the entire document. By checking execution regularly, you can catch issues early and ensure your document remains fully reproducible from start to finish.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Create code chunks"
-    ]
-  },
-  {
-    "objectID": "tutorials/chunk_options/create_chunks.html#labelling-chunks",
-    "href": "tutorials/chunk_options/create_chunks.html#labelling-chunks",
-    "title": "Create code chunks",
-    "section": "Labelling chunks",
-    "text": "Labelling chunks\nEach R code chunk in a Quarto document can be given a label, which is specified immediately after the opening {r} in the chunk header. For example: ```#| label: data-summary.\nThe label data-summary uniquely identifies this chunk. Labels serve several important purposes. They make your document easier to navigate, help organize the flow of your analysis, and are used internally by Quarto for features such as caching, error reporting, and cross-referencing. For instance, if a rendering error occurs, Quarto reports it using the chunk label, making it straightforward to locate the source of the problem. Labels are also used to name figures or tables generated by that chunk, which ensures consistent and readable file names in your output directory.\nAs a matter of good practice, chunk labels should be unique, short but descriptive, and use only lowercase letters, numbers, and hyphens or underscores (avoid spaces or special characters). A clear naming convention—such as data-load, model-fit, or plot-results—helps maintain readability and reproducibility, especially in longer documents. Consistent labeling not only improves your own workflow but also supports collaboration, as others can easily follow the structure and dependencies of your analysis.",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options",
-      "Create code chunks"
-    ]
-  },
-  {
-    "objectID": "tutorials/chunk_options/index.html",
-    "href": "tutorials/chunk_options/index.html",
-    "title": "Chunks and options",
-    "section": "",
-    "text": "With this tutorial, you will learn the following things about code chunks.\n\nFirst, we will explain to you what code chunks are.\nSecond, you will learn how to create and label code chunks yourself.\nFinally, you will get familiar with common code chunk options.\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Open-Stat-Prog",
-      "Chunks and options"
-    ]
+    "objectID": "quizzes/quarto_markdown/questions/yaml_purpose.html#answerlist-1",
+    "href": "quizzes/quarto_markdown/questions/yaml_purpose.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: narrative text belongs in the Markdown body, not the YAML header.\nCorrect: the YAML header configures metadata (title, author) and rendering options (output format, table of contents, etc.).\nWrong: R code is executed in code chunks in the document body, not in the YAML header.\nWrong: the YAML header has nothing to do with RStudio keyboard shortcuts."
   },
   {
     "objectID": "assets/docs/presentation_example.html#about-the-data",
@@ -675,52 +220,806 @@
     "text": "Summary\n\nMarkdown provides the structure and narrative.\nR executes the analysis and visualization.\nQuarto integrates both to produce polished slides.\n\nLearn more: Reveal.js Presentations in Quarto"
   },
   {
-    "objectID": "quizzes/second_tutorial/questions/default_arguments2.html",
-    "href": "quizzes/second_tutorial/questions/default_arguments2.html",
-    "title": "Question",
+    "objectID": "tutorials/chunk_options/index.html",
+    "href": "tutorials/chunk_options/index.html",
+    "title": "Chunks and options",
     "section": "",
-    "text": "Use the following help file excerpt to answer the question below.\n\n\n\n\n\n\n\n\ncor\nR Documentation\n\n\n\n\n\n\n\n\n\nvar(x, y = NULL, na.rm = FALSE, use)\n\ncov(x, y = NULL, use = \"everything\",\n    method = c(\"pearson\", \"kendall\", \"spearman\"))\n\ncor(x, y = NULL, use = \"everything\",\n    method = c(\"pearson\", \"kendall\", \"spearman\"))\n\ncov2cor(V)\n\n\n\n\n\n\n\n\nWhat is the default value for the use argument of the cor() function?\n\n\n\n\"everything\"\n\"Everything\n\"spearman\"\n\"pearson\"\n\"kendall\"\nc(\"pearson\", \"spearman\", \"kendall\")\nNULL\nmethod\ny\nx\nThe use argument does not have a defined default value."
+    "text": "In this tutorial, you will learn the following about code chunks in Quarto:\n\nWhat code chunks are, and how they share a single execution session.\nHow to create and label chunks, and why rendering regularly matters.\nThe most common chunk options, and how they control what appears in your rendered document.\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options"
+    ]
   },
   {
-    "objectID": "quizzes/second_tutorial/questions/default_arguments2.html#answerlist",
-    "href": "quizzes/second_tutorial/questions/default_arguments2.html#answerlist",
-    "title": "Question",
+    "objectID": "tutorials/chunk_options/create_chunks.html",
+    "href": "tutorials/chunk_options/create_chunks.html",
+    "title": "Create code chunks",
     "section": "",
-    "text": "\"everything\"\n\"Everything\n\"spearman\"\n\"pearson\"\n\"kendall\"\nc(\"pearson\", \"spearman\", \"kendall\")\nNULL\nmethod\ny\nx\nThe use argument does not have a defined default value."
+    "text": "Quarto documents in RStudio can be edited in two modes. In Visual mode, you insert a chunk via Insert → Executable Cell → [language].\n\n\n\nCreating chunks through the Visual mode\n\n\nIn Source mode, you create a chunk by typing three backticks followed by the language in curly braces (e.g., ```{r}) and closing it with another three backticks; everything between the fences is executable code.\n\n\n\nCreating chunks through the Source mode\n\n\nVisual mode is a convenient way to build a document with a guided interface, but we recommend working in Source mode as much as possible once you’re comfortable with the syntax.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
+    ]
   },
   {
-    "objectID": "quizzes/second_tutorial/questions/default_arguments2.html#answerlist-1",
-    "href": "quizzes/second_tutorial/questions/default_arguments2.html#answerlist-1",
+    "objectID": "tutorials/chunk_options/create_chunks.html#creating-a-chunk",
+    "href": "tutorials/chunk_options/create_chunks.html#creating-a-chunk",
+    "title": "Create code chunks",
+    "section": "",
+    "text": "Quarto documents in RStudio can be edited in two modes. In Visual mode, you insert a chunk via Insert → Executable Cell → [language].\n\n\n\nCreating chunks through the Visual mode\n\n\nIn Source mode, you create a chunk by typing three backticks followed by the language in curly braces (e.g., ```{r}) and closing it with another three backticks; everything between the fences is executable code.\n\n\n\nCreating chunks through the Source mode\n\n\nVisual mode is a convenient way to build a document with a guided interface, but we recommend working in Source mode as much as possible once you’re comfortable with the syntax.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/create_chunks.html#rendering-regularly",
+    "href": "tutorials/chunk_options/create_chunks.html#rendering-regularly",
+    "title": "Create code chunks",
+    "section": "Rendering Regularly",
+    "text": "Rendering Regularly\nBecause chunks share one session and run top to bottom, it’s good practice to render your document often as you write it, rather than waiting until the end.\nPredict: suppose you write five chunks in a row without rendering, and the second chunk has an error. What do you expect to happen when you finally render the whole document?\nExplain: rendering stops at the first chunk that fails, and Quarto reports an error pointing to that chunk. This means that you would not learn about the problem until you’d already written three chunks past it, making it harder to pinpoint what went wrong. Rendering after every chunk or two (with the Render button, Ctrl/Cmd+Shift+K, or quarto render yourfile.qmd) catches this immediately instead. You can also run a single chunk on its own with the green play icon (or Ctrl/Cmd+Shift+Enter) to test it before rendering the full document.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/create_chunks.html#labelling-chunks",
+    "href": "tutorials/chunk_options/create_chunks.html#labelling-chunks",
+    "title": "Create code chunks",
+    "section": "Labelling Chunks",
+    "text": "Labelling Chunks\nEach chunk can be given a label, specified with #| label: &lt;name&gt; immediately inside the chunk. Labels make errors easier to trace back to their source, and are used internally for caching and for naming generated figures and tables. Good labels are unique, short but descriptive, and use only lowercase letters, numbers, and hyphens or underscores, for example data-load, model-fit, or plot-results.\n\n\n\n\n\n\nCommon Mistake\n\n\n\nChunk labels must be unique within a document. If two chunks share the same label, Quarto will fail to render and report a duplicate-label error. This is easy to run into if you copy-paste an existing chunk as a starting point for a new one and forget to change its label.\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nWhich of the following chunk labels follows good labeling convention: Model Fit!, model_fit_final_version_2, or model-fit?\n\n\nmodel-fit. It is short, descriptive, unique, and uses only lowercase letters and a hyphen. Model Fit! uses spaces, capital letters, and a special character, none of which are recommended, and model_fit_final_version_2 is unnecessarily long for a label.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Create code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/index.html",
+    "href": "tutorials/presenting_output/index.html",
+    "title": "Tables and Figures",
+    "section": "",
+    "text": "In this tutorial, you will learn about the various options for creating neat tables and figures in Quarto documents, covering both Markdown-based and R-generated approaches.\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/structure.html",
+    "href": "tutorials/writing_text/structure.html",
+    "title": "Adding structure",
+    "section": "",
+    "text": "A well-structured Quarto document helps readers follow your analysis and lets Quarto automatically generate a table of contents, numbered sections, and cross-references. You add structure with headings, numbered elements (figures, tables, equations), and citations.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Adding structure"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/structure.html#headings-and-section-numbering",
+    "href": "tutorials/writing_text/structure.html#headings-and-section-numbering",
+    "title": "Adding structure",
+    "section": "Headings and Section Numbering",
+    "text": "Headings and Section Numbering\nDo: Run the following in your own quarto document.\n# Main Title\n\n## Section Title\n\n### Subsection Title\nSee: Quarto interprets these heading levels to build a document hierarchy, reflected in the output and, if enabled, in a table of contents (toc: true in the YAML header).\nPredict: if you also add number-sections: true to the YAML header, predict how the three headings above would be numbered.\n---\ntitle: \"My Analysis Report\"\ntoc: true\nnumber-sections: true\n---\nExplain: as predicted, headings are numbered according to their hierarchy: 1 for the top-level heading, 1.1 for the section beneath it, and 1.1.1 for the subsection beneath that. This numbering updates automatically as you add, remove, or reorder headings, and each numbered heading can then be cross-referenced elsewhere in the text.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Adding structure"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/structure.html#numbering-figures-and-equations",
+    "href": "tutorials/writing_text/structure.html#numbering-figures-and-equations",
+    "title": "Adding structure",
+    "section": "Numbering Figures and Equations",
+    "text": "Numbering Figures and Equations\nQuarto also numbers figures, tables, and equations that have a label. To number a figure, add a label starting with fig- and a caption via fig-cap:\n#| label: fig-distribution\n#| fig-cap: \"Distribution of scores by group.\"\n\nggplot(data, aes(x = group, y = score, fill = group)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\nFigure 1: Distribution of scores by group.\n\n\n\n\n\nTo reference it in text, use the label: See @fig-distribution for an overview. renders as: See Figure 1 for an overview.\nEquations are numbered the same way, by adding a label after the closing $$:\n$$\nE = mc^2\n$$ {#eq-myequation}\n\\[\nE = mc^2\n\\tag{1}\\]\nReferencing it with @eq-myequation then renders as: Equation 1.\n\n\n\n\n\n\nCommon Mistake\n\n\n\nA cross-reference only works if its target actually has a matching label. If you reference @fig-distribution but the figure’s label is misspelled, missing, or doesn’t start with the required prefix (fig-, tbl-, eq-), Quarto won’t resolve the link. Instead of a number like “Figure 1,” the rendered document will show the broken reference text as-is, or a ?@... placeholder. If a cross-reference isn’t rendering as a number, check the label first.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Adding structure"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/structure.html#adding-references-and-citations",
+    "href": "tutorials/writing_text/structure.html#adding-references-and-citations",
+    "title": "Adding structure",
+    "section": "Adding References and Citations",
+    "text": "Adding References and Citations\nQuarto uses Pandoc’s citation system to cite sources from a bibliography file. In your YAML header, include the path to a .bib file:\n---\ntitle: \"My Report\"\nbibliography: references.bib\n---\nYou can then cite works in-text using the @ symbol and the citation key from your .bib file:\n\n@smith2021 → Smith (2021)\n[@smith2021; @doe2022] → (Smith 2021; Doe 2022)\n\nTo include a bibliography at the end of your document, add a # References heading — Quarto populates it automatically during rendering.\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nFor more detail, see Quarto citations\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nYou created a figure with #| label: fig-boxplot. What syntax would you use to reference it in your text?\n\n\n@fig-boxplot. For example: See @fig-boxplot for the distribution of scores.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Adding structure"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/index.html",
+    "href": "tutorials/writing_text/index.html",
+    "title": "Writing text",
+    "section": "",
+    "text": "In this tutorial, you will learn how to write and structure text in Quarto documents:\n\nHow to apply basic Markdown formatting to style text, and create lists, links, and equations.\nHow to structure a document with headings, numbered figures and equations, and citations.\nHow to embed live, computed results directly within your narrative text.\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/purpose.html",
+    "href": "tutorials/quarto_markdown/purpose.html",
+    "title": "The purpose of Markdown and Quarto",
+    "section": "",
+    "text": "Before learning how to create documents and reports, it helps to understand the two core technologies behind this workflow: Quarto and Markdown. Together, they form the foundation for reproducible, flexible document creation.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "The purpose of Markdown and Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/purpose.html#introduction-to-quarto-and-markdown",
+    "href": "tutorials/quarto_markdown/purpose.html#introduction-to-quarto-and-markdown",
+    "title": "The purpose of Markdown and Quarto",
+    "section": "",
+    "text": "Before learning how to create documents and reports, it helps to understand the two core technologies behind this workflow: Quarto and Markdown. Together, they form the foundation for reproducible, flexible document creation.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "The purpose of Markdown and Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/purpose.html#what-is-quarto",
+    "href": "tutorials/quarto_markdown/purpose.html#what-is-quarto",
+    "title": "The purpose of Markdown and Quarto",
+    "section": "What Is Quarto?",
+    "text": "What Is Quarto?\nQuarto is an open-source publishing system for creating reproducible documents and websites from plain text files. It combines written content, code, data, and visualizations in a single workflow, supports multiple programming languages (R, Python or Julia), and can render to formats including HTML, PDF, Microsoft Word, and PowerPoint.\nBecause it integrates writing and computation, Quarto is well-suited for data science reports, research papers, educational materials and presentations, and reproducible analysis pipelines more generally.\n\n\n\n\n\n\n\n\nReading\n\n\n\nFor official documentation, installation instructions, and tutorials, see the Quarto website.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "The purpose of Markdown and Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/purpose.html#what-is-markdown",
+    "href": "tutorials/quarto_markdown/purpose.html#what-is-markdown",
+    "title": "The purpose of Markdown and Quarto",
+    "section": "What is Markdown?",
+    "text": "What is Markdown?\nMarkdown is a lightweight text formatting language: you write plain text with simple text-based markers (rather than graphical formatting buttons) that get converted into formatted output such as web pages or PDFs. The result is a writing experience that is both human-readable and machine-friendly.\nMarkdown was created in 2004 to make writing for the web simpler than working directly in HTML, and it has since become a standard tool for technical writing and documentation, forming the foundation of many modern publishing systems — including Quarto.\n\n\n\n\n\n\n\n\nReading\n\n\n\nHere you find the link to the original Markdown paper.\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nYou’re writing a lab report where a table of results needs to update automatically every time you rerun your analysis. Would plain Markdown or Quarto be the right tool for this, and why?\n\n\nQuarto. Markdown only provides text formatting; it has no way to execute code or generate results. Quarto builds on Markdown by adding a computation layer, so tables and figures can be generated from your analysis and stay in sync with your data.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "The purpose of Markdown and Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/presentations.html",
+    "href": "tutorials/quarto_markdown/presentations.html",
+    "title": "Creating presentations with Quarto",
+    "section": "",
+    "text": "Quarto can also turn a .qmd file into a slide deck. Presentations use the same YAML header and Markdown body as the reports covered in the previous tutorial; they simply render slide-by-slide instead of page-by-page.\nDo: Take the Quarto report that you started working on at the documents tutorial. Do you think you could turn it into a slideshow just by changing the format field in the YAML header, or would you need to rewrite the file from scratch?\nSee: Switching formats is again very simple at the YAML level. In practice you probably want to reorganize the content itself, since a slide holds much less text than a page, and each heading needs to mark where a new slide begins.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating presentations with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/presentations.html#presentation-formats",
+    "href": "tutorials/quarto_markdown/presentations.html#presentation-formats",
+    "title": "Creating presentations with Quarto",
+    "section": "Presentation Formats",
+    "text": "Presentation Formats\n\n\n\n\n\n\n\n\n\nFormat\nOutput Type\nStrengths\nChallenges\n\n\n\n\nrevealjs\nHTML slides\nFlexible; supports transitions, incremental reveals, embedded code.\nWeb-based only; needs attention to screen layout.\n\n\npptx\nPowerPoint\nEasy to share; editable after rendering.\nLimited styling and dynamic features.\n\n\nbeamer\nPDF slides (LaTeX)\nHigh-quality, printable; ideal for academic talks.\nComplex LaTeX configuration; limited interactivity.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating presentations with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/presentations.html#example-a-reveal.js-presentation",
+    "href": "tutorials/quarto_markdown/presentations.html#example-a-reveal.js-presentation",
+    "title": "Creating presentations with Quarto",
+    "section": "Example: A Reveal.js Presentation",
+    "text": "Example: A Reveal.js Presentation\n\nExample .qmd file\nResulting .html output\n\nEach slide begins with a heading (e.g., ##) or is separated by ---. When rendered, Quarto executes any embedded code chunks and displays their output, such as tables or plots, directly on the slide.\nKeep slides concise: aim for clarity, minimal text, and meaningful visuals rather than dense explanations.\nCommon challenges:\n\nBalancing detail and readability: avoid overloading slides with text or long code blocks.\nConsistent design: use concise titles and uniform font sizes.\nCross-platform compatibility: check that revealjs slides display correctly across browsers; pptx output can render differently depending on the software used to open it.\n\nAs with reports, revealjs slides are HTML output, so if you’re submitting or sharing slides as a single file, apply the same embed-resources: true setting covered in the previous tutorial.\n\n\n\n\n\n\n\n\nReading\n\n\n\nLearn more: Quarto Presentations Overview — Reveal.js Presentations — PowerPoint Presentations\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nYou have a Quarto HTML report analyzing exam scores and want to present the same analysis as a revealjs slideshow that you can safely email as a single file. What would you change in the YAML header, and what else would you likely still need to adjust in the body of the document?\n\n\nIn the YAML header, change format: html to format: revealjs and keep embed-resources: true so the slideshow stays a single, portable file. In the body, you would still need to reorganize the content into slide-sized chunks, adding headings or --- separators to mark where each new slide begins, and trimming dense text down to the key points.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating presentations with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/index.html",
+    "href": "tutorials/quarto_markdown/index.html",
+    "title": "Quarto and Markdown",
+    "section": "",
+    "text": "This tutorial introduces Quarto and Markdown.\n\nIt starts by explaining what Quarto and Markdown are for.\nNext, it focuses on the differences between Quarto and Markdown.\nFinally, it covers how to create documents and presentations with Quarto, including how to keep your rendered files self-contained and easy to share.\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown"
+    ]
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "You successfully completed the module “Reproducible reporting”. You should now be able to generate written documents and presentations where you can seamlessly integrate your text and explanations with your coding in R chunks.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Conclusion"
+    ]
+  },
+  {
+    "objectID": "conclusion.html#self-test",
+    "href": "conclusion.html#self-test",
+    "title": "Conclusion",
+    "section": "Self-Test",
+    "text": "Self-Test\nComplete this assignment in RStudio.\nCreate a new Quarto document, about_me.qmd, that meets the following requirements:\n\nAn HTML report with a title, a table of contents, section numbering, and self-contained output.\nAt least two heading levels structuring the report (for example, a “Background” section and a “Favorites” section).\nA sentence using inline code to report something computed in R, for example, how many days you’ve been alive, computed from your birth date and Sys.Date().\nA kable() table of your top 3 favorite things (e.g. hobbies, foods, movies), with a column of your own rating for each.\nA labeled, captioned image of your favorite animal, referenced in the text using its cross-reference label.\nA render that opens correctly as a single, portable file.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Conclusion"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible reporting",
+    "section": "",
+    "text": "Welcome to the Reproducible reporting module. This module consists of a series of tutorials on the following topics:",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-goals",
+    "href": "index.html#learning-goals",
+    "title": "Reproducible reporting",
+    "section": "Learning Goals",
+    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nQuarto and markdown\n\nUnderstand the purpose of Markdown and Quarto.\nUnderstand the differences between Markdown and Quarto.\nCreate documents and presentations with Quarto, and keep rendered files self-contained.\n\n\n\nChunks and options\n\nUnderstand what code chunks are.\nLearn how to create and label R code chunks.\nExplore common chunk options.\n\n\n\nWriting text\n\nLearn how to write plain text and basic Markdown formatting to style text.\nLearn how to apply structure to a document.\nLearn how to include inline code and results within text.\n\n\n\nPresenting output\n\nLearn how to display clean, readable tables.\nUnderstand how to include plots and visualizations.\n\nClick the button below to get started with the first tutorial.\n\n\n Begin Tutorial",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "in_progress.html",
+    "href": "in_progress.html",
+    "title": "In Progress",
+    "section": "",
+    "text": "Sorry, we’re still building the page you’ve requested.\nIt’s almost done…really.\nWe’re just working through a few minor issues…\n\n\n\nImage Source"
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/documents.html",
+    "href": "tutorials/quarto_markdown/documents.html",
+    "title": "Creating documents with Quarto",
+    "section": "",
+    "text": "Quarto lets you create professional reports and papers directly from RStudio, combining code, text, and visualizations in a single reproducible workflow. This tutorial covers the basics of working with Quarto files in RStudio, then walks through creating report-style documents specifically. The next tutorial covers presentations.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating documents with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/documents.html#working-with-quarto-in-rstudio",
+    "href": "tutorials/quarto_markdown/documents.html#working-with-quarto-in-rstudio",
+    "title": "Creating documents with Quarto",
+    "section": "Working with Quarto in RStudio",
+    "text": "Working with Quarto in RStudio\nTo start a new Quarto document in RStudio:\n\nGo to File → New File → Quarto Document…\nEnter a title, author, and choose a default output format (e.g., HTML, PDF, or Word).\nRStudio creates a .qmd file containing a template YAML header and an example code chunk.\nClick Render (or use Render on Save) to produce the formatted output.\n\n\n\n\nRStudio Quarto new document dialog (source: https://quarto.org)\n\n\n\n\n\n\n\n\nReading\n\n\n\nFor more information, see the official Quarto documentation: Authoring with RStudio\n\n\nEvery .qmd file has the same basic structure: a YAML header (between --- lines) defining metadata like title and output format, a body written in Markdown, and optional embedded R code chunks.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating documents with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/documents.html#yaml-document-metadata-and-configuration",
+    "href": "tutorials/quarto_markdown/documents.html#yaml-document-metadata-and-configuration",
+    "title": "Creating documents with Quarto",
+    "section": "YAML: Document Metadata and Configuration",
+    "text": "YAML: Document Metadata and Configuration\nThe YAML header is where you tell Quarto how to render your document: what format to produce and which options to apply. It uses a simple key-value structure, enclosed between --- at the start and end of the block.\n---\ntitle: \"Statistical Analysis of Air Quality Data\"\nauthor: \"Alex Rivera\"\ndate: \"2025-01-01\"\nformat:\n  html:\n    toc: true\n    code-fold: true\n---\nDo: Create a Quarto document on your own computer. In the YAML header of the .qmd file, change format: html to format: pdf in the header. Do you expect this to be a one-line switch, or would you need to change other parts of the document too?\nSee: For a simple document, changing the target format really can be that simple: the same Markdown body and code chunks are reused. In practice, though, some format-specific options (like code-fold, which is an HTML-only feature) won’t carry over, and PDF output has its own setup requirements, covered below.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating documents with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/documents.html#creating-reports-and-papers",
+    "href": "tutorials/quarto_markdown/documents.html#creating-reports-and-papers",
+    "title": "Creating documents with Quarto",
+    "section": "Creating Reports and Papers",
+    "text": "Creating Reports and Papers\nCommon document output formats include:\n\n\n\n\n\n\n\n\nFormat\nOutput Type\nTypical Use\n\n\n\n\nhtml\nInteractive web report\nExploratory data reports, dashboards\n\n\npdf\nPrint-quality report\nAcademic papers, formatted submissions\n\n\ndocx\nMicrosoft Word\nEditable reports for collaboration\n\n\nepub\ne-book\nLong-form reading materials\n\n\n\nQuarto automatically executes embedded code chunks and inserts the resulting tables and plots, so every time you re-render, the analysis and visuals update from your current data.\nA few things to keep in mind across formats:\n\nLayout: reports may need page breaks or fixed figure sizing, especially for PDF and Word.\nPDF rendering requires a working LaTeX installation (e.g., TinyTeX).\nSettings don’t always transfer: an option that works for HTML may not apply to PDF or Word.\nCitations are supported via BibTeX, covered later in this module.\n\n\n\n\n\n\n\nCommon Mistake\n\n\n\nBy default, a rendered HTML report can reference supporting files, such as separately saved images, rather than embedding everything into the single .html file. If you then hand in or share only that .html file, without its supporting files, it can open broken or missing content for whoever receives it. To avoid this, set your document to be self-contained by adding embed-resources: true under your HTML format options:\nformat:\n  html:\n    embed-resources: true\nThis produces a single, fully portable .html file with everything, including plots and images, embedded inside it. This is important whenever you’re submitting a report as one file, for example for a homework assignment.\n\n\n\n\n\n\n\n\n\n\nReading\n\n\n\nLearn more: Quarto Document Formats\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nWrite a YAML header for an HTML report titled “Analysis Report,” with a table of contents, that is safe to hand in as a single file.\n\n\n---\ntitle: \"Analysis Report\"\nformat:\n  html:\n    toc: true\n    embed-resources: true\n---\nThe toc: true option adds a table of contents, and embed-resources: true ensures the rendered .html file is self-contained, so it can be shared or submitted on its own.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Creating documents with Quarto"
+    ]
+  },
+  {
+    "objectID": "tutorials/quarto_markdown/differences.html",
+    "href": "tutorials/quarto_markdown/differences.html",
+    "title": "Differences between Quarto and Markdown",
+    "section": "",
+    "text": "Markdown and Quarto operate at different levels. Markdown is a markup language: plain text with lightweight formatting instructions for elements like headings, lists, and emphasis. It has no support for code execution, metadata, or dynamic output, which makes it ideal for static content like documentation or notes, but not for combining text with live results.\nQuarto builds on Markdown to add a document generation and publishing workflow. It extends Markdown’s syntax with tools for executing embedded code, managing metadata, and rendering to multiple output formats such as HTML, PDF, and slides.\nIn short, Markdown provides the structure, while Quarto provides the workflow that ties narrative, computation, and presentation together.\n\n\n\n\n\n\n\n\nLayer\nExample\nPurpose\n\n\n\n\nLanguage layer\nMarkdown\nProvide the text structure, document content, and basic formatting syntax.\n\n\nProcessing layer\nQuarto\nInterpret Markdown, integrate executable code, and render everything into polished output formats such as HTML or PDF.\n\n\nComputation layer\nR (and optionally Python, Julia)\nPerform analysis, generate tables and plots, and supply dynamic results embedded into the rendered document.\n\n\n\nRStudio ties these three layers together in one environment: Markdown structures the text, Quarto renders it and executes the embedded code, and R supplies the actual computation. This lets you write, analyze, and present your work within a single, seamless workflow.\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nA colleague asks you to convert your Quarto report into a plain Markdown file, so they can drop it into a different publishing system. Would you lose anything in the process, and if so, what?\n\n\nYes. You would lose the computation layer: any embedded code chunks, and the tables, figures, or inline results they generate, since Markdown alone cannot execute code. Only the plain narrative text and static formatting would survive the conversion.\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Differences between Quarto and Markdown"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/inline_code.html",
+    "href": "tutorials/writing_text/inline_code.html",
+    "title": "Inline code and results",
+    "section": "",
+    "text": "Inline code lets you execute an R expression directly within your narrative text, so a report always reflects the current data or computation, without manually copying results in.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Inline code and results"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/inline_code.html#syntax-for-inline-code",
+    "href": "tutorials/writing_text/inline_code.html#syntax-for-inline-code",
+    "title": "Inline code and results",
+    "section": "Syntax for Inline Code",
+    "text": "Syntax for Inline Code\nInline code is written with a single pair of backticks, starting with the language identifier:\nDo: Run this code inline where you are writing text in your own Quarto document.\n\n`r 2 + 2`\n\nSee: including this in a sentence runs the code and prints only the result: 4.\nPredict: now suppose a previous chunk already created an object, mean_score &lt;- mean(c(5, 10, 15)). Before looking below, predict what the following inline code will show once rendered: the code itself, or the number it evaluates to?\n\n`r mean_score`\n\nExplain: as predicted, only the result appears: “The average score is 10.” The expression is evaluated at render time, and only its result is shown; you can use any valid R expression, including objects created in earlier chunks.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Inline code and results"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/inline_code.html#using-inline-code-in-text",
+    "href": "tutorials/writing_text/inline_code.html#using-inline-code-in-text",
+    "title": "Inline code and results",
+    "section": "Using Inline Code in Text",
+    "text": "Using Inline Code in Text\nInline code works well for numbers that should always match the current analysis. For example, the syntax\n\nThe mean mpg is `r round(mean(mtcars$mpg), 1)`.\n\nrenders as: The mean mpg is 20.1. The same approach works for model results:\n\nThe regression slope is `r round(coef(lm(mpg ~ wt, data = mtcars))[2], 2)`.\n\nrenders as: The regression slope is -5.34.\n\n\n\n\n\n\nCommon Mistake\n\n\n\nRaw inline results are often much longer or messier than you’d want in a sentence: an unrounded slope like -5.344471517... looks out of place in a report. Always round (round()) or format (format()) numeric results before embedding them, rather than leaving the raw computed value to print as-is.\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\nCreate a numeric vector called scores with a few values of your choice, then compute its mean rounded to 1 decimal place, the way you would for an inline result.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nscores &lt;- c(72.456, 88.219, 91.038, 65.774)\nround(mean(scores), 1)\n\n[1] 79.4\n\n\nIf this were an inline expression in a report, e.g.\n\nThe average score is `r round(mean(scores), 1)`.\n\nit would render as: “The average score is 79.4.” Rounding keeps the embedded result readable in a sentence, rather than printing several unnecessary decimal places.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Inline code and results"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html",
+    "href": "tutorials/writing_text/text.html",
+    "title": "Writing text",
+    "section": "",
+    "text": "Quarto builds on Pandoc Markdown, which supports inline formatting for emphasis, code, strikethrough, and superscript/subscript.\nDo: Run this in your own Quarto document and see how it looks.\n*italics*\n**bold**\nSee: In visual mode, or when rendering the document, you should see this:\nitalics bold\nPredict: now suppose you wrap a word in three asterisks instead of one or two, like ***word***. Do you expect this to render as italics, bold, or both combined?\nExplain:\n***bold italics***\nbold italics\nAs predicted, combining the two markers combines both effects.\nA few other inline formatting options are useful to know:\n\nStrikethrough: ~~text~~ → text.\nInline (verbatim) code: enclose text in backticks, e.g. `my_var &lt;- 10` → my_var &lt;- 10.\nSuperscript / subscript: superscript^2^ → superscript², subscript~2~ → subscript₂.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html#text",
+    "href": "tutorials/writing_text/text.html#text",
+    "title": "Writing text",
+    "section": "",
+    "text": "Quarto builds on Pandoc Markdown, which supports inline formatting for emphasis, code, strikethrough, and superscript/subscript.\nDo: Run this in your own Quarto document and see how it looks.\n*italics*\n**bold**\nSee: In visual mode, or when rendering the document, you should see this:\nitalics bold\nPredict: now suppose you wrap a word in three asterisks instead of one or two, like ***word***. Do you expect this to render as italics, bold, or both combined?\nExplain:\n***bold italics***\nbold italics\nAs predicted, combining the two markers combines both effects.\nA few other inline formatting options are useful to know:\n\nStrikethrough: ~~text~~ → text.\nInline (verbatim) code: enclose text in backticks, e.g. `my_var &lt;- 10` → my_var &lt;- 10.\nSuperscript / subscript: superscript^2^ → superscript², subscript~2~ → subscript₂.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html#lists",
+    "href": "tutorials/writing_text/text.html#lists",
+    "title": "Writing text",
+    "section": "Lists",
+    "text": "Lists\nQuarto supports unordered and ordered lists, including nested lists.\n\nUnordered lists start lines with *, +, or -:\n* Item A\n* Item B\n  + Sub-item B1\n* Item C\n\nItem A\nItem B\n\nSub-item B1\n\nItem C\n\nOrdered lists use numbers followed by a dot:\n1. First step\n2. Second step\n3. Third step\n\nFirst step\nSecond step\nThird step\n\nTask lists use [ ] or [x]:\n- [ ] Task 1\n- [x] Task 2 (done)\n\nTask 1\nTask 2 (done)\n\n\n\n\n\n\n\n\nCommon Mistake\n\n\n\nQuarto requires a blank line before a list for it to render correctly. Without it, the list items may appear as ordinary text rather than a formatted list. If a list isn’t rendering the way you expect, check for a missing blank line above it first.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/writing_text/text.html#links-and-equations",
+    "href": "tutorials/writing_text/text.html#links-and-equations",
+    "title": "Writing text",
+    "section": "Links and Equations",
+    "text": "Links and Equations\n\nInline link: [Quarto](https://quarto.org) → Quarto\nAutolink URL: &lt;https://quarto.org&gt; → https://quarto.org\n\nQuarto supports LaTeX-style math using $ and $$ delimiters:\n\nInline math: This is inline: $E = mc^2$. → This is inline: \\(E = mc^2\\).\nDisplay math, on its own centered line:\n$$\nE = mc^2\n$$\n\\[\nE = mc^2\n\\]\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nMarkdown basics\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nWrite the Markdown syntax for a sentence that is both bold and italicized, ending with a variable name written as verbatim code, x, followed by a superscript 2.\n\n\n***This sentence is bold and italicized***, using `x`^2^.\nThis sentence is bold and italicized, using x2.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Writing text",
+      "Writing text"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/plots.html",
+    "href": "tutorials/presenting_output/plots.html",
+    "title": "Figures",
+    "section": "",
+    "text": "Figures are essential for visualizing data. Quarto supports figures generated from R code as well as external images, with chunk options and Markdown attributes controlling captions, size, and placement.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Figures"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/plots.html#figures-generated-from-r",
+    "href": "tutorials/presenting_output/plots.html#figures-generated-from-r",
+    "title": "Figures",
+    "section": "Figures Generated from R",
+    "text": "Figures Generated from R\nDo: Run the code below in your own Quarto document. It sets four chunk options:\n\nlabel: fig-scores — a label enabling this figure to be cross-referenced elsewhere as @fig-scores\nfig-cap — the figure’s caption\nfig-width / fig-height — the figure’s dimensions, in inches\n\n\nlibrary(ggplot2)\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Score = c(5.2, 6.8, 4.9)\n)\n\nggplot(data, aes(x = Group, y = Score, fill = Group)) +\n  geom_bar(stat = \"identity\") +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Boxplot of scores by group\n\n\n\n\n\nSee: the resulting figure, with the caption and dimensions from the chunk options applied.\nPredict: if you add fig-align: \"center\" to this same chunk, what do you expect to change: the figure’s content and size, or something else?\nExplain: fig-align only changes the figure’s horizontal placement on the page (left/center/right); the plot itself, its caption, and its dimensions stay exactly the same. Chunk options that control appearance are independent of one another, much like the hist()/plot() styling options covered in the visualization module.\nWhen possible, export figures as vector graphics (PDF or SVG) rather than raster formats (PNG, JPEG): vector graphics stay crisp at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Figures"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/plots.html#external-images",
+    "href": "tutorials/presenting_output/plots.html#external-images",
+    "title": "Figures",
+    "section": "External Images",
+    "text": "External Images\nLocal and web images can also be included, using Markdown’s image syntax.\nLocal images, referenced with a project-relative path (leading /):\n![Caption text](/assets/images/ecrins_pano.jpg){#fig-local width=50%}\n\n\n\n\n\n\nFigure 2: Caption text\n\n\n\nWeb images, linked directly by URL:\n![Quarto logo](https://quarto.org/quarto.png){width=200px}\n\n\n\nQuarto logo\n\n\nBoth accept the same {#fig-label width=...} attributes as R-generated figures, so they can be sized and cross-referenced the same way.\n\n\n\n\n\n\nCommon Mistake\n\n\n\nA local image path that works on one page can break on another if it’s a plain relative path (e.g., images/photo.jpg), since Quarto resolves it relative to that page’s own folder — the same class of path problem covered for bibliography files earlier in this module. For images, a leading / reliably resolves the path from the project root regardless of which page includes it, so prefer /assets/images/photo.jpg over a bare relative path.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Figures"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/plots.html#referencing-figures-in-text",
+    "href": "tutorials/presenting_output/plots.html#referencing-figures-in-text",
+    "title": "Figures",
+    "section": "Referencing Figures in Text",
+    "text": "Referencing Figures in Text\nOnce a figure has a label, reference it anywhere in the text with @:\nAs shown in @fig-scores, group B has the highest score.\nAs shown in Figure 1, group B has the highest score.\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on figures\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\nCreate a labeled, captioned bar plot with ggplot2 showing the Score for each Group in the data frame from the example above, sized 5 by 3 inches.\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThe plot itself can be built and tested here with ggplot2. In an actual .qmd file, you would also add these chunk options above the code to control the label, caption, and size:\n#| label: fig-mine\n#| fig-cap: \"Your caption here\"\n#| fig-width: 5\n#| fig-height: 3\n\n\n\nlibrary(ggplot2)\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Score = c(5.2, 6.8, 4.9)\n)\n\nggplot(data, aes(x = Group, y = Score, fill = Group)) +\n  geom_bar(stat = \"identity\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\nIn a real .qmd file, this chunk would also carry #| label: fig-mine, #| fig-cap: \"Your caption here\", #| fig-width: 5, and #| fig-height: 3 as chunk options above the code.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Figures"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/tables.html",
+    "href": "tutorials/presenting_output/tables.html",
+    "title": "Tables",
+    "section": "",
+    "text": "Tables are a common way to summarize data in reports. Quarto can produce tables directly in Markdown or dynamically from R. Clear, readable tables make your documents more professional and easier to follow.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Tables"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/tables.html#text-based-tables-in-markdown",
+    "href": "tutorials/presenting_output/tables.html#text-based-tables-in-markdown",
+    "title": "Tables",
+    "section": "Text-Based Tables in Markdown",
+    "text": "Text-Based Tables in Markdown\nFor small, static tables, you can write them directly in Markdown using pipe (|) syntax:\n| Group | Mean | SD  |\n|:------|-----:|:---:|\n| A     | 5.2  | 1.1 |\n| B     | 6.8  | 0.9 |\n\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\n\nA --- row under the headers is required; colons control column alignment (left, right, or center).",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Tables"
+    ]
+  },
+  {
+    "objectID": "tutorials/presenting_output/tables.html#generating-tables-from-r-with-kable",
+    "href": "tutorials/presenting_output/tables.html#generating-tables-from-r-with-kable",
+    "title": "Tables",
+    "section": "Generating Tables from R with kable()",
+    "text": "Generating Tables from R with kable()\nFor tables built from your own data, knitr::kable() produces a clean, nicely formatted table.\nDo: Run the code below in your own Quarto document.\n\ndata &lt;- data.frame(\n  Group = c(\"A\", \"B\", \"C\"),\n  Mean  = c(5.2, 6.8, 4.9),\n  SD    = c(1.1, 0.9, 1.3)\n)\n\ndata\n\n  Group Mean  SD\n1     A  5.2 1.1\n2     B  6.8 0.9\n3     C  4.9 1.3\n\n\nSee: The table gets printed as a raw R object, the data frame’s default output isn’t well suited for a report.\nPredict: before looking below, predict how wrapping this same data frame in knitr::kable() will change its appearance in the rendered document.\n\nlibrary(knitr)\nkable(data, caption = \"Summary statistics by group\")\n\n\nSummary statistics by group\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\n\nExplain: as predicted, kable() renders the data as a properly formatted table matching the surrounding document style, with a caption added via the caption argument, rather than R’s plain console-style printout.\nFor more control, such as striped rows, colored headers, and similar styling, the kableExtra package extends kable() output:\n\nlibrary(kableExtra)\n\nkable(data, caption = \"Summary statistics by group\") |&gt;\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\", \"condensed\"), full_width = FALSE) |&gt;\n  row_spec(0, bold = TRUE, color = \"white\", background = \"#4CAF50\")\n\n\nSummary statistics by group\n\n\nGroup\nMean\nSD\n\n\n\n\nA\n5.2\n1.1\n\n\nB\n6.8\n0.9\n\n\nC\n4.9\n1.3\n\n\n\n\n\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on tables\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\nCreate a data frame with two columns of your choice (at least 3 rows), then use kable() to display it with a caption.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nlibrary(knitr)\n\nscores &lt;- data.frame(\n  Student = c(\"Alex\", \"Jordan\", \"Sam\"),\n  Score   = c(88, 92, 79)\n)\n\nkable(scores, caption = \"Exam scores\")\n\n\nExam scores\n\n\nStudent\nScore\n\n\n\n\nAlex\n88\n\n\nJordan\n92\n\n\nSam\n79",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Tables"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/code_chunks.html",
+    "href": "tutorials/chunk_options/code_chunks.html",
+    "title": "Introduction to code chunks",
+    "section": "",
+    "text": "In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. Each chunk is delimited by a fenced syntax (triple backticks followed by a language label, such as {r}) telling Quarto which language engine to use. When you render the document, Quarto runs each chunk, captures its output, such as console text, tables and plots, and inserts that output directly into the document at the chunk’s position.\nChunks aren’t limited to R: a single document can mix chunks written in R, Python, Julia, or other supported languages.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Introduction to code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/code_chunks.html#introduction",
+    "href": "tutorials/chunk_options/code_chunks.html#introduction",
+    "title": "Introduction to code chunks",
+    "section": "",
+    "text": "In a Quarto document, code chunks are self-contained blocks of executable code embedded within the text. Each chunk is delimited by a fenced syntax (triple backticks followed by a language label, such as {r}) telling Quarto which language engine to use. When you render the document, Quarto runs each chunk, captures its output, such as console text, tables and plots, and inserts that output directly into the document at the chunk’s position.\nChunks aren’t limited to R: a single document can mix chunks written in R, Python, Julia, or other supported languages.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Introduction to code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/code_chunks.html#chunks-share-one-session",
+    "href": "tutorials/chunk_options/code_chunks.html#chunks-share-one-session",
+    "title": "Introduction to code chunks",
+    "section": "Chunks Share One Session",
+    "text": "Chunks Share One Session\nDo: Carefully look at the three chunks below that all use R in a different way.\nFirst chunk:\n\n# Create a small dataset\nset.seed(123)\ndata &lt;- data.frame(\n  group = rep(c(\"A\", \"B\"), each = 10),\n  score = c(rnorm(10, mean = 75, sd = 5),\n            rnorm(10, mean = 82, sd = 6))\n)\n\n# Display a quick summary of the data\nsummary(data$score)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  68.67   73.58   78.91   79.31   84.22   92.72 \n\n\nSecond chunk:\n\n# Use the dataset created in the previous chunk\nmodel &lt;- lm(score ~ group, data = data)\n\n# Display regression results\nsummary(model)\n\n\nCall:\nlm(formula = score ~ group, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-13.0514  -3.3335   0.1264   2.1877   9.4697 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   75.373      1.754  42.970  &lt; 2e-16 ***\ngroupB         7.879      2.481   3.176  0.00523 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 5.547 on 18 degrees of freedom\nMultiple R-squared:  0.3591,    Adjusted R-squared:  0.3235 \nF-statistic: 10.09 on 1 and 18 DF,  p-value: 0.005231\n\n\nThird chunk:\n\n\n\n\n\nDistribution of scores by group.\n\n\n\n\nSee: As you can see, an object created in the first chunk is still available by the time the second or third chunk runs. For example, data and model are both still available in the third chunk, even though neither was created here. All R chunks in a document run in the same, shared session, so objects created in one chunk persist and can be reused in any chunk that comes after it, much like running code line by line in a single R script.\nThis has a practical consequence: chunks are not independent snippets to be formatted individually. They are steps in one continuous computation, executed top to bottom.\n\n\n\n\n\n\nCommon Mistake\n\n\n\nBecause chunks share a session, code that runs fine when you execute chunks one at a time in RStudio can still fail on a full render if an earlier chunk was skipped, reordered, or edited since you last ran it. Rendering the whole document from a clean session, covered next, is the only way to be sure every chunk still works in the order it actually appears.\n\n\n\n\n\n\n\n\nPractice Exercise\n\n\n\nIn the editor below, write two short pieces of code to mimic how two chunks in the same document would behave.\n\nFirst, create a numeric vector called temperatures containing a few values of your choice.\nThen, on a new line, compute the mean of temperatures.\n\nRun both lines together and confirm that the second line can access the object created by the first.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n# \"Chunk\" 1: create an object\ntemperatures &lt;- c(18, 21, 19, 23, 17)\n\n# \"Chunk\" 2: reuse the object created above\nmean(temperatures)\n\n[1] 19.6\n\n\nRunning these two steps in sequence in the same session mirrors what happens across two chunks in a real Quarto document: temperatures is created in the first step and is still available in the second, without being redefined.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Introduction to code chunks"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html",
+    "href": "tutorials/chunk_options/chunk_options.html",
+    "title": "Chunk options",
+    "section": "",
+    "text": "Chunk options control how a chunk’s code is executed and how its results appear in the rendered document — whether the code is shown, whether messages are printed, how figures are sized, and more.\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on chunk options\n\n\nQuarto specifies chunk options as commented lines beginning with #|, directly below the chunk header, rather than inline in the curly braces:\n#| label: data-summary\n#| echo: TRUE\n#| message: FALSE",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html#introduction",
+    "href": "tutorials/chunk_options/chunk_options.html#introduction",
+    "title": "Chunk options",
+    "section": "",
+    "text": "Chunk options control how a chunk’s code is executed and how its results appear in the rendered document — whether the code is shown, whether messages are printed, how figures are sized, and more.\n\n\n\n\n\n\n\n\nExternal Resources\n\n\n\nQuarto documentation on chunk options\n\n\nQuarto specifies chunk options as commented lines beginning with #|, directly below the chunk header, rather than inline in the curly braces:\n#| label: data-summary\n#| echo: TRUE\n#| message: FALSE",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html#display-control-echo",
+    "href": "tutorials/chunk_options/chunk_options.html#display-control-echo",
+    "title": "Chunk options",
+    "section": "Display Control: echo",
+    "text": "Display Control: echo\nThe echo option controls whether the chunk’s source code itself appears in the rendered document; the result is always shown regardless.\nPredict: given the chunk below sets echo: FALSE, will the rendered document show the code, the result, both, or neither?\n#| echo: FALSE\nmean(c(5, 10, 15))\n\n\n[1] 10\n\n\nExplain: as shown above, only the result (10) appears; the mean(c(5, 10, 15)) code itself is hidden. results, warning, and message work the same way for their respective content: each independently controls whether that one type of output is shown, without affecting whether the code or other outputs appear.\n\n\n\n\n\n\nCommon Mistake\n\n\n\necho: FALSE and include: FALSE are easy to confuse. echo: FALSE hides only the code, while the result (text, table, or plot) still appears. include: FALSE hides both code and result while still running the chunk. Use include: FALSE for setup chunks (like loading packages) that should run silently, and echo: FALSE when you want the reader to see a result without the code that produced it.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html#execution-options",
+    "href": "tutorials/chunk_options/chunk_options.html#execution-options",
+    "title": "Chunk options",
+    "section": "Execution Options",
+    "text": "Execution Options\n\neval determines whether the chunk is executed at all (TRUE/FALSE).\nerror determines whether rendering continues if the chunk throws an error (TRUE) or stops (FALSE).\n\nA setup chunk that loads packages but shouldn’t appear in the final report combines these ideas:\n#| label: setup\n#| include: FALSE\n\nlibrary(ggplot2)\nlibrary(dplyr)",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html#figure-and-table-options",
+    "href": "tutorials/chunk_options/chunk_options.html#figure-and-table-options",
+    "title": "Chunk options",
+    "section": "Figure and Table Options",
+    "text": "Figure and Table Options\nWhen a chunk produces a plot or table, these options control its appearance:\n\nfig-cap adds a caption.\nfig-width / fig-height set the dimensions, in inches.\nfig-align sets the alignment (\"left\", \"center\", \"right\").\n\n#| label: visualization\n#| echo: FALSE\n#| fig-cap: \"Distribution of scores by group.\"",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "tutorials/chunk_options/chunk_options.html#caching",
+    "href": "tutorials/chunk_options/chunk_options.html#caching",
+    "title": "Chunk options",
+    "section": "Caching",
+    "text": "Caching\nSetting cache: TRUE saves a chunk’s results so they don’t need to be recomputed on every render, unless the code itself changes. This is useful for slow computations in large documents, but remember to clear the cache if the underlying data changes without the code changing.\n\n\n\n\n\n\nPractice Exercise\n\n\n\n\n Question Solution\n\n\nYou want a chunk’s plot to appear in the rendered report, captioned “Figure 1: Distribution of scores,” but without showing the ggplot code that created it. Which two chunk options do you need, and what would you set them to?\n\n\necho: FALSE to hide the code while keeping the plot, and fig-cap: \"Figure 1: Distribution of scores\" to add the caption.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Chunks and options",
+      "Chunk options"
+    ]
+  },
+  {
+    "objectID": "quizzes/quarto_markdown/index.html",
+    "href": "quizzes/quarto_markdown/index.html",
+    "title": "Knowledge Quiz: Quarto and Markdown",
+    "section": "",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich capability does Quarto have that plain Markdown lacks?\n\nAdding hyperlinks to a document.Applying bold or italic emphasis to text.Executing code and embedding the resulting output in a document.Formatting text with headings and lists.\n\n\n\n\nWrong: hyperlinks are supported by Markdown alone.\nWrong: emphasis (bold/italic) is a core Markdown feature.\nCorrect: Markdown has no computation layer; Quarto adds the ability to execute code and embed dynamic results.\nWrong: heading and list formatting is a core Markdown feature, available without Quarto.\n\n\n\n\n\nWhat is the primary purpose of the YAML header at the top of a Quarto document?\n\nTo execute the document’s R code.To write the narrative text that appears in the rendered document.To list the keyboard shortcuts available in RStudio.To define metadata and rendering options, such as the title and output format.\n\n\n\n\nWrong: R code is executed in code chunks in the document body, not in the YAML header.\nWrong: narrative text belongs in the Markdown body, not the YAML header.\nWrong: the YAML header has nothing to do with RStudio keyboard shortcuts.\nCorrect: the YAML header configures metadata (title, author) and rendering options (output format, table of contents, etc.).\n\n\n\n\n\nYou render an HTML report and want to email just the single .html file to your instructor as a homework submission. Which YAML option should you add to make sure all images and plots are embedded directly in that file, rather than referenced externally?\n\nnumber-sections: truetoc: truecode-fold: trueembed-resources: true\n\n\n\n\nWrong: number-sections adds section numbering; it has no effect on whether resources are embedded.\nWrong: toc adds a table of contents; it has no effect on whether resources are embedded.\nWrong: code-fold controls whether code is collapsible; it has no effect on whether resources are embedded.\nCorrect: embed-resources: true embeds all supporting files, such as images and plots, directly into a single, portable .html file.\n\n\n\n\n\nYou already have a Quarto report rendered as HTML and want to turn the same analysis into a revealjs slideshow. What is the most direct way to do this?\n\nChange the format field in the YAML header from html to revealjs.Rewrite the entire file from scratch using slide-specific syntax.Convert the file to PDF first, then to slides.Manually copy each paragraph into a separate PowerPoint file.\n\n\n\n\nCorrect: changing format to revealjs is the key step, though the content typically still needs to be reorganized into slide-sized chunks.\nWrong: presentations reuse the same YAML and Markdown structure as documents; a full rewrite isn’t necessary.\nWrong: there is no need to convert to PDF as an intermediate step.\nWrong: this bypasses Quarto entirely and isn’t how Quarto presentations are created.\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Quarto and Markdown",
+      "Knowledge Quiz"
+    ]
+  },
+  {
+    "objectID": "quizzes/quarto_markdown/questions/quarto_vs_markdown.html",
+    "href": "quizzes/quarto_markdown/questions/quarto_vs_markdown.html",
+    "title": "Question",
+    "section": "",
+    "text": "Which capability does Quarto have that plain Markdown lacks?\n\n\n\nFormatting text with headings and lists.\nExecuting code and embedding the resulting output in a document.\nAdding hyperlinks to a document.\nApplying bold or italic emphasis to text."
+  },
+  {
+    "objectID": "quizzes/quarto_markdown/questions/quarto_vs_markdown.html#answerlist",
+    "href": "quizzes/quarto_markdown/questions/quarto_vs_markdown.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "Formatting text with headings and lists.\nExecuting code and embedding the resulting output in a document.\nAdding hyperlinks to a document.\nApplying bold or italic emphasis to text."
+  },
+  {
+    "objectID": "quizzes/quarto_markdown/questions/quarto_vs_markdown.html#answerlist-1",
+    "href": "quizzes/quarto_markdown/questions/quarto_vs_markdown.html#answerlist-1",
     "title": "Question",
     "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect\nWrong: The “E” should be lowercase\nWrong: This is one of the possible methods\nWrong: This is one of the possible methods\nWrong: This is one of the possible methods\nWrong: These are all of the possible methods\nWrong: This is the default value for y\nWrong: This is an argument name\nWrong: This is an argument name\nWrong: This is an argument name\nWrong: There is a default value defined for use."
+    "text": "Answerlist\n\nWrong: heading and list formatting is a core Markdown feature, available without Quarto.\nCorrect: Markdown has no computation layer; Quarto adds the ability to execute code and embed dynamic results.\nWrong: hyperlinks are supported by Markdown alone.\nWrong: emphasis (bold/italic) is a core Markdown feature."
   },
   {
-    "objectID": "quizzes/second_tutorial/questions/arithmetic2.html",
-    "href": "quizzes/second_tutorial/questions/arithmetic2.html",
+    "objectID": "quizzes/quarto_markdown/questions/report_to_presentation.html",
+    "href": "quizzes/quarto_markdown/questions/report_to_presentation.html",
     "title": "Question",
     "section": "",
-    "text": "Question\nWhat is the value of \\(x\\) in the following equation?\n\\[\nx = \\frac{4 + 2}{4}\n\\]\nRound your answer to two decimal places.\n\n\nSolution\nAfter rounding, we get 1.50.\n\n\nMeta-information\nexname: Arithmetic extype: num exsolution: 1.50 extol: 0.01\n\n\n\n\n Back to top"
+    "text": "You already have a Quarto report rendered as HTML and want to turn the same analysis into a revealjs slideshow. What is the most direct way to do this?\n\n\n\nRewrite the entire file from scratch using slide-specific syntax.\nChange the format field in the YAML header from html to revealjs.\nConvert the file to PDF first, then to slides.\nManually copy each paragraph into a separate PowerPoint file."
   },
   {
-    "objectID": "quizzes/first_tutorial/questions/bad_question.html",
-    "href": "quizzes/first_tutorial/questions/bad_question.html",
+    "objectID": "quizzes/quarto_markdown/questions/report_to_presentation.html#answerlist",
+    "href": "quizzes/quarto_markdown/questions/report_to_presentation.html#answerlist",
     "title": "Question",
     "section": "",
-    "text": "Yes or No?\n\n\n\nYes\nYes\nYes\nYes\nYes\nNo\nNo\nNo\nNo\nNo"
+    "text": "Rewrite the entire file from scratch using slide-specific syntax.\nChange the format field in the YAML header from html to revealjs.\nConvert the file to PDF first, then to slides.\nManually copy each paragraph into a separate PowerPoint file."
   },
   {
-    "objectID": "quizzes/first_tutorial/questions/bad_question.html#answerlist",
-    "href": "quizzes/first_tutorial/questions/bad_question.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "Yes\nYes\nYes\nYes\nYes\nNo\nNo\nNo\nNo\nNo"
-  },
-  {
-    "objectID": "quizzes/first_tutorial/questions/bad_question.html#answerlist-1",
-    "href": "quizzes/first_tutorial/questions/bad_question.html#answerlist-1",
+    "objectID": "quizzes/quarto_markdown/questions/report_to_presentation.html#answerlist-1",
+    "href": "quizzes/quarto_markdown/questions/report_to_presentation.html#answerlist-1",
     "title": "Question",
     "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect\nWrong\nWrong\nWrong\nWrong\nWrong\nWrong\nWrong\nWrong\nWrong"
+    "text": "Answerlist\n\nWrong: presentations reuse the same YAML and Markdown structure as documents; a full rewrite isn’t necessary.\nCorrect: changing format to revealjs is the key step, though the content typically still needs to be reorganized into slide-sized chunks.\nWrong: there is no need to convert to PDF as an intermediate step.\nWrong: this bypasses Quarto entirely and isn’t how Quarto presentations are created."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/rounding_inline_results.html",
+    "href": "quizzes/writing_text/questions/rounding_inline_results.html",
+    "title": "Question",
+    "section": "",
+    "text": "You embed a regression coefficient directly in your text using the inline expression coef(model)[2], and it renders as “-5.344471517291”. What should you do to make this more suitable for a report?\n\n\n\nNothing; inline results should always show full computational precision.\nWrap the expression in round() or format() before embedding it, e.g. round(coef(model)[2], 2).\nReplace the inline code with a hard-coded number typed directly into the text.\nMove the entire sentence into a separate code chunk instead of using inline code."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/rounding_inline_results.html#answerlist",
+    "href": "quizzes/writing_text/questions/rounding_inline_results.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "Nothing; inline results should always show full computational precision.\nWrap the expression in round() or format() before embedding it, e.g. round(coef(model)[2], 2).\nReplace the inline code with a hard-coded number typed directly into the text.\nMove the entire sentence into a separate code chunk instead of using inline code."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/rounding_inline_results.html#answerlist-1",
+    "href": "quizzes/writing_text/questions/rounding_inline_results.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: unrounded results are usually far more precise than a report needs, and look out of place in a sentence.\nCorrect: rounding or formatting the expression keeps the inline result readable, while still updating automatically if the underlying data changes.\nWrong: hard-coding a number defeats the purpose of inline code, since the text would no longer update automatically.\nWrong: moving it to a separate chunk doesn’t address the rounding issue, and inline code is specifically meant for embedding results directly in text."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/broken_crossref.html",
+    "href": "quizzes/writing_text/questions/broken_crossref.html",
+    "title": "Question",
+    "section": "",
+    "text": "You reference a figure in your text with @fig-scores, but the figure’s actual chunk label is #| label: fig-score (missing the final “s”). What happens when you render the document?\n\n\n\nQuarto automatically matches the closest label and resolves the reference correctly.\nThe reference fails to resolve, and the rendered document shows the broken reference text or a placeholder instead of a number.\nRendering stops with a fatal error and no document is produced.\nThe figure is renumbered to match the reference automatically."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/broken_crossref.html#answerlist",
+    "href": "quizzes/writing_text/questions/broken_crossref.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "Quarto automatically matches the closest label and resolves the reference correctly.\nThe reference fails to resolve, and the rendered document shows the broken reference text or a placeholder instead of a number.\nRendering stops with a fatal error and no document is produced.\nThe figure is renumbered to match the reference automatically."
+  },
+  {
+    "objectID": "quizzes/writing_text/questions/broken_crossref.html#answerlist-1",
+    "href": "quizzes/writing_text/questions/broken_crossref.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: Quarto requires an exact label match; it does not guess or auto-correct mismatched labels.\nCorrect: a cross-reference only resolves if it exactly matches an existing label; otherwise it shows the raw reference text or a placeholder instead of a number.\nWrong: a mismatched cross-reference does not stop rendering entirely; the rest of the document still renders.\nWrong: labels are not automatically adjusted to match an incorrect reference."
+  },
+  {
+    "objectID": "quizzes/presenting_output/index.html",
+    "href": "quizzes/presenting_output/index.html",
+    "title": "Knowledge Quiz: Presenting Output",
+    "section": "",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhat does wrapping a data frame in knitr::kable() accomplish, compared to letting R print the data frame directly?\n\nIt renders the data as a properly formatted table matching the document’s style, rather than R’s plain console-style printout.It converts the data frame into a figure.It changes the underlying values stored in the data frame.It automatically rounds every numeric column to two decimal places.\n\n\n\n\nCorrect: kable() produces a clean, document-formatted table instead of R’s raw console output.\nWrong: kable() produces a table, not a figure.\nWrong: kable() only changes how the data is displayed, not the underlying values.\nWrong: kable() does not automatically round values; rounding must be done separately if desired.\n\n\n\n\n\nWhat do the fig-width and fig-height chunk options control?\n\nThe color palette used in the plot.The dimensions of the rendered figure, in inches.Whether the figure’s code is shown alongside the plot.The caption text shown below the figure.\n\n\n\n\nWrong: the color palette is determined by the plotting code itself, not by these chunk options.\nCorrect: fig-width and fig-height set the rendered figure’s dimensions, in inches.\nWrong: showing or hiding code is controlled by echo, not the figure sizing options.\nWrong: the caption is set with fig-cap, not fig-width/fig-height.\n\n\n\n\n\nYou include a local image in a page using a plain relative path, images/photo.jpg. The image displays correctly on that page, but breaks when the same image is included from a page in a different folder. What is the most reliable fix?\n\nMove the image next to every page that uses it.Rename the image file.Convert the image to a different file format.Use a project-relative path with a leading slash, e.g. /assets/images/photo.jpg.\n\n\n\n\nWrong: duplicating the image across folders works but isn’t a reliable or maintainable fix.\nWrong: renaming the file doesn’t address how the path is resolved.\nWrong: the file format has no bearing on how the path is resolved.\nCorrect: a leading / makes the path resolve from the project root regardless of which page includes it.\n\n\n\n\n\nWhy is it generally recommended to export figures as vector graphics (e.g., PDF or SVG) rather than a raster format (e.g., PNG or JPEG) for a report?\n\nVector graphics load faster in a web browser than raster images.Vector formats are the only ones supported by Quarto.Vector graphics render crisply at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.Vector formats always produce smaller file sizes than raster formats.\n\n\n\n\nWrong: load time depends on file size and complexity, not simply on vector versus raster format.\nWrong: Quarto supports both vector and raster image formats.\nCorrect: vector graphics scale without loss of quality, so they stay sharp when zoomed in or printed at a larger size, unlike raster images.\nWrong: file size depends on the image’s complexity, not simply on whether it’s vector or raster.\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Presenting output",
+      "Knowledge Quiz"
+    ]
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/image_path_resolution.html",
+    "href": "quizzes/presenting_output/questions/image_path_resolution.html",
+    "title": "Question",
+    "section": "",
+    "text": "You include a local image in a page using a plain relative path, images/photo.jpg. The image displays correctly on that page, but breaks when the same image is included from a page in a different folder. What is the most reliable fix?\n\n\n\nRename the image file.\nMove the image next to every page that uses it.\nUse a project-relative path with a leading slash, e.g. /assets/images/photo.jpg.\nConvert the image to a different file format."
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/image_path_resolution.html#answerlist",
+    "href": "quizzes/presenting_output/questions/image_path_resolution.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "Rename the image file.\nMove the image next to every page that uses it.\nUse a project-relative path with a leading slash, e.g. /assets/images/photo.jpg.\nConvert the image to a different file format."
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/image_path_resolution.html#answerlist-1",
+    "href": "quizzes/presenting_output/questions/image_path_resolution.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: renaming the file doesn’t address how the path is resolved.\nWrong: duplicating the image across folders works but isn’t a reliable or maintainable fix.\nCorrect: a leading / makes the path resolve from the project root regardless of which page includes it.\nWrong: the file format has no bearing on how the path is resolved."
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/vector_graphics.html",
+    "href": "quizzes/presenting_output/questions/vector_graphics.html",
+    "title": "Question",
+    "section": "",
+    "text": "Why is it generally recommended to export figures as vector graphics (e.g., PDF or SVG) rather than a raster format (e.g., PNG or JPEG) for a report?\n\n\n\nVector formats always produce smaller file sizes than raster formats.\nVector graphics render crisply at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.\nVector formats are the only ones supported by Quarto.\nVector graphics load faster in a web browser than raster images."
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/vector_graphics.html#answerlist",
+    "href": "quizzes/presenting_output/questions/vector_graphics.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "Vector formats always produce smaller file sizes than raster formats.\nVector graphics render crisply at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.\nVector formats are the only ones supported by Quarto.\nVector graphics load faster in a web browser than raster images."
+  },
+  {
+    "objectID": "quizzes/presenting_output/questions/vector_graphics.html#answerlist-1",
+    "href": "quizzes/presenting_output/questions/vector_graphics.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: file size depends on the image’s complexity, not simply on whether it’s vector or raster.\nCorrect: vector graphics scale without loss of quality, so they stay sharp when zoomed in or printed at a larger size, unlike raster images.\nWrong: Quarto supports both vector and raster image formats.\nWrong: load time depends on file size and complexity, not simply on vector versus raster format."
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/chunk_option_syntax.html",
+    "href": "quizzes/chunk_options/questions/chunk_option_syntax.html",
+    "title": "Question",
+    "section": "",
+    "text": "How does Quarto expect chunk options to be written inside an R chunk?\n\n\n\nAs arguments inside the curly braces, e.g. {r, echo=FALSE}.\nAs commented lines starting with #|, placed directly below the chunk header.\nAs a separate YAML file referenced by the chunk’s label.\nAs plain R function calls at the top of the chunk, e.g. set_echo(FALSE)."
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/chunk_option_syntax.html#answerlist",
+    "href": "quizzes/chunk_options/questions/chunk_option_syntax.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "As arguments inside the curly braces, e.g. {r, echo=FALSE}.\nAs commented lines starting with #|, placed directly below the chunk header.\nAs a separate YAML file referenced by the chunk’s label.\nAs plain R function calls at the top of the chunk, e.g. set_echo(FALSE)."
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/chunk_option_syntax.html#answerlist-1",
+    "href": "quizzes/chunk_options/questions/chunk_option_syntax.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: this is the older R Markdown syntax; Quarto uses a different convention.\nCorrect: Quarto chunk options are written as #| commented lines directly below the chunk header.\nWrong: chunk options are written inline in the chunk itself, not in a separate file.\nWrong: chunk options are not set through R function calls."
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/echo_vs_include.html",
+    "href": "quizzes/chunk_options/questions/echo_vs_include.html",
+    "title": "Question",
+    "section": "",
+    "text": "You want a chunk’s code to run, but neither the code nor its output should appear anywhere in the rendered document (for example, a setup chunk loading packages). Which option should you use?\n\n\n\necho: FALSE\neval: FALSE\ninclude: FALSE\nerror: FALSE"
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/echo_vs_include.html#answerlist",
+    "href": "quizzes/chunk_options/questions/echo_vs_include.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "echo: FALSE\neval: FALSE\ninclude: FALSE\nerror: FALSE"
+  },
+  {
+    "objectID": "quizzes/chunk_options/questions/echo_vs_include.html#answerlist-1",
+    "href": "quizzes/chunk_options/questions/echo_vs_include.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nWrong: echo: FALSE hides only the code; the result would still appear.\nWrong: eval: FALSE prevents the chunk from running at all, so packages would not actually be loaded.\nCorrect: include: FALSE runs the chunk but hides both the code and any output.\nWrong: error: FALSE controls whether rendering stops on an error; it does not hide code or output."
   }
 ]

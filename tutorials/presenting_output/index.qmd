@@ -1,4 +1,5 @@
 ---
 title: "Tables and Figures"
 ---
-In this tutorial, you will learn about the various options for creating neat tables and figures in Quarto documents. 
+In this tutorial, you will learn about the various options for creating neat tables and figures in Quarto documents,
+covering both Markdown-based and R-generated approaches.

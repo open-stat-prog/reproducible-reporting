@@ -1,119 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/first_tutorial/questions/default_arguments1.html</loc>
-    <lastmod>2025-10-14T08:43:32.510Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/chunk_options/questions/duplicate_labels.html</loc>
+    <lastmod>2026-09-02T15:51:20.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/first_tutorial/index.html</loc>
-    <lastmod>2025-10-14T17:55:39.712Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/chunk_options/questions/session_persistence.html</loc>
+    <lastmod>2026-09-02T15:51:15.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/second_tutorial/questions/logical.html</loc>
-    <lastmod>2025-10-14T08:43:32.509Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/chunk_options/index.html</loc>
+    <lastmod>2026-09-02T15:51:34.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/second_tutorial/index.html</loc>
-    <lastmod>2025-10-14T17:56:19.974Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/presenting_output/questions/figure_sizing.html</loc>
+    <lastmod>2026-09-03T15:09:02.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/chunk_options.html</loc>
-    <lastmod>2025-10-20T09:43:03.045Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/presenting_output/questions/kable_purpose.html</loc>
+    <lastmod>2026-09-03T15:08:58.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/code_chunks.html</loc>
-    <lastmod>2025-10-20T08:22:33.121Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/writing_text/questions/section_numbering.html</loc>
+    <lastmod>2026-09-03T13:21:25.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/presenting_output/tables.html</loc>
-    <lastmod>2025-10-20T12:47:16.587Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/writing_text/questions/bold_italic_syntax.html</loc>
+    <lastmod>2026-09-03T13:21:21.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/presenting_output/plots.html</loc>
-    <lastmod>2025-10-20T13:04:30.075Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/writing_text/index.html</loc>
+    <lastmod>2026-09-03T13:21:41.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/text.html</loc>
-    <lastmod>2025-10-20T10:24:04.935Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/quarto_markdown/questions/self_contained_html.html</loc>
+    <lastmod>2026-09-02T14:35:23.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/inline_code.html</loc>
-    <lastmod>2025-10-20T12:08:03.540Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/differences.html</loc>
-    <lastmod>2025-10-19T12:00:30.077Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/index.html</loc>
-    <lastmod>2025-10-19T16:57:19.958Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/topic2.html</loc>
-    <lastmod>2025-10-14T08:43:32.511Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/in_progress.html</loc>
-    <lastmod>2025-10-14T08:43:32.504Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/index.html</loc>
-    <lastmod>2025-10-20T13:04:43.525Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/conclusion.html</loc>
-    <lastmod>2025-10-20T13:06:55.052Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/topic3.html</loc>
-    <lastmod>2025-10-14T08:43:32.512Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/topic1.html</loc>
-    <lastmod>2025-10-14T08:43:32.510Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/documents.html</loc>
-    <lastmod>2025-10-19T17:25:43.012Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/purpose.html</loc>
-    <lastmod>2025-10-19T12:55:56.105Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/index.html</loc>
-    <lastmod>2025-10-20T09:46:14.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/structure.html</loc>
-    <lastmod>2025-10-20T11:40:37.432Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/presenting_output/index.html</loc>
-    <lastmod>2025-10-20T12:29:53.632Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/create_chunks.html</loc>
-    <lastmod>2025-10-20T09:23:19.916Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/index.html</loc>
-    <lastmod>2025-10-20T08:12:08.858Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/quarto_markdown/questions/yaml_purpose.html</loc>
+    <lastmod>2026-09-02T14:35:19.000Z</lastmod>
   </url>
   <url>
     <loc>https://www.openstatprog.com/reproducible-reporting/assets/docs/presentation_example.html</loc>
     <lastmod>2025-10-19T13:44:00.139Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/second_tutorial/questions/default_arguments2.html</loc>
-    <lastmod>2025-10-14T08:43:32.509Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/index.html</loc>
+    <lastmod>2026-09-03T11:03:57.104Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/second_tutorial/questions/arithmetic2.html</loc>
-    <lastmod>2025-10-14T08:43:32.508Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/create_chunks.html</loc>
+    <lastmod>2026-09-03T12:18:47.199Z</lastmod>
   </url>
   <url>
-    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/first_tutorial/questions/bad_question.html</loc>
-    <lastmod>2025-10-14T08:43:32.510Z</lastmod>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/presenting_output/index.html</loc>
+    <lastmod>2026-09-03T15:08:47.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/structure.html</loc>
+    <lastmod>2026-09-03T14:28:46.242Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/index.html</loc>
+    <lastmod>2026-09-03T13:21:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/purpose.html</loc>
+    <lastmod>2026-09-02T14:54:32.913Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/presentations.html</loc>
+    <lastmod>2026-09-02T15:31:20.645Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/index.html</loc>
+    <lastmod>2026-09-02T14:34:49.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/conclusion.html</loc>
+    <lastmod>2026-09-03T15:41:01.408Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/index.html</loc>
+    <lastmod>2026-09-02T14:35:36.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/in_progress.html</loc>
+    <lastmod>2025-10-14T08:43:32.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/documents.html</loc>
+    <lastmod>2026-09-02T15:17:21.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/quarto_markdown/differences.html</loc>
+    <lastmod>2026-09-02T15:11:46.345Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/inline_code.html</loc>
+    <lastmod>2026-09-03T15:02:26.936Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/writing_text/text.html</loc>
+    <lastmod>2026-09-03T13:59:20.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/presenting_output/plots.html</loc>
+    <lastmod>2026-09-03T15:37:34.574Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/presenting_output/tables.html</loc>
+    <lastmod>2026-09-03T15:27:36.013Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/code_chunks.html</loc>
+    <lastmod>2026-09-03T12:10:26.523Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/tutorials/chunk_options/chunk_options.html</loc>
+    <lastmod>2026-09-03T12:46:12.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/quarto_markdown/index.html</loc>
+    <lastmod>2026-09-02T14:35:31.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/quarto_markdown/questions/quarto_vs_markdown.html</loc>
+    <lastmod>2026-09-02T14:35:14.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/quarto_markdown/questions/report_to_presentation.html</loc>
+    <lastmod>2026-09-02T14:35:28.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/writing_text/questions/rounding_inline_results.html</loc>
+    <lastmod>2026-09-03T13:52:02.170Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/writing_text/questions/broken_crossref.html</loc>
+    <lastmod>2026-09-03T13:21:31.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/presenting_output/index.html</loc>
+    <lastmod>2026-09-03T15:09:17.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/presenting_output/questions/image_path_resolution.html</loc>
+    <lastmod>2026-09-03T15:09:07.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/presenting_output/questions/vector_graphics.html</loc>
+    <lastmod>2026-09-03T15:09:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/chunk_options/questions/chunk_option_syntax.html</loc>
+    <lastmod>2026-09-02T15:51:29.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openstatprog.com/reproducible-reporting/quizzes/chunk_options/questions/echo_vs_include.html</loc>
+    <lastmod>2026-09-02T15:51:25.000Z</lastmod>
   </url>
 </urlset>

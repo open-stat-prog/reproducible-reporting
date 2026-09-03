@@ -1,0 +1,28 @@
+Question
+========
+Why is it generally recommended to export figures as vector graphics (e.g., PDF or SVG) rather than a raster format
+(e.g., PNG or JPEG) for a report?
+
+Answerlist
+----------
+* Vector formats always produce smaller file sizes than raster formats.
+* Vector graphics render crisply at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.
+* Vector formats are the only ones supported by Quarto.
+* Vector graphics load faster in a web browser than raster images.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: file size depends on the image's complexity, not simply on whether it's vector or raster.
+* Correct: vector graphics scale without loss of quality, so they stay sharp when zoomed in or printed at a larger size, unlike raster images.
+* Wrong: Quarto supports both vector and raster image formats.
+* Wrong: load time depends on file size and complexity, not simply on vector versus raster format.
+
+Meta-information
+================
+exname: Vector versus Raster Graphics
+extype: schoice
+exsolution: 0100
+exshuffle: 4

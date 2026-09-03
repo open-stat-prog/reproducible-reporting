@@ -2,8 +2,9 @@
 title: "Quarto and Markdown"
 ---
 
-This tutorial introduces Quarto and Markdown. 
+This tutorial introduces Quarto and Markdown.
 
--   It starts with explaining for what purposes Quarto and Markdown can be used. 
--   Next, it focuses more explicitly on the differences between Quarto and Markdown.
--   Finally, different documents that can be created with Quarto are introduced. Here, concrete examples of written documents and presentations are given.
+-   It starts by explaining what Quarto and Markdown are for.
+-   Next, it focuses on the differences between Quarto and Markdown.
+-   Finally, it covers how to create documents and presentations with Quarto, including how to keep your rendered files
+    self-contained and easy to share.

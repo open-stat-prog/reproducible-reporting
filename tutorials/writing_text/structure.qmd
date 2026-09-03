@@ -1,10 +1,10 @@
 ---
 title: Adding structure
-bibliography: ["references.bib"]
 ---
 
-
-A well-structured Quarto document helps readers follow your analysis and allows Quarto to automatically generate tables of contents, numbered sections, and cross-references. You can add structure using **headings**, **numbered elements** (sections, figures, and equations), and **citations** or **cross-references**.
+A well-structured Quarto document helps readers follow your analysis and lets Quarto automatically generate a table of
+contents, numbered sections, and cross-references. You add structure with **headings**, **numbered elements** (figures,
+tables, equations), and **citations**.
 
 ::: {.column-margin}
 
@@ -14,9 +14,9 @@ For more detail, see for example [HTML basics](https://quarto.org/docs/output-fo
 
 :::
 
-## Headings and Subheadings
+## Headings and Section Numbering
 
-Headings in Quarto follow the standard Markdown syntax using one or more hash (`#`) symbols. A single `#` creates a top-level heading, `##` creates a subheading, and so on.
+**Do:** Run the following in your own quarto document. 
 
 ```markdown
 # Main Title
@@ -26,18 +26,11 @@ Headings in Quarto follow the standard Markdown syntax using one or more hash (`
 ### Subsection Title
 ```
 
-Which would result in: 
+**See:** Quarto interprets these heading levels to build a document hierarchy, reflected in the output and, if
+enabled, in a table of contents (`toc: true` in the YAML header).
 
-# Main Title
-
-## Section Title
-
-### Subsection Title
-
-
-Quarto automatically interprets these heading levels to build a **document hierarchy**. This structure is reflected in the output and (if enabled) in a **table of contents** (`toc: true` in the YAML front matter).
-
-For example, adding the following to your YAML header will generate an automatic table of contents based on your headings:
+**Predict:** if you also add `number-sections: true` to the YAML header, predict how the three headings above would be
+numbered.
 
 ```yaml
 ---
@@ -47,30 +40,28 @@ number-sections: true
 ---
 ```
 
-When `number-sections: true` is set, all headings are automatically numbered (`1`, `1.1`, `1.2`, etc.), and cross-references can be created for each section.
+**Explain:** as predicted, headings are numbered according to their hierarchy: `1` for the top-level heading, `1.1` for
+the section beneath it, and `1.1.1` for the subsection beneath that. This numbering updates automatically as you add,
+remove, or reorder headings, and each numbered heading can then be cross-referenced elsewhere in the text.
 
+## Numbering Figures and Equations
 
-### Numbering Figures and Equations
-
-Quarto automatically numbers **figures**, **tables**, and **equations** that have captions. This numbering enables you to refer to them consistently throughout your text.
-
-To number a **figure**, simply add a caption using the `fig-cap` option:
+Quarto also numbers figures, tables, and equations that have a **label**. To number a figure, add a `label` starting
+with `fig-` and a caption via `fig-cap`:
 
 ````markdown
 #| label: fig-distribution
 #| fig-cap: "Distribution of scores by group."
-library(ggplot)
 
 ggplot(data, aes(x = group, y = score, fill = group)) +
   geom_boxplot()
 ````
 
-See below how this caption will appear in addition to the figure:
-
 ```{r}
 #| label: fig-distribution
 #| fig-cap: "Distribution of scores by group."
 #| echo: FALSE
+#| message: FALSE
 
 library(ggplot2)
 
@@ -81,37 +72,40 @@ data <- data.frame(
             rnorm(10, mean = 82, sd = 6))
 )
 
-
 ggplot(data, aes(x = group, y = score, fill = group)) +
   geom_boxplot()
 ```
 
-To reference it in text, use the label you assigned:
-`See @fig-distribution for an overview of the score distributions.` would result in: See @fig-distribution for an overview of the score distributions.
+To reference it in text, use the label: `See @fig-distribution for an overview.` renders as: See @fig-distribution for
+an overview.
 
-For **equations**, numbering occurs when you assign a label inside the LaTeX math block:
+Equations are numbered the same way, by adding a label after the closing `$$`:
 
 ```markdown
 $$
-E = mc^2 \quad
+E = mc^2
 $$ {#eq-myequation}
 ```
 
 $$
-E = mc^2 \quad 
+E = mc^2
 $$ {#eq-myequation}
 
-You can then refer to this equation as `@eq-myequation` in your text, which will render as “(1)” or “Equation 1” depending on the format. Here it results in: @eq-myequation. 
+Referencing it with `@eq-myequation` then renders as: @eq-myequation.
 
+::: {.callout-note}
+## Common Mistake
 
-## Numbering Sections
-
-When you include `number-sections: true` in your YAML front matter, Quarto automatically numbers all top-level and nested headings. This is especially useful in reports, theses, or papers where hierarchical organization matters. The numbering adjusts dynamically as you add or rearrange content, ensuring consistent structure throughout the document.
-
+A cross-reference only works if its target actually has a matching label. If you reference `@fig-distribution` but the
+figure's label is misspelled, missing, or doesn't start with the required prefix (`fig-`, `tbl-`, `eq-`), Quarto won't
+resolve the link. Instead of a number like "Figure 1," the rendered document will show the broken reference text as-is,
+or a `?@...` placeholder. If a cross-reference isn't rendering as a number, check the label first.
+:::
 
 ## Adding References and Citations
 
-Quarto uses **Pandoc’s citation system**, allowing you to cite sources from a bibliography file. In your YAML header, include the path to a `.bib` file (in BibTeX format):
+Quarto uses Pandoc's citation system to cite sources from a bibliography file. In your YAML header, include the path to
+a `.bib` file:
 
 ```yaml
 ---
@@ -121,15 +115,12 @@ bibliography: references.bib
 ```
 
 You can then cite works in-text using the `@` symbol and the citation key from your `.bib` file:
-`As shown in @smith2021, the results confirm the hypothesis.`
 
-To include a **list of references** (a bibliography) at the end of your document, simply add a `# References` heading — Quarto will automatically populate it during rendering.
-
-Example of inline citations:
-
-* `@smith2021` →  @smith2021
+* `@smith2021` → @smith2021
 * `[@smith2021; @doe2022]` → [@smith2021; @doe2022]
 
+To include a bibliography at the end of your document, add a `# References` heading — Quarto populates it automatically
+during rendering.
 
 ::: {.column-margin}
 
@@ -139,6 +130,21 @@ For more detail, see [Quarto citations](https://quarto.org/docs/authoring/citati
 
 :::
 
+::: practice
+
+## Practice Exercise
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+You created a figure with `#| label: fig-boxplot`. What syntax would you use to reference it in your text?
+
+## {{< var tab_title.solution >}}
+
+`@fig-boxplot`. For example: See `@fig-boxplot` for the distribution of scores.
+
+::::
+
+:::
+
 # References
-
-

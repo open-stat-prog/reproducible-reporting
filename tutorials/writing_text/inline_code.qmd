@@ -2,96 +2,96 @@
 title: "Inline code and results"
 ---
 
-In Quarto, **inline code** allows you to execute R expressions (or code in other supported languages) directly within your narrative text. This makes it possible to **embed calculated results dynamically** into your report, so your text always reflects the latest data or computations. Inline code is particularly useful for reporting **summary statistics**, **model results**, or **dates** without manually updating the text.
-
+Inline code lets you execute an R expression directly within your narrative text, so a report always reflects the
+current data or computation, without manually copying results in.
 
 ## Syntax for Inline Code
 
-Inline R code in Quarto is enclosed with **single backticks** and starts with the language identifier, followed by the expression:
+Inline code is written with a single pair of backticks, starting with the language identifier:
+
+**Do:** Run this code inline where you are writing text in your own Quarto document.
 
 ```{r}
-#| eval: false 
+#| eval: false
 `r 2 + 2`
 ```
 
-Including such a statement in text directly runs the code and prints the result: `r 2 + 2`.
+**See:** including this in a sentence runs the code and prints only the result: `r 2 + 2`.
 
-Similarly, you can embed variables defined in previous code chunks:
-
+**Predict:** now suppose a previous chunk already created an object, `mean_score <- mean(c(5, 10, 15))`. Before looking
+below, predict what the following inline code will show once rendered: the code itself, or the number it evaluates to?
 
 ```{r}
-mean_score <- mean(c(5, 10, 15))
-mean_score
-```
-
-If we now include in a sentence 
-```{r}
-#| eval: false 
+#| eval: false
 `r mean_score`
 ```
 
-This immediately prints the value of `mean_score`: The average score is `r mean_score`.
+```{r}
+#| include: false
+mean_score <- mean(c(5, 10, 15))
+```
 
-
-Key points:  
-- The expression inside the inline code is evaluated **at render time**.  
-- You can use any valid R expression, including functions, arithmetic, or objects created in previous chunks.  
-- Inline code only outputs the **result**, not the code itself.
-
+**Explain:** as predicted, only the result appears: "The average score is `r mean_score`." The expression is evaluated
+at render time, and only its result is shown; you can use any valid R expression, including objects created in earlier
+chunks.
 
 ## Using Inline Code in Text
 
-Inline code can be used in:
-
-1. **Numerical results**:
+Inline code works well for numbers that should always match the current analysis. For example, the syntax
 
 ```{r}
-#| eval: false 
-The dataset contains `r nrow(mtcars)` rows and `r ncol(mtcars)` columns.
-```
-
-The dataset contains `r nrow(mtcars)` rows and `r ncol(mtcars)` columns.
-
-
-2. **Statistical summaries**:
-
-```{r}
-#| eval: false 
+#| eval: false
 The mean mpg is `r round(mean(mtcars$mpg), 1)`.
 ```
 
-The mean mpg is `r round(mean(mtcars$mpg), 1)`.
-
-
-3. **Dynamic dates or times**:
+renders as: The mean mpg is `r round(mean(mtcars$mpg), 1)`. The same approach works for model results:
 
 ```{r}
-#| eval: false 
-Report generated on `r Sys.Date()`.
+#| eval: false
+The regression slope is `r round(coef(lm(mpg ~ wt, data = mtcars))[2], 2)`.
 ```
 
-Report generated on `r Sys.Date()`.
+renders as: The regression slope is `r round(coef(lm(mpg ~ wt, data = mtcars))[2], 2)`.
 
+::: {.callout-note}
+## Common Mistake
 
-4. **Model results**:
+Raw inline results are often much longer or messier than you'd want in a sentence: an unrounded slope like
+`-5.344471517...` looks out of place in a report. Always round (`round()`) or format (`format()`) numeric results
+before embedding them, rather than leaving the raw computed value to print as-is.
+:::
+
+::: practice
+
+## Practice Exercise
+
+Create a numeric vector called `scores` with a few values of your choice, then compute its mean rounded to 1 decimal
+place, the way you would for an inline result.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+
+```
+
+## {{< var tab_title.solution >}}
 
 ```{r}
-#| eval: false 
-The regression slope is `r coef(lm(mpg ~ wt, data = mtcars))[2]`.
+scores <- c(72.456, 88.219, 91.038, 65.774)
+round(mean(scores), 1)
 ```
 
-The regression slope is `r coef(lm(mpg ~ wt, data = mtcars))[2]`.
+If this were an inline expression in a report, e.g.
 
+```{r}
+#| eval: false
+The average score is `r round(mean(scores), 1)`.
+```
 
-These ensure your narrative text always reflects the **current state of your analysis**.
+it would render as: "The average score is 79.4." Rounding keeps the embedded result readable in a sentence, rather than
+printing several unnecessary decimal places.
 
+::::
 
-## Best Practices
-
-* **Keep expressions simple**: Inline code should be concise; longer computations belong in code chunks.
-* **Name variables clearly**: Use descriptive names in code chunks so inline references are readable.
-* **Round or format results**: Inline outputs may need rounding (`round()`) or formatting (`format()`) for clarity.
-
-
-Inline code is a key feature for **reproducible reporting**, as it reduces manual copying of results and ensures that text and code remain **synchronized**. By combining inline expressions with code chunks, you can create documents that automatically update whenever your data or analysis changes.
-
+:::

@@ -1,0 +1,27 @@
+Question
+========
+Which Markdown syntax renders a word as both bold and italicized?
+
+Answerlist
+----------
+* `*word*`
+* `**word**`
+* `***word***`
+* `~~word~~`
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: a single pair of asterisks renders italics only.
+* Wrong: two pairs of asterisks render bold only.
+* Correct: three asterisks combine both bold and italic emphasis.
+* Wrong: double tildes render strikethrough, not bold or italic emphasis.
+
+Meta-information
+================
+exname: Combined Bold and Italic Syntax
+extype: schoice
+exsolution: 0010
+exshuffle: 4

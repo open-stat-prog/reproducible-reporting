@@ -1,0 +1,27 @@
+Question
+========
+What is the primary purpose of the YAML header at the top of a Quarto document?
+
+Answerlist
+----------
+* To write the narrative text that appears in the rendered document.
+* To define metadata and rendering options, such as the title and output format.
+* To execute the document's R code.
+* To list the keyboard shortcuts available in RStudio.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: narrative text belongs in the Markdown body, not the YAML header.
+* Correct: the YAML header configures metadata (title, author) and rendering options (output format, table of contents, etc.).
+* Wrong: R code is executed in code chunks in the document body, not in the YAML header.
+* Wrong: the YAML header has nothing to do with RStudio keyboard shortcuts.
+
+Meta-information
+================
+exname: Purpose of the YAML Header
+extype: schoice
+exsolution: 0100
+exshuffle: 4

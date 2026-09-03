@@ -1,0 +1,28 @@
+Question
+========
+A document has a top-level heading (`#`), containing a section (`##`), which itself contains a subsection (`###`).
+With `number-sections: true` set in the YAML header, how would the subsection be numbered?
+
+Answerlist
+----------
+* `1`
+* `1.1`
+* `1.1.1`
+* Subsections are not numbered, only top-level headings are.
+
+Solution
+========
+
+Answerlist
+----------
+* Wrong: `1` would be the number given to the top-level heading, not the subsection.
+* Wrong: `1.1` would be the number given to the section, one level up from the subsection.
+* Correct: numbering reflects the full heading hierarchy, so the subsection nested two levels deep is numbered `1.1.1`.
+* Wrong: `number-sections: true` numbers all heading levels, not just the top level.
+
+Meta-information
+================
+exname: Section Numbering
+extype: schoice
+exsolution: 0010
+exshuffle: 4

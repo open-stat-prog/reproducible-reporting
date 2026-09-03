@@ -4,20 +4,17 @@ title: "Chunk options"
 
 ## Introduction
 
-Code chunks in Quarto can be customized using chunk options, which control how the code is executed and how its results are displayed in the final document. Options can modify nearly every aspect of a chunk’s behavior — for example, whether the code is shown, whether messages are printed, how figures are formatted, or whether results are cached.
-
-Chunk options give authors control over presentation, reproducibility, and efficiency. They allow you to separate background computation from displayed content, keep reports readable, and ensure that code runs reliably across environments. By thoughtfully combining these options, you can create documents that balance transparency (showing code and results) with polish (suppressing unnecessary output).
+Chunk options control how a chunk's code is executed and how its results appear in the rendered document — whether the
+code is shown, whether messages are printed, how figures are sized, and more.
 
 ::: {.column-margin}
-
-:::: resource
+::: resource
 [Quarto documentation on chunk options](https://quarto.org/docs/computations/r.html#chunk-options)
-::::
-
+:::
 :::
 
-
-Quarto uses a **YAML-style syntax** for specifying chunk options, which is cleaner and more consistent than the inline syntax used in traditional R Markdown. This means that instead of placing all options inside the curly braces next to `{r}`, you write them **as commented lines beginning with `#|`** inside the chunk, directly below the chunk header. For example:
+Quarto specifies chunk options as commented lines beginning with `#|`, directly below the chunk header, rather than
+inline in the curly braces:
 
 ````markdown
 #| label: data-summary
@@ -25,44 +22,43 @@ Quarto uses a **YAML-style syntax** for specifying chunk options, which is clean
 #| message: FALSE
 ````
 
-Here:
+## Display Control: `echo`
 
-* `label:` assigns a unique name to the chunk.
-* `echo:` determines whether the code appears in the rendered document.
-* `message:` controls whether R messages are shown.
+The `echo` option controls whether the chunk's source code itself appears in the rendered document; the result is
+always shown regardless. 
 
-This “Quarto way” of specifying options improves readability, makes long lists of options easier to manage, and ensures compatibility across different programming languages supported by Quarto (not just R).
-
-### Display Control Options
-
-Display-related options determine what content from a chunk appears in the final rendered document.
-
-* **`echo`** controls whether the source code itself is shown (`TRUE` shows it, `FALSE` hides it).
-* **`results`** specifies how the printed results appear (e.g., `"markup"` for normal output or `"hide"` to suppress).
-* **`warning`** and **`message`** control whether warnings or messages are displayed.
-
-For instance, to show only the result of a calculation but not the underlying code, you could write in your R chunk:
+**Predict:** given the chunk below sets `echo: FALSE`, will the rendered document show the
+code, the result, both, or neither?
 
 ````markdown
 #| echo: FALSE
 mean(c(5, 10, 15))
 ````
 
-Which would only print the output when being rendered in a Quarto document:
 ```{r}
 #| echo: FALSE
 mean(c(5, 10, 15))
 ```
 
-### Execution Options
+**Explain:** as shown above, only the result (10) appears; the `mean(c(5, 10, 15))` code itself is hidden. `results`,
+`warning`, and `message` work the same way for their respective content: each independently controls whether that one
+type of output is shown, without affecting whether the code or other outputs appear.
 
-Execution options govern whether and how the code runs when Quarto renders the document.
+::: {.callout-note}
+## Common Mistake
 
-* **`eval`** determines if the chunk should be executed (`TRUE` or `FALSE`).
-* **`include`** controls whether both code and results appear in the final output; `include: FALSE` runs the code but hides all output.
-* **`error`** specifies whether rendering should continue if an error occurs (`TRUE`) or stop (`FALSE`).
+`echo: FALSE` and `include: FALSE` are easy to confuse. `echo: FALSE` hides only the code, while the result (text,
+table, or plot) still appears. `include: FALSE` hides both code and result while still running the chunk.
+Use `include: FALSE` for setup chunks (like loading packages) that should run silently, and `echo: FALSE` when you want
+the reader to see a result without the code that produced it.
+:::
 
-For example, a setup chunk that loads packages but doesn’t need to appear in the final report could look like this:
+## Execution Options
+
+* **`eval`** determines whether the chunk is executed at all (`TRUE`/`FALSE`).
+* **`error`** determines whether rendering continues if the chunk throws an error (`TRUE`) or stops (`FALSE`).
+
+A setup chunk that loads packages but shouldn't appear in the final report combines these ideas:
 
 ````markdown
 #| label: setup
@@ -72,15 +68,13 @@ library(ggplot2)
 library(dplyr)
 ````
 
-### Figure and Table Options
+## Figure and Table Options
 
-When your chunk generates plots or tables, figure-related options control the formatting and appearance of these outputs.
+When a chunk produces a plot or table, these options control its appearance:
 
-* **`fig-cap`** adds a caption to a plot.
-* **`fig-width`** and **`fig-height`** set the dimensions (in inches).
-* **`fig-align`** specifies the alignment (`"left"`, `"center"`, or `"right"`).
-
-For example:
+* **`fig-cap`** adds a caption.
+* **`fig-width`** / **`fig-height`** set the dimensions, in inches.
+* **`fig-align`** sets the alignment (`"left"`, `"center"`, `"right"`).
 
 ````markdown
 #| label: visualization
@@ -88,14 +82,27 @@ For example:
 #| fig-cap: "Distribution of scores by group."
 ````
 
-### Caching and Performance Options
+## Caching
 
-For time-consuming computations, Quarto allows you to cache results so they don’t have to be rerun each time you render the document.
+Setting **`cache: TRUE`** saves a chunk's results so they don't need to be recomputed on every render, unless the code
+itself changes. This is useful for slow computations in large documents, but remember to clear the cache if the
+underlying data changes without the code changing.
 
-* **`cache: TRUE`** saves the chunk’s results; subsequent renders reuse them unless the code changes.
+::: practice
 
-Caching helps speed up rendering in large analytical documents, though it’s important to refresh the cache if the data or upstream results change.
+## Practice Exercise
 
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
 
+You want a chunk's plot to appear in the rendered report, captioned "Figure 1: Distribution of scores," but without
+showing the ggplot code that created it. Which two chunk options do you need, and what would you set them to?
 
+## {{< var tab_title.solution >}}
 
+`echo: FALSE` to hide the code while keeping the plot, and `fig-cap: "Figure 1: Distribution of scores"` to add the
+caption.
+
+::::
+
+:::

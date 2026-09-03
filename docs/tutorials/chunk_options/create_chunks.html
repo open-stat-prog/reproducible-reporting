@@ -72,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-resource.callout {
+  border-left-color: orange;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -98,6 +98,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -109,19 +122,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -218,7 +218,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/quarto_markdown/documents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Creating different documents with Quarto</span></a>
+ <span class="menu-text">Creating documents with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/quarto_markdown/presentations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating presentations with Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/quarto_markdown/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -250,6 +262,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Chunk options</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/chunk_options/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -279,6 +297,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Inline code and results</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/writing_text/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -302,6 +326,12 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
  <span class="menu-text">Figures</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/presenting_output/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -320,9 +350,9 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quarto-visual-mode-in-r-studio" id="toc-quarto-visual-mode-in-r-studio" class="nav-link active" data-scroll-target="#quarto-visual-mode-in-r-studio">Quarto visual mode in R studio</a></li>
-  <li><a href="#quarto-source-mode-in-r-studio" id="toc-quarto-source-mode-in-r-studio" class="nav-link" data-scroll-target="#quarto-source-mode-in-r-studio">Quarto source mode in R studio</a></li>
-  <li><a href="#labelling-chunks" id="toc-labelling-chunks" class="nav-link" data-scroll-target="#labelling-chunks">Labelling chunks</a></li>
+  <li><a href="#creating-a-chunk" id="toc-creating-a-chunk" class="nav-link active" data-scroll-target="#creating-a-chunk">Creating a Chunk</a></li>
+  <li><a href="#rendering-regularly" id="toc-rendering-regularly" class="nav-link" data-scroll-target="#rendering-regularly">Rendering Regularly</a></li>
+  <li><a href="#labelling-chunks" id="toc-labelling-chunks" class="nav-link" data-scroll-target="#labelling-chunks">Labelling Chunks</a></li>
   </ul>
 </nav>
     </div>
@@ -348,35 +378,69 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </header>
 
 
-<section id="quarto-visual-mode-in-r-studio" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-visual-mode-in-r-studio">Quarto visual mode in R studio</h2>
-<p>When working with Quarto documents, you can switch between a “Source”and a “Visual” mode in R studio. In ths Visual mode, you can click on “Insert” –&gt; “Executable Cell” –&gt; “R”. Here you also see the various other programming languages listed that are supported by Quarto.</p>
+<section id="creating-a-chunk" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-chunk">Creating a Chunk</h2>
+<p>Quarto documents in RStudio can be edited in two modes. In <strong>Visual mode</strong>, you insert a chunk via <strong>Insert → Executable Cell → [language]</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../assets/images/GUI_chunks.png" class="img-fluid figure-img"></p>
 <figcaption>Creating chunks through the Visual mode</figcaption>
 </figure>
 </div>
-<p>When creating a chunk like this, a block appears in your .qmd file where you can directly type your R code.</p>
-<p>Although you can find everything you need to create your full .qmd file in the “Visual” mode with the guided user interface, we recommend to work in “Source” mode as much as possible.</p>
-</section>
-<section id="quarto-source-mode-in-r-studio" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-source-mode-in-r-studio">Quarto source mode in R studio</h2>
+<p>In <strong>Source mode</strong>, you create a chunk by typing three backticks followed by the language in curly braces (e.g., <code>```{r}</code>) and closing it with another three backticks; everything between the fences is executable code.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../assets/images/Source_chunks.jpg" class="img-fluid figure-img"></p>
 <figcaption>Creating chunks through the Source mode</figcaption>
 </figure>
 </div>
-<p>In <strong>source mode</strong>, you can create a code chunk by typing three backticks followed by the language in curly braces—for example, <code>```{r}</code> for R, and then closing the chunk with another set of three backticks. Everything between these fences will be treated as executable code when the document is rendered.</p>
-<p>As you develop a Quarto document, it’s good practice to <strong>regularly check that it still executes correctly</strong>. The most direct way to do this is by <strong>rendering</strong> the document frequently. Rendering runs all code chunks in sequence, ensuring that each one can be executed successfully and that objects or results are correctly available when needed. You can render the document by clicking the <strong>Render</strong> button in RStudio, using the keyboard shortcut <strong>Ctrl + Shift + K</strong> (Windows/Linux) or <strong>Cmd + Shift + K</strong> (Mac), or by running <code>quarto render yourfile.qmd</code> in the terminal.</p>
-<p>If the document executes without errors, the rendered output (HTML, PDF, or Word) will be updated. If an error occurs, Quarto will stop rendering and display a message pointing to the problematic chunk. Reading these messages carefully helps identify where code might rely on outdated objects or missing packages. Running code chunks <strong>individually</strong> in RStudio (by clicking the green play icon at the top right of each chunk or pressing <strong>Ctrl + Shift + Enter</strong>) is another useful way to test smaller sections before rendering the entire document. By checking execution regularly, you can catch issues early and ensure your document remains fully reproducible from start to finish.</p>
+<p>Visual mode is a convenient way to build a document with a guided interface, but we recommend working in Source mode as much as possible once you’re comfortable with the syntax.</p>
+</section>
+<section id="rendering-regularly" class="level2">
+<h2 class="anchored" data-anchor-id="rendering-regularly">Rendering Regularly</h2>
+<p>Because chunks share one session and run top to bottom, it’s good practice to render your document often as you write it, rather than waiting until the end.</p>
+<p><strong>Predict:</strong> suppose you write five chunks in a row without rendering, and the second chunk has an error. What do you expect to happen when you finally render the whole document?</p>
+<p><strong>Explain:</strong> rendering stops at the first chunk that fails, and Quarto reports an error pointing to that chunk. This means that you would not learn about the problem until you’d already written three chunks past it, making it harder to pinpoint what went wrong. Rendering after every chunk or two (with the <strong>Render</strong> button, <strong>Ctrl/Cmd+Shift+K</strong>, or <code>quarto render yourfile.qmd</code>) catches this immediately instead. You can also run a single chunk on its own with the green play icon (or <strong>Ctrl/Cmd+Shift+Enter</strong>) to test it before rendering the full document.</p>
 </section>
 <section id="labelling-chunks" class="level2">
-<h2 class="anchored" data-anchor-id="labelling-chunks">Labelling chunks</h2>
-<p>Each R code chunk in a Quarto document can be given a <strong>label</strong>, which is specified immediately after the opening <code>{r}</code> in the chunk header. For example: ```<code>#| label: data-summary</code>.</p>
-<p>The label <code>data-summary</code> uniquely identifies this chunk. Labels serve several important purposes. They make your document easier to navigate, help organize the flow of your analysis, and are used internally by Quarto for features such as <strong>caching</strong>, <strong>error reporting</strong>, and <strong>cross-referencing</strong>. For instance, if a rendering error occurs, Quarto reports it using the chunk label, making it straightforward to locate the source of the problem. Labels are also used to name figures or tables generated by that chunk, which ensures consistent and readable file names in your output directory.</p>
-<p>As a matter of good practice, chunk labels should be <strong>unique</strong>, <strong>short but descriptive</strong>, and <strong>use only lowercase letters, numbers, and hyphens or underscores</strong> (avoid spaces or special characters). A clear naming convention—such as <code>data-load</code>, <code>model-fit</code>, or <code>plot-results</code>—helps maintain readability and reproducibility, especially in longer documents. Consistent labeling not only improves your own workflow but also supports collaboration, as others can easily follow the structure and dependencies of your analysis.</p>
+<h2 class="anchored" data-anchor-id="labelling-chunks">Labelling Chunks</h2>
+<p>Each chunk can be given a <strong>label</strong>, specified with <code>#| label: &lt;name&gt;</code> immediately inside the chunk. Labels make errors easier to trace back to their source, and are used internally for caching and for naming generated figures and tables. Good labels are unique, short but descriptive, and use only lowercase letters, numbers, and hyphens or underscores, for example <code>data-load</code>, <code>model-fit</code>, or <code>plot-results</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Common Mistake
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Chunk labels must be unique within a document. If two chunks share the same label, Quarto will fail to render and report a duplicate-label error. This is easy to run into if you copy-paste an existing chunk as a starting point for a new one and forget to change its label.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Which of the following chunk labels follows good labeling convention: <code>Model Fit!</code>, <code>model_fit_final_version_2</code>, or <code>model-fit</code>?</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><code>model-fit</code>. It is short, descriptive, unique, and uses only lowercase letters and a hyphen. <code>Model Fit!</code> uses spaces, capital letters, and a special character, none of which are recommended, and <code>model_fit_final_version_2</code> is unnecessarily long for a label.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -812,7 +876,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- © 2025
+ © 2026
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">
