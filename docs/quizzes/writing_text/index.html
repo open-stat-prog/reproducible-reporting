@@ -72,6 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -96,19 +109,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -392,64 +392,64 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which Markdown syntax renders a word as both bold and italicized?</p>
-<div id="webex-6eb9fe1cd22abd463a07d7fd60791dd2" class="webex-radiogroup" data-answer="bVROCUpVHVM5">
-<label><input type="radio" autocomplete="off" name="6eb9fe1cd22abd463a07d7fd60791dd2"><span><code>***word***</code></span></label><label><input type="radio" autocomplete="off" name="6eb9fe1cd22abd463a07d7fd60791dd2"><span><code>*word*</code></span></label><label><input type="radio" autocomplete="off" name="6eb9fe1cd22abd463a07d7fd60791dd2"><span><code>**word**</code></span></label><label><input type="radio" autocomplete="off" name="6eb9fe1cd22abd463a07d7fd60791dd2"><span><code>~~word~~</code></span></label>
+<div id="webex-4f42bf4728a8ce3bc8833f4f4c18b74a" class="webex-radiogroup" data-answer="b1YYAk5WGAZv">
+<label><input type="radio" autocomplete="off" name="4f42bf4728a8ce3bc8833f4f4c18b74a"><span><code>~~word~~</code></span></label><label><input type="radio" autocomplete="off" name="4f42bf4728a8ce3bc8833f4f4c18b74a"><span><code>**word**</code></span></label><label><input type="radio" autocomplete="off" name="4f42bf4728a8ce3bc8833f4f4c18b74a"><span><code>*word*</code></span></label><label><input type="radio" autocomplete="off" name="4f42bf4728a8ce3bc8833f4f4c18b74a"><span><code>***word***</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Correct: three asterisks combine both bold and italic emphasis.</li>
-<li>Wrong: a single pair of asterisks renders italics only.</li>
-<li>Wrong: two pairs of asterisks render bold only.</li>
 <li>Wrong: double tildes render strikethrough, not bold or italic emphasis.</li>
+<li>Wrong: two pairs of asterisks render bold only.</li>
+<li>Wrong: a single pair of asterisks renders italics only.</li>
+<li>Correct: three asterisks combine both bold and italic emphasis.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>A document has a top-level heading (<code>#</code>), containing a section (<code>##</code>), which itself contains a subsection (<code>###</code>). With <code>number-sections: true</code> set in the YAML header, how would the subsection be numbered?</p>
-<div id="webex-1456a0dd7622632db2f6d518da03a4b2" class="webex-radiogroup" data-answer="agQZB00ASFRq">
-<label><input type="radio" autocomplete="off" name="1456a0dd7622632db2f6d518da03a4b2"><span>Subsections are not numbered, only top-level headings are.</span></label><label><input type="radio" autocomplete="off" name="1456a0dd7622632db2f6d518da03a4b2"><span><code>1.1.1</code></span></label><label><input type="radio" autocomplete="off" name="1456a0dd7622632db2f6d518da03a4b2"><span><code>1.1</code></span></label><label><input type="radio" autocomplete="off" name="1456a0dd7622632db2f6d518da03a4b2"><span><code>1</code></span></label>
+<div id="webex-18343ef698c456ba55c86126872f5a69" class="webex-radiogroup" data-answer="aggfBB9VSgdk">
+<label><input type="radio" autocomplete="off" name="18343ef698c456ba55c86126872f5a69"><span>Subsections are not numbered, only top-level headings are.</span></label><label><input type="radio" autocomplete="off" name="18343ef698c456ba55c86126872f5a69"><span><code>1</code></span></label><label><input type="radio" autocomplete="off" name="18343ef698c456ba55c86126872f5a69"><span><code>1.1</code></span></label><label><input type="radio" autocomplete="off" name="18343ef698c456ba55c86126872f5a69"><span><code>1.1.1</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Wrong: <code>number-sections: true</code> numbers all heading levels, not just the top level.</li>
-<li>Correct: numbering reflects the full heading hierarchy, so the subsection nested two levels deep is numbered <code>1.1.1</code>.</li>
-<li>Wrong: <code>1.1</code> would be the number given to the section, one level up from the subsection.</li>
 <li>Wrong: <code>1</code> would be the number given to the top-level heading, not the subsection.</li>
+<li>Wrong: <code>1.1</code> would be the number given to the section, one level up from the subsection.</li>
+<li>Correct: numbering reflects the full heading hierarchy, so the subsection nested two levels deep is numbered <code>1.1.1</code>.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You reference a figure in your text with <code>@fig-scores</code>, but the figure’s actual chunk label is <code>#| label: fig-score</code> (missing the final “s”). What happens when you render the document?</p>
-<div id="webex-96954f5149353481902e7f1de8478633" class="webex-radiogroup" data-answer="YgYVBRhXGQFp">
-<label><input type="radio" autocomplete="off" name="96954f5149353481902e7f1de8478633"><span>The figure is renumbered to match the reference automatically.</span></label><label><input type="radio" autocomplete="off" name="96954f5149353481902e7f1de8478633"><span>Rendering stops with a fatal error and no document is produced.</span></label><label><input type="radio" autocomplete="off" name="96954f5149353481902e7f1de8478633"><span>The reference fails to resolve, and the rendered document shows the broken reference text or a placeholder instead of a number.</span></label><label><input type="radio" autocomplete="off" name="96954f5149353481902e7f1de8478633"><span>Quarto automatically matches the closest label and resolves the reference correctly.</span></label>
+<div id="webex-b3439b1f1e6e5ae98acd38dde7dfbca2" class="webex-radiogroup" data-answer="OQMYAxVTHVZs">
+<label><input type="radio" autocomplete="off" name="b3439b1f1e6e5ae98acd38dde7dfbca2"><span>Rendering stops with a fatal error and no document is produced.</span></label><label><input type="radio" autocomplete="off" name="b3439b1f1e6e5ae98acd38dde7dfbca2"><span>Quarto automatically matches the closest label and resolves the reference correctly.</span></label><label><input type="radio" autocomplete="off" name="b3439b1f1e6e5ae98acd38dde7dfbca2"><span>The reference fails to resolve, and the rendered document shows the broken reference text or a placeholder instead of a number.</span></label><label><input type="radio" autocomplete="off" name="b3439b1f1e6e5ae98acd38dde7dfbca2"><span>The figure is renumbered to match the reference automatically.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Wrong: labels are not automatically adjusted to match an incorrect reference.</li>
 <li>Wrong: a mismatched cross-reference does not stop rendering entirely; the rest of the document still renders.</li>
-<li>Correct: a cross-reference only resolves if it exactly matches an existing label; otherwise it shows the raw reference text or a placeholder instead of a number.</li>
 <li>Wrong: Quarto requires an exact label match; it does not guess or auto-correct mismatched labels.</li>
+<li>Correct: a cross-reference only resolves if it exactly matches an existing label; otherwise it shows the raw reference text or a placeholder instead of a number.</li>
+<li>Wrong: labels are not automatically adjusted to match an incorrect reference.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You embed a regression coefficient directly in your text using the inline expression <code>coef(model)[2]</code>, and it renders as “-5.344471517291”. What should you do to make this more suitable for a report?</p>
-<div id="webex-d8e083eebcdab928d4f5044799c85fed" class="webex-radiogroup" data-answer="PwlJABQDSVU/">
-<label><input type="radio" autocomplete="off" name="d8e083eebcdab928d4f5044799c85fed"><span>Wrap the expression in <code>round()</code> or <code>format()</code> before embedding it, e.g.&nbsp;<code>round(coef(model)[2], 2)</code>.</span></label><label><input type="radio" autocomplete="off" name="d8e083eebcdab928d4f5044799c85fed"><span>Move the entire sentence into a separate code chunk instead of using inline code.</span></label><label><input type="radio" autocomplete="off" name="d8e083eebcdab928d4f5044799c85fed"><span>Nothing; inline results should always show full computational precision.</span></label><label><input type="radio" autocomplete="off" name="d8e083eebcdab928d4f5044799c85fed"><span>Replace the inline code with a hard-coded number typed directly into the text.</span></label>
+<div id="webex-3995f8093a0c3e9eb79e5977e6513015" class="webex-radiogroup" data-answer="aAkVBUoJHAlu">
+<label><input type="radio" autocomplete="off" name="3995f8093a0c3e9eb79e5977e6513015"><span>Replace the inline code with a hard-coded number typed directly into the text.</span></label><label><input type="radio" autocomplete="off" name="3995f8093a0c3e9eb79e5977e6513015"><span>Move the entire sentence into a separate code chunk instead of using inline code.</span></label><label><input type="radio" autocomplete="off" name="3995f8093a0c3e9eb79e5977e6513015"><span>Wrap the expression in <code>round()</code> or <code>format()</code> before embedding it, e.g.&nbsp;<code>round(coef(model)[2], 2)</code>.</span></label><label><input type="radio" autocomplete="off" name="3995f8093a0c3e9eb79e5977e6513015"><span>Nothing; inline results should always show full computational precision.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Correct: rounding or formatting the expression keeps the inline result readable, while still updating automatically if the underlying data changes.</li>
-<li>Wrong: moving it to a separate chunk doesn’t address the rounding issue, and inline code is specifically meant for embedding results directly in text.</li>
-<li>Wrong: unrounded results are usually far more precise than a report needs, and look out of place in a sentence.</li>
 <li>Wrong: hard-coding a number defeats the purpose of inline code, since the text would no longer update automatically.</li>
+<li>Wrong: moving it to a separate chunk doesn’t address the rounding issue, and inline code is specifically meant for embedding results directly in text.</li>
+<li>Correct: rounding or formatting the expression keeps the inline result readable, while still updating automatically if the underlying data changes.</li>
+<li>Wrong: unrounded results are usually far more precise than a report needs, and look out of place in a sentence.</li>
 </ul>
 </div>
 </div>

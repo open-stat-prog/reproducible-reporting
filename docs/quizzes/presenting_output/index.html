@@ -72,6 +72,32 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: purple;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -96,32 +122,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: purple;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -392,14 +392,14 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What does wrapping a data frame in <code>knitr::kable()</code> accomplish, compared to letting R print the data frame directly?</p>
-<div id="webex-231765b0148ac7cc14272c59a969141c" class="webex-radiogroup" data-answer="aQIdBxoFTgBs">
-<label><input type="radio" autocomplete="off" name="231765b0148ac7cc14272c59a969141c"><span>It renders the data as a properly formatted table matching the document’s style, rather than R’s plain console-style printout.</span></label><label><input type="radio" autocomplete="off" name="231765b0148ac7cc14272c59a969141c"><span>It converts the data frame into a figure.</span></label><label><input type="radio" autocomplete="off" name="231765b0148ac7cc14272c59a969141c"><span>It changes the underlying values stored in the data frame.</span></label><label><input type="radio" autocomplete="off" name="231765b0148ac7cc14272c59a969141c"><span>It automatically rounds every numeric column to two decimal places.</span></label>
+<div id="webex-24397f61c4db1fd6bdbbb82fa0219626" class="webex-radiogroup" data-answer="aQQfCBtWGgE+">
+<label><input type="radio" autocomplete="off" name="24397f61c4db1fd6bdbbb82fa0219626"><span>It converts the data frame into a figure.</span></label><label><input type="radio" autocomplete="off" name="24397f61c4db1fd6bdbbb82fa0219626"><span>It renders the data as a properly formatted table matching the document’s style, rather than R’s plain console-style printout.</span></label><label><input type="radio" autocomplete="off" name="24397f61c4db1fd6bdbbb82fa0219626"><span>It changes the underlying values stored in the data frame.</span></label><label><input type="radio" autocomplete="off" name="24397f61c4db1fd6bdbbb82fa0219626"><span>It automatically rounds every numeric column to two decimal places.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Correct: <code>kable()</code> produces a clean, document-formatted table instead of R’s raw console output.</li>
 <li>Wrong: <code>kable()</code> produces a table, not a figure.</li>
+<li>Correct: <code>kable()</code> produces a clean, document-formatted table instead of R’s raw console output.</li>
 <li>Wrong: <code>kable()</code> only changes how the data is displayed, not the underlying values.</li>
 <li>Wrong: <code>kable()</code> does not automatically round values; rounding must be done separately if desired.</li>
 </ul>
@@ -408,15 +408,15 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What do the <code>fig-width</code> and <code>fig-height</code> chunk options control?</p>
-<div id="webex-1f8389a6b0e06c1f00af7f822da826df" class="webex-radiogroup" data-answer="alYUAhQJTQY/">
-<label><input type="radio" autocomplete="off" name="1f8389a6b0e06c1f00af7f822da826df"><span>The color palette used in the plot.</span></label><label><input type="radio" autocomplete="off" name="1f8389a6b0e06c1f00af7f822da826df"><span>The dimensions of the rendered figure, in inches.</span></label><label><input type="radio" autocomplete="off" name="1f8389a6b0e06c1f00af7f822da826df"><span>Whether the figure’s code is shown alongside the plot.</span></label><label><input type="radio" autocomplete="off" name="1f8389a6b0e06c1f00af7f822da826df"><span>The caption text shown below the figure.</span></label>
+<div id="webex-7fc89cec72603871fbb0a5ff82ed0ed8" class="webex-radiogroup" data-answer="bFZPCBVSSVNq">
+<label><input type="radio" autocomplete="off" name="7fc89cec72603871fbb0a5ff82ed0ed8"><span>Whether the figure’s code is shown alongside the plot.</span></label><label><input type="radio" autocomplete="off" name="7fc89cec72603871fbb0a5ff82ed0ed8"><span>The color palette used in the plot.</span></label><label><input type="radio" autocomplete="off" name="7fc89cec72603871fbb0a5ff82ed0ed8"><span>The dimensions of the rendered figure, in inches.</span></label><label><input type="radio" autocomplete="off" name="7fc89cec72603871fbb0a5ff82ed0ed8"><span>The caption text shown below the figure.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>Wrong: showing or hiding code is controlled by <code>echo</code>, not the figure sizing options.</li>
 <li>Wrong: the color palette is determined by the plotting code itself, not by these chunk options.</li>
 <li>Correct: <code>fig-width</code> and <code>fig-height</code> set the rendered figure’s dimensions, in inches.</li>
-<li>Wrong: showing or hiding code is controlled by <code>echo</code>, not the figure sizing options.</li>
 <li>Wrong: the caption is set with <code>fig-cap</code>, not <code>fig-width</code>/<code>fig-height</code>.</li>
 </ul>
 </div>
@@ -424,32 +424,32 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You include a local image in a page using a plain relative path, <code>images/photo.jpg</code>. The image displays correctly on that page, but breaks when the same image is included from a page in a different folder. What is the most reliable fix?</p>
-<div id="webex-f8f80b84997d9258a0ca4aa6cea09bfb" class="webex-radiogroup" data-answer="PQhKCBxSFAVk">
-<label><input type="radio" autocomplete="off" name="f8f80b84997d9258a0ca4aa6cea09bfb"><span>Move the image next to every page that uses it.</span></label><label><input type="radio" autocomplete="off" name="f8f80b84997d9258a0ca4aa6cea09bfb"><span>Rename the image file.</span></label><label><input type="radio" autocomplete="off" name="f8f80b84997d9258a0ca4aa6cea09bfb"><span>Convert the image to a different file format.</span></label><label><input type="radio" autocomplete="off" name="f8f80b84997d9258a0ca4aa6cea09bfb"><span>Use a project-relative path with a leading slash, e.g.&nbsp;<code>/assets/images/photo.jpg</code>.</span></label>
+<div id="webex-339c55d091bbc9c0ad2bef80d6df9c8e" class="webex-radiogroup" data-answer="aAMVUxkESABk">
+<label><input type="radio" autocomplete="off" name="339c55d091bbc9c0ad2bef80d6df9c8e"><span>Rename the image file.</span></label><label><input type="radio" autocomplete="off" name="339c55d091bbc9c0ad2bef80d6df9c8e"><span>Move the image next to every page that uses it.</span></label><label><input type="radio" autocomplete="off" name="339c55d091bbc9c0ad2bef80d6df9c8e"><span>Use a project-relative path with a leading slash, e.g.&nbsp;<code>/assets/images/photo.jpg</code>.</span></label><label><input type="radio" autocomplete="off" name="339c55d091bbc9c0ad2bef80d6df9c8e"><span>Convert the image to a different file format.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Wrong: duplicating the image across folders works but isn’t a reliable or maintainable fix.</li>
 <li>Wrong: renaming the file doesn’t address how the path is resolved.</li>
-<li>Wrong: the file format has no bearing on how the path is resolved.</li>
+<li>Wrong: duplicating the image across folders works but isn’t a reliable or maintainable fix.</li>
 <li>Correct: a leading <code>/</code> makes the path resolve from the project root regardless of which page includes it.</li>
+<li>Wrong: the file format has no bearing on how the path is resolved.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Why is it generally recommended to export figures as vector graphics (e.g., PDF or SVG) rather than a raster format (e.g., PNG or JPEG) for a report?</p>
-<div id="webex-2c24c2b099b44a733e7a4c08cd615ebc" class="webex-radiogroup" data-answer="aVMeBE8DTgBk">
-<label><input type="radio" autocomplete="off" name="2c24c2b099b44a733e7a4c08cd615ebc"><span>Vector graphics load faster in a web browser than raster images.</span></label><label><input type="radio" autocomplete="off" name="2c24c2b099b44a733e7a4c08cd615ebc"><span>Vector formats are the only ones supported by Quarto.</span></label><label><input type="radio" autocomplete="off" name="2c24c2b099b44a733e7a4c08cd615ebc"><span>Vector graphics render crisply at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.</span></label><label><input type="radio" autocomplete="off" name="2c24c2b099b44a733e7a4c08cd615ebc"><span>Vector formats always produce smaller file sizes than raster formats.</span></label>
+<div id="webex-8f09f979b58998f6b6bee3ed7a704987" class="webex-radiogroup" data-answer="Y1YcCEoJGwk/">
+<label><input type="radio" autocomplete="off" name="8f09f979b58998f6b6bee3ed7a704987"><span>Vector formats always produce smaller file sizes than raster formats.</span></label><label><input type="radio" autocomplete="off" name="8f09f979b58998f6b6bee3ed7a704987"><span>Vector graphics render crisply at any zoom level or print size, while raster images can look blurry or pixelated when scaled up.</span></label><label><input type="radio" autocomplete="off" name="8f09f979b58998f6b6bee3ed7a704987"><span>Vector graphics load faster in a web browser than raster images.</span></label><label><input type="radio" autocomplete="off" name="8f09f979b58998f6b6bee3ed7a704987"><span>Vector formats are the only ones supported by Quarto.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>Wrong: file size depends on the image’s complexity, not simply on whether it’s vector or raster.</li>
+<li>Correct: vector graphics scale without loss of quality, so they stay sharp when zoomed in or printed at a larger size, unlike raster images.</li>
 <li>Wrong: load time depends on file size and complexity, not simply on vector versus raster format.</li>
 <li>Wrong: Quarto supports both vector and raster image formats.</li>
-<li>Correct: vector graphics scale without loss of quality, so they stay sharp when zoomed in or printed at a larger size, unlike raster images.</li>
-<li>Wrong: file size depends on the image’s complexity, not simply on whether it’s vector or raster.</li>
 </ul>
 </div>
 </div>

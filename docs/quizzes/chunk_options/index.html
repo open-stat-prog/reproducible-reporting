@@ -72,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading-advanced.callout {
+  border-left-color: red;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -98,17 +98,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -392,63 +392,63 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>A Quarto document has two R chunks. The first chunk creates an object called <code>x</code>. Can the second chunk use <code>x</code>, without recreating it?</p>
-<div id="webex-a36f0a2ae8fac4d871484012daf525bb" class="webex-radiogroup" data-answer="OgIaVhxRHlE4">
-<label><input type="radio" autocomplete="off" name="a36f0a2ae8fac4d871484012daf525bb"><span>Yes, because all R chunks in a document share a single, continuous session.</span></label><label><input type="radio" autocomplete="off" name="a36f0a2ae8fac4d871484012daf525bb"><span>No, each chunk runs in its own isolated environment.</span></label><label><input type="radio" autocomplete="off" name="a36f0a2ae8fac4d871484012daf525bb"><span>Only if both chunks have the same label.</span></label><label><input type="radio" autocomplete="off" name="a36f0a2ae8fac4d871484012daf525bb"><span>Only if the <code>cache: TRUE</code> option is set on the first chunk.</span></label>
+<div id="webex-806f48428cbfb32280cc05d161584946" class="webex-radiogroup" data-answer="YwEaVhgIGAJl">
+<label><input type="radio" autocomplete="off" name="806f48428cbfb32280cc05d161584946"><span>Yes, because all R chunks in a document share a single, continuous session.</span></label><label><input type="radio" autocomplete="off" name="806f48428cbfb32280cc05d161584946"><span>Only if the <code>cache: TRUE</code> option is set on the first chunk.</span></label><label><input type="radio" autocomplete="off" name="806f48428cbfb32280cc05d161584946"><span>No, each chunk runs in its own isolated environment.</span></label><label><input type="radio" autocomplete="off" name="806f48428cbfb32280cc05d161584946"><span>Only if both chunks have the same label.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Correct: chunks in the same language run in one shared session, so objects persist across chunks in the order they appear.</li>
+<li>Wrong: caching affects whether a chunk’s computation is rerun on subsequent renders; it isn’t required for objects to be shared within a single render.</li>
 <li>Wrong: R chunks are not isolated from one another.</li>
 <li>Wrong: chunk labels identify chunks for referencing and error messages; they don’t control whether objects are shared.</li>
-<li>Wrong: caching affects whether a chunk’s computation is rerun on subsequent renders; it isn’t required for objects to be shared within a single render.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You copy-paste an existing chunk to use as a starting point for a new one, but forget to change its label. What happens when you render the document?</p>
-<div id="webex-0487d0cb83ffffc2b2ca1e56e4c6ff17" class="webex-radiogroup" data-answer="awUUB0gAT1Jl">
-<label><input type="radio" autocomplete="off" name="0487d0cb83ffffc2b2ca1e56e4c6ff17"><span>Rendering fails with a duplicate-label error.</span></label><label><input type="radio" autocomplete="off" name="0487d0cb83ffffc2b2ca1e56e4c6ff17"><span>Quarto silently renames the second chunk’s label automatically.</span></label><label><input type="radio" autocomplete="off" name="0487d0cb83ffffc2b2ca1e56e4c6ff17"><span>Only the first chunk with that label is executed; the second is skipped.</span></label><label><input type="radio" autocomplete="off" name="0487d0cb83ffffc2b2ca1e56e4c6ff17"><span>Nothing; chunk labels are purely cosmetic and don’t affect rendering.</span></label>
+<div id="webex-b8489ec2e53694826a429c8976f40601" class="webex-radiogroup" data-answer="OQkYCBVVTwI4">
+<label><input type="radio" autocomplete="off" name="b8489ec2e53694826a429c8976f40601"><span>Rendering fails with a duplicate-label error.</span></label><label><input type="radio" autocomplete="off" name="b8489ec2e53694826a429c8976f40601"><span>Quarto silently renames the second chunk’s label automatically.</span></label><label><input type="radio" autocomplete="off" name="b8489ec2e53694826a429c8976f40601"><span>Nothing; chunk labels are purely cosmetic and don’t affect rendering.</span></label><label><input type="radio" autocomplete="off" name="b8489ec2e53694826a429c8976f40601"><span>Only the first chunk with that label is executed; the second is skipped.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Correct: chunk labels must be unique within a document; a duplicate causes rendering to fail with an error.</li>
 <li>Wrong: Quarto does not silently rename duplicate labels.</li>
-<li>Wrong: this is not how Quarto handles duplicate labels; rendering fails outright.</li>
 <li>Wrong: chunk labels must be unique, and duplicates cause a rendering error.</li>
+<li>Wrong: this is not how Quarto handles duplicate labels; rendering fails outright.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You want a chunk’s code to run, but neither the code nor its output should appear anywhere in the rendered document (for example, a setup chunk loading packages). Which option should you use?</p>
-<div id="webex-c83eddb7f61eb172c1c9f5e486e12aa7" class="webex-radiogroup" data-answer="OAgfVEhUTgc7">
-<label><input type="radio" autocomplete="off" name="c83eddb7f61eb172c1c9f5e486e12aa7"><span><code>eval: FALSE</code></span></label><label><input type="radio" autocomplete="off" name="c83eddb7f61eb172c1c9f5e486e12aa7"><span><code>include: FALSE</code></span></label><label><input type="radio" autocomplete="off" name="c83eddb7f61eb172c1c9f5e486e12aa7"><span><code>echo: FALSE</code></span></label><label><input type="radio" autocomplete="off" name="c83eddb7f61eb172c1c9f5e486e12aa7"><span><code>error: FALSE</code></span></label>
+<div id="webex-6029db3d243e6f7872103abf8291c94f" class="webex-radiogroup" data-answer="bQAeCUhSH1Vv">
+<label><input type="radio" autocomplete="off" name="6029db3d243e6f7872103abf8291c94f"><span><code>eval: FALSE</code></span></label><label><input type="radio" autocomplete="off" name="6029db3d243e6f7872103abf8291c94f"><span><code>error: FALSE</code></span></label><label><input type="radio" autocomplete="off" name="6029db3d243e6f7872103abf8291c94f"><span><code>echo: FALSE</code></span></label><label><input type="radio" autocomplete="off" name="6029db3d243e6f7872103abf8291c94f"><span><code>include: FALSE</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Wrong: <code>eval: FALSE</code> prevents the chunk from running at all, so packages would not actually be loaded.</li>
-<li>Correct: <code>include: FALSE</code> runs the chunk but hides both the code and any output.</li>
-<li>Wrong: <code>echo: FALSE</code> hides only the code; the result would still appear.</li>
 <li>Wrong: <code>error: FALSE</code> controls whether rendering stops on an error; it does not hide code or output.</li>
+<li>Wrong: <code>echo: FALSE</code> hides only the code; the result would still appear.</li>
+<li>Correct: <code>include: FALSE</code> runs the chunk but hides both the code and any output.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>How does Quarto expect chunk options to be written inside an R chunk?</p>
-<div id="webex-91140384586b44c9e3da39527303767b" class="webex-radiogroup" data-answer="YgEdBRwDFARo">
-<label><input type="radio" autocomplete="off" name="91140384586b44c9e3da39527303767b"><span>As plain R function calls at the top of the chunk, e.g.&nbsp;<code>set_echo(FALSE)</code>.</span></label><label><input type="radio" autocomplete="off" name="91140384586b44c9e3da39527303767b"><span>As commented lines starting with <code>#|</code>, placed directly below the chunk header.</span></label><label><input type="radio" autocomplete="off" name="91140384586b44c9e3da39527303767b"><span>As arguments inside the curly braces, e.g.&nbsp;<code>{r, echo=FALSE}</code>.</span></label><label><input type="radio" autocomplete="off" name="91140384586b44c9e3da39527303767b"><span>As a separate YAML file referenced by the chunk’s label.</span></label>
+<div id="webex-bf5349224e5197077bc8c637347323f5" class="webex-radiogroup" data-answer="OVYZAxgIHgJp">
+<label><input type="radio" autocomplete="off" name="bf5349224e5197077bc8c637347323f5"><span>As plain R function calls at the top of the chunk, e.g.&nbsp;<code>set_echo(FALSE)</code>.</span></label><label><input type="radio" autocomplete="off" name="bf5349224e5197077bc8c637347323f5"><span>As arguments inside the curly braces, e.g.&nbsp;<code>{r, echo=FALSE}</code>.</span></label><label><input type="radio" autocomplete="off" name="bf5349224e5197077bc8c637347323f5"><span>As commented lines starting with <code>#|</code>, placed directly below the chunk header.</span></label><label><input type="radio" autocomplete="off" name="bf5349224e5197077bc8c637347323f5"><span>As a separate YAML file referenced by the chunk’s label.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Wrong: chunk options are not set through R function calls.</li>
-<li>Correct: Quarto chunk options are written as <code>#|</code> commented lines directly below the chunk header.</li>
 <li>Wrong: this is the older R Markdown syntax; Quarto uses a different convention.</li>
+<li>Correct: Quarto chunk options are written as <code>#|</code> commented lines directly below the chunk header.</li>
 <li>Wrong: chunk options are written inline in the chunk itself, not in a separate file.</li>
 </ul>
 </div>

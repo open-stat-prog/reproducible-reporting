@@ -72,19 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -93,6 +80,32 @@ div.callout-reading.callout-style-default > .callout-header {
 }
 div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -109,19 +122,6 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -392,64 +392,64 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which capability does Quarto have that plain Markdown lacks?</p>
-<div id="webex-27000b11ea433754bef7abd7205fa0cc" class="webex-radiogroup" data-answer="aQccABxTHQE4">
-<label><input type="radio" autocomplete="off" name="27000b11ea433754bef7abd7205fa0cc"><span>Adding hyperlinks to a document.</span></label><label><input type="radio" autocomplete="off" name="27000b11ea433754bef7abd7205fa0cc"><span>Applying bold or italic emphasis to text.</span></label><label><input type="radio" autocomplete="off" name="27000b11ea433754bef7abd7205fa0cc"><span>Executing code and embedding the resulting output in a document.</span></label><label><input type="radio" autocomplete="off" name="27000b11ea433754bef7abd7205fa0cc"><span>Formatting text with headings and lists.</span></label>
+<div id="webex-79c87c03421f55f601462074700caeea" class="webex-radiogroup" data-answer="bAlPCBtTHAJp">
+<label><input type="radio" autocomplete="off" name="79c87c03421f55f601462074700caeea"><span>Formatting text with headings and lists.</span></label><label><input type="radio" autocomplete="off" name="79c87c03421f55f601462074700caeea"><span>Adding hyperlinks to a document.</span></label><label><input type="radio" autocomplete="off" name="79c87c03421f55f601462074700caeea"><span>Applying bold or italic emphasis to text.</span></label><label><input type="radio" autocomplete="off" name="79c87c03421f55f601462074700caeea"><span>Executing code and embedding the resulting output in a document.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>Wrong: heading and list formatting is a core Markdown feature, available without Quarto.</li>
 <li>Wrong: hyperlinks are supported by Markdown alone.</li>
 <li>Wrong: emphasis (bold/italic) is a core Markdown feature.</li>
 <li>Correct: Markdown has no computation layer; Quarto adds the ability to execute code and embed dynamic results.</li>
-<li>Wrong: heading and list formatting is a core Markdown feature, available without Quarto.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What is the primary purpose of the YAML header at the top of a Quarto document?</p>
-<div id="webex-b896bd19ffd2a0e7833d42ece49da813" class="webex-radiogroup" data-answer="OQgVBk5UHQg7">
-<label><input type="radio" autocomplete="off" name="b896bd19ffd2a0e7833d42ece49da813"><span>To execute the document’s R code.</span></label><label><input type="radio" autocomplete="off" name="b896bd19ffd2a0e7833d42ece49da813"><span>To write the narrative text that appears in the rendered document.</span></label><label><input type="radio" autocomplete="off" name="b896bd19ffd2a0e7833d42ece49da813"><span>To list the keyboard shortcuts available in RStudio.</span></label><label><input type="radio" autocomplete="off" name="b896bd19ffd2a0e7833d42ece49da813"><span>To define metadata and rendering options, such as the title and output format.</span></label>
+<div id="webex-52586c47c1a06a0e3e64804565b205ba" class="webex-radiogroup" data-answer="bgMZCBpTGAc+">
+<label><input type="radio" autocomplete="off" name="52586c47c1a06a0e3e64804565b205ba"><span>To define metadata and rendering options, such as the title and output format.</span></label><label><input type="radio" autocomplete="off" name="52586c47c1a06a0e3e64804565b205ba"><span>To list the keyboard shortcuts available in RStudio.</span></label><label><input type="radio" autocomplete="off" name="52586c47c1a06a0e3e64804565b205ba"><span>To write the narrative text that appears in the rendered document.</span></label><label><input type="radio" autocomplete="off" name="52586c47c1a06a0e3e64804565b205ba"><span>To execute the document’s R code.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>Wrong: R code is executed in code chunks in the document body, not in the YAML header.</li>
-<li>Wrong: narrative text belongs in the Markdown body, not the YAML header.</li>
-<li>Wrong: the YAML header has nothing to do with RStudio keyboard shortcuts.</li>
 <li>Correct: the YAML header configures metadata (title, author) and rendering options (output format, table of contents, etc.).</li>
+<li>Wrong: the YAML header has nothing to do with RStudio keyboard shortcuts.</li>
+<li>Wrong: narrative text belongs in the Markdown body, not the YAML header.</li>
+<li>Wrong: R code is executed in code chunks in the document body, not in the YAML header.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You render an HTML report and want to email just the single <code>.html</code> file to your instructor as a homework submission. Which YAML option should you add to make sure all images and plots are embedded directly in that file, rather than referenced externally?</p>
-<div id="webex-7ff210048440f237164a6a74ee6479fe" class="webex-radiogroup" data-answer="bFZKAh0AHAVl">
-<label><input type="radio" autocomplete="off" name="7ff210048440f237164a6a74ee6479fe"><span><code>number-sections: true</code></span></label><label><input type="radio" autocomplete="off" name="7ff210048440f237164a6a74ee6479fe"><span><code>toc: true</code></span></label><label><input type="radio" autocomplete="off" name="7ff210048440f237164a6a74ee6479fe"><span><code>code-fold: true</code></span></label><label><input type="radio" autocomplete="off" name="7ff210048440f237164a6a74ee6479fe"><span><code>embed-resources: true</code></span></label>
+<div id="webex-7d49701e98bb4d1171de0b6dc8d234db" class="webex-radiogroup" data-answer="bFQYCBsAHVVk">
+<label><input type="radio" autocomplete="off" name="7d49701e98bb4d1171de0b6dc8d234db"><span><code>number-sections: true</code></span></label><label><input type="radio" autocomplete="off" name="7d49701e98bb4d1171de0b6dc8d234db"><span><code>embed-resources: true</code></span></label><label><input type="radio" autocomplete="off" name="7d49701e98bb4d1171de0b6dc8d234db"><span><code>code-fold: true</code></span></label><label><input type="radio" autocomplete="off" name="7d49701e98bb4d1171de0b6dc8d234db"><span><code>toc: true</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Wrong: <code>number-sections</code> adds section numbering; it has no effect on whether resources are embedded.</li>
-<li>Wrong: <code>toc</code> adds a table of contents; it has no effect on whether resources are embedded.</li>
-<li>Wrong: <code>code-fold</code> controls whether code is collapsible; it has no effect on whether resources are embedded.</li>
 <li>Correct: <code>embed-resources: true</code> embeds all supporting files, such as images and plots, directly into a single, portable <code>.html</code> file.</li>
+<li>Wrong: <code>code-fold</code> controls whether code is collapsible; it has no effect on whether resources are embedded.</li>
+<li>Wrong: <code>toc</code> adds a table of contents; it has no effect on whether resources are embedded.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>You already have a Quarto report rendered as HTML and want to turn the same analysis into a revealjs slideshow. What is the most direct way to do this?</p>
-<div id="webex-89a3a6fd7a7a05f8a3a13ee03d5ae78a" class="webex-radiogroup" data-answer="YwhNA00GSlRq">
-<label><input type="radio" autocomplete="off" name="89a3a6fd7a7a05f8a3a13ee03d5ae78a"><span>Change the <code>format</code> field in the YAML header from <code>html</code> to <code>revealjs</code>.</span></label><label><input type="radio" autocomplete="off" name="89a3a6fd7a7a05f8a3a13ee03d5ae78a"><span>Rewrite the entire file from scratch using slide-specific syntax.</span></label><label><input type="radio" autocomplete="off" name="89a3a6fd7a7a05f8a3a13ee03d5ae78a"><span>Convert the file to PDF first, then to slides.</span></label><label><input type="radio" autocomplete="off" name="89a3a6fd7a7a05f8a3a13ee03d5ae78a"><span>Manually copy each paragraph into a separate PowerPoint file.</span></label>
+<div id="webex-740fec27617802a72df4c36468b8ee9f" class="webex-radiogroup" data-answer="bAUcVklTHgdr">
+<label><input type="radio" autocomplete="off" name="740fec27617802a72df4c36468b8ee9f"><span>Change the <code>format</code> field in the YAML header from <code>html</code> to <code>revealjs</code>.</span></label><label><input type="radio" autocomplete="off" name="740fec27617802a72df4c36468b8ee9f"><span>Manually copy each paragraph into a separate PowerPoint file.</span></label><label><input type="radio" autocomplete="off" name="740fec27617802a72df4c36468b8ee9f"><span>Convert the file to PDF first, then to slides.</span></label><label><input type="radio" autocomplete="off" name="740fec27617802a72df4c36468b8ee9f"><span>Rewrite the entire file from scratch using slide-specific syntax.</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Correct: changing <code>format</code> to <code>revealjs</code> is the key step, though the content typically still needs to be reorganized into slide-sized chunks.</li>
-<li>Wrong: presentations reuse the same YAML and Markdown structure as documents; a full rewrite isn’t necessary.</li>
-<li>Wrong: there is no need to convert to PDF as an intermediate step.</li>
 <li>Wrong: this bypasses Quarto entirely and isn’t how Quarto presentations are created.</li>
+<li>Wrong: there is no need to convert to PDF as an intermediate step.</li>
+<li>Wrong: presentations reuse the same YAML and Markdown structure as documents; a full rewrite isn’t necessary.</li>
 </ul>
 </div>
 </div>

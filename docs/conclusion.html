@@ -71,19 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -121,6 +108,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -368,21 +368,8 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 
 
 <p>You successfully completed the module “Reproducible reporting”. You should now be able to generate written documents and presentations where you can seamlessly integrate your text and explanations with your coding in R chunks.</p>
-<section id="self-test" class="level2">
-<h2 class="anchored" data-anchor-id="self-test">Self-Test</h2>
-<p>Complete this assignment in RStudio.</p>
-<p>Create a new Quarto document, <code>about_me.qmd</code>, that meets the following requirements:</p>
-<ol type="1">
-<li>An HTML report with a title, a table of contents, section numbering, and self-contained output.</li>
-<li>At least two heading levels structuring the report (for example, a “Background” section and a “Favorites” section).</li>
-<li>A sentence using inline code to report something computed in R, for example, how many days you’ve been alive, computed from your birth date and <code>Sys.Date()</code>.</li>
-<li>A <code>kable()</code> table of your top 3 favorite things (e.g.&nbsp;hobbies, foods, movies), with a column of your own rating for each.</li>
-<li>A labeled, captioned image of your favorite animal, referenced in the text using its cross-reference label.</li>
-<li>A render that opens correctly as a single, portable file.</li>
-</ol>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

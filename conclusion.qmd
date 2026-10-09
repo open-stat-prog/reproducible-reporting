@@ -14,18 +14,5 @@ source(here::here("R", "buttons.R"))
 You successfully completed the module "Reproducible reporting". You should now be able to generate written documents
 and presentations where you can seamlessly integrate your text and explanations with your coding in R chunks.
 
-## Self-Test
 
-Complete this assignment in RStudio. 
-
-Create a new Quarto document, `about_me.qmd`, that meets the following requirements:
-
-1. An HTML report with a title, a table of contents, section numbering, and self-contained output.
-1. At least two heading levels structuring the report (for example, a "Background" section and a "Favorites" section).
-1. A sentence using inline code to report something computed in R, for example, how many days you've been alive,
-   computed from your birth date and `Sys.Date()`.
-1. A `kable()` table of your top 3 favorite things (e.g. hobbies, foods, movies), with a column of your own
-   rating for each.
-1. A labeled, captioned image of your favorite animal, referenced in the text using its cross-reference label.
-1. A render that opens correctly as a single, portable file.
 
